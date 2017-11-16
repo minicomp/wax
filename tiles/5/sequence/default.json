@@ -1,0 +1,35 @@
+{
+  "@id": "/wax-theme/tiles/5/sequence/default.json",
+  "@type": "sc:Sequence",
+  "canvases": [
+    {
+      "@type": "sc:Canvas",
+      "@id": "/wax-theme/tiles/5/canvas/front.json",
+      "label": "front",
+      "width": 3329,
+      "height": 4993,
+      "thumbnail": "/wax-theme/tiles/images/5-1/full/167,/0/default.jpg",
+      "images": [
+        {
+          "@type": "oa:Annotation",
+          "@id": "/wax-theme/tiles/5/annotation/front.json",
+          "motivation": "sc:painting",
+          "resource": {
+            "@id": "/wax-theme/tiles/images/5-1/full/full/0/default.jpg",
+            "@type": "dcterms:Image",
+            "format": "image/jpeg",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "/wax-theme/tiles/images/5-1",
+              "profile": "http://iiif.io/api/image/2/level0.json"
+            },
+            "width": 3329,
+            "height": 4993
+          },
+          "on": "/wax-theme/tiles/5/canvas/front.json"
+        }
+      ]
+    }
+  ],
+  "@context": "http://iiif.io/api/presentation/2/context.json"
+}

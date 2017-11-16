@@ -1,0 +1,43 @@
+---
+layout: page
+---
+{% capture the_collection %}{{page.collection}}{% endcapture %}
+  {% if page.collection %}
+    {% assign documents = site[the_collection] %}
+  {% endif %}
+{% for link in documents  %}
+  {% if link.title == page.title %}
+    {% unless forloop.first %}
+      {% assign prevurl = prev.url %}
+      {% assign prevtitle = prev.title %}
+    {% endunless %}
+    {% unless forloop.last %}
+      {% assign next = documents[forloop.index] %}
+      {% assign nexturl = next.url %}
+      {% assign nexttitle = next.title %}
+    {% endunless %}
+  {% endif %}
+  {% assign prev = link %}
+{% endfor %}
+
+<article class="post">
+  <div class="post-content">
+  	{% include iiif_image.html %}
+    <table class="prevnext" width="100%" style="margin-bottom:20px;">
+      <tr>
+        <td style="text-align:left;">{% if prevurl %}Previous: <a href="{{site.baseurl}}{{prevurl}}" class="prev">{{prevtitle}}</a>{% endif %}</td>
+        <td style="text-align:right;">{% if nexturl %}Next: <a href="{{site.baseurl}}{{nexturl}}" class="next">{{nexttitle}}</a>{% endif %}</td>
+      </tr>
+    </table>
+    <br><br>
+    <p>
+      <b>artist: </b> {{ page.artist }}<br>
+      <b>location: </b> {{ page.location }}<br>
+      <b>title: </b> {{ page.title }}<br>
+      <b>date: </b> {{ page._date }}<br>
+      <b>object type: </b> {{ page.object_type }}<br>
+      <b>current location: </b> {{ page.current_location }}<br>
+      <b>source: </b> <a href="{{ page.wiki_link }}">WikiMedia Commons</><br>
+    </p>
+  </div>
+</article>

@@ -1,0 +1,63 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "/wax-theme/tiles/collection/top.json",
+  "@type": "sc:Collection",
+  "label": "top",
+  "manifests": [
+    {
+      "@id": "/wax-theme/tiles/1/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Wax. - objects - 1"
+    },
+    {
+      "@id": "/wax-theme/tiles/10/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Wax. - objects - 10"
+    },
+    {
+      "@id": "/wax-theme/tiles/11/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Wax. - objects - 11"
+    },
+    {
+      "@id": "/wax-theme/tiles/2/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Wax. - objects - 2"
+    },
+    {
+      "@id": "/wax-theme/tiles/3/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Wax. - objects - 3"
+    },
+    {
+      "@id": "/wax-theme/tiles/4/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Wax. - objects - 4"
+    },
+    {
+      "@id": "/wax-theme/tiles/5/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Wax. - objects - 5"
+    },
+    {
+      "@id": "/wax-theme/tiles/6/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Wax. - objects - 6"
+    },
+    {
+      "@id": "/wax-theme/tiles/7/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Wax. - objects - 7"
+    },
+    {
+      "@id": "/wax-theme/tiles/8/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Wax. - objects - 8"
+    },
+    {
+      "@id": "/wax-theme/tiles/9/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Wax. - objects - 9"
+    }
+  ]
+}
