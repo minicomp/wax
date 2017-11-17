@@ -1,28 +1,28 @@
 {
   "@type": "sc:Canvas",
-  "@id": "/wax-theme/tiles/11/canvas/front.json",
+  "@id": "/wax/tiles/11/canvas/front.json",
   "label": "front",
   "width": 2708,
   "height": 4671,
-  "thumbnail": "/wax-theme/tiles/images/11-1/full/145,/0/default.jpg",
+  "thumbnail": "/wax/tiles/images/11-1/full/145,/0/default.jpg",
   "images": [
     {
       "@type": "oa:Annotation",
-      "@id": "/wax-theme/tiles/11/annotation/front.json",
+      "@id": "/wax/tiles/11/annotation/front.json",
       "motivation": "sc:painting",
       "resource": {
-        "@id": "/wax-theme/tiles/images/11-1/full/full/0/default.jpg",
+        "@id": "/wax/tiles/images/11-1/full/full/0/default.jpg",
         "@type": "dcterms:Image",
         "format": "image/jpeg",
         "service": {
           "@context": "http://iiif.io/api/image/2/context.json",
-          "@id": "/wax-theme/tiles/images/11-1",
+          "@id": "/wax/tiles/images/11-1",
           "profile": "http://iiif.io/api/image/2/level0.json"
         },
         "width": 2708,
         "height": 4671
       },
-      "on": "/wax-theme/tiles/11/canvas/front.json"
+      "on": "/wax/tiles/11/canvas/front.json"
     }
   ],
   "@context": "http://iiif.io/api/presentation/2/context.json"

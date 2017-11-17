@@ -1,10 +1,11 @@
 title: Wax.
-description: Jekyll for minimal exhibitions.
-baseurl: "/wax-theme" # the subpath of your site, e.g. /blog
+description: "a jekyll theme for minimal exhibitions"
+baseurl: "/wax" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
+permalink: pretty
 
 exclude: [Gemfile*, node_modules, vendor]
 
