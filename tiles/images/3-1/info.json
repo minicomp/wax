@@ -1,6 +1,6 @@
 {
   "@context": "http://iiif.io/api/image/2/context.json",
-  "@id": "/wax-theme/tiles/images/3-1",
+  "@id": "/wax/tiles/images/3-1",
   "protocol": "http://iiif.io/api/image",
   "width": 5080,
   "height": 3532,

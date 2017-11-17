@@ -10,6 +10,14 @@ GIT
       mini_magick (~> 4.2)
       rmagick (~> 2.15)
 
+GIT
+  remote: https://github.com/mnyrop/wax_tasks.git
+  revision: 900fc246487f87d9af1a3717aee47d737136d24d
+  specs:
+    wax_tasks (0.0.1)
+      rake (~> 12.2)
+      tqdm (~> 0.3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -89,6 +97,7 @@ DEPENDENCIES
   jekyll (~> 3.6.2)
   rake
   tqdm
+  wax_tasks!
 
 BUNDLED WITH
    1.16.0

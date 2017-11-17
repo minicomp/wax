@@ -1,19 +1,19 @@
 {
   "@type": "oa:Annotation",
-  "@id": "/wax-theme/tiles/9/annotation/front.json",
+  "@id": "/wax/tiles/9/annotation/front.json",
   "motivation": "sc:painting",
   "resource": {
-    "@id": "/wax-theme/tiles/images/9-1/full/full/0/default.jpg",
+    "@id": "/wax/tiles/images/9-1/full/full/0/default.jpg",
     "@type": "dcterms:Image",
     "format": "image/jpeg",
     "service": {
       "@context": "http://iiif.io/api/image/2/context.json",
-      "@id": "/wax-theme/tiles/images/9-1",
+      "@id": "/wax/tiles/images/9-1",
       "profile": "http://iiif.io/api/image/2/level0.json"
     },
     "width": 4653,
     "height": 6319
   },
-  "on": "/wax-theme/tiles/9/canvas/front.json",
+  "on": "/wax/tiles/9/canvas/front.json",
   "@context": "http://iiif.io/api/presentation/2/context.json"
 }
