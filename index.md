@@ -1,6 +1,7 @@
 ---
 layout: default
 iiif_image: 1
+title: Wax.
 ---
 
 # hi.
