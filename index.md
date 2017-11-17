@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 iiif_image: 1
 ---
 
