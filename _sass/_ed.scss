@@ -868,3 +868,30 @@ li.prose {
 li.prose-indent {
   text-indent: 2rem;
 }
+
+/* Gallery masonry */
+
+.grid:after {
+  content: '' ;
+  display: block ;
+  clear: both ;
+}
+.grid-item {
+  float: left ;
+  overflow: hidden;
+}
+.grid-item img {
+  display: block ;
+  width: 100% ;
+  -moz-transform: scale(1.6);
+  -webkit-transform: scale(1.6);
+  transform: scale(1.6);
+  -moz-transition: all 1.5s;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+}
+.grid-item:hover img {
+  -moz-transform: scale(2.0);
+  -webkit-transform: scale(2.0);
+  transform: scale(2.0);
+}

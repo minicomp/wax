@@ -20,7 +20,7 @@ All images in this demo are from The Museum of Islamic Art, Qatar, courtesy of [
 
 # in the collection
 
-#### Manuscripts
+<h3><a href="{{ site.baseurl }}/manuscripts" style="color:black">Manuscripts</a></h3>
 {% assign manuscripts = site.data.objects | where: "object_type", "manuscript" %}
 <h4>
   {% for object in manuscripts %}
@@ -28,7 +28,7 @@ All images in this demo are from The Museum of Islamic Art, Qatar, courtesy of [
   {% endfor %}
 </h4>
 
-#### Portraits
+<h3><a href="{{ site.baseurl }}/portraits" style="color:black">Portraits</a></h3>
 {% assign portraits = site.data.objects | where: "object_type", "portrait" %}
 <h4>
   {% for object in portraits %}
@@ -36,7 +36,7 @@ All images in this demo are from The Museum of Islamic Art, Qatar, courtesy of [
   {% endfor %}
 </h4>
 
-#### Panels
+<h3><a href="{{ site.baseurl }}/panels" style="color:black">Panels</a></h3>
 {% assign panels = site.data.objects | where: "object_type", "panel" %}
 <h4>
   {% for object in panels %}
@@ -44,7 +44,7 @@ All images in this demo are from The Museum of Islamic Art, Qatar, courtesy of [
   {% endfor %}
 </h4>
 
-#### Maps
+<h3><a href="{{ site.baseurl }}/objects/4" style="color:black">Maps</a></h3>
 {% assign maps = site.data.objects | where: "object_type", "map" %}
 <h4>
   {% for object in maps %}

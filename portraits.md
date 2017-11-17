@@ -1,6 +1,6 @@
 ---
 layout: gallery
-title: Gallery
-group: full
+title: Portraits
+group: portraits
 columns: 3
 ---
