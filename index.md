@@ -3,13 +3,21 @@ layout: page
 iiif_image: 1
 ---
 
+# hi.
+
+Wax is a [Jekyll](http://jekyllrb.com) theme designed for digital exhibition based on [minimal computing principles](http://go-dh.github.io/mincomp/), and is focused on impact, durability, ease and flexibility. Our underlying technology is easy to learn and teach, and can produce beautifully rendered, high quality exhibitions of image-based data. To start using Wax, please see our [documentation]({{ site.baseurl }}/documentation) for installation instructions and more. To learn more about the ideas behind Wax and a list of current features see our [about]({{ site.baseurl }}/about) section.
+
+All images in this demo are from The Museum of Islamic Art, Qatar, courtesy of [WikiMedia](https://commons.wikimedia.org/wiki/Category:Google_Art_Project_works_in_The_Museum_of_Islamic_Art,_Qatar) and [Google Art Project](https://www.google.com/culturalinstitute/about/artproject/). Zooming images are a product the [IIIF](http://iiif.io/) image API and the [Openseadragon](https://openseadragon.github.io/) viewer.
+
+
+<hr>
 
 {% include iiif_image.html %}
 
-<br><br>
-Sample images for Wax demo from The Museum of Islamic Art, Qatar, courtesy of [WikiMedia](https://commons.wikimedia.org/wiki/Category:Google_Art_Project_works_in_The_Museum_of_Islamic_Art,_Qatar) and [Google Art Project](https://www.google.com/culturalinstitute/about/artproject/).
+<hr>
 
-# In the Collection
+
+# in the collection
 
 #### Manuscripts
 {% assign manuscripts = site.data.objects | where: "object_type", "manuscript" %}
