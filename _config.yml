@@ -15,7 +15,7 @@ collections:
     source: objects.csv
     key: id
     directory: objects
-    layout: object-page
+    layout: iiif-image-page
 
 webrick:
   headers:
