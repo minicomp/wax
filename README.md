@@ -1,4 +1,4 @@
-# wax
+# wax [![Build Status](https://travis-ci.org/minicomp/wax.svg?branch=master)](https://travis-ci.org/minicomp/wax)
 
 
 > __Note: Wax is currently unreleased!__ <br> Check back soon for better documentation, more features, and a beta Gem.
