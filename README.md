@@ -1,9 +1,9 @@
-# wax
+# [wax.](https://minicomp.github.io/wax/) [![Build Status](https://travis-ci.org/minicomp/wax.svg?branch=master)](https://travis-ci.org/minicomp/wax)
 
 
 > __Note: Wax is currently unreleased!__ <br> Check back soon for better documentation, more features, and a beta Gem.
 
-## current Features
+## current features
 + [x] Layouts for images and metadata (either IIIF or flat image)
 + [x] Masonry layout for image gallery
 + [x] Automated Markdown pages generation for our collection from CSV or YAML files
