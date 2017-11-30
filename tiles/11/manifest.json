@@ -5,7 +5,7 @@
   "label": "Wax. - objects - 11",
   "thumbnail": "/wax/tiles/images/11-1/full/145,/0/default.jpg",
   "viewingDirection": "left-to-right",
-  "viewingHint": "paged",
+  "viewingHint": "individuals",
   "sequences": [
     {
       "@id": "/wax/tiles/11/sequence/default.json",

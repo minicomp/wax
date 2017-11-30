@@ -3,6 +3,9 @@ layout: default
 iiif_image: 1
 title: Wax.
 ---
+{% include iiif_image.html %}
+{% include search.html %}
+<hr>
 
 # hi.
 
@@ -10,13 +13,7 @@ Wax is a [Jekyll](http://jekyllrb.com) theme designed for digital exhibitions ba
 
 All images in this demo are from The Museum of Islamic Art, Qatar, courtesy of [WikiMedia](https://commons.wikimedia.org/wiki/Category:Google_Art_Project_works_in_The_Museum_of_Islamic_Art,_Qatar) and [Google Art Project](https://www.google.com/culturalinstitute/about/artproject/).
 
-
 <hr>
-
-{% include iiif_image.html %}
-
-<hr>
-
 
 # in the collection
 

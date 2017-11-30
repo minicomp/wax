@@ -2,6 +2,7 @@
 language: ruby
 rvm:
   - 2.4
+  - 2.3
 script:
   - bundle exec jekyll build -d _site/wax
   - bundle exec htmlproofer ./_site --only-4xx --check-html --allow_hash_href --assume-extension  --disable-external --alt-ignore '/.*/'
