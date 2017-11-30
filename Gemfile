@@ -5,6 +5,6 @@ group :development, :test do
   gem 'html-proofer'
   gem 'tqdm'
   gem 'rake'
-  gem 'iiif_s3', :git => 'https://github.com/cmoa/iiif_s3.git'
+  gem 'iiif_s3'
   gem 'wax_tasks', :git => 'https://github.com/mnyrop/wax_tasks.git'
 end
