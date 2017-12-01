@@ -3,6 +3,7 @@ layout: default
 iiif_image: 1
 title: Wax.
 ---
+
 {% include iiif_image.html %}
 {% include search.html %}
 <hr>

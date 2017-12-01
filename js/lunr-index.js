@@ -12,7 +12,7 @@ var index = elasticlunr(function () {
   this.saveDocument(false);
 });
 
-elasticlunr.clearStopWords();
+// elasticlunr.clearStopWords();
 
 {% assign count = 0 %}
 {% for item in site.data.objects %}
@@ -45,7 +45,7 @@ $(document).ready(function() {
   $('input#search').on('keyup', function () {
     var resultdiv = $('#results');
     var query = $(this).val();
-    var result = index.search(query, {expand: true });
+    var result = index.search(query, {bool: "OR", expand: true});
     resultdiv.empty();
     for (var item in result) {
       var ref = result[item].ref;
