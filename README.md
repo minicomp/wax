@@ -12,7 +12,7 @@
 + [x] Automated search index generation
 + [x] Client-side elastic search
 + [x] Automated testing on search index(es)
-+ [ ] Automated publishing of compiled `site` to `gh-pages` branch
++ [x] Automated publishing of compiled `site` to `gh-pages` branch
 
 ## on the horizon
 + [ ] Tag/category extraction
