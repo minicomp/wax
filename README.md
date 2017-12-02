@@ -9,37 +9,24 @@
 + [x] Automated Markdown pages generation for our collection from CSV or YAML files
 + [x] Automated IIIF tiles and JSON data generation from local images
 + [x] Automated testing for dead links and html errors
++ [x] Automated search index generation
++ [x] Client-side elastic search
++ [x] Automated testing on search index(es)
++ [ ] Automated publishing of compiled `site` to `gh-pages` branch
 
 ## on the horizon
 + [ ] Tag/category extraction
-+ [ ] Automated search index generation
-+ [ ] Client-side elastic search
-+ [ ] Automated testing on search index(es)
 + [ ] Automated d3 force-graph visualizations
++ [ ] Automated publishing of compiled `site` to Amazon S3
 
-## runtime dependencies
-+ `bundler ~> 1.15`
-+ `jekyll ~> 3.5`
+## dependencies
++ `jekyll` (gem)
++ `bundler` (gem)
++ `wax_tasks` (gem)
++ `rspec` (gem)
++ `html-proofer` (gem)
++ `ImageMagick` (system)
 
-## optional dev/test dependencies
-#### for page generation:
-+ `rake`
-#### for iiif generation + display:
-+ `rake`
-+ `imagemagick ~> 6`
-+ `iiif_s3`
-+ `openseadragon`
-#### for testing:
-+ `htmlproofer`
-#### for image galleries:
-+ `jquery ~> 3`
-+ `masonry ~> 2`
-#### for elastic client-side search:
-+ `jquery ~> 3`
-+ `lunrjs`
-#### for visualizations:
-+ `jquery ~> 3`
-+ `d3js ~> 4`
 
 ## to use
 
