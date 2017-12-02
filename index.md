@@ -4,19 +4,17 @@ iiif_image: 1
 title: Wax.
 ---
 
+{% include iiif_image.html %}
+{% include search.html %}
+<hr>
+
 # hi.
 
 Wax is a [Jekyll](http://jekyllrb.com) theme designed for digital exhibitions based on [minimal computing principles](http://go-dh.github.io/mincomp/), and is focused on impact, durability, ease, and flexibility. Our underlying technology is easy to learn and teach, and can produce beautifully rendered, high-quality collections of image-based data. To start using Wax, please see our [documentation]({{ site.baseurl }}/documentation) for installation instructions and more. To learn more about the ideas behind Wax and a list of current features see our [about]({{ site.baseurl }}/about) section.
 
 All images in this demo are from The Museum of Islamic Art, Qatar, courtesy of [WikiMedia](https://commons.wikimedia.org/wiki/Category:Google_Art_Project_works_in_The_Museum_of_Islamic_Art,_Qatar) and [Google Art Project](https://www.google.com/culturalinstitute/about/artproject/).
 
-
 <hr>
-
-{% include iiif_image.html %}
-
-<hr>
-
 
 # in the collection
 

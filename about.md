@@ -11,15 +11,16 @@ Need a site with dynamic search but can’t commit to maintaining a database? Wa
 
 ## Current Features
 
-- Layouts for images and metadata (either IIIF or flat image)
+- Layouts for image and metadata pages (either IIIF or flat image)
 - Masonry layout for image gallery
-- Automated Markdown pages generation for our collection from CSV or YAML files
-- Automated IIIF tiles and JSON data generation from local images
-- Automated testing for dead links and html errors
+- Can automatically generate collection pages from CSV or YAML files
+- Can automatically generate IIIF tiles and JSON data from local images
+- Can automatically publish your compiled site to a `gh-pages` branch.
+- Can automatically test for dead links and html errors
 
 ## On the horizon
 
-- Tag/category extraction
-- Automated search index generation
-- Client-side elastic search
-- Automated testing on search index(es)
+- Will automatically extract tag and category information
+- Will automatically generate search index
+- Will have client-side elastic search
+- Will automatically test search index(es)

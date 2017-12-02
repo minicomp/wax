@@ -2,9 +2,10 @@ source "https://rubygems.org"
 gem "jekyll", "~> 3.6.2"
 
 group :development, :test do
+  gem 'wax_tasks'
   gem 'html-proofer'
-  gem 'tqdm'
-  gem 'rake'
-  gem 'iiif_s3', :git => 'https://github.com/cmoa/iiif_s3.git'
-  gem 'wax_tasks', :git => 'https://github.com/mnyrop/wax_tasks.git'
+  gem 'rspec'
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'rack-jekyll'
 end

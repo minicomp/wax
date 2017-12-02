@@ -17,6 +17,28 @@ collections:
     directory: objects
     layout: iiif-image-page
 
+lunr:
+  content: true
+  name: lunr-index
+  meta:
+    - dir: "_objects"
+      permalink: "/objects"
+      fields:
+        - artist
+        - location
+        - title
+        - _date
+        - object_type
+        - current_location
+
+quoll:
+  main:
+    page: index.html
+    terms:
+      - iran
+      - map
+      - manuscript
+
 webrick:
   headers:
     "Access-Control-Allow-Origin": "*"
