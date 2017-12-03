@@ -11,16 +11,18 @@ Need a site with dynamic search but can’t commit to maintaining a database? Wa
 
 ## Current Features
 
-- Layouts for image and metadata pages (either IIIF or flat image)
-- Masonry layout for image gallery
-- Can automatically generate collection pages from CSV or YAML files
-- Can automatically generate IIIF tiles and JSON data from local images
-- Can automatically publish your compiled site to a `gh-pages` branch.
-- Can automatically test for dead links and html errors
+- Has layouts for image and metadata pages (either IIIF or flat image)
+- Has masonry layout for image gallery
+- Can generate collection pages from CSV or YAML files
+- Can generate IIIF tiles and JSON data from local images
+- Can publish your compiled site to a `gh-pages` branch.
+- Can test for dead links and html errors
+- Can generate search index
+- Has client-side elastic search
+- Can test search index(es)
 
 ## On the horizon
 
-- Will automatically extract tag and category information
-- Will automatically generate search index
-- Will have client-side elastic search
-- Will automatically test search index(es)
+- Will extract tag and category information
+- Will generate d3 force-graph visualizations
+- Will publish compiled site to Amazon S3
