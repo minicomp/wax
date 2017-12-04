@@ -3,21 +3,23 @@
 
 > __Note: Wax is currently unreleased!__ <br> Check back soon for better documentation, more features, and a beta Gem.
 
-## current features
-+ [x] Layouts for images and metadata (either IIIF or flat image)
-+ [x] Masonry layout for image gallery
-+ [x] Automated Markdown pages generation for our collection from CSV or YAML files
-+ [x] Automated IIIF tiles and JSON data generation from local images
-+ [x] Automated testing for dead links and html errors
-+ [x] Automated search index generation
-+ [x] Client-side elastic search
-+ [x] Automated testing on search index(es)
-+ [ ] Automated publishing of compiled `site` to `gh-pages` branch
+## Current Features
 
-## on the horizon
-+ [ ] Tag/category extraction
-+ [ ] Automated d3 force-graph visualizations
-+ [ ] Automated publishing of compiled `site` to Amazon S3
+- [x] has layouts for image and metadata pages (either IIIF or flat image)
+- [x] has masonry layout for image gallery
+- [x] can generate collection pages from CSV or YAML files
+- [x] can generate IIIF tiles and JSON data from local images
+- [x] can publish your compiled site to a `gh-pages` branch.
+- [x] can test for dead links and html errors
+- [x] can generate search index
+- [x] has client-side elastic search
+- [x] can test search index(es)
+
+## On the horizon
+
+- [ ] will extract tag and category information
+- [ ] will generate d3 force-graph visualizations
+- [ ] will publish compiled site to Amazon S3
 
 ## dependencies
 + `jekyll` (gem)
