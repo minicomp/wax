@@ -15,12 +15,6 @@
 - [x] has client-side elastic search
 - [x] can test search index(es)
 
-## On the horizon
-
-- [ ] will extract tag and category information
-- [ ] will generate d3 force-graph visualizations
-- [ ] will publish compiled site to Amazon S3
-
 ## dependencies
 + `jekyll` (gem)
 + `bundler` (gem)
