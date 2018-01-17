@@ -1,6 +1,7 @@
 title: Wax.
 description: "a jekyll theme for minimal exhibitions"
-baseurl: "/wax" # the subpath of your site, e.g. /blog
+baseurl: ""
+gh-baseurl: "/wax" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
@@ -11,19 +12,17 @@ exclude: [Gemfile*, node_modules, vendor]
 
 collections:
   objects:
-    output: true
     source: objects.csv
-    key: id
     directory: objects
     layout: iiif-image-page
 
 lunr:
-  content: true
+  content: false
   name: lunr-index
   meta:
-    - dir: "_objects"
-      permalink: "/objects"
+    - dir: objects
       fields:
+        - pid
         - artist
         - location
         - title

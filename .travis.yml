@@ -1,10 +1,10 @@
-
+sudo: false
 language: ruby
 rvm:
   - 2.4
 script:
-  - bundle exec jekyll build -d _site/wax
-  - bundle exec htmlproofer ./_site --only-4xx --check-html --allow_hash_href --assume-extension  --disable-external --alt-ignore '/.*/'
+  - bundle exec jekyll build
+  - bundle exec rake wax:proof
   - bundle exec rspec
 env:
   global:

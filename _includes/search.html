@@ -1,9 +1,26 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="{{ site.baseurl }}/js/elastic-lunr.js"></script>
 <script src="{{ site.baseurl }}/js/lunr-index.js"></script>
+<script src="{{ site.baseurl }}/js/lunr-ui.js"></script>
+
+<style>
+  .search table{width:100%;margin-top:30px;}
+  #search-icon{width:8%;}
+  #input-box{width:92%}
+  #search{width:100%;border:none;font-size:14px;}
+  #results{margin:30px;}
+</style>
 
 <div class="search">
-  <span class="icon">&#x1F50D;</span>
-  <input type="text" class="searchTerm" id="search" placeholder="Browse the collection...">
+  <table>
+    <tr>
+      <td id="search-icon">
+        <span class="icon">&#x1F50D;</span>
+      </td>
+      <td id="input-box">
+        <input type="text" class="searchTerm" id="search" placeholder="Browse the collection...">
+      </td>
+    </tr>
+  </table>
 </div>
 <div id="results"></div>

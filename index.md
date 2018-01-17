@@ -3,7 +3,6 @@ layout: default
 iiif_image: 1
 title: Wax.
 ---
-
 {% include iiif_image.html %}
 {% include search.html %}
 <hr>
@@ -22,7 +21,7 @@ All images in this demo are from The Museum of Islamic Art, Qatar, courtesy of [
 {% assign manuscripts = site.data.objects | where: "object_type", "manuscript" %}
 <h4>
   {% for object in manuscripts %}
-  <a href="{{ site.baseurl }}/objects/{{ object.id }}">{{ object.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
+  <a href="{{ site.baseurl }}/objects/{{ object.pid }}">{{ object.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
   {% endfor %}
 </h4>
 
@@ -30,7 +29,7 @@ All images in this demo are from The Museum of Islamic Art, Qatar, courtesy of [
 {% assign portraits = site.data.objects | where: "object_type", "portrait" %}
 <h4>
   {% for object in portraits %}
-  <a href="{{ site.baseurl }}/objects/{{ object.id }}">{{ object.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
+  <a href="{{ site.baseurl }}/objects/{{ object.pid }}">{{ object.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
   {% endfor %}
 </h4>
 
@@ -38,7 +37,7 @@ All images in this demo are from The Museum of Islamic Art, Qatar, courtesy of [
 {% assign panels = site.data.objects | where: "object_type", "panel" %}
 <h4>
   {% for object in panels %}
-  <a href="{{ site.baseurl }}/objects/{{ object.id }}">{{ object.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
+  <a href="{{ site.baseurl }}/objects/{{ object.pid }}">{{ object.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
   {% endfor %}
 </h4>
 
@@ -46,6 +45,6 @@ All images in this demo are from The Museum of Islamic Art, Qatar, courtesy of [
 {% assign maps = site.data.objects | where: "object_type", "map" %}
 <h4>
   {% for object in maps %}
-  <a href="{{ site.baseurl }}/objects/{{ object.id }}">{{ object.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
+  <a href="{{ site.baseurl }}/objects/{{ object.pid }}">{{ object.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
   {% endfor %}
 </h4>
