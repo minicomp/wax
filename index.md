@@ -1,6 +1,6 @@
 ---
 layout: default
-iiif_image: 1
+iiif_image: miaq-1
 title: Wax.
 ---
 {% include iiif_image.html %}
@@ -17,34 +17,34 @@ All images in this demo are from The Museum of Islamic Art, Qatar, courtesy of [
 
 # in the collection
 
-<h3><a href="{{ site.baseurl }}/manuscripts" style="color:black">Manuscripts</a></h3>
-{% assign manuscripts = site.data.objects | where: "object_type", "manuscript" %}
+<h3>Manuscripts</h3>
+{% assign manuscripts = site.data.miaq | where: "object_type", "manuscript" %}
 <h4>
-  {% for object in manuscripts %}
-  <a href="{{ site.baseurl }}/objects/{{ object.pid }}">{{ object.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
+  {% for item in manuscripts %}
+  <a href="{{ site.baseurl }}/mia-qatar/{{ item.pid }}/">{{ item.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
   {% endfor %}
 </h4>
 
-<h3><a href="{{ site.baseurl }}/portraits" style="color:black">Portraits</a></h3>
-{% assign portraits = site.data.objects | where: "object_type", "portrait" %}
+<h3>Portraits</h3>
+{% assign portraits = site.data.miaq | where: "object_type", "portrait" %}
 <h4>
-  {% for object in portraits %}
-  <a href="{{ site.baseurl }}/objects/{{ object.pid }}">{{ object.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
+  {% for item in portraits %}
+<a href="{{ site.baseurl }}/mia-qatar/{{ item.pid }}/">{{ item.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
   {% endfor %}
 </h4>
 
-<h3><a href="{{ site.baseurl }}/panels" style="color:black">Panels</a></h3>
-{% assign panels = site.data.objects | where: "object_type", "panel" %}
+<h3>Panels</h3>
+{% assign panels = site.data.miaq | where: "object_type", "panel" %}
 <h4>
-  {% for object in panels %}
-  <a href="{{ site.baseurl }}/objects/{{ object.pid }}">{{ object.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
+  {% for item in panels %}
+  <a href="{{ site.baseurl }}/mia-qatar/{{ item.pid }}/">{{ item.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
   {% endfor %}
 </h4>
 
-<h3><a href="{{ site.baseurl }}/objects/4" style="color:black">Maps</a></h3>
-{% assign maps = site.data.objects | where: "object_type", "map" %}
+<h3>Maps</h3>
+{% assign maps = site.data.miaq | where: "object_type", "map" %}
 <h4>
-  {% for object in maps %}
-  <a href="{{ site.baseurl }}/objects/{{ object.pid }}">{{ object.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
+  {% for item in maps %}
+  <a href="{{ site.baseurl }}/mia-qatar/{{ item.pid }}/">{{ item.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
   {% endfor %}
 </h4>
