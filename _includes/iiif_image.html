@@ -1,31 +1,27 @@
-
-<script defer="true" src="{{ site.baseurl }}/iiif_viewer/openseadragon.min.js"></script>
+<script defer="true" src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.3.1/openseadragon.min.js"></script>
 <script>
-//<![CDATA[
-var iiif_viewerfuncs = [];
-window.onload = function() {
-  var arrayLength = iiif_viewerfuncs.length;
-  for (var i = 0; i < arrayLength; i++) {
-    iiif_viewerfuncs[i]();
+  var iiif_viewerfuncs = [];
+  window.onload = function() {
+    var arrayLength = iiif_viewerfuncs.length;
+    for (var i = 0; i < arrayLength; i++) {
+      iiif_viewerfuncs[i]();
+    }
   }
-}
-//]]
 </script>
+
 <div id="openseadragon{{ page.instancecounter }}" class="iiif_image"
 style="width: 100%; height: 500px; border: 1px solid grey"></div>
 
 <script>
-  //<![CDATA[
   iiif_viewerfuncs.push(
     function initOpenSeadragon{{ page.instancecounter }}() {
       OpenSeadragon({
         id: "openseadragon{{ page.instancecounter }}",
         minZoomImageRatio: 1,
-        prefixUrl: "{{ site.baseurl }}/iiif_viewer/images/",
-        tileSources: "{{ site.baseurl }}/tiles/images/{{ page.iiif_image }}-1/info.json",
+        prefixUrl: "https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.3.1/images/",
+        tileSources: "{{ site.baseurl }}/iiif/tiles/images/{{ page.iiif_image }}-1/info.json",
         crossOriginPolicy: false
       });
     }
   )
-  //]]>
 </script>
