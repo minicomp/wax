@@ -1,44 +1,31 @@
 title: Wax.
-description: "a jekyll theme for minimal exhibitions"
-baseurl: "/wax" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+description: a jekyll theme for minimal exhibitions
+url: ''
+baseurl: '/wax'
 
-# Build settings
+# build settings
 markdown: kramdown
 permalink: pretty
+lunr_language: false
+exclude: [Gemfile*, node_modules, vendor, Rakefile]
 
-exclude: [Gemfile*, node_modules, vendor]
-
-collections:
-  objects:
-    output: true
-    source: objects.csv
-    key: id
-    directory: objects
+# wax collection settings
+wax_collections:
+  miaq:
+    source: miaq.csv
+    directory: mia-qatar
     layout: iiif-image-page
+    lunr_index:
+      content: false
+      fields: [title, artist, location, _date, object_type, current_location]
 
-lunr:
-  content: true
-  name: lunr-index
-  meta:
-    - dir: "_objects"
-      permalink: "/objects"
-      fields:
-        - artist
-        - location
-        - title
-        - _date
-        - object_type
-        - current_location
-
+# search tests
 quoll:
   main:
-    page: index.html
-    terms:
-      - iran
-      - map
-      - manuscript
+    page: ''
+    terms: [iran, map, manuscript]
 
+# cors headers for iiif use
 webrick:
   headers:
     "Access-Control-Allow-Origin": "*"
