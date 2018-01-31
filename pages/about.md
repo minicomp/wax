@@ -26,4 +26,3 @@ Need a site with dynamic search but can’t commit to maintaining a database? Wa
 
 - Will extract tag and category information
 - Will generate d3 force-graph visualizations
-- Will publish compiled site to Amazon S3

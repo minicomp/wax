@@ -1,56 +1,38 @@
-# [wax.](https://minicomp.github.io/wax/) [![Build Status](https://travis-ci.org/minicomp/wax.svg?branch=master)](https://travis-ci.org/minicomp/wax)
+# [wax](https://minicomp.github.io/wax/)
 
+[![Build Status](https://travis-ci.org/mnyrop/wax.svg?branch=master)](https://travis-ci.org/mnyrop/wax) [![Dependency Status](https://gemnasium.com/badges/github.com/mnyrop/wax.svg)](https://gemnasium.com/github.com/mnyrop/wax)
+
+__A soon-to-be gem-packaged Jekyll theme for creating minimal exhibitions with [Jekyll](http://jekyllrb.com), [IIIF](http://iiif.io), and [ElasticLunr.js](http://elasticlunr.com).__
+
+Looking for a the functionality of Wax but want to use your own theme? Check out [minicomp/wax_tasks](https://github.com/minicomp/wax_tasks).
 
 > __Note: Wax is currently unreleased!__ <br> Check back soon for better documentation, more features, and a beta Gem.
 
-## Current Features
+![wax_screen](https://github.com/mnyrop/wax_tasks/raw/master/docs/wax_screen.gif?raw=true)
 
-- [x] has layouts for image and metadata pages (either IIIF or flat image)
-- [x] has masonry layout for image gallery
-- [x] can generate collection pages from CSV or YAML files
-- [x] can generate IIIF tiles and JSON data from local images
-- [x] can publish your compiled site to a `gh-pages` branch.
-- [x] can test for dead links and html errors
-- [x] can generate search index
-- [x] has client-side elastic search
-- [x] can test search index(es)
+#### Getting Started
+- [Prerequisites](#prerequisites)
+- [Installing](#installing)
+- [Customizing](#installing)
 
-## dependencies
-+ `jekyll` (gem)
-+ `bundler` (gem)
-+ `wax_tasks` (gem)
-+ `rspec` (gem)
-+ `html-proofer` (gem)
-+ `ImageMagick` (system)
+#### To Do
+- [v0.0.1](#001-release)
+
+# Getting Started
+
+## Prerequisites
+
+## Installing
+
+## Customizing
+
+# Contributing
+
+Fork/clone the repository. After making code changes, run the tests (`$ bundle exec rubocop` and `$ bundle exec rspec`) before submitting a PR.
 
 
-## to use
+# To Do
+## 0.0.1 release
 
-1. Clone this repository + cd into it.
-```
-$ git clone https://github.com/minicomp/wax.git && cd wax
-```
-2. Make sure you have [`bundler`]() installed, then install the project dependencies with
-```
-$ bundle install
-```
-3. Replace the sample data ([`objects.csv`](https://github.com/minicomp/wax/blob/master/_data/objects.csv)) in the `_data` folder with your own collection data.
-4. Replace the sample collection info in the `_config.yaml` file with your own info:
-```yaml
-collections:
-  objects:
-    output: true # must be true for the pages to get compiled as html
-    source: objects.csv # name of the file in _data
-    key: id # name of the primary key
-    directory: objects # what folder you want the pages generated into
-    layout: iiif-image-page # what layout you want the pages to use
-```
-5. Generate the pages for your collection:
-```
-$ bundle exec rake wax:pagemaster objects
-```
-6. Replace the images in [`_iiif/objects/`](https://github.com/minicomp/wax/tree/master/_iiif/objects) with your own full size images.
-7. Generate the IIIF image tiles and JSON metadata for your collection images:
-```
-$ bundle exec rake wax:iiif objects
-```
+- [ ] Package includes and layouts
+- [ ] Settle on gallery layout dependency and config
