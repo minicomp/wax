@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/mnyrop/wax.git
-  revision: 1566c978d25b1955d9a6b38cd541e9c2e5135063
+  revision: 457a6378327af40d41392ff35d72d308e05273b8
   branch: gem
   specs:
     wax_theme (0.0.1)
@@ -662,7 +662,7 @@ GEM
       ethon (>= 0.9.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    wax_tasks (0.0.311)
+    wax_tasks (0.0.4)
       colorize (~> 0.8)
       html-proofer (~> 3.0)
       iiif_s3 (~> 0.1)
