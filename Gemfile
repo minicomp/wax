@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
-
 gem 'jekyll', '~> 3.7.2'
-gem 'wax_theme', :git => 'https://github.com/mnyrop/wax.git', :branch => 'gem'
 
 group :development, :test do
-  gem 'wax_tasks'
+  gem 'html-proofer'
   gem 'rspec'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
   gem 'capybara'
-  gem 'poltergeist'
   gem 'rack-jekyll'
+  gem 'wax_tasks'
 end

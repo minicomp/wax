@@ -1,0 +1,36 @@
+{
+  "@context": "http://iiif.io/api/image/2/context.json",
+  "@id": "/wax/iiif/images/objects-2-1",
+  "protocol": "http://iiif.io/api/image",
+  "width": 2501,
+  "height": 3924,
+  "sizes": [
+    {
+      "width": 2501,
+      "height": 3924
+    },
+    {
+      "width": 159,
+      "height": 250
+    }
+  ],
+  "profile": [
+    "http://iiif.io/api/image/2/level0.json",
+    {
+      "supports": [
+        "cors",
+        "sizeByWhListed",
+        "baseUriRedirect"
+      ]
+    }
+  ],
+  "tiles": [
+    {
+      "width": 512,
+      "scaleFactors": [
+        1,
+        2
+      ]
+    }
+  ]
+}

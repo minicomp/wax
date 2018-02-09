@@ -1,0 +1,41 @@
+---
+layout: page
+---
+{% if page.columns == 2 %}{% assign grid_ratio = "50%" %}
+{% else %}{% assign grid_ratio = "33.333%" %}
+{% endif %}
+
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<style>.grid-sizer,.grid-item { width: {{ grid_ratio }} ;}</style>
+
+<div class="grid" style="margin-top:30px;">
+  <div class="grid-sizer"></div>
+  {% if page.group == 'full' %}
+    {% assign objects = site.data.objects %}
+  {% elsif page.group == 'manuscripts' %}
+    {% assign objects = site.data.objects | where: "object_type", "manuscript" %}
+  {% elsif page.group == 'panels' %}
+    {% assign objects = site.data.objects | where: "object_type", "panel" %}
+  {% elsif page.group == 'portraits' %}
+    {% assign objects = site.data.objects | where: "object_type", "portrait" %}
+  {% endif %}
+  {% for object in objects %}
+    <div class="grid-item">
+      <a href="{{ site.baseurl }}/objects/{{ object.pid }}">
+        <img src="{{ site.baseurl }}/images/objects/small/{{ object.pid }}.jpg"/>
+      </a>
+    </div>
+  {% endfor %}
+</div>
+
+<script>
+  var $grid = $('.grid').imagesLoaded( function() {
+    $grid.masonry({
+      itemSelector: '.grid-item',
+      percentPosition: true,
+      columnWidth: '.grid-sizer'
+    });
+  });
+</script>

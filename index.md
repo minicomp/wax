@@ -1,8 +1,8 @@
 ---
 layout: default
-iiif_image: miaq-1
 title: Wax.
 ---
+{% assign iiif_image = 'objects-1' %}
 {% include iiif_image.html %}
 {% include search.html %}
 <hr>
@@ -18,33 +18,33 @@ All images in this demo are from The Museum of Islamic Art, Qatar, courtesy of [
 # in the collection
 
 <h3>Manuscripts</h3>
-{% assign manuscripts = site.data.miaq | where: "object_type", "manuscript" %}
+{% assign manuscripts = site.data.objects | where: "object_type", "manuscript" %}
 <h4>
   {% for item in manuscripts %}
-  <a href="{{ site.baseurl }}/mia-qatar/{{ item.pid }}/">{{ item.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
+  <a href="{{ site.baseurl }}/objects/{{ item.pid }}/">{{ item.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
   {% endfor %}
 </h4>
 
 <h3>Portraits</h3>
-{% assign portraits = site.data.miaq | where: "object_type", "portrait" %}
+{% assign portraits = site.data.objects | where: "object_type", "portrait" %}
 <h4>
   {% for item in portraits %}
-<a href="{{ site.baseurl }}/mia-qatar/{{ item.pid }}/">{{ item.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
+<a href="{{ site.baseurl }}/objects/{{ item.pid }}/">{{ item.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
   {% endfor %}
 </h4>
 
 <h3>Panels</h3>
-{% assign panels = site.data.miaq | where: "object_type", "panel" %}
+{% assign panels = site.data.objects | where: "object_type", "panel" %}
 <h4>
   {% for item in panels %}
-  <a href="{{ site.baseurl }}/mia-qatar/{{ item.pid }}/">{{ item.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
+  <a href="{{ site.baseurl }}/objects/{{ item.pid }}/">{{ item.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
   {% endfor %}
 </h4>
 
 <h3>Maps</h3>
-{% assign maps = site.data.miaq | where: "object_type", "map" %}
+{% assign maps = site.data.objects | where: "object_type", "map" %}
 <h4>
   {% for item in maps %}
-  <a href="{{ site.baseurl }}/mia-qatar/{{ item.pid }}/">{{ item.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
+  <a href="{{ site.baseurl }}/objects/{{ item.pid }}/">{{ item.title }}</a>{% unless forloop.last %} &#9702; {% endunless %}
   {% endfor %}
 </h4>

@@ -8,12 +8,12 @@ markdown: kramdown
 permalink: pretty
 lunr_language: false
 exclude: [Gemfile*, node_modules, vendor, Rakefile]
-theme: wax_theme
+
 # wax collection settings
-wax_collections:
-  miaq:
-    source: miaq.csv
-    directory: mia-qatar
+collections:
+  objects:
+    output: true
+    source: objects.csv
     layout: iiif-image-page
     lunr_index:
       content: false
@@ -22,7 +22,7 @@ wax_collections:
 # search tests
 quoll:
   main:
-    page: ''
+    page: '/'
     terms: [iran, map, manuscript]
 
 # cors headers for iiif use

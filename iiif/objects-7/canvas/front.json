@@ -1,0 +1,29 @@
+{
+  "@type": "sc:Canvas",
+  "@id": "/wax/iiif/objects-7/canvas/front.json",
+  "label": "front",
+  "width": 4081,
+  "height": 5441,
+  "thumbnail": "/wax/iiif/images/objects-7-1/full/188,/0/default.jpg",
+  "images": [
+    {
+      "@type": "oa:Annotation",
+      "@id": "/wax/iiif/objects-7/annotation/front.json",
+      "motivation": "sc:painting",
+      "resource": {
+        "@id": "/wax/iiif/images/objects-7-1/full/full/0/default.jpg",
+        "@type": "dcterms:Image",
+        "format": "image/jpeg",
+        "service": {
+          "@context": "http://iiif.io/api/image/2/context.json",
+          "@id": "/wax/iiif/images/objects-7-1",
+          "profile": "http://iiif.io/api/image/2/level0.json"
+        },
+        "width": 4081,
+        "height": 5441
+      },
+      "on": "/wax/iiif/objects-7/canvas/front.json"
+    }
+  ],
+  "@context": "http://iiif.io/api/presentation/2/context.json"
+}
