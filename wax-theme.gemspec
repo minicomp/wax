@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "wax-theme"
+  spec.name          = "wax_theme"
   spec.version       = "0.0.1"
   spec.authors       = ["marii nyröp"]
   spec.email         = ["m.nyrop@columbia.edu"]
