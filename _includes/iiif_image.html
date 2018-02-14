@@ -16,7 +16,7 @@
         minZoomImageRatio: 1,
         autoFade: false,
         prefixUrl: "https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.3.1/images/",
-        tileSources: [ "{{ site.baseurl }}/iiif/images/{{ include.collection }}-{{ include.pid }}-1/info.json" ],
+        tileSources: [ "{{ include.image_path }}" ],
         crossOriginPolicy: false
       });
     }
