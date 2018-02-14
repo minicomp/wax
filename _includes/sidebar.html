@@ -11,11 +11,6 @@
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
 
-    {% comment %}
-      The code below dynamically generates a sidebar nav of pages with
-      `layout: page` in the front-matter. See readme for usage.
-    {% endcomment %}
-
     {% assign pages_list = site.pages | sort:"url" %}
     {% for node in pages_list %}
       {% if node.title != null %}
@@ -26,10 +21,7 @@
     {% endfor %}
 
     <!-- The code below is used for manually entered links  -->
-    <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="https://github.com/minicomp/wax" target="_none">View on GitHub</a>
+    <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="https://github.com/minicomp/wax" target="_none">Made with Minicomp/Wax</a>
 
   </nav>
-  <!-- <div class="sidebar-item">
-    <p>currently unreleased. check back for gem 0.0.1</p>
-  </div> -->
 </div>

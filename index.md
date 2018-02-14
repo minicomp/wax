@@ -2,8 +2,7 @@
 layout: default
 title: Wax.
 ---
-{% assign iiif_image = 'objects-1' %}
-{% include iiif_image.html %}
+{% include iiif_image.html collection='objects' pid='1' %}
 {% include search.html %}
 <hr>
 

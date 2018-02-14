@@ -1,0 +1,22 @@
+{% capture the_collection %}{{ include.collection }}{% endcapture %}
+  {% if page.collection %}
+    {% assign documents = site[the_collection] %}
+  {% endif %}
+{% for link in documents  %}
+  {% if link.title == page.title %}
+    {% unless forloop.first %}
+      {% assign prevurl = prev.url %}
+    {% endunless %}
+    {% unless forloop.last %}
+      {% assign next = documents[forloop.index] %}
+      {% assign nexturl = next.url %}
+    {% endunless %}
+  {% endif %}
+  {% assign prev = link %}
+{% endfor %}
+<table class="prevnext" width="100%">
+  <tr>
+    <td style="text-align:left;">{% if prevurl %}<a href="{{site.baseurl}}{{prevurl}}" class="prev">Previous</a>{% endif %}</td>
+    <td style="text-align:right;">{% if nexturl %}<a href="{{site.baseurl}}{{nexturl}}" class="next">Next</a>{% endif %}</td>
+  </tr>
+</table>

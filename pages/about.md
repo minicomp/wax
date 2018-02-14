@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Wax is a modular, minimal theme for creating digital exhibitions. It leverages the power of [Jekyll](), which is a modern and easy-to-use static site generator.
+Wax is a modular, minimal theme for creating digital exhibitions. It leverages the power of [Jekyll](https://jekyllrb.com), which is a modern and easy-to-use static site generator.
 
 When complete, Wax will include many of the components expected of database-powered platforms like WordPress, Scalar, or Omeka. These components will be discrete, lightweight, interoperable, and easy to use, creating an expansive framework of Jekyll tooling that enables scholars to dynamically assemble what they need and drop what they don’t.
 
@@ -12,17 +12,9 @@ Need a site with dynamic search but can’t commit to maintaining a database? Wa
 
 ## Current Features
 
-- Has layouts for image and metadata pages (either IIIF or flat image)
-- Has masonry layout for image gallery
-- Can generate collection pages from CSV or YAML files
+- Can generate collection pages from CSV or JSON files
 - Can generate IIIF tiles and JSON data from local images
 - Can publish your compiled site to a `gh-pages` branch.
 - Can test for dead links and html errors
 - Can generate search index
 - Has client-side elastic search
-- Can test search index(es)
-
-## On the horizon
-
-- Will extract tag and category information
-- Will generate d3 force-graph visualizations
