@@ -22,6 +22,9 @@ Looking for the full functionality of Wax but want to use/make your own theme? C
 - [With wax_theme](#what-you-get-with-wax_theme)
 - [With wax_tasks](#what-you-get-with-wax_tasks)
 
+#### Guides
+- [Coming Soon](#guides)
+
 
 # Getting Started
 
@@ -53,7 +56,7 @@ and run `$ bundle install`. If you want to use custom Rake tasks for generating 
 >
 > `$ git clone https://github.com/minicomp/wax.git -b gh-pages`
 
-## What you get with wax_theme
+# What you get with wax_theme
 
 #### Sass styles
 Based on [Ed. Theme](https://github.com/minicomp/ed).
@@ -73,11 +76,12 @@ Based on [Ed. Theme](https://github.com/minicomp/ed).
 - [pagination.html]()
 
 
-## What you get with wax_tasks
+# What you get with wax_tasks
 
 - A task for generating collection pages from a CSV or JSON file: [`wax:pagemaster`]()
 - A task for generating an [ElasticLunr]() search index: [`wax:lunr`]()
 - A task for generating [IIIF](http://iiif.io/) derivatives and json data from a local directory of images: [`wax:iiif`]()
 - A task for running [html-proofer]() and any [rspec]() tests: [`wax:test`]()
 
+# Guides
 > __Note:__ A full guide for using `wax_theme` is on its way!
