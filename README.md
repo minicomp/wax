@@ -60,13 +60,13 @@ and run `$ bundle install`. If you want to use custom Rake tasks for generating 
 
 #### Sass styles
 Based on [Ed. Theme](https://github.com/minicomp/ed).
-- [\_ed.scss]()
-- [\_syntax.scss]()
-- [\_wax.scss]()
+- [\_ed.scss](https://github.com/mnyrop/wax/blob/master/_sass/_ed.scss)
+- [\_syntax.scss](https://github.com/mnyrop/wax/blob/master/_sass/_synatx.scss)
+- [\_wax.scss](https://github.com/mnyrop/wax/blob/master/_sass/_wax.scss)
 
 #### Basic layouts
-- [default.html]()
-- [page.html]()
+- [default.html](https://github.com/mnyrop/wax/blob/master/_layouts/default.html)
+- [page.html](https://github.com/mnyrop/wax/blob/master/_layouts/page.html)
 
 #### Includes (i.e. reusable components)
 - [iiif_image.html](https://github.com/mnyrop/wax/blob/master/_includes/iiif_image.html)
@@ -78,10 +78,10 @@ Based on [Ed. Theme](https://github.com/minicomp/ed).
 
 # What you get with wax_tasks
 
-- A task for generating collection pages from a CSV or JSON file: [`wax:pagemaster`]()
-- A task for generating an [ElasticLunr](http://elasticlunr.com) search index: [`wax:lunr`]()
-- A task for generating [IIIF](http://iiif.io/) derivatives and json data from a local directory of images: [`wax:iiif`]()
-- A task for running [html-proofer]() and any [rspec]() tests: [`wax:test`]()
+- A task for generating collection pages from a CSV or JSON file: [`wax:pagemaster`](https://github.com/mnyrop/wax_tasks#waxpagemaster)
+- A task for generating an [ElasticLunr](http://elasticlunr.com) search index: [`wax:lunr`](https://github.com/mnyrop/wax_tasks#waxlunr)
+- A task for generating [IIIF](http://iiif.io/) derivatives and json data from a local directory of images: [`wax:iiif`](https://github.com/mnyrop/wax_tasks#waxiiif)
+- A task for running [html-proofer](https://github.com/gjtorikian/html-proofer) and any [rspec](http://rspec.info/) tests: [`wax:test`](https://github.com/mnyrop/wax_tasks#waxtest)
 
 # Guides
 > __Note:__ A full guide for using `wax_theme` is on its way!
