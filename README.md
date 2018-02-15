@@ -69,17 +69,17 @@ Based on [Ed. Theme](https://github.com/minicomp/ed).
 - [page.html]()
 
 #### Includes (i.e. reusable components)
-- [iiif_image.html]()
-- [search.html]()
-- [sidebar.html]()
-- [header.html]()
-- [pagination.html]()
+- [iiif_image.html](https://github.com/mnyrop/wax/blob/master/_includes/iiif_image.html)
+- [search.html](https://github.com/mnyrop/wax/blob/master/_includes/search.html)
+- [sidebar.html](https://github.com/mnyrop/wax/blob/master/_includes/sidebar.html)
+- [header.html](https://github.com/mnyrop/wax/blob/master/_includes/header.html)
+- [pagination.html](https://github.com/mnyrop/wax/blob/master/_includes/pagination.html)
 
 
 # What you get with wax_tasks
 
 - A task for generating collection pages from a CSV or JSON file: [`wax:pagemaster`]()
-- A task for generating an [ElasticLunr]() search index: [`wax:lunr`]()
+- A task for generating an [ElasticLunr](http://elasticlunr.com) search index: [`wax:lunr`]()
 - A task for generating [IIIF](http://iiif.io/) derivatives and json data from a local directory of images: [`wax:iiif`]()
 - A task for running [html-proofer]() and any [rspec]() tests: [`wax:test`]()
 
