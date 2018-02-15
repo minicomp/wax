@@ -1,0 +1,24 @@
+
+<script defer="true" src="{{ site.js.openseadragon.cdn | default: 'https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.3.1/openseadragon.min.js' }}"></script>
+<script>
+  var iiif_viewerfuncs = [];
+  window.onload = function() {
+    var arrayLength = iiif_viewerfuncs.length;
+    for (var i = 0; i < arrayLength; i++) { iiif_viewerfuncs[i](); }
+  }
+</script>
+<div id="openseadragon{{ page.instancecounter }}" class="iiif_image"></div>
+<script>
+  iiif_viewerfuncs.push(
+    function initOpenSeadragon{{ page.instancecounter }}() {
+      OpenSeadragon({
+        id: "openseadragon{{ page.instancecounter }}",
+        minZoomImageRatio: 1,
+        autoFade: false,
+        prefixUrl: "https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.3.1/images/",
+        tileSources: [ "{{ include.image_path }}" ],
+        crossOriginPolicy: false
+      });
+    }
+  )
+</script>
