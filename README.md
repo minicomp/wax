@@ -17,8 +17,10 @@ Looking for the full functionality of Wax but want to use/make your own theme? C
 #### Getting Started
 - [Prerequisites](#prerequisites)
 - [Installing](#installing)
-- [What you get with wax_theme](#what-you-get-with-wax-them)
-- [What you get with wax_tasks](#what-you-get-with-wax-tasks)
+
+#### What you get
+- [With wax_theme](#what-you-get-with-wax-them)
+- [With wax_tasks](#what-you-get-with-wax-tasks)
 
 
 # Getting Started
