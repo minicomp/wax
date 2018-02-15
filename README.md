@@ -19,8 +19,8 @@ Looking for the full functionality of Wax but want to use/make your own theme? C
 - [Installing](#installing)
 
 #### What you get
-- [With wax_theme](#what-you-get-with-wax-them)
-- [With wax_tasks](#what-you-get-with-wax-tasks)
+- [With wax_theme](#what-you-get-with-wax_theme)
+- [With wax_tasks](#what-you-get-with-wax_tasks)
 
 
 # Getting Started
