@@ -1,0 +1,29 @@
+{
+  "@type": "sc:Canvas",
+  "@id": "/wax/iiif/miaq-obj1/canvas/front.json",
+  "label": "front",
+  "width": 4001,
+  "height": 2704,
+  "thumbnail": "/wax/iiif/images/miaq-obj1-1/full/250,/0/default.jpg",
+  "images": [
+    {
+      "@type": "oa:Annotation",
+      "@id": "/wax/iiif/miaq-obj1/annotation/front.json",
+      "motivation": "sc:painting",
+      "resource": {
+        "@id": "/wax/iiif/images/miaq-obj1-1/full/full/0/default.jpg",
+        "@type": "dcterms:Image",
+        "format": "image/jpeg",
+        "service": {
+          "@context": "http://iiif.io/api/image/2/context.json",
+          "@id": "/wax/iiif/images/miaq-obj1-1",
+          "profile": "http://iiif.io/api/image/2/level0.json"
+        },
+        "width": 4001,
+        "height": 2704
+      },
+      "on": "/wax/iiif/miaq-obj1/canvas/front.json"
+    }
+  ],
+  "@context": "http://iiif.io/api/presentation/2/context.json"
+}

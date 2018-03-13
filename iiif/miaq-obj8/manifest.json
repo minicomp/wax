@@ -1,0 +1,45 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "/wax/iiif/miaq-obj8/manifest.json",
+  "@type": "sc:Manifest",
+  "label": "Minicomp/Wax ✕ MIA Qatar - miaq - obj8",
+  "thumbnail": "/wax/iiif/images/miaq-obj8-1/full/169,/0/default.jpg",
+  "viewingDirection": "left-to-right",
+  "viewingHint": "individuals",
+  "sequences": [
+    {
+      "@id": "/wax/iiif/miaq-obj8/sequence/default.json",
+      "@type": "sc:Sequence",
+      "canvases": [
+        {
+          "@type": "sc:Canvas",
+          "@id": "/wax/iiif/miaq-obj8/canvas/front.json",
+          "label": "front",
+          "width": 3927,
+          "height": 5810,
+          "thumbnail": "/wax/iiif/images/miaq-obj8-1/full/169,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "/wax/iiif/miaq-obj8/annotation/front.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "/wax/iiif/images/miaq-obj8-1/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "/wax/iiif/images/miaq-obj8-1",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 3927,
+                "height": 5810
+              },
+              "on": "/wax/iiif/miaq-obj8/canvas/front.json"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

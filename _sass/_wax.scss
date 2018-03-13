@@ -1,38 +1,53 @@
-/* Wax Styles added to Ed. */
+@import url('https://fonts.googleapis.com/css?family=Karma:400,500,600,700&subset=latin-ext');
+.sans-serif{ font-family: sans-serif !important; }
+.serif{ font-family: 'Karma', serif !important; }
 
-/* IIIF */
-.iiif_image{
-  width: 100%;
-  height: 500px;
-  border: 0.5px grey solid;
-  background: #ffffff;
-  margin-top: 20px;
+.container {
+  p, ul {
+    margin: 2.5em 0em 2.5em 0em;
+    max-width: 800px;
+    font-size: 1.25em;
+  }
+  p{font-family: 'Karma', serif;}
 }
 
-/* Search */
-#search{
-  width:100%;
-  border:none;
-  font-size:14px;
-  table{
-    width:100%;
-    margin-top:30px;
-    #search-icon{
-      width:8%;
-    }
-    #input-box{
-      width:92%
-    }
+#iiif-banner{
+  height: 450px;
+  .leaflet-control-container{
+    display:none !important;
   }
 }
-#results{
-  margin:30px;
+
+#iiif-viewer{
+  height: 600px;
 }
 
-/* Pagination */
+.navbar{ padding: 0.5rem 0rem 0.5rem 0rem;}
+
+.nopadding { padding: 0 !important; }
+.nomargin{ margin: 0 !important; }
+
 .prevnext{
-  margin:0 auto;
-  background:transparent;
-  margin-bottom: 40px;
-  td{ width: 50%; }
+  width: '100%';
+  margin: 2rem auto;
+}
+
+.leaflet-container{
+  border: 1px solid grey;
+}
+
+.dropdown-toggle::after{
+  display: none !important;
+}
+
+.search-block{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  #results{
+    .result{
+      padding: 1rem 1rem 1rem 3rem;
+      h5{margin-top: 1rem;}
+      p{margin-top: 1rem;}
+    }
+  }
 }
