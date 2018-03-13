@@ -1,22 +1,35 @@
 {% capture the_collection %}{{ include.collection }}{% endcapture %}
   {% if page.collection %}
-    {% assign documents = site[the_collection] %}
+    {% assign documents = site[the_collection] | sort: 'order' %}
+    {% assign first = documents.first %}
+    {% assign last = documents.last %}
   {% endif %}
 {% for link in documents  %}
   {% if link.title == page.title %}
-    {% unless forloop.first %}
+    {% if forloop.first %}
+      {% assign prevurl = last.url %}
+    {% else %}
       {% assign prevurl = prev.url %}
-    {% endunless %}
-    {% unless forloop.last %}
+    {% endif %}
+    {% if forloop.last %}
+      {% assign nexturl = first.url %}
+    {% else %}
       {% assign next = documents[forloop.index] %}
       {% assign nexturl = next.url %}
-    {% endunless %}
+    {% endif %}
   {% endif %}
   {% assign prev = link %}
 {% endfor %}
-<table class="prevnext" width="100%">
-  <tr>
-    <td style="text-align:left;">{% if prevurl %}<a href="{{site.baseurl}}{{prevurl}}" class="prev">Previous</a>{% endif %}</td>
-    <td style="text-align:right;">{% if nexturl %}<a href="{{site.baseurl}}{{nexturl}}" class="next">Next</a>{% endif %}</td>
-  </tr>
-</table>
+
+<div class="prevnext d-flex clearfix">
+  <div class="p-2">
+    <a href="{{site.baseurl}}{{prevurl}}" class="prev">
+      <button type="button" class="btn btn-outline-primary">Previous</button>
+    </a>
+  </div>
+  <div class="ml-auto p-2">
+    <a href="{{site.baseurl}}{{nexturl}}" class="next">
+      <button type="button" class="btn btn-outline-primary">Next</button>
+    </a>
+  </div>
+</div>

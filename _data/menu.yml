@@ -1,0 +1,14 @@
+- label: About
+  sub:
+  - label: Wax
+    link: /about/
+  - label: Minicomp
+    link: /minicomp/
+  - label: Credits
+    link: /credits/
+- label: Documentation
+  link: /docs/
+- label: Exhibits
+  link: /exhibits/
+- label: Browse
+  link: /collection/

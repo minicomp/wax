@@ -1,0 +1,45 @@
+{% include leaflet_assets.html %}
+
+{% assign object = site.data[include.collection] | where: 'pid', include.pid | first %}
+{%- capture manifest_uri -%}
+  {{ site.baseurl }}/iiif/{{ include.collection }}-{{ include.pid }}/manifest.json
+{%- endcapture -%}
+{%- capture caption -%}
+  {{ object.artist }}, <a href="{{ site.baseurl }}/{{ include.collection }}/{{ include.pid }}">{{ object.title }}</a>. {{ object.\_date}} {{ object.object_type  }}, {{ object.location }}. {{ object.current_location }}.
+{%- endcapture -%}
+
+<figure class="figure container-fluid nopadding">
+  <div id="iiif-banner"></div>
+  <figcaption class="figure-caption">{{ caption }}</figcaption>
+</figure>
+
+<script>
+    var iiif_banner;
+    var iiifLayers = {};
+    var manifestUrl = '{{ manifest_uri }}';
+    iiif_banner = L.map('iiif-banner', {
+      center: {{ include.center | default: '[0,0]' }},
+      crs: L.CRS.Simple,
+      zoomDelta: 0.25,
+      zoomSnap: .25,
+      zoom: {{ include.zoom | default: '3' }},
+      minZoom: {{ include.zoom | default: '3' }},
+      maxZoom: {{ include.zoom | default: '3' }}
+    });
+    $.getJSON(manifestUrl, function(data) {
+      var i = 1;
+      $.each(data.sequences[0].canvases, function(_, val) {
+        var label = 'image ' + i;
+        iiifLayers[label] = L.tileLayer.iiif(val.images[0].resource.service['@id'] + '/info.json', {fitBounds: false});
+        i++;
+      });
+      if (i > 2){ L.control.layers(iiifLayers).addTo(iiif_banner);}
+      iiifLayers[Object.keys(iiifLayers)[0]].addTo(iiif_banner);
+    });
+    iiif_banner.on('zoomend', function() {
+      console.log(iiif_banner.getZoom());
+    });
+    iiif_banner.on('drag', function() {
+      console.log(iiif_banner.getCenter());
+    });
+</script>

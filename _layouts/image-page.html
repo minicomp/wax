@@ -1,0 +1,34 @@
+---
+layout: page
+---
+
+<img alt='{{ page.title}}-img' src='{{ site.baseurl }}/iiif/images/{{ page.collection }}-{{ page.pid }}-1/full/full/0/default.jpg' class='large-static-image'/>
+{% include pagination.html collection=page.collection %}
+
+<!-- custom metadata table -->
+<table class='meta-table'>
+  <tr class='meta-row'>
+    <td class='meta-label'>Artist</td>
+    <td class='meta-field'>{{ page.artist }}</td>
+  </tr>
+  <tr class='meta-row'>
+    <td class='meta-label'>Location</td>
+    <td class='meta-field'>{{ page.location }}</td>
+  </tr>
+  <tr class='meta-row'>
+    <td class='meta-label'>Date</td>
+    <td class='meta-field'>{{ page._date }}</td>
+  </tr>
+  <tr class='meta-row'>
+    <td class='meta-label'>Object type</td>
+    <td class='meta-field'>{{ page.object_type }}</td>
+  </tr>
+  <tr class='meta-row'>
+    <td class='meta-label'>Current location</td>
+    <td class='meta-field'>{{ page.current_location }}</td>
+  </tr>
+  <tr class='meta-row'>
+    <td class='meta-label'>Source</td>
+    <td class='meta-field'><a href='{{ page.wiki_link }}'>Wikimedia Commons</a></td>
+  </tr>
+</table>

@@ -4,57 +4,55 @@
   {% include head.html %}
 
   <body>
-    {% include sidebar.html %}
+    <style>
+      #title a{font-size:1.5em !important;}
+      .icon {display:inline-flex;align-self:center;}
+      .icon svg, .icon img {height:1.3em;width:1.3em;}
+      .icon.baseline svg, .icon img {top:.1em;position:relative;}
+    </style>
 
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the content to avoid any CSS collisions with our real content. -->
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="{{ site.baseurl }}/" title="Home">{{ site.title | newline_to_br }}</a>
-            <br><small>{{ site.description }}</small>
-          </h3>
-        </div>
-      </div>
+    <div class="container-fluid" style="border-bottom:1px solid grey;margin:20px 0px 20px 0px;">
+      <div class="container">
+        <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center nopadding">
+          <span id="title">
+            <a href="{{ site.baseurl }}/" class="navbar-brand d-flex w-50 mr-auto" title="Home">
+              <div class="icon baseline"><img src="{{ site.baseurl }}/assets/logo.png"/></div>
+              {{ site.title | newline_to_br }}
+            </a>
+          </span>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
 
-      <div class="container content" id="main">
-        {{ content }}
+            <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+              {% for item in site.data.menu %}
+                {% if item.sub %}
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ item.label }}{% unless forloop.last %}&nbsp;&nbsp;&nbsp;/{% endunless %}
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    {% for sub in item.sub %}
+                    <a class="dropdown-item" href="{{ site.baseurl }}{{ sub.link }}">{{ sub.label }}</a>
+                    {% endfor %}
+                  </div>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ site.baseurl }}{{ item.link }}">{{ item.label }}{% unless forloop.last %}&nbsp;&nbsp;&nbsp;/{% endunless %}</a>
+                </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </nav>
       </div>
     </div>
 
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-    <script>
-    // Highlight search Query
-    var url = window.location.href;
-      if (url.lastIndexOf("?q=") > 0) {
-        // get the index of the parameter, add three (to account for length)
-        var stringloc = url.lastIndexOf("?q=") + 3;
-        // get the substring (query) and decode
-        var searchquery = decodeURIComponent(url.substr(stringloc));
-        // regex matches at beginning of line, end of line or word boundary, useful for poetry
-        var regex = new RegExp("(?:^|\\b)(" + searchquery + ")(?:$|\\b)", "gim");
-        // get, add mark and then set content
-        var content = document.getElementById("main").innerHTML;
-        document.getElementById("main").innerHTML = content.replace(regex, "<mark>$1</mark>");
-      }
-
-    // Toggle sidebar
-      (function(document) {
-        var toggle = document.querySelector('.sidebar-toggle');
-        var sidebar = document.querySelector('#sidebar');
-        var checkbox = document.querySelector('#sidebar-checkbox');
-
-        document.addEventListener('click', function(e) {
-          var target = e.target;
-
-          if(!checkbox.checked ||
-             sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
-
-          checkbox.checked = false;
-        }, false);
-      })(document);
-    </script>
+    <div class="container" id="main">
+      {{ content }}
+      {% include footer.html %}
+    </div>
   </body>
 </html>
