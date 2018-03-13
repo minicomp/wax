@@ -1,20 +1,14 @@
-<script src="{{ site.js.jquery.cdn | default: 'https://code.jquery.com/jquery-3.2.1.slim.min.js' }}"></script>
 <script src="{{ site.js.elasticlunr.cdn | default: 'https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js' }}"></script>
-
-<script src="{{ site.baseurl }}/js/lunr-index.js"></script>
 <script src="{{ site.baseurl }}/js/lunr-ui.js"></script>
 
-<div class="search">
-  <table>
-    <tr>
-      <td id="search-icon">
-        <span class="icon">&#x1F50D;</span>
-      </td>
-      <td id="input-box">
-        <input type="text" class="searchTerm" id="search" placeholder="{{ site.search_placeholder | default: 'Browse the collection...' }}">
-      </td>
-    </tr>
-  </table>
-</div>
+<div class="search-block">
+  <div class="input-group">
+    <span class="input-group-btn">
+        <button class="btn btn-default" type="button">🔎</button>
+    </span>
+    <input type="text" class="form-control" id="search" name="x" placeholder="Search... ">
+  </div>
 
-<div id="results"></div>
+  <div id="results" class="list-group"></div>
+
+</div>

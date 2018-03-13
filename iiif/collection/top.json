@@ -1,0 +1,63 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "/wax/iiif/collection/top.json",
+  "@type": "sc:Collection",
+  "label": "top",
+  "manifests": [
+    {
+      "@id": "/wax/iiif/miaq-obj1/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Minicomp/Wax ✕ MIA Qatar - miaq - obj1"
+    },
+    {
+      "@id": "/wax/iiif/miaq-obj10/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Minicomp/Wax ✕ MIA Qatar - miaq - obj10"
+    },
+    {
+      "@id": "/wax/iiif/miaq-obj11/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Minicomp/Wax ✕ MIA Qatar - miaq - obj11"
+    },
+    {
+      "@id": "/wax/iiif/miaq-obj2/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Minicomp/Wax ✕ MIA Qatar - miaq - obj2"
+    },
+    {
+      "@id": "/wax/iiif/miaq-obj3/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Minicomp/Wax ✕ MIA Qatar - miaq - obj3"
+    },
+    {
+      "@id": "/wax/iiif/miaq-obj4/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Minicomp/Wax ✕ MIA Qatar - miaq - obj4"
+    },
+    {
+      "@id": "/wax/iiif/miaq-obj5/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Minicomp/Wax ✕ MIA Qatar - miaq - obj5"
+    },
+    {
+      "@id": "/wax/iiif/miaq-obj6/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Minicomp/Wax ✕ MIA Qatar - miaq - obj6"
+    },
+    {
+      "@id": "/wax/iiif/miaq-obj7/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Minicomp/Wax ✕ MIA Qatar - miaq - obj7"
+    },
+    {
+      "@id": "/wax/iiif/miaq-obj8/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Minicomp/Wax ✕ MIA Qatar - miaq - obj8"
+    },
+    {
+      "@id": "/wax/iiif/miaq-obj9/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Minicomp/Wax ✕ MIA Qatar - miaq - obj9"
+    }
+  ]
+}
