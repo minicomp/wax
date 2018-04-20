@@ -65,12 +65,20 @@
 
   .gallery-item {
     padding: .5em;
-
-    img{
-      object-fit: cover;
-      object-position: 50% 20%;
-      width:250px;
-      height:200px;
-    }
   }
+}
+
+.navbar-toggler{ margin: 1em; }
+
+.sq-thumb-med{
+  object-fit: cover;
+  object-position: 50% 20%;
+  width:250px;
+  height:200px;
+}
+.sq-thumb-sm{
+  object-fit: cover;
+  object-position: 50% 20%;
+  width:80px;
+  height:80px;
 }

@@ -18,7 +18,7 @@ collections:
     layout:     iiif-image-page
     lunr_index:
       content:  false
-      fields:   [title, artist, location, _date, object_type, current_location]
+      fields:   [pid, title, artist, location, _date, object_type, current_location]
 
 # search tests
 quoll:
