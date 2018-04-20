@@ -8,9 +8,9 @@ layout: default
     {% for item in site.data[page.collection] %}
     <div class="gallery-item">
       <a href="{{ site.baseurl }}/{{ page.collection }}/{{ item.pid }}/">
-        <img class="sq-thumb-med" src="{{ site.baseurl }}/iiif/images/{{ page.collection }}-{{ item.pid }}-1/full/250,/0/default.jpg" alt="{{ item.title }}">
+        <img class="gallery-thumb" src="{{ site.baseurl }}/iiif/images/{{ page.collection }}-{{ item.pid }}-1/full/250,/0/default.jpg" alt="{{ item.title }}">
       </a>
-      <!-- <p class="item-text">{{ item.title }}</p> -->
+      <p class="gallery-text">{{ item.title }}</p>
     </div>
     {% endfor %}
   </div>
