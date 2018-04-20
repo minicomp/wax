@@ -2,7 +2,6 @@ title:          Minicomp/Wax ✕ MIA Qatar
 description:    a jekyll theme for minimal exhibitions
 url:            ''
 baseurl:        '/wax'
-gh-baseurl:     '/wax'
 
 # build settings
 markdown:       kramdown
@@ -12,10 +11,10 @@ exclude:        [Gemfile*, node_modules, vendor, Rakefile]
 
 # wax collection settings
 collections:
-  miaq:
+  wax-collection:
     output:     true
     keep_order: true
-    source:     miaq.csv
+    source:     wax-collection.csv
     layout:     iiif-image-page
     lunr_index:
       content:  false

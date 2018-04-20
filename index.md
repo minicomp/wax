@@ -1,8 +1,10 @@
 ---
 layout: default
 title: Wax.
+collection: wax-collection
+pid: obj7
 ---
-{% include iiif_banner.html pid='obj7' collection='miaq' zoom='2.75' center='[-170, 117]' %}
+{% include iiif_banner.html pid=page.pid collection=page.collection zoom='2.75' center='[-170, 117]' %}
 
 {% include search.html %}
 

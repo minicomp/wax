@@ -4,7 +4,8 @@ layout: none
 [
   {
     "lunr_id": 0,
-    "link": "{{'/miaq/obj1/' | relative_url }}",
+    "link": "{{'/wax-collection/obj1/' | relative_url }}",
+    "collection": "wax-collection",
     "title": "The Dala'il al-Khayrat of al-Juzuli",
     "artist": "Al-Hajj Hafiz Muhammad Nuri",
     "location": "Turkey",
@@ -14,7 +15,8 @@ layout: none
   },
   {
     "lunr_id": 1,
-    "link": "{{'/miaq/obj10/' | relative_url }}",
+    "link": "{{'/wax-collection/obj10/' | relative_url }}",
+    "collection": "wax-collection",
     "title": "Portrait of Hasan 'Ali Mirza Shuja al-Saltana",
     "artist": "Unknown",
     "location": "Iran",
@@ -24,7 +26,8 @@ layout: none
   },
   {
     "lunr_id": 2,
-    "link": "{{'/miaq/obj11/' | relative_url }}",
+    "link": "{{'/wax-collection/obj11/' | relative_url }}",
+    "collection": "wax-collection",
     "title": "Portrait of Sheikh Ali Mirza",
     "artist": "Unknown",
     "location": "Iran",
@@ -34,7 +37,8 @@ layout: none
   },
   {
     "lunr_id": 3,
-    "link": "{{'/miaq/obj2/' | relative_url }}",
+    "link": "{{'/wax-collection/obj2/' | relative_url }}",
+    "collection": "wax-collection",
     "title": "Portrait of Fath 'Ali Shah",
     "artist": "Mihr 'Ali",
     "location": "Iran",
@@ -44,7 +48,8 @@ layout: none
   },
   {
     "lunr_id": 4,
-    "link": "{{'/miaq/obj3/' | relative_url }}",
+    "link": "{{'/wax-collection/obj3/' | relative_url }}",
+    "collection": "wax-collection",
     "title": "Sulwan Al-Muta'a",
     "artist": "Unknown",
     "location": "Egypt",
@@ -54,7 +59,8 @@ layout: none
   },
   {
     "lunr_id": 5,
-    "link": "{{'/miaq/obj4/' | relative_url }}",
+    "link": "{{'/wax-collection/obj4/' | relative_url }}",
+    "collection": "wax-collection",
     "title": "Map of the World",
     "artist": "Unknown",
     "location": "Egypt",
@@ -64,7 +70,8 @@ layout: none
   },
   {
     "lunr_id": 6,
-    "link": "{{'/miaq/obj5/' | relative_url }}",
+    "link": "{{'/wax-collection/obj5/' | relative_url }}",
+    "collection": "wax-collection",
     "title": "Faridun crosses the River Dijla, fol. 33v",
     "artist": "Unknown",
     "location": "Iran",
@@ -74,7 +81,8 @@ layout: none
   },
   {
     "lunr_id": 7,
-    "link": "{{'/miaq/obj6/' | relative_url }}",
+    "link": "{{'/wax-collection/obj6/' | relative_url }}",
+    "collection": "wax-collection",
     "title": "Panel from Iran",
     "artist": "Unknown",
     "location": "Iran",
@@ -84,7 +92,8 @@ layout: none
   },
   {
     "lunr_id": 8,
-    "link": "{{'/miaq/obj7/' | relative_url }}",
+    "link": "{{'/wax-collection/obj7/' | relative_url }}",
+    "collection": "wax-collection",
     "title": "Diwan of Jami Manuscript",
     "artist": "Unknown",
     "location": "Iran",
@@ -94,7 +103,8 @@ layout: none
   },
   {
     "lunr_id": 9,
-    "link": "{{'/miaq/obj8/' | relative_url }}",
+    "link": "{{'/wax-collection/obj8/' | relative_url }}",
+    "collection": "wax-collection",
     "title": "Page from the Shahnama",
     "artist": "Unknown",
     "location": "Iran",
@@ -104,7 +114,8 @@ layout: none
   },
   {
     "lunr_id": 10,
-    "link": "{{'/miaq/obj9/' | relative_url }}",
+    "link": "{{'/wax-collection/obj9/' | relative_url }}",
+    "collection": "wax-collection",
     "title": "Silk Tapestry Depicting the story of Leila and Majnun",
     "artist": "Unknown",
     "location": "Iran",

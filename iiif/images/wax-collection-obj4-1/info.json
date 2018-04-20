@@ -1,0 +1,42 @@
+{
+  "@context": "http://iiif.io/api/image/2/context.json",
+  "@id": "/wax/iiif/images/wax-collection-obj4-1",
+  "protocol": "http://iiif.io/api/image",
+  "width": 4000,
+  "height": 5398,
+  "sizes": [
+    {
+      "width": 4000,
+      "height": 5398
+    },
+    {
+      "width": 250,
+      "height": 337
+    },
+    {
+      "width": 650,
+      "height": 877
+    }
+  ],
+  "profile": [
+    "http://iiif.io/api/image/2/level0.json",
+    {
+      "supports": [
+        "cors",
+        "sizeByWhListed",
+        "baseUriRedirect"
+      ]
+    }
+  ],
+  "tiles": [
+    {
+      "width": 512,
+      "scaleFactors": [
+        1,
+        2,
+        4,
+        8
+      ]
+    }
+  ]
+}

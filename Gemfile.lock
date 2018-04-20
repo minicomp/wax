@@ -1,9 +1,21 @@
+GIT
+  remote: https://github.com/mnyrop/wax_tasks.git
+  revision: cdac85918c9f3d24f2facae1f027c2bd137128e0
+  branch: alpha
+  specs:
+    wax_tasks (0.0.5)
+      colorize (~> 0.8)
+      html-proofer (~> 3)
+      jekyll (~> 3)
+      rake (~> 12)
+      wax_iiif (~> 0.0.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (5.1.5)
+    activesupport (5.2.0)
       concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (~> 0.7)
+      i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     addressable (2.5.2)
@@ -88,7 +100,7 @@ GEM
       rack (~> 1.5)
     rack-test (0.8.3)
       rack (>= 1.0, < 3)
-    rake (12.3.0)
+    rake (12.3.1)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -122,14 +134,8 @@ GEM
       ethon (>= 0.9.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    wax_iiif (0.0.1)
+    wax_iiif (0.0.2)
       mini_magick (>= 4.8)
-    wax_tasks (0.0.45)
-      colorize (~> 0.8)
-      html-proofer (~> 3.0)
-      jekyll (~> 3.7)
-      rake (~> 12.0)
-      wax_iiif (~> 0.0.1)
     xpath (3.0.0)
       nokogiri (~> 1.8)
     yell (2.0.7)
@@ -144,7 +150,8 @@ DEPENDENCIES
   rack-jekyll
   rspec
   selenium-webdriver
-  wax_tasks
+  wax_iiif
+  wax_tasks!
 
 BUNDLED WITH
    1.16.1
