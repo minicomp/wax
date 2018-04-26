@@ -11,6 +11,8 @@ before_script:
   - bundle exec jekyll build
 script:
   - bundle exec rake wax:test
+after_success:
+  - bundle exec rake wax:push:gh
 branches:
   except:
   - gh-pages
