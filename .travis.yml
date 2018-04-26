@@ -4,8 +4,12 @@ addons:
   chrome: stable
 rvm:
   - 2.4
+before_script:
+  - bundle exec rake wax:pagemaster qatar_collection
+  - bundle exec rake wax:iiif qatar_collection
+  - bundle exec rake wax:lunr
+  - bundle exec jekyll build
 script:
-  - bundle exec jekyll build -d _site/wax
   - bundle exec rake wax:test
 branches:
   except:

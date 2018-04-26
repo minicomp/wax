@@ -1,63 +1,63 @@
 {
   "@context": "http://iiif.io/api/presentation/2/context.json",
-  "@id": "/wax/iiif/collection/top.json",
+  "@id": "/iiif/collection/top.json",
   "@type": "sc:Collection",
   "label": "top",
   "manifests": [
     {
-      "@id": "/wax/iiif/wax-collection-obj1/manifest.json",
+      "@id": "/iiif/qatar_collection-obj1/manifest.json",
       "@type": "sc:Manifest",
-      "label": "wax-collection - obj1"
+      "label": "qatar_collection - obj1"
     },
     {
-      "@id": "/wax/iiif/wax-collection-obj10/manifest.json",
+      "@id": "/iiif/qatar_collection-obj10/manifest.json",
       "@type": "sc:Manifest",
-      "label": "wax-collection - obj10"
+      "label": "qatar_collection - obj10"
     },
     {
-      "@id": "/wax/iiif/wax-collection-obj11/manifest.json",
+      "@id": "/iiif/qatar_collection-obj11/manifest.json",
       "@type": "sc:Manifest",
-      "label": "wax-collection - obj11"
+      "label": "qatar_collection - obj11"
     },
     {
-      "@id": "/wax/iiif/wax-collection-obj2/manifest.json",
+      "@id": "/iiif/qatar_collection-obj2/manifest.json",
       "@type": "sc:Manifest",
-      "label": "wax-collection - obj2"
+      "label": "qatar_collection - obj2"
     },
     {
-      "@id": "/wax/iiif/wax-collection-obj3/manifest.json",
+      "@id": "/iiif/qatar_collection-obj3/manifest.json",
       "@type": "sc:Manifest",
-      "label": "wax-collection - obj3"
+      "label": "qatar_collection - obj3"
     },
     {
-      "@id": "/wax/iiif/wax-collection-obj4/manifest.json",
+      "@id": "/iiif/qatar_collection-obj4/manifest.json",
       "@type": "sc:Manifest",
-      "label": "wax-collection - obj4"
+      "label": "qatar_collection - obj4"
     },
     {
-      "@id": "/wax/iiif/wax-collection-obj5/manifest.json",
+      "@id": "/iiif/qatar_collection-obj5/manifest.json",
       "@type": "sc:Manifest",
-      "label": "wax-collection - obj5"
+      "label": "qatar_collection - obj5"
     },
     {
-      "@id": "/wax/iiif/wax-collection-obj6/manifest.json",
+      "@id": "/iiif/qatar_collection-obj6/manifest.json",
       "@type": "sc:Manifest",
-      "label": "wax-collection - obj6"
+      "label": "qatar_collection - obj6"
     },
     {
-      "@id": "/wax/iiif/wax-collection-obj7/manifest.json",
+      "@id": "/iiif/qatar_collection-obj7/manifest.json",
       "@type": "sc:Manifest",
-      "label": "wax-collection - obj7"
+      "label": "qatar_collection - obj7"
     },
     {
-      "@id": "/wax/iiif/wax-collection-obj8/manifest.json",
+      "@id": "/iiif/qatar_collection-obj8/manifest.json",
       "@type": "sc:Manifest",
-      "label": "wax-collection - obj8"
+      "label": "qatar_collection - obj8"
     },
     {
-      "@id": "/wax/iiif/wax-collection-obj9/manifest.json",
+      "@id": "/iiif/qatar_collection-obj9/manifest.json",
       "@type": "sc:Manifest",
-      "label": "wax-collection - obj9"
+      "label": "qatar_collection - obj9"
     }
   ]
 }

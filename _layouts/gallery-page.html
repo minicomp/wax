@@ -2,16 +2,16 @@
 layout: default
 ---
 <div class="wax-gallery">
-  {% for item in site.data[page.collection] %}
+  {% for item in site.data[page.gallery_group] %}
     <div class="gallery-item col-lg-3 col-md-4 col-sm-6 col-xs-12">
-        <a href="{{ site.baseurl }}/{{ page.collection }}/{{ item.pid }}/">
+        <a href="{{ site.baseurl }}/{{ page.gallery_group }}/{{ item.pid }}/">
           <div class="hovereffect">
-            <img class="img-responsive gallery-thumb" src="{{ site.baseurl }}/iiif/images/{{ page.collection }}-{{ item.pid }}-1/full/250,/0/default.jpg">
+            <img class="img-responsive gallery-thumb" src="{{ site.baseurl }}/iiif/images/{{ page.gallery_group }}-{{ item.pid }}-1/full/250,/0/default.jpg">
             <div class="overlay">
                <p class="info">{{ item.title }}</p>
             </div>
-          </a>
         </div>
+      </a>
     </div>
   {% endfor %}
 </div>

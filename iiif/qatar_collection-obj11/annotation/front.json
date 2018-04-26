@@ -1,0 +1,19 @@
+{
+  "@type": "oa:Annotation",
+  "@id": "/iiif/qatar_collection-obj11/annotation/front.json",
+  "motivation": "sc:painting",
+  "resource": {
+    "@id": "/iiif/images/qatar_collection-obj11-1/full/full/0/default.jpg",
+    "@type": "dcterms:Image",
+    "format": "image/jpeg",
+    "service": {
+      "@context": "http://iiif.io/api/image/2/context.json",
+      "@id": "/iiif/images/qatar_collection-obj11-1",
+      "profile": "http://iiif.io/api/image/2/level0.json"
+    },
+    "width": 2708,
+    "height": 4671
+  },
+  "on": "/iiif/qatar_collection-obj11/canvas/front.json",
+  "@context": "http://iiif.io/api/presentation/2/context.json"
+}

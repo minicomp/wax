@@ -20,7 +20,6 @@ search_tests.each do |search|
         before(:all) do
           @search_bar.set term
           @result_link = first(".result").first("a")['href']
-          puts @result_link
         end
         after(:all) do
           visit(baseurl + "/" + search_page + perma_ext)

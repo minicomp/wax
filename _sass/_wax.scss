@@ -1,16 +1,46 @@
-@import url('https://fonts.googleapis.com/css?family=Karma:400,500,600,700&subset=latin-ext');
+@import 'variables';
 
-$accent-color: #f44441;
-$serif: 'Karma';
-$sans-serif: 'sans-serif';
+html, body {
+  margin:0;
+  padding:0;
+  height:100%;
+  width:100%;
+}
 
+#main{
+  position: relative;
+}
+
+#title a{
+  font-size:1.5em !important;
+}
+.icon {
+  display:inline-flex;align-self:center;
+}
+.icon svg, .icon img {
+  height:1.3em;width:1.3em;
+}
+.icon.baseline svg, .icon img {
+  top:.1em;position:relative;
+}
+
+#header-block{
+  border-bottom: 1px solid grey;
+  padding: 20px 0px 20px 0px;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 10000;
+  position: fixed;
+}
+#header-spacer {
+  height:200px;
+}
 
 .sans-serif{ font-family: $sans-serif !important; }
 .serif{ font-family: $serif, serif !important; }
 
 p a { color: $accent-color !important; }
-figcaption a { color: $accent-color !important; }
-figcaption{ padding: 10px 0 10px 0; }
 td a { color: $accent-color !important; }
 .btn-outline-primary {
   color: $accent-color !important;
@@ -21,21 +51,45 @@ td a { color: $accent-color !important; }
   }
 }
 
-
-.banner {
-  width: 100vw;
-  height: 450px;
-  margin-top: -2em;
-  z-index: 1;
+#wax-banner{
   position: relative;
-  left: calc(-1 * (100vw - 100%) / 2);
-  overflow: hidden;
-  img{
-    object-fit: none;
-    width: 100vw;
+  margin: 20px 0px 100px 0px;
+  .banner-item{
+    position: absolute;
+    transition: opacity 1s;
+    background-color: #fff;
+    opacity: 0;
+    &:first-child {
+      z-index: 2; /* frontmost */
+      opacity: 1;
+    }
+    &:last-child {
+      z-index: 1; /* behind current slide */
+      opacity: 1;
+    }
+    .banner-img {
+      width: 100%;
+      height: 450px;
+      z-index: -1;
+      overflow: hidden;
+      margin-bottom: 20px;
+      img {
+        z-index: -1;
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+    }
+    .banner-caption {
+      font-family: $sans-serif !important;
+      font-size: 1em;
+      margin-top: 1em;
+      a {
+        color: $accent-color !important;
+      }
+    }
   }
 }
-
 .container {
   p, ul {
     margin: 2.5em 0em 2.5em 0em;
@@ -43,13 +97,6 @@ td a { color: $accent-color !important; }
     font-size: 1.25em;
   }
   p{font-family: $serif, serif;}
-}
-
-#iiif-banner{
-  height: 450px;
-  .leaflet-control-container{
-    display:none !important;
-  }
 }
 
 #iiif-viewer{
