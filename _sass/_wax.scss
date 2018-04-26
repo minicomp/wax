@@ -1,6 +1,40 @@
 @import url('https://fonts.googleapis.com/css?family=Karma:400,500,600,700&subset=latin-ext');
-.sans-serif{ font-family: sans-serif !important; }
-.serif{ font-family: 'Karma', serif !important; }
+
+$accent-color: #f44441;
+$serif: 'Karma';
+$sans-serif: 'sans-serif';
+
+
+.sans-serif{ font-family: $sans-serif !important; }
+.serif{ font-family: $serif, serif !important; }
+
+p a { color: $accent-color !important; }
+figcaption a { color: $accent-color !important; }
+figcaption{ padding: 10px 0 10px 0; }
+td a { color: $accent-color !important; }
+.btn-outline-primary {
+  color: $accent-color !important;
+  border-color: $accent-color !important;
+  &:hover{
+    background-color: $accent-color !important;
+    color: #fff !important;
+  }
+}
+
+
+.banner {
+  width: 100vw;
+  height: 450px;
+  margin-top: -2em;
+  z-index: 1;
+  position: relative;
+  left: calc(-1 * (100vw - 100%) / 2);
+  overflow: hidden;
+  img{
+    object-fit: none;
+    width: 100vw;
+  }
+}
 
 .container {
   p, ul {
@@ -8,7 +42,7 @@
     max-width: 800px;
     font-size: 1.25em;
   }
-  p{font-family: 'Karma', serif;}
+  p{font-family: $serif, serif;}
 }
 
 #iiif-banner{
@@ -43,11 +77,30 @@
 .search-block{
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
+  .btn-default{
+    height: 102%;
+    border-radius: 10px 0 0 10px;
+  }
+  #search{
+    border-style: groove;
+    border-width: 2px;
+    &:focus {
+        box-shadow: none !important;
+        border-color: #dfdfdf;
+    }
+  }
   #results{
     .result{
-      padding: 1rem 1rem 1rem 3rem;
-      h5{margin-top: 1rem;}
-      p{margin-top: 1rem;}
+      margin: 1rem 1rem 1rem 3rem;
+      padding: 0;
+      img{
+        float: left;
+      }
+      p {
+        display: inline-block;
+        padding: none !important;
+        margin: 1rem 0 0 1rem !important;
+      }
     }
   }
 }
@@ -72,14 +125,6 @@
       object-position: 50% 20%;
       width: 250px;
       height: 200px;
-      -webkit-transition: filter .2s;
-      transition: filter .2s;
-      -webkit-filter: grayscale(.5);
-      filter: grayscale(.5);
-      &:hover{
-        -webkit-filter: grayscale(0);
-        filter: grayscale(0);
-      }
     }
     .gallery-text{
       margin: 10px 0 10px 0;
@@ -94,4 +139,58 @@
   object-position: 50% 20%;
   width: 80px;
   height: 80px;
+}
+
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background-color: $accent-color;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  display: table;
+  height: 200px;
+}
+
+.hovereffect:hover .overlay {
+  opacity: .7;
+}
+
+.hovereffect .info {
+  text-decoration: none;
+  color: #fff;
+  background-color: transparent;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  font-weight: normal;
+  overflow: hidden;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 20px 0 20px;
+}
+
+.hovereffect:hover .info {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
