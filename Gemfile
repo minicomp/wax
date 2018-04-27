@@ -6,6 +6,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
   gem 'capybara'
+  gem 'puma'
   gem 'rack-jekyll'
   gem 'wax_tasks', :git => 'https://github.com/mnyrop/wax_tasks.git', :branch => 'alpha'
   gem 'wax_iiif'

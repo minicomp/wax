@@ -93,6 +93,7 @@ GEM
     pathutil (0.16.1)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.2)
+    puma (3.11.4)
     rack (1.6.10)
     rack-jekyll (0.5.0)
       jekyll (>= 1.3)
@@ -147,6 +148,7 @@ DEPENDENCIES
   capybara
   chromedriver-helper
   jekyll (~> 3.8)
+  puma
   rack-jekyll
   rspec
   selenium-webdriver
