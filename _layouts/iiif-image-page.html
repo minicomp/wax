@@ -2,35 +2,42 @@
 layout: default
 ---
 
-{% include iiif_image.html collection=page.collection pid=page.pid %}
-{% include pagination.html collection=page.collection %}
+{% include iiif_image.html collection=page.collection pid=page.pid pagination=true %}
 
-<div class="table-responsive">
-  <table class="table meta table-striped">
-    {% for item in site.data.metadata_table %}
-    <tr class='meta-row'>
-      <td class='meta-label'>
-      {% if item.label %}{{ item.label }}
-      {% else %}
-        {{ item.field | capitalize | replace: "-", " " | replace: "_", " " }}
-      {% endif %}
-      </td>
-      <td class='meta-field'>
-      {% if item.link %}
-        {% assign test = item.link | slice: 0,3 | upcase %}
-        {% if test == 'HTTP' %}
-          {% assign link = item.link %}
-        {% else %}
-          {% assign link = page[item.link] %}
-        {% endif %}
-        <a href="{{ link }}">
-          {{ page[item.field] }}
-        </a>
-      {% else %}
-        {{ page[item.field] }}
-      {% endif %}
-      </td>
-    </tr>
-    {% endfor %}
-  </table>
+
+<div class="metadata-block">
+  <div class="meta">
+    <span class="label">Title: </span>
+    <span class="value">{{ page.title }}</span>
+  </div>
+
+  <div class="meta">
+    <span class="label">Artist: </span>
+    <span class="value">{{ page.artist }}</span>
+  </div>
+
+  <div class="meta">
+    <span class="label">Location: </span>
+    <span class="value">{{ page.location }}</span>
+  </div>
+
+  <div class="meta">
+    <span class="label">Date: </span>
+    <span class="value">{{ page._date }}</span>
+  </div>
+
+  <div class="meta">
+    <span class="label">Object Type: </span>
+    <span class="value">{{ page.object_type }}</span>
+  </div>
+
+  <div class="meta">
+    <span class="label">Current Location: </span>
+    <span class="value">{{ page.current_location }}</span>
+  </div>
+
+  <div class="meta">
+    <span class="label">Source: </span>
+    <span class="value">{{ page.wiki_link }}</span>
+  </div>
 </div>
