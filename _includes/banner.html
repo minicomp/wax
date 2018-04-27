@@ -7,7 +7,7 @@
       {%- endcapture -%}
       {% assign object = site.data[item.collection] | where: 'pid', item.pid | first %}
       {%- capture caption -%}
-        {{ object.artist }}, <a href="{{ site.baseurl }}/{{ item.collection }}/{{ item.pid }}">{{ object.title }}</a>. {{ object.\_date}} {{ object.object_type  }}, {{ object.location }}. {{ object.current_location }}.
+        {{ object.artist }}, <a href="{{ site.baseurl }}/{{ item.collection }}/{{ item.pid }}/">{{ object.title }}</a>. {{ object.\_date}} {{ object.object_type  }}, {{ object.location }}. {{ object.current_location }}.
       {%- endcapture -%}
 
 
@@ -26,7 +26,7 @@
       {% endcapture %}
 
       <div class="banner-item">
-        <a href="{{ site.baseurl }}/{{ item.collection }}/{{ item.pid }}">
+        <a href="{{ site.baseurl }}/{{ item.collection }}/{{ item.pid }}/">
           <div class="banner-img">
               <img src="{{ image_uri }}" style="transform: {{ transform-css }};"/>
           </div>
