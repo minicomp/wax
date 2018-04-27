@@ -7,7 +7,7 @@ rvm:
 before_script:
   - bundle exec rake wax:pagemaster qatar_collection
   - bundle exec rake wax:lunr
-  - bundle exec jekyll build -c _site/wax
+  - bundle exec jekyll build -d _site/wax
 script:
   - bundle exec rake wax:test
 branches:
