@@ -1,41 +1,41 @@
 {
   "@context": "http://iiif.io/api/presentation/2/context.json",
-  "@id": "/iiif/qatar_collection-obj6/manifest.json",
+  "@id": "/wax/iiif/qatar_collection-obj6/manifest.json",
   "@type": "sc:Manifest",
   "label": "qatar_collection - obj6",
-  "thumbnail": "/iiif/images/qatar_collection-obj6-1/full/250,/0/default.jpg",
+  "thumbnail": "/wax/iiif/images/qatar_collection-obj6-1/full/250,/0/default.jpg",
   "viewingDirection": "left-to-right",
   "viewingHint": "individuals",
   "sequences": [
     {
-      "@id": "/iiif/qatar_collection-obj6/sequence/default.json",
+      "@id": "/wax/iiif/qatar_collection-obj6/sequence/default.json",
       "@type": "sc:Sequence",
       "canvases": [
         {
           "@type": "sc:Canvas",
-          "@id": "/iiif/qatar_collection-obj6/canvas/front.json",
+          "@id": "/wax/iiif/qatar_collection-obj6/canvas/front.json",
           "label": "front",
           "width": 4001,
           "height": 2840,
-          "thumbnail": "/iiif/images/qatar_collection-obj6-1/full/250,/0/default.jpg",
+          "thumbnail": "/wax/iiif/images/qatar_collection-obj6-1/full/250,/0/default.jpg",
           "images": [
             {
               "@type": "oa:Annotation",
-              "@id": "/iiif/qatar_collection-obj6/annotation/front.json",
+              "@id": "/wax/iiif/qatar_collection-obj6/annotation/front.json",
               "motivation": "sc:painting",
               "resource": {
-                "@id": "/iiif/images/qatar_collection-obj6-1/full/full/0/default.jpg",
+                "@id": "/wax/iiif/images/qatar_collection-obj6-1/full/full/0/default.jpg",
                 "@type": "dcterms:Image",
                 "format": "image/jpeg",
                 "service": {
                   "@context": "http://iiif.io/api/image/2/context.json",
-                  "@id": "/iiif/images/qatar_collection-obj6-1",
+                  "@id": "/wax/iiif/images/qatar_collection-obj6-1",
                   "profile": "http://iiif.io/api/image/2/level0.json"
                 },
                 "width": 4001,
                 "height": 2840
               },
-              "on": "/iiif/qatar_collection-obj6/canvas/front.json"
+              "on": "/wax/iiif/qatar_collection-obj6/canvas/front.json"
             }
           ]
         }

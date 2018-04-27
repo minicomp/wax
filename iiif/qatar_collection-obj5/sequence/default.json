@@ -1,32 +1,32 @@
 {
-  "@id": "/iiif/qatar_collection-obj5/sequence/default.json",
+  "@id": "/wax/iiif/qatar_collection-obj5/sequence/default.json",
   "@type": "sc:Sequence",
   "canvases": [
     {
       "@type": "sc:Canvas",
-      "@id": "/iiif/qatar_collection-obj5/canvas/front.json",
+      "@id": "/wax/iiif/qatar_collection-obj5/canvas/front.json",
       "label": "front",
       "width": 3329,
       "height": 4993,
-      "thumbnail": "/iiif/images/qatar_collection-obj5-1/full/250,/0/default.jpg",
+      "thumbnail": "/wax/iiif/images/qatar_collection-obj5-1/full/250,/0/default.jpg",
       "images": [
         {
           "@type": "oa:Annotation",
-          "@id": "/iiif/qatar_collection-obj5/annotation/front.json",
+          "@id": "/wax/iiif/qatar_collection-obj5/annotation/front.json",
           "motivation": "sc:painting",
           "resource": {
-            "@id": "/iiif/images/qatar_collection-obj5-1/full/full/0/default.jpg",
+            "@id": "/wax/iiif/images/qatar_collection-obj5-1/full/full/0/default.jpg",
             "@type": "dcterms:Image",
             "format": "image/jpeg",
             "service": {
               "@context": "http://iiif.io/api/image/2/context.json",
-              "@id": "/iiif/images/qatar_collection-obj5-1",
+              "@id": "/wax/iiif/images/qatar_collection-obj5-1",
               "profile": "http://iiif.io/api/image/2/level0.json"
             },
             "width": 3329,
             "height": 4993
           },
-          "on": "/iiif/qatar_collection-obj5/canvas/front.json"
+          "on": "/wax/iiif/qatar_collection-obj5/canvas/front.json"
         }
       ]
     }

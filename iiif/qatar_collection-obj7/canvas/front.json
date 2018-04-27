@@ -1,28 +1,28 @@
 {
   "@type": "sc:Canvas",
-  "@id": "/iiif/qatar_collection-obj7/canvas/front.json",
+  "@id": "/wax/iiif/qatar_collection-obj7/canvas/front.json",
   "label": "front",
   "width": 4081,
   "height": 5441,
-  "thumbnail": "/iiif/images/qatar_collection-obj7-1/full/250,/0/default.jpg",
+  "thumbnail": "/wax/iiif/images/qatar_collection-obj7-1/full/250,/0/default.jpg",
   "images": [
     {
       "@type": "oa:Annotation",
-      "@id": "/iiif/qatar_collection-obj7/annotation/front.json",
+      "@id": "/wax/iiif/qatar_collection-obj7/annotation/front.json",
       "motivation": "sc:painting",
       "resource": {
-        "@id": "/iiif/images/qatar_collection-obj7-1/full/full/0/default.jpg",
+        "@id": "/wax/iiif/images/qatar_collection-obj7-1/full/full/0/default.jpg",
         "@type": "dcterms:Image",
         "format": "image/jpeg",
         "service": {
           "@context": "http://iiif.io/api/image/2/context.json",
-          "@id": "/iiif/images/qatar_collection-obj7-1",
+          "@id": "/wax/iiif/images/qatar_collection-obj7-1",
           "profile": "http://iiif.io/api/image/2/level0.json"
         },
         "width": 4081,
         "height": 5441
       },
-      "on": "/iiif/qatar_collection-obj7/canvas/front.json"
+      "on": "/wax/iiif/qatar_collection-obj7/canvas/front.json"
     }
   ],
   "@context": "http://iiif.io/api/presentation/2/context.json"

@@ -6,13 +6,10 @@ rvm:
   - 2.4
 before_script:
   - bundle exec rake wax:pagemaster qatar_collection
-  - bundle exec rake wax:iiif qatar_collection
   - bundle exec rake wax:lunr
-  - bundle exec jekyll build
+  - bundle exec jekyll build -c _site/wax
 script:
   - bundle exec rake wax:test
-after_success:
-  - bundle exec rake wax:push:gh
 branches:
   except:
   - gh-pages

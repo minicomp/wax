@@ -1,7 +1,7 @@
 title:          Minicomp/Wax
 description:    a jekyll theme for minimal exhibitions
 url:            ''
-baseurl:        ''
+baseurl:        '/wax'
 
 # build settings
 permalink:      pretty

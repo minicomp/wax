@@ -1,61 +1,61 @@
 {
   "@context": "http://iiif.io/api/presentation/2/context.json",
-  "@id": "/iiif/collection/top.json",
+  "@id": "/wax/iiif/collection/top.json",
   "@type": "sc:Collection",
   "label": "top",
   "manifests": [
     {
-      "@id": "/iiif/qatar_collection-obj1/manifest.json",
+      "@id": "/wax/iiif/qatar_collection-obj1/manifest.json",
       "@type": "sc:Manifest",
       "label": "qatar_collection - obj1"
     },
     {
-      "@id": "/iiif/qatar_collection-obj10/manifest.json",
+      "@id": "/wax/iiif/qatar_collection-obj10/manifest.json",
       "@type": "sc:Manifest",
       "label": "qatar_collection - obj10"
     },
     {
-      "@id": "/iiif/qatar_collection-obj11/manifest.json",
+      "@id": "/wax/iiif/qatar_collection-obj11/manifest.json",
       "@type": "sc:Manifest",
       "label": "qatar_collection - obj11"
     },
     {
-      "@id": "/iiif/qatar_collection-obj2/manifest.json",
+      "@id": "/wax/iiif/qatar_collection-obj2/manifest.json",
       "@type": "sc:Manifest",
       "label": "qatar_collection - obj2"
     },
     {
-      "@id": "/iiif/qatar_collection-obj3/manifest.json",
+      "@id": "/wax/iiif/qatar_collection-obj3/manifest.json",
       "@type": "sc:Manifest",
       "label": "qatar_collection - obj3"
     },
     {
-      "@id": "/iiif/qatar_collection-obj4/manifest.json",
+      "@id": "/wax/iiif/qatar_collection-obj4/manifest.json",
       "@type": "sc:Manifest",
       "label": "qatar_collection - obj4"
     },
     {
-      "@id": "/iiif/qatar_collection-obj5/manifest.json",
+      "@id": "/wax/iiif/qatar_collection-obj5/manifest.json",
       "@type": "sc:Manifest",
       "label": "qatar_collection - obj5"
     },
     {
-      "@id": "/iiif/qatar_collection-obj6/manifest.json",
+      "@id": "/wax/iiif/qatar_collection-obj6/manifest.json",
       "@type": "sc:Manifest",
       "label": "qatar_collection - obj6"
     },
     {
-      "@id": "/iiif/qatar_collection-obj7/manifest.json",
+      "@id": "/wax/iiif/qatar_collection-obj7/manifest.json",
       "@type": "sc:Manifest",
       "label": "qatar_collection - obj7"
     },
     {
-      "@id": "/iiif/qatar_collection-obj8/manifest.json",
+      "@id": "/wax/iiif/qatar_collection-obj8/manifest.json",
       "@type": "sc:Manifest",
       "label": "qatar_collection - obj8"
     },
     {
-      "@id": "/iiif/qatar_collection-obj9/manifest.json",
+      "@id": "/wax/iiif/qatar_collection-obj9/manifest.json",
       "@type": "sc:Manifest",
       "label": "qatar_collection - obj9"
     }
