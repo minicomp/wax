@@ -3,3 +3,5 @@ wax_tasks
 .sass-cache
 .jekyll-metadata
 .DS_Store
+_qatar_collection
+Gemfile.lock

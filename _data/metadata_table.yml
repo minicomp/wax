@@ -1,0 +1,9 @@
+- field: title
+- field: artist
+- field: location
+- field: _date
+- field: object_type
+- field: current_location
+- field: wiki_link
+  label: Source
+  link: wiki_link

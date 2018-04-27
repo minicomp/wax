@@ -1,0 +1,39 @@
+<div class="container-fluid" id="header-block">
+  <div class="container">
+    <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center nopadding">
+      <span id="title">
+        <a href="{{ site.baseurl }}/" class="navbar-brand d-flex w-50 mr-auto" title="Home">
+          <div class="icon baseline"><img src="{{ site.baseurl }}/assets/logo.png"/></div>
+          {{ site.title | newline_to_br }}
+        </a>
+      </span>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+
+        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+          {% for item in site.menu %}
+            {% if item.sub %}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ item.label }}{% unless forloop.last %}&nbsp;&nbsp;&nbsp;/{% endunless %}
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                {% for sub in item.sub %}
+                <a class="dropdown-item" href="{{ site.baseurl }}{{ sub.link }}">{{ sub.label }}</a>
+                {% endfor %}
+              </div>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ site.baseurl }}{{ item.link }}">{{ item.label }}{% unless forloop.last %}&nbsp;&nbsp;&nbsp;/{% endunless %}</a>
+            </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+<div id="header-spacer"></div>

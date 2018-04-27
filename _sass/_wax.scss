@@ -1,21 +1,102 @@
-@import url('https://fonts.googleapis.com/css?family=Karma:400,500,600,700&subset=latin-ext');
-.sans-serif{ font-family: sans-serif !important; }
-.serif{ font-family: 'Karma', serif !important; }
+@import 'variables';
 
+html, body {
+  margin:0;
+  padding:0;
+  height:100%;
+  width:100%;
+}
+
+#main{
+  position: relative;
+}
+
+#title a{
+  font-size:1.5em !important;
+}
+.icon {
+  display:inline-flex;align-self:center;
+}
+.icon svg, .icon img {
+  height:1.3em;width:1.3em;
+}
+.icon.baseline svg, .icon img {
+  top:.1em;position:relative;
+}
+
+#header-block{
+  border-bottom: 1px solid grey;
+  padding: 20px 0px 20px 0px;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 10000;
+  position: fixed;
+}
+#header-spacer {
+  height:200px;
+}
+
+.sans-serif{ font-family: $sans-serif !important; }
+.serif{ font-family: $serif, serif !important; }
+
+p a { color: $accent-color !important; }
+td a { color: $accent-color !important; }
+.btn-outline-primary {
+  color: $accent-color !important;
+  border-color: $accent-color !important;
+  &:hover{
+    background-color: $accent-color !important;
+    color: #fff !important;
+  }
+}
+
+#wax-banner{
+  position: relative;
+  margin: 20px 0px 100px 0px;
+  .banner-item{
+    position: absolute;
+    transition: opacity 1s;
+    background-color: #fff;
+    opacity: 0;
+    &:first-child {
+      z-index: 2; /* frontmost */
+      opacity: 1;
+    }
+    &:last-child {
+      z-index: 1; /* behind current slide */
+      opacity: 1;
+    }
+    .banner-img {
+      width: 100%;
+      height: 450px;
+      z-index: -1;
+      overflow: hidden;
+      margin-bottom: 20px;
+      img {
+        z-index: -1;
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+    }
+    .banner-caption {
+      font-family: $sans-serif !important;
+      font-size: 1em;
+      margin-top: 1em;
+      a {
+        color: $accent-color !important;
+      }
+    }
+  }
+}
 .container {
   p, ul {
     margin: 2.5em 0em 2.5em 0em;
     max-width: 800px;
     font-size: 1.25em;
   }
-  p{font-family: 'Karma', serif;}
-}
-
-#iiif-banner{
-  height: 450px;
-  .leaflet-control-container{
-    display:none !important;
-  }
+  p{font-family: $serif, serif;}
 }
 
 #iiif-viewer{
@@ -43,11 +124,120 @@
 .search-block{
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
-  #results{
-    .result{
-      padding: 1rem 1rem 1rem 3rem;
-      h5{margin-top: 1rem;}
-      p{margin-top: 1rem;}
+  .btn-default{
+    height: 102%;
+    border-radius: 10px 0 0 10px;
+  }
+  #search{
+    border-style: groove;
+    border-width: 2px;
+    &:focus {
+        box-shadow: none !important;
+        border-color: #dfdfdf;
     }
   }
+  #results{
+    .result{
+      margin: 1rem 1rem 1rem 3rem;
+      padding: 0;
+      img{
+        float: left;
+      }
+      p {
+        display: inline-block;
+        padding: none !important;
+        margin: 1rem 0 0 1rem !important;
+      }
+    }
+  }
+}
+
+/* metadata item table */
+.meta-label{width:25%}
+.meta-field{overflow-x: scroll;}
+
+
+/* gallery cards */
+.wax-gallery {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  .gallery-item {
+    padding:.5em;
+    width: 250px;
+    margin: 1em;
+    .gallery-thumb{
+      object-fit: cover;
+      object-position: 50% 20%;
+      width: 250px;
+      height: 200px;
+    }
+    .gallery-text{
+      margin: 10px 0 10px 0;
+    }
+  }
+}
+
+.navbar-toggler{ margin: 1em; }
+
+.sq-thumb-sm{
+  object-fit: cover;
+  object-position: 50% 20%;
+  width: 80px;
+  height: 80px;
+}
+
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background-color: $accent-color;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  display: table;
+  height: 200px;
+}
+
+.hovereffect:hover .overlay {
+  opacity: .7;
+}
+
+.hovereffect .info {
+  text-decoration: none;
+  color: #fff;
+  background-color: transparent;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  font-weight: normal;
+  overflow: hidden;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 20px 0 20px;
+}
+
+.hovereffect:hover .info {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }

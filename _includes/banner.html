@@ -1,0 +1,41 @@
+<div id="wax-banner">
+  {% assign i = 1 %}
+  {% for item in include.banner %}
+
+      {%- capture image_uri -%}
+        {{ site.baseurl }}/iiif/images/{{ item.collection }}-{{ item.pid }}-1/full/1140,/0/default.jpg
+      {%- endcapture -%}
+      {% assign object = site.data[item.collection] | where: 'pid', item.pid | first %}
+      {%- capture caption -%}
+        {{ object.artist }}, <a href="{{ site.baseurl }}/{{ item.collection }}/{{ item.pid }}">{{ object.title }}</a>. {{ object.\_date}} {{ object.object_type  }}, {{ object.location }}. {{ object.current_location }}.
+      {%- endcapture -%}
+
+
+      {% capture transform-css %}
+        {% if item.zoom == 1 %} scale(1.5,1.5)
+        {% elsif item.zoom == 2 %} scale(2,2)
+        {% else %} scale(1.1, 1.1)
+        {% endif %}
+        {% if item.x == 'left' %} translateX(5%)
+        {% elsif item.x == 'right' %} translateX(-5%)
+        {% endif %}
+        {% if item.y == 'center' %} translateY(-35%)
+        {% elsif item.y == 'bottom' %} translateY(-65%)
+        {% else %} translateY(-5%)
+        {% endif %}
+      {% endcapture %}
+
+      <div class="banner-item">
+        <a href="{{ site.baseurl }}/{{ item.collection }}/{{ item.pid }}">
+          <div class="banner-img">
+              <img src="{{ image_uri }}" style="transform: {{ transform-css }};"/>
+          </div>
+        </a>
+        <span class="banner-caption">{{ caption }}</span>
+      </div>
+
+    {% assign i = i | plus: 1 %}
+  {% endfor %}
+</div>
+
+<script type="text/javascript" src="{{ site.baseurl }}/js/fading-banner.js"></script>

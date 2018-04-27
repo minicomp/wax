@@ -1,22 +1,34 @@
+GIT
+  remote: https://github.com/mnyrop/wax_tasks.git
+  revision: 74544bf7f27313784cb4f74c77173d37bddc4efa
+  branch: alpha
+  specs:
+    wax_tasks (0.0.5)
+      colorize (~> 0.8)
+      html-proofer (~> 3)
+      jekyll (~> 3)
+      rake (~> 12)
+      wax_iiif (~> 0.0.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (5.1.5)
+    activesupport (5.2.0)
       concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (~> 0.7)
+      i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
-    capybara (2.18.0)
+    capybara (3.0.2)
       addressable
       mini_mime (>= 0.1.3)
-      nokogiri (>= 1.3.3)
-      rack (>= 1.0.0)
-      rack-test (>= 0.5.4)
-      xpath (>= 2.0, < 4.0)
+      nokogiri (~> 1.8)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      xpath (~> 3.0)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
     chromedriver-helper (1.2.0)
@@ -47,7 +59,7 @@ GEM
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     io-like (0.3.0)
-    jekyll (3.7.3)
+    jekyll (3.8.0)
       addressable (~> 2.4)
       colorator (~> 1.0)
       em-websocket (~> 0.5)
@@ -81,14 +93,15 @@ GEM
     pathutil (0.16.1)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.2)
-    rack (1.6.9)
+    puma (3.11.4)
+    rack (1.6.10)
     rack-jekyll (0.5.0)
       jekyll (>= 1.3)
       listen (>= 1.3)
       rack (~> 1.5)
-    rack-test (0.8.3)
+    rack-test (1.0.0)
       rack (>= 1.0, < 3)
-    rake (12.3.0)
+    rake (12.3.1)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -109,7 +122,7 @@ GEM
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
     safe_yaml (1.0.4)
-    sass (3.5.5)
+    sass (3.5.6)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -122,14 +135,8 @@ GEM
       ethon (>= 0.9.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    wax_iiif (0.0.1)
+    wax_iiif (0.0.2)
       mini_magick (>= 4.8)
-    wax_tasks (0.0.45)
-      colorize (~> 0.8)
-      html-proofer (~> 3.0)
-      jekyll (~> 3.7)
-      rake (~> 12.0)
-      wax_iiif (~> 0.0.1)
     xpath (3.0.0)
       nokogiri (~> 1.8)
     yell (2.0.7)
@@ -140,11 +147,13 @@ PLATFORMS
 DEPENDENCIES
   capybara
   chromedriver-helper
-  jekyll (~> 3.7.3)
+  jekyll (~> 3.8)
+  puma
   rack-jekyll
   rspec
   selenium-webdriver
-  wax_tasks
+  wax_iiif
+  wax_tasks!
 
 BUNDLED WITH
    1.16.1

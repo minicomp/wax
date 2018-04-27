@@ -1,30 +1,56 @@
-title:          Minicomp/Wax ✕ MIA Qatar
+title:          Minicomp/Wax
 description:    a jekyll theme for minimal exhibitions
 url:            ''
 baseurl:        '/wax'
-gh-baseurl:     '/wax'
 
 # build settings
-markdown:       kramdown
 permalink:      pretty
 lunr_language:  false
 exclude:        [Gemfile*, node_modules, vendor, Rakefile]
 
 # wax collection settings
 collections:
-  miaq:
-    output:     true
-    keep_order: true
-    source:     miaq.csv
-    layout:     iiif-image-page
+  pages:
+    output:       true
+  exhibits:
+    output:       true
+  qatar_collection:
+    output:       true
+    keep_order:   true
+    source:       qatar_collection.csv
+    layout:       iiif-image-page
     lunr_index:
-      content:  false
-      fields:   [title, artist, location, _date, object_type, current_location]
+      content:    false
+      fields:
+        - pid
+        - title
+        - artist
+        - location
+        - _date
+        - object_type
+        - current_location
+
+# menu settings
+menu:
+  - label: About
+    sub:
+    - label: Wax
+      link: /about/
+    - label: Minicomp
+      link: /minicomp/
+    - label: Credits
+      link: /credits/
+  - label: Documentation
+    link: /docs/
+  - label: Exhibits
+    link: /exhibits/
+  - label: Browse
+    link: /browse/
 
 # search tests
 quoll:
   main:
-    page: 'collection'
+    page: 'browse'
     terms:
       - iran
       - map

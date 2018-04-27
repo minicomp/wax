@@ -13,6 +13,7 @@ $.getJSON("{{ site.baseurl }}/js/lunr-index.json", function(index_json) {
     index.addField('_date');
     index.addField('object_type');
     index.addField('current_location');
+    index.addField('collection');
     // add docs
     for (i in store) { index.addDoc(store[i]);}
     $('input#search').on('keyup', function () {
@@ -34,7 +35,7 @@ $.getJSON("{{ site.baseurl }}/js/lunr-index.json", function(index_json) {
         if (item._date){ meta += item._date + '. ';}
         if (item.object_type){ meta += item.object_type + '. ';}
 
-        var result = '<div class="result list-group-item"><a href="' + link + '"><p class="mb-1">' + title + '</a>. ' + meta + '</p></div>';
+        var result = '<div class="result"><img class="sq-thumb-sm" src="{{ site.baseurl }}/iiif/images/' + item.collection + '-' + item.pid + '-1/full/250,/0/default.jpg"/>&nbsp;&nbsp;&nbsp;<p><a href="' + link + '">' + title + '</a>.<br>' + meta + '</p></div>';
         results_div.append(result);
       }
     });

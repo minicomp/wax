@@ -4,7 +4,9 @@ layout: none
 [
   {
     "lunr_id": 0,
-    "link": "{{'/miaq/obj1/' | relative_url }}",
+    "link": "{{'/qatar_collection/obj1/' | relative_url }}",
+    "collection": "qatar_collection",
+    "pid": "obj1",
     "title": "The Dala'il al-Khayrat of al-Juzuli",
     "artist": "Al-Hajj Hafiz Muhammad Nuri",
     "location": "Turkey",
@@ -14,7 +16,9 @@ layout: none
   },
   {
     "lunr_id": 1,
-    "link": "{{'/miaq/obj10/' | relative_url }}",
+    "link": "{{'/qatar_collection/obj10/' | relative_url }}",
+    "collection": "qatar_collection",
+    "pid": "obj10",
     "title": "Portrait of Hasan 'Ali Mirza Shuja al-Saltana",
     "artist": "Unknown",
     "location": "Iran",
@@ -24,7 +28,9 @@ layout: none
   },
   {
     "lunr_id": 2,
-    "link": "{{'/miaq/obj11/' | relative_url }}",
+    "link": "{{'/qatar_collection/obj11/' | relative_url }}",
+    "collection": "qatar_collection",
+    "pid": "obj11",
     "title": "Portrait of Sheikh Ali Mirza",
     "artist": "Unknown",
     "location": "Iran",
@@ -34,17 +40,9 @@ layout: none
   },
   {
     "lunr_id": 3,
-    "link": "{{'/miaq/obj2/' | relative_url }}",
-    "title": "Portrait of Fath 'Ali Shah",
-    "artist": "Mihr 'Ali",
-    "location": "Iran",
-    "_date": "1816",
-    "object_type": "portrait",
-    "current_location": "The Museum of Islamic Art, Qatar"
-  },
-  {
-    "lunr_id": 4,
-    "link": "{{'/miaq/obj3/' | relative_url }}",
+    "link": "{{'/qatar_collection/obj2/' | relative_url }}",
+    "collection": "qatar_collection",
+    "pid": "obj2",
     "title": "Sulwan Al-Muta'a",
     "artist": "Unknown",
     "location": "Egypt",
@@ -53,8 +51,10 @@ layout: none
     "current_location": "The Museum of Islamic Art, Qatar"
   },
   {
-    "lunr_id": 5,
-    "link": "{{'/miaq/obj4/' | relative_url }}",
+    "lunr_id": 4,
+    "link": "{{'/qatar_collection/obj3/' | relative_url }}",
+    "collection": "qatar_collection",
+    "pid": "obj3",
     "title": "Map of the World",
     "artist": "Unknown",
     "location": "Egypt",
@@ -63,8 +63,10 @@ layout: none
     "current_location": "The Museum of Islamic Art, Qatar"
   },
   {
-    "lunr_id": 6,
-    "link": "{{'/miaq/obj5/' | relative_url }}",
+    "lunr_id": 5,
+    "link": "{{'/qatar_collection/obj4/' | relative_url }}",
+    "collection": "qatar_collection",
+    "pid": "obj4",
     "title": "Faridun crosses the River Dijla, fol. 33v",
     "artist": "Unknown",
     "location": "Iran",
@@ -73,8 +75,10 @@ layout: none
     "current_location": "The Museum of Islamic Art, Qatar"
   },
   {
-    "lunr_id": 7,
-    "link": "{{'/miaq/obj6/' | relative_url }}",
+    "lunr_id": 6,
+    "link": "{{'/qatar_collection/obj5/' | relative_url }}",
+    "collection": "qatar_collection",
+    "pid": "obj5",
     "title": "Panel from Iran",
     "artist": "Unknown",
     "location": "Iran",
@@ -83,8 +87,10 @@ layout: none
     "current_location": "The Museum of Islamic Art, Qatar"
   },
   {
-    "lunr_id": 8,
-    "link": "{{'/miaq/obj7/' | relative_url }}",
+    "lunr_id": 7,
+    "link": "{{'/qatar_collection/obj6/' | relative_url }}",
+    "collection": "qatar_collection",
+    "pid": "obj6",
     "title": "Diwan of Jami Manuscript",
     "artist": "Unknown",
     "location": "Iran",
@@ -93,8 +99,10 @@ layout: none
     "current_location": "The Museum of Islamic Art, Qatar"
   },
   {
-    "lunr_id": 9,
-    "link": "{{'/miaq/obj8/' | relative_url }}",
+    "lunr_id": 8,
+    "link": "{{'/qatar_collection/obj7/' | relative_url }}",
+    "collection": "qatar_collection",
+    "pid": "obj7",
     "title": "Page from the Shahnama",
     "artist": "Unknown",
     "location": "Iran",
@@ -103,13 +111,27 @@ layout: none
     "current_location": "The Museum of Islamic Art, Qatar"
   },
   {
-    "lunr_id": 10,
-    "link": "{{'/miaq/obj9/' | relative_url }}",
+    "lunr_id": 9,
+    "link": "{{'/qatar_collection/obj8/' | relative_url }}",
+    "collection": "qatar_collection",
+    "pid": "obj8",
     "title": "Silk Tapestry Depicting the story of Leila and Majnun",
     "artist": "Unknown",
     "location": "Iran",
     "_date": "1550 - 1650",
     "object_type": "panel",
+    "current_location": "The Museum of Islamic Art, Qatar"
+  },
+  {
+    "lunr_id": 10,
+    "link": "{{'/qatar_collection/obj9/' | relative_url }}",
+    "collection": "qatar_collection",
+    "pid": "obj9",
+    "title": "Portrait of Fath 'Ali Shah",
+    "artist": "Mihr 'Ali",
+    "location": "Iran",
+    "_date": "1816",
+    "object_type": "portrait",
     "current_location": "The Museum of Islamic Art, Qatar"
   }
 ]
