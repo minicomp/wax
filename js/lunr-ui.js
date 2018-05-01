@@ -35,7 +35,7 @@ $.getJSON("{{ site.baseurl }}/js/lunr-index.json", function(index_json) {
         if (item._date){ meta += item._date + '. ';}
         if (item.object_type){ meta += item.object_type + '. ';}
 
-        var result = '<div class="result"><img class="sq-thumb-sm" src="{{ site.baseurl }}/iiif/images/' + item.collection + '-' + item.pid + '-1/full/250,/0/default.jpg"/>&nbsp;&nbsp;&nbsp;<p><a href="' + link + '">' + title + '</a>.<br>' + meta + '</p></div>';
+        var result = '<div class="result"><a href="' + link + '"><img class="sq-thumb-sm" src="{{ site.baseurl }}/iiif/images/' + item.collection + '-' + item.pid + '-1/full/250,/0/default.jpg"/>&nbsp;&nbsp;&nbsp;<p><span class="title">' + title + '.</span><br>' + meta + '</p></a></div>';
         results_div.append(result);
       }
     });

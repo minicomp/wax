@@ -27,15 +27,19 @@
   {% assign prev = doc %}
   {% endfor %}
 
-  <div class="item-view container-fluid">
+  <div class="item-view">
     <a href="{{site.baseurl}}{{prevurl}}" id="prev" class="prevnext">
-      <button type="button" class="btn btn-outline-primary"> < </button>
+      <button type="button" class="btn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
     </a>
 
     <div id="iiif-viewer"></div>
 
     <a href="{{site.baseurl}}{{nexturl}}" id="next" class="prevnext">
-      <button type="button" class="btn btn-outline-primary"> > </button>
+      <button type="button" class="btn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </a>
 
   </div>

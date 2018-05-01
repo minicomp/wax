@@ -11,8 +11,11 @@ $max-text-width:  800px;
 
 /* colors */
 
+$text-color:      #222222;
 $accent-color:    #f44441;
 $bg-color:        #ffffff;
+$light-grey:      #dee2e6;
+$dark-grey:       #aaaaaa;
 
 /* viewport sizes */
 
@@ -41,4 +44,5 @@ $viewer-height:   600px;
 font & asset import
 */
 
-@import url('https://fonts.googleapis.com/css?family=Karma:400,500,600,700&subset=latin-ext');
+@import
+url('https://fonts.googleapis.com/css?family=Karma:400,500,600,700&subset=latin-ext');

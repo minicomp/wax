@@ -1,6 +1,5 @@
 @import 'variables';
 
-
 /*
 
 main body & containers
@@ -28,11 +27,15 @@ html, body {
   a {
     color: $accent-color;
   }
-  p {
-    font-family: $serif, serif;
+  p{
+    font-family: $serif;
+    color: $text-color;
     margin: $more-margin 0 $more-margin 0;
     max-width: $max-text-width;
     font-size: $main-font-size;
+    @media screen and (max-width: $break-sm) {
+      font-size: $main-font-size * .8;
+    }
   }
 }
 
@@ -42,9 +45,12 @@ header & nav bar
 
 */
 
-
 #header-block{
   border-bottom: 1px solid grey;
+  padding: $more-margin 0 $more-margin 0;
+  @media screen and (max-width: $break-med) {
+    padding: $less-margin 0 $less-margin 0;
+  }
   top: 0;
   left: 0;
   background-color: $bg-color;
@@ -65,18 +71,24 @@ header & nav bar
     position: relative;
   }
   ul {
-    margin: $more-margin 0 $more-margin 0;
     max-width: $max-text-width;
     font-size: $main-font-size;
     .dropdown-toggle::after{
       display: none !important;
     }
   }
+  .navbar{
+    padding: 0 !important;
+    margin: 0 !important;
+    .navbar-toggler{
+      margin: $less-margin;
+    }
+  }
 }
 #header-spacer {
-  height:150px;
+  height: 175px;
   @media screen and (max-width: $break-med) {
-    height: 125px;
+    height: 150px;
   }
 }
 
@@ -88,7 +100,7 @@ banner
 
 #wax-banner{
   position: relative;
-  margin: $more-margin 0 $super-margin 0;
+  margin: $margin 0 $super-margin 0;
   .banner-item{
     position: absolute;
     transition: opacity $fade-time;
@@ -107,7 +119,7 @@ banner
       height: $banner-height;
       z-index: -1;
       overflow: hidden;
-      margin-bottom: $more-margin;
+      margin-bottom: $margin;
       @media screen and (max-width: $break-med) {
         height: $banner-height / 1.5;
       }
@@ -122,8 +134,11 @@ banner
       }
     }
     .banner-caption {
-      font-family: $sans-serif ;
-      margin-top: $margin;
+      font-family:  $sans-serif;
+      margin-top:   $margin;
+      @media screen and (max-width: $break-sm) {
+        font-size: $main-font-size * .8;
+      }
     }
   }
 }
@@ -134,16 +149,18 @@ item pages (iiif + metadata)
 
 */
 .item-view {
-  display: inline-flex;
-  flex-wrap: nowrap;
+  width:           100%;
+  display:         inline-flex;
+  flex-wrap:       nowrap;
   justify-content: space-between;
-  align-items: center;
+  align-items:     center;
+  margin:          0;
 
   #iiif-viewer{
-    height: $viewer-height;
-    width: 90%;
-    border: 1px solid grey;
-    margin: $more-margin $margin $more-margin $margin;
+    height:   $viewer-height;
+    width:    100%;
+    border:   1px solid grey;
+    margin:   $more-margin $less-margin $more-margin $less-margin;
     @media screen and (max-width: $break-med) {
       height: $viewer-height / 1.5;
     }
@@ -154,12 +171,20 @@ item pages (iiif + metadata)
       color: black;
     }
   }
-  .btn-outline-primary {
-    color: $accent-color !important;
-    border-color: $accent-color !important;
+  .btn {
+    margin: 0;
+    color: $light-grey !important;
+    background-color: $bg-color  !important;
+    border: none;
+    font-size: $main-font-size * 2;
     &:hover{
-      background-color: $accent-color  !important;
-      color: $bg-color !important;
+      background-color: $bg-color  !important;
+      color: $dark-grey !important;
+    }
+    @media screen and (max-width: $break-sm) {
+      font-size: $main-font-size;
+      margin: 0;
+      padding: 0;
     }
   }
   #prev{
@@ -170,16 +195,14 @@ item pages (iiif + metadata)
   }
 }
 
-.metadata-block {
-  display: flex;
-  flex-wrap: wrap;
+#metadata-block {
   .meta{
-    padding: $margin;
     .label{
       font-weight: bold;
+      width: 30%;
     }
     .value{
-
+      font-family: $serif;
     }
   }
 }
@@ -191,31 +214,43 @@ search box
 
 
 .search-block{
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  .btn-default{
-    height: 102%;
-    border-radius: 10px 0 0 10px;
-  }
+  margin: $more-margin 0 $more-margin 0;
   #search{
     border-style: groove;
     border-width: 2px;
     &:focus {
         box-shadow: none ;
-        border-color: #dfdfdf;
+        border-color: $light-grey;
     }
   }
-  #results{
-    .result{
-      margin: 1rem 1rem 1rem 3rem;
-      padding: 0;
-      img{
-        float: left;
+  #results {
+    margin: 0;
+    .result {
+      padding: $less-margin;
+      a {
+        color: $text-color;
+        text-decoration: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        img {
+          float: left;
+          width: 50px;
+        }
+        p {
+          margin: 0;
+          margin-left: $less-margin;
+          @media screen and (max-width: $break-sm) {
+            font-size: $main-font-size * .8;
+          }
+          .title{
+            color: $accent-color;
+          }
+        }
       }
-      p {
-        display: inline-block;
-        padding: none ;
-        margin: 1rem 0 0 1rem ;
+      &:hover {
+        background-color: $light-grey
       }
     }
   }
@@ -245,7 +280,6 @@ search box
   }
 }
 
-.navbar-toggler{ margin: 1em; }
 
 .sq-thumb-sm{
   object-fit: cover;
@@ -272,8 +306,8 @@ search box
   left: 0;
   background-color: $accent-color;
   opacity: 0;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition:opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
   display: table;
   height: 200px;
 }
@@ -285,15 +319,13 @@ search box
 
 .hovereffect .info {
   text-decoration: none;
-  color: #fff;
+  color: #ffffff !important;
   background-color: transparent;
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
   font-weight: normal;
   overflow: hidden;
   display: table-cell;

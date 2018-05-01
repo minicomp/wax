@@ -4,40 +4,43 @@ layout: default
 
 {% include iiif_image.html collection=page.collection pid=page.pid pagination=true %}
 
+<center>
+  <div id="metadata-block">
+    <table class="table table-striped">
+      <tr class="meta">
+        <td class="label">Title: </td>
+        <td class="value">{{ page.title }}</td>
+      </tr>
 
-<div class="metadata-block">
-  <div class="meta">
-    <span class="label">Title: </span>
-    <span class="value">{{ page.title }}</span>
-  </div>
+      <tr class="meta">
+        <td class="label">Artist: </td>
+        <td class="value">{{ page.artist }}</td>
+      </tr>
 
-  <div class="meta">
-    <span class="label">Artist: </span>
-    <span class="value">{{ page.artist }}</span>
-  </div>
+      <tr class="meta">
+        <td class="label">Location: </td>
+        <td class="value">{{ page.location }}</td>
+      </tr>
 
-  <div class="meta">
-    <span class="label">Location: </span>
-    <span class="value">{{ page.location }}</span>
-  </div>
+      <tr class="meta">
+        <td class="label">Date: </td>
+        <td class="value">{{ page._date }}</td>
+      </tr>
 
-  <div class="meta">
-    <span class="label">Date: </span>
-    <span class="value">{{ page._date }}</span>
-  </div>
+      <tr class="meta">
+        <td class="label">Object Type: </td>
+        <td class="value">{{ page.object_type }}</td>
+      </tr>
 
-  <div class="meta">
-    <span class="label">Object Type: </span>
-    <span class="value">{{ page.object_type }}</span>
-  </div>
+      <tr class="meta">
+        <td class="label">Current Location: </td>
+        <td class="value">{{ page.current_location }}</td>
+      </tr>
 
-  <div class="meta">
-    <span class="label">Current Location: </span>
-    <span class="value">{{ page.current_location }}</span>
+      <tr class="meta">
+        <td class="label">Source: </td>
+        <td class="value"><a href="{{ page.wiki_link }}">Wikimedia Commons</a></td>
+      </tr>
+    </table>
   </div>
-
-  <div class="meta">
-    <span class="label">Source: </span>
-    <span class="value">{{ page.wiki_link }}</span>
-  </div>
-</div>
+</center>

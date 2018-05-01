@@ -17,7 +17,19 @@ function nextSlide() {
 }
 setInterval(nextSlide, 3000);
 
-$(document).ready(function() {
-  $(window).on('resize', function(){ resizeWaxBanner(); })
-  resizeWaxBanner(); //call immediately on page load
-});
+function resizeMetaBox() {
+  var viewerWidth = $('#iiif-viewer').width();
+  var metaBox = $('#metadata-block');
+  metaBox.width(viewerWidth);
+}
+$(window).on('resize', function(){
+  resizeMetaBox();
+})
+
+resizeMetaBox();
+resizeWaxBanner();
+
+$(window).on('resize', function(){
+  resizeMetaBox();
+  resizeWaxBanner();
+})
