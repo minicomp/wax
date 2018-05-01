@@ -2,35 +2,45 @@
 layout: default
 ---
 
-{% include iiif_image.html collection=page.collection pid=page.pid %}
-{% include pagination.html collection=page.collection %}
+{% include iiif_image.html collection=page.collection pid=page.pid pagination=true %}
 
-<div class="table-responsive">
-  <table class="table meta table-striped">
-    {% for item in site.data.metadata_table %}
-    <tr class='meta-row'>
-      <td class='meta-label'>
-      {% if item.label %}{{ item.label }}
-      {% else %}
-        {{ item.field | capitalize | replace: "-", " " | replace: "_", " " }}
-      {% endif %}
-      </td>
-      <td class='meta-field'>
-      {% if item.link %}
-        {% assign test = item.link | slice: 0,3 | upcase %}
-        {% if test == 'HTTP' %}
-          {% assign link = item.link %}
-        {% else %}
-          {% assign link = page[item.link] %}
-        {% endif %}
-        <a href="{{ link }}">
-          {{ page[item.field] }}
-        </a>
-      {% else %}
-        {{ page[item.field] }}
-      {% endif %}
-      </td>
-    </tr>
-    {% endfor %}
-  </table>
-</div>
+<center>
+  <div id="metadata-block">
+    <table class="table table-striped">
+      <tr class="meta">
+        <td class="label">Title: </td>
+        <td class="value">{{ page.title }}</td>
+      </tr>
+
+      <tr class="meta">
+        <td class="label">Artist: </td>
+        <td class="value">{{ page.artist }}</td>
+      </tr>
+
+      <tr class="meta">
+        <td class="label">Location: </td>
+        <td class="value">{{ page.location }}</td>
+      </tr>
+
+      <tr class="meta">
+        <td class="label">Date: </td>
+        <td class="value">{{ page._date }}</td>
+      </tr>
+
+      <tr class="meta">
+        <td class="label">Object Type: </td>
+        <td class="value">{{ page.object_type }}</td>
+      </tr>
+
+      <tr class="meta">
+        <td class="label">Current Location: </td>
+        <td class="value">{{ page.current_location }}</td>
+      </tr>
+
+      <tr class="meta">
+        <td class="label">Source: </td>
+        <td class="value"><a href="{{ page.wiki_link }}">Wikimedia Commons</a></td>
+      </tr>
+    </table>
+  </div>
+</center>
