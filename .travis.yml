@@ -9,6 +9,3 @@ before_script:
   - bundle exec jekyll build -d _site/wax
 script:
   - bundle exec rake wax:test
-branches:
-  except:
-  - gh-pages

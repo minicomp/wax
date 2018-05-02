@@ -7,8 +7,7 @@ baseurl:          '/wax'
 # build settings
 permalink:        pretty
 lunr_language:    false
-exclude:          [Gemfile*, node_modules, vendor, Rakefile, spec]
-collections_dir:  collections
+exclude:          [Gemfile*, Rakefile, node_modules, vendor, spec, README.md]
 
 # wax collection settings
 collections:
