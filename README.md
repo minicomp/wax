@@ -1,87 +1,62 @@
-# [wax](https://minicomp.github.io/wax/) [![Build Status](https://travis-ci.org/mnyrop/wax.svg?branch=master)](https://travis-ci.org/mnyrop/wax)
+# minicomp/wax
+#### jekyll for minimal exhibitions with iiif ~> <https://minicomp.github.io/wax/>
+
+[![Build Status](https://travis-ci.org/mnyrop/wax.svg?branch=master)](https://travis-ci.org/mnyrop/wax) [![Dependency Status](https://gemnasium.com/badges/github.com/mnyrop/wax.svg)](https://gemnasium.com/github.com/mnyrop/wax)
+
+<img src="https://raw.githubusercontent.com/mnyrop/wax_tasks/master/docs/wax_screen.gif" width="500"/>
+
+#### Welcome to the demo repository for the [Minicomp/Wax](https://github.com/minicomp/wax/) minimal exhibition workflow.
+
+The easiest way to **get started** with your own Wax exhibition is **by cloning this repository** and swapping out content, media, styles, and components **to make it your your own**.
+
+Advanced users can check back to find a **Ruby gem / Jekyll theme** with the layouts, includes, and scripts from this demo.
+
+## Issues / Contributing
+
+The canonical source for Wax is the [Minicomp](https://github.com/minicomp/wax/) fork of the project. Please submit issues (bugs, feature requests, questions, etc.) as well as pull requests only to the Minicomp/Wax repository.
+
+## Primary tooling
+
+Wax is a flexible workflow and not a platform. As such, its tooling is more of a dynamic roster than a stack. At its center are __[jekyll](http://jekyllrb.com)__ and __[wax_tasks](https://github.com/minicomp/wax_tasks/)__ (which are both Ruby gems), but the rest of the components
+are purely optional depending on what you'd like to do and how you'd like to do it. The following list is by no means exhaustive, but gives an outline of Wax's open source super group:
+
+__For searching/indexing:__
+- [elasticlunr.js](http://elasticlunr.com/)
+
+__For IIIF generation/presentation:__
+- [wax_iiif gem](https://github.com/minicomp/wax_iiif/) (fork of [iiif_s3]()https://github.com/cmoa/iiif_s3)
+- [leaflet.js](http://leafletjs.com/) and [leaflet-iiif.js](https://github.com/mejackreed/Leaflet-IIIF)
+- [imagemagick](https://www.imagemagick.org/script/index.php)
+
+__For theming:__
+- [jquery](http://jquery.com/)
+- [bootstrap4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+
+__For testing:__
+- [rspec gem](http://rspec.info/)
+- [html-proofer gem](https://github.com/gjtorikian/html-proofer)
+- [capybara gem](http://teamcapybara.github.io/capybara/)
+- [travis-ci](https://travis-ci.org/)
 
 
-##### A gem-packaged Jekyll theme for creating minimal exhibitions with [Jekyll](http://jekyllrb.com), [IIIF](http://iiif.io), and [ElasticLunr.js](http://elasticlunr.com).
+## Quick Start
 
-> __Note: Wax is currently unreleased!__ <br> Check back soon for better documentation, more features, and a beta Gem.
+Make sure your system is ready with modern Ruby (>=2.2), git, and ImageMagick installed.
 
-
-Looking for the full functionality of Wax but want to use/make your own theme? Check out [minicomp/wax_tasks](https://github.com/minicomp/wax_tasks).
-
-<br>
-
-![wax_screen](https://github.com/mnyrop/wax_tasks/raw/master/docs/wax_screen.gif?raw=true)
-
-<br>
-
-#### Getting Started
-- [Prerequisites](#prerequisites)
-- [Installing](#installing)
-
-#### What you get
-- [With wax_theme](#what-you-get-with-wax_theme)
-- [With wax_tasks](#what-you-get-with-wax_tasks)
-
-#### Guides
-- [Coming Soon](#guides)
-
-
-# Getting Started
-
-## Prerequisites
-
-You will need Ruby 2.2 or higher and [Bundler](https://rubygems.org/gems/bundler) installed.
-
-You can check your Ruby version with `$ ruby --version` and can install Bundler with `$ gem install bundler`. Having trouble? Check out these guides for configuring your machine to use Jekyll for [Mac](https://learn.cloudcannon.com/jekyll/install-jekyll-on-os-x/), [Linux](https://learn.cloudcannon.com/jekyll/install-jekyll-on-linux/), and [Windows](https://jekyllrb.com/docs/windows/).
-
-## Installing
-
-Install `wax_theme` globally with `$ gem install wax_theme` or add it to your site's `Gemfile`:
-
-```ruby
-source 'https://rubygems.org'
-
-gem 'jekyll', '~> 3.7'
-gem 'wax_theme'
-
-group :development, :test do
- gem 'wax_tasks' # optional
-end
-
+Install Bundler
+```sh
+$ gem install bundler
 ```
-
-and run `$ bundle install`. If you want to use custom Rake tasks for generating pages, IIIF derivatives, a search index, and more, you should add `wax_tasks` to your `Gemfile` as well.
-
-> __Hint:__ The best way to get started is to clone the site demo:
->
-> `$ git clone https://github.com/minicomp/wax.git -b gh-pages`
-
-# What you get with wax_theme
-
-#### Sass styles
-Based on [Ed. Theme](https://github.com/minicomp/ed).
-- [\_ed.scss]()
-- [\_syntax.scss]()
-- [\_wax.scss]()
-
-#### Basic layouts
-- [default.html]()
-- [page.html]()
-
-#### Includes (i.e. reusable components)
-- [iiif_image.html]()
-- [search.html]()
-- [sidebar.html]()
-- [header.html]()
-- [pagination.html]()
-
-
-# What you get with wax_tasks
-
-- A task for generating collection pages from a CSV or JSON file: [`wax:pagemaster`]()
-- A task for generating an [ElasticLunr]() search index: [`wax:lunr`]()
-- A task for generating [IIIF](http://iiif.io/) derivatives and json data from a local directory of images: [`wax:iiif`]()
-- A task for running [html-proofer]() and any [rspec]() tests: [`wax:test`]()
-
-# Guides
-> __Note:__ A full guide for using `wax_theme` is on its way!
+Clone the repository and change directory into it
+```sh
+$ git clone https://github.com/minicomp/wax.git && cd wax
+```
+Install the Ruby Dependencies
+```sh
+$ bundle install
+```
+Serve the site locally
+```sh
+$ bundle exec jekyll serve
+```
+Check out the [Minicomp Wiki](https://minicomp.github.io/wiki/) to learn how to use and customize the demo components.

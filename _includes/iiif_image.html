@@ -1,36 +1,54 @@
-{% include leaflet_assets.html %}
+{% include iiif_assets.html %}
 
 {% assign object = site.data[include.collection] | where: 'pid', include.pid | first %}
 
 {%- capture manifest_uri -%}
   {{ site.baseurl }}/iiif/{{ include.collection }}-{{ include.pid }}/manifest.json
 {%- endcapture -%}
+<script type="text/javascript">window.manifest = "{{ manifest_uri}}";</script>
 
-<figure class="figure container-fluid nopadding">
-  <div id="iiif-viewer"></div>
-</figure>
+{% if include.pagination == true %}
 
-<script>
-    var iiif_viewer;
-    var iiifLayers = {};
-    var manifestUrl = '{{ manifest_uri }}';
-    iiif_viewer = L.map('iiif-viewer', {
-      center: [0, 0],
-      crs: L.CRS.Simple,
-      zoomDelta: 0.5,
-      zoomSnap: 0,
-      zoom: 0,
-      minZoom: 0,
-      maxZoom: 2.5
-    });
-    $.getJSON(manifestUrl, function(data) {
-      var i = 1;
-      $.each(data.sequences[0].canvases, function(_, val) {
-        var label = 'image ' + i;
-        iiifLayers[label] = L.tileLayer.iiif(val.images[0].resource.service['@id'] + '/info.json', {fitBounds: true});
-        i++;
-      });
-      if (i > 2){ L.control.layers(iiifLayers).addTo(iiif_viewer);}
-      iiifLayers[Object.keys(iiifLayers)[0]].addTo(iiif_viewer);
-    });
-</script>
+  {% assign documents = site[include.collection] | sort: 'order' %}
+  {% assign first = documents.first %}
+  {% assign last = documents.last %}
+
+  {% for doc in documents %}
+    {% if doc.pid == include.pid %}
+
+      {% if forloop.first %}{% assign prevurl = last.url %}
+      {% else %}{% assign prevurl = prev.url %}
+      {% endif %}
+
+      {% if forloop.last %}{% assign nexturl = first.url %}
+      {% else %}{% assign nexturl = documents[forloop.index].url %}
+      {% endif %}
+
+    {% endif %}
+  {% assign prev = doc %}
+  {% endfor %}
+
+  <div class="item-view">
+    <a href="{{site.baseurl}}{{prevurl}}" id="prev" class="prevnext">
+      <button type="button" class="btn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+    </a>
+
+    <div id="iiif-viewer"></div>
+
+    <a href="{{site.baseurl}}{{nexturl}}" id="next" class="prevnext">
+      <button type="button" class="btn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </a>
+
+  </div>
+
+{% else %}
+
+  <div class="item-view  container-fluid">
+    <div id="iiif-viewer"></div>
+  </div>
+
+{% endif %}

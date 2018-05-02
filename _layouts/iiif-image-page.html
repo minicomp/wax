@@ -2,39 +2,45 @@
 layout: default
 ---
 
-{% include iiif_image.html collection=page.collection pid=page.pid %}
-{% include pagination.html collection=page.collection %}
+{% include iiif_image.html collection=page.collection pid=page.pid pagination=true %}
 
+<center>
+  <div id="metadata-block">
+    <table class="table table-striped">
+      <tr class="meta">
+        <td class="label">Title: </td>
+        <td class="value">{{ page.title }}</td>
+      </tr>
 
-<div class="table-responsive">
-  <table class="table meta table-striped">
-    <tr class='meta-row'>
-      <td class='meta-label'>Title</td>
-      <td class='meta-field'>{{ page.title }}</td>
-    </tr>
-    <tr class='meta-row'>
-      <td class='meta-label'>Artist</td>
-      <td class='meta-field'>{{ page.artist }}</td>
-    </tr>
-    <tr class='meta-row'>
-      <td class='meta-label'>Location</td>
-      <td class='meta-field'>{{ page.location }}</td>
-    </tr>
-    <tr class='meta-row'>
-      <td class='meta-label'>Date</td>
-      <td class='meta-field'>{{ page._date }}</td>
-    </tr>
-    <tr class='meta-row'>
-      <td class='meta-label'>Object type</td>
-      <td class='meta-field'>{{ page.object_type }}</td>
-    </tr>
-    <tr class='meta-row'>
-      <td class='meta-label'>Current location</td>
-      <td class='meta-field'>{{ page.current_location }}</td>
-    </tr>
-    <tr class='meta-row'>
-      <td class='meta-label'>Source</td>
-      <td class='meta-field'><a href='{{ page.wiki_link }}'>Wikimedia Commons</a></td>
-    </tr>
-  </table>
-</div>
+      <tr class="meta">
+        <td class="label">Artist: </td>
+        <td class="value">{{ page.artist }}</td>
+      </tr>
+
+      <tr class="meta">
+        <td class="label">Location: </td>
+        <td class="value">{{ page.location }}</td>
+      </tr>
+
+      <tr class="meta">
+        <td class="label">Date: </td>
+        <td class="value">{{ page._date }}</td>
+      </tr>
+
+      <tr class="meta">
+        <td class="label">Object Type: </td>
+        <td class="value">{{ page.object_type }}</td>
+      </tr>
+
+      <tr class="meta">
+        <td class="label">Current Location: </td>
+        <td class="value">{{ page.current_location }}</td>
+      </tr>
+
+      <tr class="meta">
+        <td class="label">Source: </td>
+        <td class="value"><a href="{{ page.wiki_link }}">Wikimedia Commons</a></td>
+      </tr>
+    </table>
+  </div>
+</center>
