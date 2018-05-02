@@ -1,5 +1,5 @@
-# [minicomp/wax](https://github.com/minicomp/wax/)
-### jekyll for minimal exhibitions with iiif
+# minicomp/wax 🐝
+#### jekyll for minimal exhibitions with iiif 
 
 <https://minicomp.github.io/wax/>
 
@@ -13,11 +13,11 @@ The easiest way to **get started** with your own Wax exhibition is **by cloning 
 
 Advanced users can check back to find a **Ruby gem / Jekyll theme** with the layouts, includes, and scripts from this demo.
 
-### Issues / Contributing
+## Issues / Contributing
 
 The canonical source for Wax is the [Minicomp](https://github.com/minicomp/wax/) fork of the project. Please submit issues (bugs, feature requests, questions, etc.) as well as pull requests only to the Minicomp/Wax repository.
 
-### Primary tooling
+## Primary tooling
 
 Wax is a flexible workflow and not a platform. As such, its tooling is more of a dynamic roster than a stack. At its center are __[jekyll](http://jekyllrb.com)__ and __[wax_tasks](https://github.com/minicomp/wax_tasks/)__ (which are both Ruby gems), but the rest of the components
 are purely optional depending on what you'd like to do and how you'd like to do it. The following list is by no means exhaustive, but gives an outline of Wax's open source super group:
@@ -41,7 +41,7 @@ __For testing:__
 - [travis-ci](https://travis-ci.org/)
 
 
-### Quick Start
+## Quick Start
 
 Make sure your system is ready with modern Ruby (>=2.2), git, and ImageMagick installed.
 
