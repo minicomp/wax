@@ -2,5 +2,5 @@
 layout: gallery-page
 title: Exhibits
 permalink: /exhibits/
-gallery_group: qatar_collection
+# gallery_group: qatar
 ---

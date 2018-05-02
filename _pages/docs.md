@@ -3,7 +3,7 @@ layout: default
 title: Documentation
 permalink: /docs/
 banner:
-  - collection: qatar_collection
+  - collection: qatar
     pid: obj2
     zoom: 1
     y: top

@@ -3,7 +3,7 @@ layout: default
 title: Credits
 permalink: /credits/
 banner:
-  - collection: qatar_collection
+  - collection: qatar
     pid: obj8
     zoom: 1
 ---
