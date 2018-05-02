@@ -59,16 +59,12 @@ header & nav bar
   #title a{
     font-size: $main-font-size * 1.2;
   }
-  .icon {
-    display: inline-flex;
+  .logo.baseline {
+    background: $logo no-repeat;
+    background-size: contain;
     align-self: center;
-  }
-  .icon svg, .icon img {
-    height: 1em;
-  }
-  .icon.baseline svg, .icon img {
-    top: auto.1em;
-    position: relative;
+    padding: $main-font-size * .8;
+    margin: .25em .25em 0 0;
   }
   ul {
     max-width: $max-text-width;

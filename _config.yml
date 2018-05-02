@@ -52,7 +52,7 @@ menu:
 # search tests
 quoll:
   main:
-    page: 'browse'
+    page: '/'
     terms:
       - iran
       - map

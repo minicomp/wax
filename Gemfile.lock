@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/mnyrop/wax_tasks.git
-  revision: 74544bf7f27313784cb4f74c77173d37bddc4efa
+  revision: 3b57c758fbbd6bbd60211014cd1457c4801136af
   branch: alpha
   specs:
     wax_tasks (0.0.5)
@@ -22,7 +22,7 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
-    capybara (3.0.2)
+    capybara (3.0.3)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -43,7 +43,7 @@ GEM
       http_parser.rb (~> 0.6.0)
     ethon (0.11.0)
       ffi (>= 1.3.0)
-    eventmachine (1.2.5)
+    eventmachine (1.2.6)
     ffi (1.9.23)
     forwardable-extended (2.6.0)
     html-proofer (3.8.0)
@@ -59,7 +59,7 @@ GEM
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     io-like (0.3.0)
-    jekyll (3.8.0)
+    jekyll (3.8.1)
       addressable (~> 2.4)
       colorator (~> 1.0)
       em-websocket (~> 0.5)
@@ -147,7 +147,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   chromedriver-helper
-  jekyll (~> 3.8)
+  jekyll (~> 3.8.1)
   puma
   rack-jekyll
   rspec
