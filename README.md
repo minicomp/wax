@@ -1,7 +1,5 @@
-# minicomp/wax 🐝
-#### jekyll for minimal exhibitions with iiif 
-
-<https://minicomp.github.io/wax/>
+# minicomp/wax
+#### jekyll for minimal exhibitions with iiif ~> <https://minicomp.github.io/wax/>
 
 [![Build Status](https://travis-ci.org/mnyrop/wax.svg?branch=master)](https://travis-ci.org/mnyrop/wax) [![Dependency Status](https://gemnasium.com/badges/github.com/mnyrop/wax.svg)](https://gemnasium.com/github.com/mnyrop/wax)
 
