@@ -1,12 +1,14 @@
-title:          Minicomp/Wax
-description:    a jekyll theme for minimal exhibitions
-url:            ''
-baseurl:        '/wax'
+# main settings
+title:            Minicomp/Wax
+description:      a jekyll theme for minimal exhibitions
+url:              ''
+baseurl:          '/wax'
 
 # build settings
-permalink:      pretty
-lunr_language:  false
-exclude:        [Gemfile*, node_modules, vendor, Rakefile, spec]
+permalink:        pretty
+lunr_language:    false
+exclude:          [Gemfile*, node_modules, vendor, Rakefile, spec]
+collections_dir:  collections
 
 # wax collection settings
 collections:
@@ -14,10 +16,10 @@ collections:
     output:       true
   exhibits:
     output:       true
-  qatar_collection:
+  qatar:
     output:       true
     keep_order:   true
-    source:       qatar_collection.csv
+    source:       qatar.csv
     layout:       iiif-image-page
     lunr_index:
       content:    false
@@ -44,8 +46,8 @@ menu:
     link: /docs/
   - label: Exhibits
     link: /exhibits/
-  - label: Browse
-    link: /browse/
+  - label: Gallery
+    link: /gallery/
 
 # search tests
 quoll:

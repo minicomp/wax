@@ -3,19 +3,19 @@ layout: default
 title: Wax.
 search: true
 banner:
-- collection: qatar_collection
+- collection: qatar
   pid: obj7
   zoom: 1
   y: center
   x: left
-- collection: qatar_collection
+- collection: qatar
   pid: obj10
   zoom: 1
   x: right
-- collection: qatar_collection
+- collection: qatar
   pid: obj1
   zoom: 1
-- collection: qatar_collection
+- collection: qatar
   pid: obj8
   zooom: 0
 ---
