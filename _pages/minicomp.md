@@ -5,7 +5,7 @@ permalink: /minicomp/
 banner:
   - collection: qatar
     pid: obj6
-    zoom: 0
-    y: top
-    x: center
+    zoom: 1
+    y: center
+    x: left
 ---

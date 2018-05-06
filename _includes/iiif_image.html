@@ -1,10 +1,7 @@
-{% include iiif_assets.html %}
-
-{% assign object = site.data[include.collection] | where: 'pid', include.pid | first %}
-
 {%- capture manifest_uri -%}
-  {{ site.baseurl }}/iiif/{{ include.collection }}-{{ include.pid }}/manifest.json
+  {{ site.baseurl }}/iiif/{{ include.collection }}/{{ include.pid }}/manifest.json
 {%- endcapture -%}
+
 <script type="text/javascript">window.manifest = "{{ manifest_uri}}";</script>
 
 {% if include.pagination == true %}

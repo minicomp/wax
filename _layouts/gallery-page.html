@@ -11,7 +11,7 @@ layout: default
   container.prepend("<div id='gallery'></div>");
   var gallery = $('#gallery');
   {% for item in the_collection %}
-  gallery.append("<div class='gallery-item {{ item[page.facet_by] }} all'><a href='{{ site.baseurl }}/{{ page.gallery_group }}/{{ item.pid }}/'><div class='hovereffect'><img class='img-responsive gallery-thumb' src='{{ site.baseurl }}/iiif/images/{{ page.gallery_group }}-{{ item.pid }}-1/full/250,/0/default.jpg'><div class='overlay'><p class='info'>{{ item.title }}</p></div></div></a></div>");
+  gallery.append("<div class='gallery-item {{ item[page.facet_by] }} all'><a href='{{ site.baseurl }}/{{ page.gallery_group }}/{{ item.pid }}/'><div class='hovereffect'><img class='img-responsive gallery-thumb' src='{{ site.baseurl }}/iiif/{{ page.gallery_group }}/images/{{ item.pid }}-1/full/250,/0/default.jpg'><div class='overlay'><p class='info'>{{ item.title }}</p></div></div></a></div>");
   {% endfor %}
 
   {% if page.facet_by %}

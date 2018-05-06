@@ -3,7 +3,7 @@
   {% for item in include.banner %}
 
       {%- capture image_uri -%}
-        {{ site.baseurl }}/iiif/images/{{ item.collection }}-{{ item.pid }}-1/full/1140,/0/default.jpg
+        {{ site.baseurl }}/iiif/{{ item.collection }}/images/{{ item.pid }}-1/full/1140,/0/default.jpg
       {%- endcapture -%}
       {% assign object = site.data[item.collection] | where: 'pid', item.pid | first %}
       {%- capture caption -%}

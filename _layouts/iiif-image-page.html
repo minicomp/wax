@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-iiif@2.0.1/leaflet-iiif.min.js"></script>
 
 {% include iiif_image.html collection=page.collection pid=page.pid pagination=true %}
 
