@@ -6,30 +6,20 @@ baseurl:          '/wax'
 
 # build settings
 permalink:        pretty
-lunr_language:    false
 exclude:          [Gemfile*, Rakefile, node_modules, vendor, spec, README.md]
 collections_dir:  collections
 
 # wax collection settings
 collections:
-  pages:
-    output:       true
-  exhibits:
-    output:       true
   qatar:
-    output:       true
-    source:       qatar.csv
-    layout:       iiif-image-page
-    lunr_index:
-      content:    false
-      fields: [pid, title, artist, location, _date, object_type, current_location]
-  loc:
     output: true
-    source: loc.csv
+    source: qatar.csv
     layout: iiif-image-page
     lunr_index:
       content: false
       fields: [pid, title, artist, location, _date, object_type, current_location]
+    iiif:
+      label: title
 
 # menu settings
 menu:

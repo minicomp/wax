@@ -5,7 +5,16 @@ layout: default
 <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-iiif@2.0.1/leaflet-iiif.min.js"></script>
 
-{% include iiif_image.html collection=page.collection pid=page.pid pagination=true %}
+{%- capture manifest-%}
+  {%- if page.manifest -%}
+    {{ page.manifest }}
+  {%- else -%}
+    {{ site.baseurl }}/iiif/{{ page.collection }}/{{ page.pid }}/manifest.json
+  {%- endif -%}
+{%- endcapture -%}
+
+<script type="text/javascript">window.manifest = "{{ manifest }}";</script>
+{% include iiif_image.html pagination=true %}
 
 <center>
   <div id="metadata-block">
@@ -38,6 +47,11 @@ layout: default
       <tr class="meta">
         <td class="label">Current Location: </td>
         <td class="value">{{ page.current_location }}</td>
+      </tr>
+
+      <tr class="meta">
+        <td class="label">IIIF Manifest: </td>
+        <td class="value">{{ manifest }}</td>
       </tr>
 
       <tr class="meta">
