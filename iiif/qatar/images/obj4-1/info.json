@@ -1,0 +1,46 @@
+{
+  "@context": "http://iiif.io/api/image/2/context.json",
+  "@id": "/wax/iiif/qatar/images/obj4-1",
+  "protocol": "http://iiif.io/api/image",
+  "width": 3329,
+  "height": 4993,
+  "sizes": [
+    {
+      "width": 3329,
+      "height": 4993
+    },
+    {
+      "width": 250,
+      "height": 375
+    },
+    {
+      "width": 600,
+      "height": 900
+    },
+    {
+      "width": 1140,
+      "height": 1710
+    }
+  ],
+  "profile": [
+    "http://iiif.io/api/image/2/level0.json",
+    {
+      "supports": [
+        "cors",
+        "sizeByWhListed",
+        "baseUriRedirect"
+      ]
+    }
+  ],
+  "tiles": [
+    {
+      "width": 512,
+      "scaleFactors": [
+        1,
+        2,
+        4,
+        8
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/build/mirador/css/mirador-combined.css">
+<script src="{{ site.baseurl }}/build/mirador/mirador.js"></script>
+<div id="iiif-viewer" class="mirador" allowfullscreen="allowfullscreen"></div>
+
+<script type="text/javascript">
+  $(function() {
+    Mirador({
+      id: 'iiif-viewer',
+      layout: "1x2",
+      data: [
+        { "manifestUri": "{{ include.m1 }}" },
+        { "manifestUri": "{{ include.m2 }}" }
+      ],
+      windowObjects: [
+        {
+          loadedManifest: "{{ include.m1 }}",
+          sidePanel: false,
+          bottomPanelVisible: false
+        },
+        {
+          loadedManifest: "{{ include.m2 }}",
+          sidePanel: false,
+          bottomPanelVisible: false
+        },
+      ]
+    });
+  });
+</script>

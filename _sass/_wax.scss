@@ -1,5 +1,3 @@
-@import 'variables';
-
 /*
 
 main body & containers
@@ -152,7 +150,7 @@ item pages (iiif + metadata)
   align-items:     center;
   margin:          0;
 
-  #iiif-viewer{
+  #leaflet-iiif{
     height:   $viewer-height;
     width:    100%;
     border:   1px solid grey;
@@ -339,4 +337,18 @@ search box
   object-position: 50% 20%;
   width: 80px;
   height: 80px;
+}
+
+.iiif-logo {
+  height: 1.5em;
+}
+
+.mirador{
+  display: block;
+  position: relative;
+  height: 60vh;
+  margin-bottom: 50px;
+}
+.mirador a {
+  color: inherit !important;
 }

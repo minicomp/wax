@@ -6,30 +6,20 @@ baseurl:          '/wax'
 
 # build settings
 permalink:        pretty
-lunr_language:    false
 exclude:          [Gemfile*, Rakefile, node_modules, vendor, spec, README.md]
+collections_dir:  collections
 
 # wax collection settings
 collections:
-  pages:
-    output:       true
-  exhibits:
-    output:       true
   qatar:
-    output:       true
-    keep_order:   true
-    source:       qatar.csv
-    layout:       iiif-image-page
+    output: true
+    source: qatar.csv
+    layout: iiif-item-page
     lunr_index:
-      content:    false
-      fields:
-        - pid
-        - title
-        - artist
-        - location
-        - _date
-        - object_type
-        - current_location
+      content: false
+      fields: [pid, title, artist, location, _date, object_type, current_location]
+    iiif:
+      label: title
 
 # menu settings
 menu:
@@ -42,7 +32,7 @@ menu:
     - label: Credits
       link: /credits/
   - label: Documentation
-    link: /docs/
+    link: https://minicomp.github.io/wiki/#/wax/
   - label: Exhibits
     link: /exhibits/
   - label: Gallery
@@ -56,6 +46,24 @@ quoll:
       - iran
       - map
       - manuscript
+
+# javascript dependencies
+js:
+  jquery:
+    version: 3.2.1
+    cdn: //code.jquery.com/jquery-3.2.1.min.js
+  popper:
+    version: 1.12.9
+    cdn: //cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js
+  bootstrap:
+    version: 4.0.0
+    cdn: //maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js
+  leaflet:
+    version: 1.3.1
+    cdn: //unpkg.com/leaflet@1.3.1/dist/leaflet.js
+  leaflet-iiif:
+    version: 2.0.1
+    cdn: //cdn.jsdelivr.net/npm/leaflet-iiif@2.0.1/leaflet-iiif.min.js
 
 # cors headers for iiif use
 webrick:
