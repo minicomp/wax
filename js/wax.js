@@ -26,8 +26,8 @@ setInterval(nextSlide, 3000);
 // metadata table
 
 function resizeMetaBox() {
-  if ( $( "#iiif-viewer" ).length ) {
-    var viewerWidth = $('#iiif-viewer').width();
+  if ( $( "#leaflet-iiif" ).length ) {
+    var viewerWidth = $('#leaflet-iiif').width();
     var metaBox = $('#metadata-block');
     metaBox.width(viewerWidth);
   }
@@ -36,16 +36,17 @@ function resizeMetaBox() {
 /// iiif viewer
 
 function loadIIIFViewer(manifest_uri) {
-  if ( $( "#iiif-viewer" ).length ) {
-    var iiif_viewer;
+  if ( $( "#leaflet-iiif" ).length ) {
+    var leaflet_iiif;
     var iiifLayers = {};
     var manifestUrl = manifest_uri;
-    iiif_viewer = L.map('iiif-viewer', {
+    leaflet_iiif = L.map('leaflet-iiif', {
       center: [0, 0],
       crs: L.CRS.Simple,
       zoomDelta: 0.5,
       zoomSnap: 0,
-      zoom: 0
+      minZoom: .5,
+      zoom: .5
     });
     $.getJSON(manifestUrl, function(data) {
       var i = 1;
@@ -54,8 +55,8 @@ function loadIIIFViewer(manifest_uri) {
         iiifLayers[label] = L.tileLayer.iiif(val.images[0].resource.service['@id'] + '/info.json', {fitBounds: true});
         i++;
       });
-      if (i > 2){ L.control.layers(iiifLayers).addTo(iiif_viewer);}
-      iiifLayers[Object.keys(iiifLayers)[0]].addTo(iiif_viewer);
+      if (i > 2){ L.control.layers(iiifLayers).addTo(leaflet_iiif);}
+      iiifLayers[Object.keys(iiifLayers)[0]].addTo(leaflet_iiif);
     });
   }
 }
