@@ -9,3 +9,7 @@ banner:
     y: center
     x: left
 ---
+
+### Coming soon!
+
+In the meantime, check out our [Wiki](https://minicomp.github.io/wiki/#/wax/).

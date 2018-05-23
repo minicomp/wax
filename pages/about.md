@@ -8,3 +8,7 @@ banner:
     zoom: 0
     y: top
 ---
+
+### Coming soon!
+
+In the meantime, check out our [Wiki](https://minicomp.github.io/wiki/#/wax/).
