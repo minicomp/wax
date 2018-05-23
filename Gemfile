@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'jekyll', '~> 3.8.1'
+gem 'jekyll', '~> 3.8.2'
 
 group :development, :test do
   gem 'rspec'
@@ -7,5 +7,5 @@ group :development, :test do
   gem 'chromedriver-helper'
   gem 'capybara'
   gem 'rack-jekyll'
-  gem 'wax_tasks', :git => 'https://github.com/mnyrop/wax_tasks.git'
+  gem 'wax_tasks'
 end

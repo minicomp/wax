@@ -7,57 +7,57 @@
     {
       "@id": "/wax/iiif/qatar/obj1/manifest.json",
       "@type": "sc:Manifest",
-      "label": "qatar obj1"
+      "label": "The Dala'il al-Khayrat of al-Juzuli"
     },
     {
       "@id": "/wax/iiif/qatar/obj10/manifest.json",
       "@type": "sc:Manifest",
-      "label": "qatar obj10"
+      "label": "Portrait of Hasan 'Ali Mirza Shuja al-Saltana"
     },
     {
       "@id": "/wax/iiif/qatar/obj11/manifest.json",
       "@type": "sc:Manifest",
-      "label": "qatar obj11"
+      "label": "Portrait of Sheikh Ali Mirza"
     },
     {
       "@id": "/wax/iiif/qatar/obj2/manifest.json",
       "@type": "sc:Manifest",
-      "label": "qatar obj2"
+      "label": "Sulwan Al-Muta'a"
     },
     {
       "@id": "/wax/iiif/qatar/obj3/manifest.json",
       "@type": "sc:Manifest",
-      "label": "qatar obj3"
+      "label": "Map of the World"
     },
     {
       "@id": "/wax/iiif/qatar/obj4/manifest.json",
       "@type": "sc:Manifest",
-      "label": "qatar obj4"
+      "label": "Faridun crosses the River Dijla, fol. 33v"
     },
     {
       "@id": "/wax/iiif/qatar/obj5/manifest.json",
       "@type": "sc:Manifest",
-      "label": "qatar obj5"
+      "label": "Panel from Iran"
     },
     {
       "@id": "/wax/iiif/qatar/obj6/manifest.json",
       "@type": "sc:Manifest",
-      "label": "qatar obj6"
+      "label": "Diwan of Jami Manuscript"
     },
     {
       "@id": "/wax/iiif/qatar/obj7/manifest.json",
       "@type": "sc:Manifest",
-      "label": "qatar obj7"
+      "label": "Page from the Shahnama"
     },
     {
       "@id": "/wax/iiif/qatar/obj8/manifest.json",
       "@type": "sc:Manifest",
-      "label": "qatar obj8"
+      "label": "Silk Tapestry Depicting the story of Leila and Majnun"
     },
     {
       "@id": "/wax/iiif/qatar/obj9/manifest.json",
       "@type": "sc:Manifest",
-      "label": "qatar obj9"
+      "label": "Portrait of Fath 'Ali Shah"
     }
   ]
 }

@@ -2,7 +2,25 @@
   "@context": "http://iiif.io/api/presentation/2/context.json",
   "@id": "/wax/iiif/qatar/obj11/manifest.json",
   "@type": "sc:Manifest",
-  "label": "qatar obj11",
+  "label": "Portrait of Sheikh Ali Mirza",
+  "metadata": [
+    {
+      "label": "Artist",
+      "value": "Unknown"
+    },
+    {
+      "label": "Institution",
+      "value": "The Museum of Islamic Art, Qatar"
+    },
+    {
+      "label": "Type of Item",
+      "value": "portrait"
+    },
+    {
+      "label": "Date Created",
+      "value": "1800 - 1850"
+    }
+  ],
   "thumbnail": "/wax/iiif/qatar/images/obj11-1/full/250,/0/default.jpg",
   "viewingDirection": "left-to-right",
   "viewingHint": "individuals",
