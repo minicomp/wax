@@ -3,24 +3,6 @@
   "@id": "/wax/iiif/qatar/obj4/manifest.json",
   "@type": "sc:Manifest",
   "label": "Faridun crosses the River Dijla, fol. 33v",
-  "metadata": [
-    {
-      "label": "Artist",
-      "value": "Unknown"
-    },
-    {
-      "label": "Institution",
-      "value": "The Museum of Islamic Art, Qatar"
-    },
-    {
-      "label": "Type of Item",
-      "value": "manuscript"
-    },
-    {
-      "label": "Date Created",
-      "value": "1525 - 1535"
-    }
-  ],
   "thumbnail": "/wax/iiif/qatar/images/obj4-1/full/250,/0/default.jpg",
   "viewingDirection": "left-to-right",
   "viewingHint": "individuals",

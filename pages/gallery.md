@@ -1,7 +1,7 @@
 ---
-layout: gallery-page
+layout: default
 title: Gallery
 permalink: /gallery/
-collection: qatar
-facet_by: object_type
 ---
+
+{% include gallery.html facet_by='object_type' collection='qatar' %}

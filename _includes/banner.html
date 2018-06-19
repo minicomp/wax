@@ -1,6 +1,7 @@
 <div id="wax-banner">
   {% assign i = 1 %}
-  {% for item in include.banner %}
+  {% assign banner = include.banner | default: page.banner %}
+  {% for item in banner %}
 
       {%- capture image_uri -%}
         {{ site.baseurl }}/iiif/{{ item.collection }}/images/{{ item.pid }}-1/full/1140,/0/default.jpg
@@ -31,7 +32,9 @@
               <img src="{{ image_uri }}" style="transform: {{ transform-css }};"/>
           </div>
         </a>
-        <span class="banner-caption">{{ caption }}</span>
+        {% if include.caption %}
+          <span class="banner-caption">{{ caption }}</span>
+        {% endif %}
       </div>
 
     {% assign i = i | plus: 1 %}

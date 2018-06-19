@@ -3,24 +3,6 @@
   "@id": "/wax/iiif/qatar/obj3/manifest.json",
   "@type": "sc:Manifest",
   "label": "Map of the World",
-  "metadata": [
-    {
-      "label": "Artist",
-      "value": "Unknown"
-    },
-    {
-      "label": "Institution",
-      "value": "The Museum of Islamic Art, Qatar"
-    },
-    {
-      "label": "Type of Item",
-      "value": "map"
-    },
-    {
-      "label": "Date Created",
-      "value": "15th century"
-    }
-  ],
   "thumbnail": "/wax/iiif/qatar/images/obj3-1/full/250,/0/default.jpg",
   "viewingDirection": "left-to-right",
   "viewingHint": "individuals",

@@ -3,24 +3,6 @@
   "@id": "/wax/iiif/qatar/obj9/manifest.json",
   "@type": "sc:Manifest",
   "label": "Portrait of Fath 'Ali Shah",
-  "metadata": [
-    {
-      "label": "Artist",
-      "value": "Mihr 'Ali"
-    },
-    {
-      "label": "Institution",
-      "value": "The Museum of Islamic Art, Qatar"
-    },
-    {
-      "label": "Type of Item",
-      "value": "portrait"
-    },
-    {
-      "label": "Date Created",
-      "value": "1816"
-    }
-  ],
   "thumbnail": "/wax/iiif/qatar/images/obj9-1/full/250,/0/default.jpg",
   "viewingDirection": "left-to-right",
   "viewingHint": "individuals",

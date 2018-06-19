@@ -22,6 +22,7 @@ html, body {
 }
 
 #main{
+  margin-bottom: 500px; // temporary fix
   a {
     color: $accent-color;
   }
@@ -341,14 +342,4 @@ search box
 
 .iiif-logo {
   height: 1.5em;
-}
-
-.mirador{
-  display: block;
-  position: relative;
-  height: 60vh;
-  margin-bottom: 50px;
-}
-.mirador a {
-  color: inherit !important;
 }

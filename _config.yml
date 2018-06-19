@@ -1,25 +1,25 @@
 # main settings
 title:            Minicomp/Wax
 description:      a jekyll theme for minimal exhibitions
-url:              ''
-baseurl:          '/wax'
+url:              '' # the url should stay empty
+baseurl:          '/wax' # the baseurl of your site must be defined but can be an empty ''
 
 # build settings
 permalink:        pretty
-exclude:          [Gemfile*, Rakefile, node_modules, vendor, spec, README.md]
-collections_dir:  collections
+exclude:          [Gemfile*, Rakefile, vendor, spec, README.md]
 
 # wax collection settings
 collections:
   qatar:
     output: true
     source: qatar.csv
-    layout: iiif-item-page
+    layout: qatar_item
     lunr_index:
       content: false
       fields: [pid, title, artist, location, _date, object_type, current_location]
     iiif:
-      label: title
+      meta:
+        label: title
 
 # menu settings
 menu:
@@ -38,11 +38,11 @@ menu:
   - label: Gallery
     link: /gallery/
 
-# search tests
+# search tests. run with $ bundle exec rspec
 quoll:
   main:
-    page: '/'
-    terms:
+    page: '/' # the path of the page you want to test
+    terms:  # the search terms you expect to yield results
       - iran
       - map
       - manuscript

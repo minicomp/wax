@@ -3,7 +3,6 @@ layout: none
 ---
 [
   {
-    "lunr_id": 0,
     "link": "{{'/qatar/obj1/' | relative_url }}",
     "collection": "qatar",
     "pid": "obj1",
@@ -12,10 +11,10 @@ layout: none
     "location": "Turkey",
     "_date": "1801",
     "object_type": "manuscript",
-    "current_location": "The Museum of Islamic Art, Qatar"
+    "current_location": "The Museum of Islamic Art, Qatar",
+    "lunr_id": 0
   },
   {
-    "lunr_id": 1,
     "link": "{{'/qatar/obj10/' | relative_url }}",
     "collection": "qatar",
     "pid": "obj10",
@@ -24,10 +23,10 @@ layout: none
     "location": "Iran",
     "_date": "1800 - 1850",
     "object_type": "portrait",
-    "current_location": "The Museum of Islamic Art, Qatar"
+    "current_location": "The Museum of Islamic Art, Qatar",
+    "lunr_id": 1
   },
   {
-    "lunr_id": 2,
     "link": "{{'/qatar/obj11/' | relative_url }}",
     "collection": "qatar",
     "pid": "obj11",
@@ -36,10 +35,10 @@ layout: none
     "location": "Iran",
     "_date": "1800 - 1850",
     "object_type": "portrait",
-    "current_location": "The Museum of Islamic Art, Qatar"
+    "current_location": "The Museum of Islamic Art, Qatar",
+    "lunr_id": 2
   },
   {
-    "lunr_id": 3,
     "link": "{{'/qatar/obj2/' | relative_url }}",
     "collection": "qatar",
     "pid": "obj2",
@@ -48,10 +47,10 @@ layout: none
     "location": "Egypt",
     "_date": "14th century",
     "object_type": "manuscript",
-    "current_location": "The Museum of Islamic Art, Qatar"
+    "current_location": "The Museum of Islamic Art, Qatar",
+    "lunr_id": 3
   },
   {
-    "lunr_id": 4,
     "link": "{{'/qatar/obj3/' | relative_url }}",
     "collection": "qatar",
     "pid": "obj3",
@@ -60,10 +59,10 @@ layout: none
     "location": "Egypt",
     "_date": "15th century",
     "object_type": "map",
-    "current_location": "The Museum of Islamic Art, Qatar"
+    "current_location": "The Museum of Islamic Art, Qatar",
+    "lunr_id": 4
   },
   {
-    "lunr_id": 5,
     "link": "{{'/qatar/obj4/' | relative_url }}",
     "collection": "qatar",
     "pid": "obj4",
@@ -72,10 +71,10 @@ layout: none
     "location": "Iran",
     "_date": "1525 - 1535",
     "object_type": "manuscript",
-    "current_location": "The Museum of Islamic Art, Qatar"
+    "current_location": "The Museum of Islamic Art, Qatar",
+    "lunr_id": 5
   },
   {
-    "lunr_id": 6,
     "link": "{{'/qatar/obj5/' | relative_url }}",
     "collection": "qatar",
     "pid": "obj5",
@@ -84,10 +83,10 @@ layout: none
     "location": "Iran",
     "_date": "1600 - 1625",
     "object_type": "panel",
-    "current_location": "The Museum of Islamic Art, Qatar"
+    "current_location": "The Museum of Islamic Art, Qatar",
+    "lunr_id": 6
   },
   {
-    "lunr_id": 7,
     "link": "{{'/qatar/obj6/' | relative_url }}",
     "collection": "qatar",
     "pid": "obj6",
@@ -96,10 +95,10 @@ layout: none
     "location": "Iran",
     "_date": "16th century",
     "object_type": "manuscript",
-    "current_location": "The Museum of Islamic Art, Qatar"
+    "current_location": "The Museum of Islamic Art, Qatar",
+    "lunr_id": 7
   },
   {
-    "lunr_id": 8,
     "link": "{{'/qatar/obj7/' | relative_url }}",
     "collection": "qatar",
     "pid": "obj7",
@@ -108,10 +107,10 @@ layout: none
     "location": "Iran",
     "_date": "1525 - 1535",
     "object_type": "manuscript",
-    "current_location": "The Museum of Islamic Art, Qatar"
+    "current_location": "The Museum of Islamic Art, Qatar",
+    "lunr_id": 8
   },
   {
-    "lunr_id": 9,
     "link": "{{'/qatar/obj8/' | relative_url }}",
     "collection": "qatar",
     "pid": "obj8",
@@ -120,10 +119,10 @@ layout: none
     "location": "Iran",
     "_date": "1550 - 1650",
     "object_type": "panel",
-    "current_location": "The Museum of Islamic Art, Qatar"
+    "current_location": "The Museum of Islamic Art, Qatar",
+    "lunr_id": 9
   },
   {
-    "lunr_id": 10,
     "link": "{{'/qatar/obj9/' | relative_url }}",
     "collection": "qatar",
     "pid": "obj9",
@@ -132,6 +131,7 @@ layout: none
     "location": "Iran",
     "_date": "1816",
     "object_type": "portrait",
-    "current_location": "The Museum of Islamic Art, Qatar"
+    "current_location": "The Museum of Islamic Art, Qatar",
+    "lunr_id": 10
   }
 ]

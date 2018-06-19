@@ -10,6 +10,8 @@ banner:
     x: left
 ---
 
+{% include banner.html %}
+
 ### Coming soon!
 
 In the meantime, check out our [Wiki](https://minicomp.github.io/wiki/#/wax/).

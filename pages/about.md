@@ -8,6 +8,7 @@ banner:
     zoom: 0
     y: top
 ---
+{% include banner.html %}
 
 ### Coming soon!
 

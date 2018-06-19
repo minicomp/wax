@@ -43,10 +43,8 @@ function loadIIIFViewer(manifest_uri) {
     leaflet_iiif = L.map('leaflet-iiif', {
       center: [0, 0],
       crs: L.CRS.Simple,
-      zoomDelta: 0.5,
       zoomSnap: 0,
-      minZoom: .5,
-      zoom: .5
+      zoom: 0
     });
     $.getJSON(manifestUrl, function(data) {
       var i = 1;

@@ -3,24 +3,6 @@
   "@id": "/wax/iiif/qatar/obj1/manifest.json",
   "@type": "sc:Manifest",
   "label": "The Dala'il al-Khayrat of al-Juzuli",
-  "metadata": [
-    {
-      "label": "Artist",
-      "value": "Al-Hajj Hafiz Muhammad Nuri"
-    },
-    {
-      "label": "Institution",
-      "value": "The Museum of Islamic Art, Qatar"
-    },
-    {
-      "label": "Type of Item",
-      "value": "manuscript"
-    },
-    {
-      "label": "Date Created",
-      "value": "1801"
-    }
-  ],
   "thumbnail": "/wax/iiif/qatar/images/obj1-1/full/250,/0/default.jpg",
   "viewingDirection": "left-to-right",
   "viewingHint": "individuals",
