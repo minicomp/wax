@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/mnyrop/wax_tasks.git
-  revision: f5412b2e943afe315e0df909807c064480a83a5b
+  revision: 893e6ce93b92ee098b62cf01c654d84b75f5f6e5
   branch: beta
   specs:
-    wax_tasks (0.2.0)
+    wax_tasks (0.3.0)
       colorize (~> 0.8)
       html-proofer (~> 3)
       jekyll (~> 3)
@@ -22,7 +22,7 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
-    capybara (3.2.1)
+    capybara (3.3.1)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -126,7 +126,7 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    selenium-webdriver (3.12.0)
+    selenium-webdriver (3.13.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
     thread_safe (0.3.6)

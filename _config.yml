@@ -7,6 +7,7 @@ baseurl:          '/wax' # the baseurl of your site must be defined but can be a
 # build settings
 permalink:        pretty
 exclude:          [Gemfile*, Rakefile, vendor, spec, README.md]
+source:           src
 
 # wax collection settings
 collections:
