@@ -3,7 +3,7 @@ gem 'jekyll', '~> 3.8.3'
 
 group :development, :test do
   gem 'rspec'
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '3.12.0'
   gem 'chromedriver-helper'
   gem 'capybara'
   gem 'rack-jekyll'
