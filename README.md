@@ -1,4 +1,4 @@
-# minicomp/wax [![Build Status](https://travis-ci.org/mnyrop/wax.svg?branch=master)](https://travis-ci.org/mnyrop/wax)
+# minicomp/wax [![Build Status](https://travis-ci.org/mnyrop/wax.svg?branch=master)](https://travis-ci.org/mnyrop/wax) [![Libraries.io](https://img.shields.io/librariesio/github/mnyrop/wax.svg)](https://libraries.io/github/mnyrop/wax) 
 
 
 ### jekyll for minimal exhibitions with iiif

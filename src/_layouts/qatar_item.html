@@ -1,0 +1,57 @@
+---
+layout: item
+iiif: true
+viewer: leaflet
+pagination: true
+show_title: true
+---
+
+<center>
+  <div id="metadata-block">
+    <table class="table table-striped">
+      <tr class="meta">
+        <td class="label">Title: </td>
+        <td class="value">{{ page.title }}</td>
+      </tr>
+
+      <tr class="meta">
+        <td class="label">Artist: </td>
+        <td class="value">{{ page.artist }}</td>
+      </tr>
+
+      <tr class="meta">
+        <td class="label">Location: </td>
+        <td class="value">{{ page.location }}</td>
+      </tr>
+
+      <tr class="meta">
+        <td class="label">Date: </td>
+        <td class="value">{{ page._date }}</td>
+      </tr>
+
+      <tr class="meta">
+        <td class="label">Object Type: </td>
+        <td class="value">{{ page.object_type }}</td>
+      </tr>
+
+      <tr class="meta">
+        <td class="label">Current Location: </td>
+        <td class="value">{{ page.current_location }}</td>
+      </tr>
+
+      <tr class="meta">
+        <td class="label">IIIF Manifest: </td>
+        <td class="value">
+          <a href="{{ manifest }}">
+            <img src="{{ site.baseurl }}/assets/iiif-logo.png" class="iiif-logo"/>
+          </a>
+        </td>
+      </tr>
+
+      <tr class="meta">
+        <td class="label">Source: </td>
+        <td class="value"><a href="{{ page.wiki_link }}">Wikimedia Commons</a></td>
+      </tr>
+    </table>
+  </div>
+</center>
