@@ -1,16 +1,28 @@
-# minicomp/wax [![Build Status](https://travis-ci.org/mnyrop/wax.svg?branch=master)](https://travis-ci.org/mnyrop/wax) [![Libraries.io](https://img.shields.io/librariesio/github/mnyrop/wax.svg)](https://libraries.io/github/mnyrop/wax) 
+# minicomp/wax 🐝
+
+[![Build Status](https://travis-ci.org/mnyrop/wax.svg?branch=master)](https://travis-ci.org/mnyrop/wax) [![](https://img.shields.io/librariesio/github/mnyrop/wax.svg)](https://libraries.io/github/mnyrop/wax) 
 
 
-### jekyll for minimal exhibitions with iiif
+__jekyll for minimal exhibitions with iiif__
 
-canonical repository: <https://minicomp.github.io/wax/>
+canonical repository: <https://minicomp.github.io/wax/> <br>
+gem behind wax:       <https://github.com/minicomp/wax_tasks/>
 
-gem behind wax: <https://github.com/minicomp/wax_tasks/>
+<br>
 
+```sh
+NOTE ~>   WAX, WAX_TASKS, and WAX_IIIF are in RAPID development and will be 
+          unstable until the beta release (v0.5.0). 
+          
+          Please submit any bugs, questions, suggestions, feature requests, 
+          and/or documentation edits as GitHub issues.
+          Any feedback is helpful/appreciated !!!!
+```
+<br>
 
 <a href="https://minicomp.github.io/wax/">
   <img src="https://raw.githubusercontent.com/minicomp/wiki/master/docs/assets/wax_screen.gif"/>
- </a>
+</a>
 
 #### Welcome to the demo repository for the [Minicomp/Wax](https://github.com/minicomp/wax/) minimal exhibition workflow.
 
