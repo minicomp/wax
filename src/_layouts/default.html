@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <div class="container" id="main">
+      {{ content }}
+      {% include footer.html %}
+    </div>
+
+  </body>
+  <script type="text/javascript" src="{{ site.js.bootstrap.cdn }}"></script>
+  <script type="text/javascript" src="{{ site.js.popper.cdn }}"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/js/wax.js"></script>
+</html>

@@ -1,0 +1,23 @@
+{% assign img = page.inline_images[include.img] %}
+{% assign float = img.float  | default: 'left' %}
+{% assign object = site.data[img.collection] | where: 'pid', img.pid | first %}
+{%- capture margin -%}
+  {% if float == 'left' %}0 20px 0 0
+  {% else %}0 0 0 20px{% endif %}
+{%- endcapture -%}
+{%- capture css -%}
+  display:  inline-block;
+  object-fit: cover;
+  float:    {{ float }};
+  width:    {{ img.width  | default: '150px' }};
+  height:   {{ img.height | default: '150px' }};
+  margin:   {{ margin }};
+{%- endcapture -%}
+
+{%- capture image_uri -%}
+  {{ site.baseurl }}/iiif/{{ img.collection }}/images/{{ img.pid }}-1/full/600,/0/default.jpg
+{%- endcapture -%}
+
+<a href="{{ site.baseurl }}/{{ img.collection }}/{{ img.pid }}/" >
+  <img src="{{ image_uri }}" style="{{ css }}" class="inline-img" alt="{{ object.title }}" title="{{ object.title }}"/>
+</a>

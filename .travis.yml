@@ -4,8 +4,15 @@ addons:
   chrome: stable
 rvm:
   - 2.4
+branches:
+  except:
+    - gh-pages
 before_script:
+  - bundle exec rake wax:pagemaster qatar
+  - bundle exec rake wax:iiif qatar
   - bundle exec rake wax:lunr
-  - bundle exec jekyll build -d _site/wax
 script:
+  - bundle exec jekyll build -d _site/wax
   - bundle exec rake wax:test
+after_success:
+  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then bundle exec rake wax:push gh-pages; fi
