@@ -5,7 +5,8 @@
 
 __jekyll for minimal exhibitions with iiif__
 
-canonical repository: <https://minicomp.github.io/wax/> <br>
+demo site:            <https://minicomp.github.io/wax/> <br>
+cannonical repo:      <https://github.com/minicomp/wax/> <br>
 gem behind wax:       <https://github.com/minicomp/wax_tasks/>
 
 <br>
