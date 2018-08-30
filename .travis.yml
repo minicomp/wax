@@ -8,8 +8,6 @@ branches:
   except:
     - gh-pages
 before_script:
-  - bundle exec rake wax:pagemaster qatar
-  - bundle exec rake wax:iiif qatar
   - bundle exec rake wax:lunr
 script:
   - bundle exec jekyll build -d _site/wax
