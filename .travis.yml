@@ -2,6 +2,10 @@ sudo: required
 language: ruby
 rvm:
   - 2.4
+addons:
+  firefox: latest
+git:
+  depth: 1
 branches:
   except:
     - gh-pages
