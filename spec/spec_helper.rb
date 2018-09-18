@@ -7,15 +7,14 @@ require 'rack/test'
 RSpec.configure do |config|
   config.include Capybara::DSL
 
-  Capybara.register_driver :headless_chrome do |app|
-    capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-      chromeOptions: { args: %w(headless disable-gpu) }
-    )
-    Capybara::Selenium::Driver.new app, browser: :chrome, desired_capabilities: capabilities
+  Capybara.register_driver :firefox_headless do |app|
+    options = ::Selenium::WebDriver::Firefox::Options.new
+    options.args << '--headless'
+    Capybara::Selenium::Driver.new(app, browser: :firefox, options: options)
   end
 
-  Capybara.javascript_driver = :headless_chrome
+  Capybara.javascript_driver = :firefox_headless
   Capybara.current_driver = Capybara.javascript_driver
-  Capybara.app = Rack::Jekyll.new(:force_build => false)
+  Capybara.app = Rack::Jekyll.new(force_build: false)
   Capybara.server = :webrick
 end

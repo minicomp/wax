@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
-gem 'jekyll', '~> 3.8.3'
+gem 'github-pages'
 
 group :development, :test do
+  gem 'capybara'
+  gem 'geckodriver-helper'
+  gem 'rack-jekyll'
   gem 'rspec'
   gem 'selenium-webdriver'
-  gem 'chromedriver-helper'
-  gem 'capybara'
-  gem 'rack-jekyll'
   gem 'wax_tasks', :git => 'https://github.com/mnyrop/wax_tasks.git'
 end
