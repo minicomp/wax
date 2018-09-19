@@ -5,9 +5,10 @@ url:              '' # the url should stay empty
 baseurl:          '/wax' # the baseurl of your site must be defined but can be an empty ''
 
 # build settings
-permalink:        pretty
-exclude:          [Gemfile*, Rakefile, vendor, spec, README.md]
-source:           src
+permalink:            'pretty'
+exclude:              [Gemfile*, Rakefile, vendor, spec, README.md]
+source:               'src'
+safe:                 true
 
 # wax collection settings
 collections:
