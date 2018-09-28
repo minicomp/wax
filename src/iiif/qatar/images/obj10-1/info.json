@@ -1,6 +1,6 @@
 {
   "@context": "http://iiif.io/api/image/2/context.json",
-  "@id": "/wax/iiif/qatar/images/obj10-1",
+  "@id": "/iiif/qatar/images/obj10-1",
   "protocol": "http://iiif.io/api/image",
   "width": 2501,
   "height": 4331,

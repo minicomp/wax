@@ -5,7 +5,7 @@ $.getJSON("{{ site.baseurl }}/js/lunr-index.json", function(index_json) {
     window.index = new elasticlunr.Index;
     window.store = index_json;
     index.saveDocument(false);
-    index.setRef('lunr_id');
+    index.setRef('lunr_index');
     index.addField('pid');
     index.addField('title');
     index.addField('artist');

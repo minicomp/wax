@@ -3,16 +3,16 @@ layout: none
 ---
 [
   {
-    "link": "{{'/qatar/obj1/' | relative_url }}",
+    "link": "{{'/qatar/obj5/' | relative_url }}",
     "collection": "qatar",
-    "pid": "obj1",
-    "title": "The Dala'il al-Khayrat of al-Juzuli",
-    "artist": "Al-Hajj Hafiz Muhammad Nuri",
-    "location": "Turkey",
-    "_date": "1801",
-    "object_type": "manuscript",
+    "pid": "obj5",
+    "title": "Panel from Iran",
+    "artist": "Unknown",
+    "location": "Iran",
+    "_date": "1600 - 1625",
+    "object_type": "panel",
     "current_location": "The Museum of Islamic Art, Qatar",
-    "lunr_id": 0
+    "lunr_index": 0
   },
   {
     "link": "{{'/qatar/obj10/' | relative_url }}",
@@ -24,43 +24,19 @@ layout: none
     "_date": "1800 - 1850",
     "object_type": "portrait",
     "current_location": "The Museum of Islamic Art, Qatar",
-    "lunr_id": 1
+    "lunr_index": 1
   },
   {
-    "link": "{{'/qatar/obj11/' | relative_url }}",
+    "link": "{{'/qatar/obj1/' | relative_url }}",
     "collection": "qatar",
-    "pid": "obj11",
-    "title": "Portrait of Sheikh Ali Mirza",
-    "artist": "Unknown",
-    "location": "Iran",
-    "_date": "1800 - 1850",
-    "object_type": "portrait",
-    "current_location": "The Museum of Islamic Art, Qatar",
-    "lunr_id": 2
-  },
-  {
-    "link": "{{'/qatar/obj2/' | relative_url }}",
-    "collection": "qatar",
-    "pid": "obj2",
-    "title": "Sulwan Al-Muta'a",
-    "artist": "Unknown",
-    "location": "Egypt",
-    "_date": "14th century",
+    "pid": "obj1",
+    "title": "The Dala'il al-Khayrat of al-Juzuli",
+    "artist": "Al-Hajj Hafiz Muhammad Nuri",
+    "location": "Turkey",
+    "_date": "1801",
     "object_type": "manuscript",
     "current_location": "The Museum of Islamic Art, Qatar",
-    "lunr_id": 3
-  },
-  {
-    "link": "{{'/qatar/obj3/' | relative_url }}",
-    "collection": "qatar",
-    "pid": "obj3",
-    "title": "Map of the World",
-    "artist": "Unknown",
-    "location": "Egypt",
-    "_date": "15th century",
-    "object_type": "map",
-    "current_location": "The Museum of Islamic Art, Qatar",
-    "lunr_id": 4
+    "lunr_index": 2
   },
   {
     "link": "{{'/qatar/obj4/' | relative_url }}",
@@ -72,55 +48,19 @@ layout: none
     "_date": "1525 - 1535",
     "object_type": "manuscript",
     "current_location": "The Museum of Islamic Art, Qatar",
-    "lunr_id": 5
+    "lunr_index": 3
   },
   {
-    "link": "{{'/qatar/obj5/' | relative_url }}",
+    "link": "{{'/qatar/obj11/' | relative_url }}",
     "collection": "qatar",
-    "pid": "obj5",
-    "title": "Panel from Iran",
+    "pid": "obj11",
+    "title": "Portrait of Sheikh Ali Mirza",
     "artist": "Unknown",
     "location": "Iran",
-    "_date": "1600 - 1625",
-    "object_type": "panel",
+    "_date": "1800 - 1850",
+    "object_type": "portrait",
     "current_location": "The Museum of Islamic Art, Qatar",
-    "lunr_id": 6
-  },
-  {
-    "link": "{{'/qatar/obj6/' | relative_url }}",
-    "collection": "qatar",
-    "pid": "obj6",
-    "title": "Diwan of Jami Manuscript",
-    "artist": "Unknown",
-    "location": "Iran",
-    "_date": "16th century",
-    "object_type": "manuscript",
-    "current_location": "The Museum of Islamic Art, Qatar",
-    "lunr_id": 7
-  },
-  {
-    "link": "{{'/qatar/obj7/' | relative_url }}",
-    "collection": "qatar",
-    "pid": "obj7",
-    "title": "Page from the Shahnama",
-    "artist": "Unknown",
-    "location": "Iran",
-    "_date": "1525 - 1535",
-    "object_type": "manuscript",
-    "current_location": "The Museum of Islamic Art, Qatar",
-    "lunr_id": 8
-  },
-  {
-    "link": "{{'/qatar/obj8/' | relative_url }}",
-    "collection": "qatar",
-    "pid": "obj8",
-    "title": "Silk Tapestry Depicting the story of Leila and Majnun",
-    "artist": "Unknown",
-    "location": "Iran",
-    "_date": "1550 - 1650",
-    "object_type": "panel",
-    "current_location": "The Museum of Islamic Art, Qatar",
-    "lunr_id": 9
+    "lunr_index": 4
   },
   {
     "link": "{{'/qatar/obj9/' | relative_url }}",
@@ -132,6 +72,66 @@ layout: none
     "_date": "1816",
     "object_type": "portrait",
     "current_location": "The Museum of Islamic Art, Qatar",
-    "lunr_id": 10
+    "lunr_index": 5
+  },
+  {
+    "link": "{{'/qatar/obj8/' | relative_url }}",
+    "collection": "qatar",
+    "pid": "obj8",
+    "title": "Silk Tapestry Depicting the story of Leila and Majnun",
+    "artist": "Unknown",
+    "location": "Iran",
+    "_date": "1550 - 1650",
+    "object_type": "panel",
+    "current_location": "The Museum of Islamic Art, Qatar",
+    "lunr_index": 6
+  },
+  {
+    "link": "{{'/qatar/obj3/' | relative_url }}",
+    "collection": "qatar",
+    "pid": "obj3",
+    "title": "Map of the World",
+    "artist": "Unknown",
+    "location": "Egypt",
+    "_date": "15th century",
+    "object_type": "map",
+    "current_location": "The Museum of Islamic Art, Qatar",
+    "lunr_index": 7
+  },
+  {
+    "link": "{{'/qatar/obj7/' | relative_url }}",
+    "collection": "qatar",
+    "pid": "obj7",
+    "title": "Page from the Shahnama",
+    "artist": "Unknown",
+    "location": "Iran",
+    "_date": "1525 - 1535",
+    "object_type": "manuscript",
+    "current_location": "The Museum of Islamic Art, Qatar",
+    "lunr_index": 8
+  },
+  {
+    "link": "{{'/qatar/obj6/' | relative_url }}",
+    "collection": "qatar",
+    "pid": "obj6",
+    "title": "Diwan of Jami Manuscript",
+    "artist": "Unknown",
+    "location": "Iran",
+    "_date": "16th century",
+    "object_type": "manuscript",
+    "current_location": "The Museum of Islamic Art, Qatar",
+    "lunr_index": 9
+  },
+  {
+    "link": "{{'/qatar/obj2/' | relative_url }}",
+    "collection": "qatar",
+    "pid": "obj2",
+    "title": "Sulwan Al-Muta'a",
+    "artist": "Unknown",
+    "location": "Egypt",
+    "_date": "14th century",
+    "object_type": "manuscript",
+    "current_location": "The Museum of Islamic Art, Qatar",
+    "lunr_index": 10
   }
 ]

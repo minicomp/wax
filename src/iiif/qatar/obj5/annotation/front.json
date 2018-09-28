@@ -1,19 +1,19 @@
 {
   "@type": "oa:Annotation",
-  "@id": "/wax/iiif/qatar/obj5/annotation/front.json",
+  "@id": "/iiif/qatar/obj5/annotation/front.json",
   "motivation": "sc:painting",
   "resource": {
-    "@id": "/wax/iiif/qatar/images/obj5-1/full/full/0/default.jpg",
+    "@id": "/iiif/qatar/images/obj5-1/full/full/0/default.jpg",
     "@type": "dcterms:Image",
     "format": "image/jpeg",
     "service": {
       "@context": "http://iiif.io/api/image/2/context.json",
-      "@id": "/wax/iiif/qatar/images/obj5-1",
+      "@id": "/iiif/qatar/images/obj5-1",
       "profile": "http://iiif.io/api/image/2/level0.json"
     },
     "width": 4001,
     "height": 2840
   },
-  "on": "/wax/iiif/qatar/obj5/canvas/front.json",
+  "on": "/iiif/qatar/obj5/canvas/front.json",
   "@context": "http://iiif.io/api/presentation/2/context.json"
 }

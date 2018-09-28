@@ -2,13 +2,13 @@
 title:            Minicomp/Wax
 description:      a jekyll theme for minimal exhibitions
 url:              '' # the url should stay empty
-baseurl:          '/wax' # the baseurl of your site must be defined but can be an empty ''
+baseurl:          '' # the baseurl of your site must be defined but can be an empty ''
 
 # build settings
-permalink:            'pretty'
-exclude:              [Gemfile*, Rakefile, vendor, spec, README.md]
-source:               'src'
-safe:                 true
+permalink:        'pretty'
+source:           'src'
+exclude:          [Gemfile*, Rakefile, vendor, spec, README.md]
+safe:             true
 
 # wax collection settings
 collections:
