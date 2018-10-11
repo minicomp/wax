@@ -1,18 +1,18 @@
 sudo: required
 language: ruby
-addons:
-  chrome: stable
 rvm:
   - 2.4
+addons:
+  firefox: latest
+git:
+  depth: 1
 branches:
   except:
     - gh-pages
 before_script:
-  - bundle exec rake wax:pagemaster qatar
-  - bundle exec rake wax:iiif qatar
   - bundle exec rake wax:lunr
 script:
-  - bundle exec jekyll build -d _site/wax
+  - bundle exec jekyll build
   - bundle exec rake wax:test
 after_success:
   - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then bundle exec rake wax:push gh-pages; fi
