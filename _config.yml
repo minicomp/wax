@@ -6,12 +6,14 @@ baseurl:          '' # the baseurl of your site must be defined but can be an em
 
 # build settings
 permalink:        'pretty'
-source:           'src'
 exclude:          [Gemfile*, Rakefile, vendor, spec, README.md]
 safe:             true
 
 # wax collection settings
 collections:
+  pages:
+    output:
+      true
   qatar:
     output: true
     source: qatar.csv
