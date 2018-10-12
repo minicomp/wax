@@ -21,9 +21,6 @@ collections:
     lunr_index:
       content: false
       fields: [pid, title, artist, location, _date, object_type, current_location]
-    iiif:
-      meta:
-        label: title
 
 # menu settings
 menu:

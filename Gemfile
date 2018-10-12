@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'jekyll', '3.8.4'
+gem 'jekyll', '>=3.8'
 
 group :development, :test do
   gem 'capybara'
@@ -7,5 +7,6 @@ group :development, :test do
   gem 'rack-jekyll'
   gem 'rspec'
   gem 'selenium-webdriver'
-  gem 'wax_tasks'
+  gem 'wax_tasks', git: 'https://github.com/mnyrop/wax_tasks.git', branch: 'iiif-documents'
+  gem 'wax_iiif', git: 'https://github.com/mnyrop/wax_iiif.git', branch: '0.0.3'
 end

@@ -7,14 +7,9 @@ layout: default
 {% endif %}
 
 {% if layout.iiif == true %}
-  {%- capture manifest-%}
-    {%- if page.manifest -%}{{ page.manifest }}
-    {%- else -%}{{ site.baseurl }}/iiif/{{ page.collection }}/{{ page.pid }}/manifest.json
-    {%- endif -%}
-  {%- endcapture -%}
-
-  <script type="text/javascript">window.manifest = "{{ manifest }}";</script>
-
+  {%- capture image_uri -%}/iiif/images/{{ page.collection }}/{{ page.pid }}/info.json{%- endcapture -%}
+  {% assign image_uri = image_uri | absolute_url -%}
+  <script type="text/javascript">window.image_uri = "{{ image_uri }}";</script>
   {% include leaflet_iiif_viewer.html %}
 {% endif %}
 

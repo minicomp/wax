@@ -1,0 +1,66 @@
+---
+layout: none
+---
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "{{ 'iiif' | absolute_url }}/collection/top.json",
+  "@type": "sc:Collection",
+  "label": "top",
+  "manifests": [
+    {
+      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj10/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj10"
+    },
+    {
+      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj5/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj5"
+    },
+    {
+      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj4/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj4"
+    },
+    {
+      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj11/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj11"
+    },
+    {
+      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj6/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj6"
+    },
+    {
+      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj7/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj7"
+    },
+    {
+      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj3/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj3"
+    },
+    {
+      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj2/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj2"
+    },
+    {
+      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj1/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj1"
+    },
+    {
+      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj9/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj9"
+    },
+    {
+      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj8/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj8"
+    }
+  ]
+}

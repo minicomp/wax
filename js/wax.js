@@ -35,18 +35,32 @@ function resizeMetaBox() {
 
 /// iiif viewer
 
-function loadIIIFViewer(manifest_uri) {
+function loadIIIFImageViewer(image_uri) {
+  if ( $( "#leaflet-iiif" ).length ) {
+    console.log('inside if');
+    console.log('in the function');
+    var iiif_viewer = L.map('leaflet-iiif', {
+      center: [0, 0],
+      crs: L.CRS.Simple,
+      zoomDelta: 0.5,
+      zoomSnap: 0,
+      zoom: 0
+    });
+    L.tileLayer.iiif(image_uri).addTo(iiif_viewer);
+  }
+}
+
+function loadIIIFManifestViewer(manifest_uri) {
   if ( $( "#leaflet-iiif" ).length ) {
     var leaflet_iiif;
     var iiifLayers = {};
-    var manifestUrl = manifest_uri;
     leaflet_iiif = L.map('leaflet-iiif', {
       center: [0, 0],
       crs: L.CRS.Simple,
       zoomSnap: 0,
       zoom: 0
     });
-    $.getJSON(manifestUrl, function(data) {
+    $.getJSON(manifest_uri, function(data) {
       var i = 1;
       $.each(data.sequences[0].canvases, function(_, val) {
         var label = 'image ' + i;
@@ -59,14 +73,19 @@ function loadIIIFViewer(manifest_uri) {
   }
 }
 
+if (typeof(image_uri) != "undefined"){
+  loadIIIFImageViewer(image_uri);
+}
+
+if (typeof(manifest_uri) != "undefined"){
+  loadIIIFManifestViewer(manifest_uri);
+}
+
+
 // on load
 
 resizeMetaBox();
 resizeWaxBanner();
-
-if (typeof(manifest) != "undefined"){
-  loadIIIFViewer(manifest);
-}
 
 // on resize
 

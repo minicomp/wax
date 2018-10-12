@@ -8,39 +8,38 @@
   container.prepend("<div id='gallery'></div>");
   var gallery = $('#gallery');
   {% for item in the_collection %}
-  gallery.append("<div class='gallery-item {{ item[include.facet_by] }} all'><a href='{{ site.baseurl }}/{{ include.collection }}/{{ item.pid }}/'><div class='hovereffect'><img class='img-responsive gallery-thumb' src='{{ site.baseurl }}/iiif/{{ include.collection }}/images/{{ item.pid }}-1/full/250,/0/default.jpg'><div class='overlay'><p class='info'>{{ item.title }}</p></div></div></a></div>");
+    gallery.append("<div class='gallery-item {{ item[include.facet_by] | slugify }} all'><a href='{{ site.baseurl }}/{{ include.collection }}/{{ item.pid }}/'><div class='hovereffect'><img class='img-responsive gallery-thumb' src='{{ site.baseurl }}/iiif/images/{{ include.collection }}/{{ item.pid }}/full/250,/0/default.jpg'><div class='overlay'><p class='info'>{{ item.title }}</p></div></div></a></div>");
   {% endfor %}
 
   {% if include.facet_by %}
-      container.prepend('<div id="facet-buttons"></div><br>');
+   container.prepend('<div id="facet-buttons"></div><br>');
 
-      var buttonDiv = $('#facet-buttons');
-      var facets = Array.from(new Set([{%- for item in the_collection -%}'{{ item[include.facet_by] }}'{% unless forloop.last %}, {% endunless %}{%- endfor -%}]));
+    var buttonDiv = $('#facet-buttons');
+    var facets = Array.from(new Set([{%- for item in the_collection -%}'{{ item[include.facet_by] | slugify }}'{% unless forloop.last %}, {% endunless %}{%- endfor -%}]));
 
-      // create buttons
-      buttonDiv.append("<button class='btn facet active' data-filter='all'>show all</button>");
-      for (i in facets) {
-        buttonDiv.append("<button class='btn facet' data-filter=" + facets[i]+ ">" + facets[i] + "</button>");
-      }
+    // create buttons
+    buttonDiv.append("<button class='btn facet btn-outline-secondary' data-filter='all'>show all</button>");
+    for (i in facets) {
+      buttonDiv.append("<button class='btn facet btn-outline-secondary' data-filter=" + facets[i]+ ">" + facets[i] + "</button>");
+    }
 
-
-      // filter on button click
-      $(document).ready(function(){
-          // clicking button with class "category-button"
-          $(".facet").click(function(){
-              // get the data-filter value of the button
-              var filterValue = $(this).attr('data-filter');
-              // show all items
-              if(filterValue == "all") {
-                  $(".all").show("slow");
-              }
-              else {
-                  // hide all items
-                  $(".all").hide("slow");
-                  // and then, show only items with selected data-filter value
-                  $('.'+filterValue).show("slow");
-              }
-          });
+    // filter on button click
+    $(document).ready(function(){
+      // clicking button with class "category-button"
+      $(".facet").click(function(){
+        // get the data-filter value of the button
+        var filterValue = $(this).attr('data-filter');
+        // show all items
+        if(filterValue == "all") {
+          $(".all").show("slow");
+        }
+        else {
+          // hide all items
+          $(".all").hide("slow");
+          // and then, show only items with selected data-filter value
+          $('.'+filterValue).show("slow");
+        }
       });
-    {% endif %}
+    });
+  {% endif %}
 </script>

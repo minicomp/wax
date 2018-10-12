@@ -1,0 +1,38 @@
+---
+layout: none
+---
+{
+  "@id": "{{ 'iiif' | absolute_url }}/qatar/sequence/obj9.json",
+  "@type": "sc:Sequence",
+  "canvases": [
+    {
+      "@type": "sc:Canvas",
+      "@id": "{{ 'iiif' | absolute_url }}/qatar/canvas/obj9.json",
+      "label": "obj9",
+      "width": 2501,
+      "height": 3924,
+      "thumbnail": "{{ 'iiif' | absolute_url }}/images/qatar/obj9/full/250,/0/default.jpg",
+      "images": [
+        {
+          "@type": "oa:Annotation",
+          "@id": "{{ 'iiif' | absolute_url }}/qatar/annotation/obj9.json",
+          "motivation": "sc:painting",
+          "resource": {
+            "@id": "{{ 'iiif' | absolute_url }}/images/qatar/obj9/full/full/0/default.jpg",
+            "@type": "dcterms:Image",
+            "format": "image/jpeg",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "{{ 'iiif' | absolute_url }}/images/qatar/obj9",
+              "profile": "http://iiif.io/api/image/2/level0.json"
+            },
+            "width": 2501,
+            "height": 3924
+          },
+          "on": "{{ 'iiif' | absolute_url }}/qatar/canvas/obj9.json"
+        }
+      ]
+    }
+  ],
+  "@context": "http://iiif.io/api/presentation/2/context.json"
+}

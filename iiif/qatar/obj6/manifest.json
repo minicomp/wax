@@ -1,41 +1,44 @@
+---
+layout: none
+---
 {
   "@context": "http://iiif.io/api/presentation/2/context.json",
-  "@id": "/iiif/qatar/obj6/manifest.json",
+  "@id": "{{ 'iiif' | absolute_url }}/qatar/obj6/manifest.json",
   "@type": "sc:Manifest",
   "label": "obj6",
-  "thumbnail": "/iiif/qatar/images/obj6-1/full/250,/0/default.jpg",
+  "thumbnail": "{{ 'iiif' | absolute_url }}/images/qatar/obj6/full/250,/0/default.jpg",
   "viewingDirection": "left-to-right",
   "viewingHint": "individuals",
   "sequences": [
     {
-      "@id": "/iiif/qatar/obj6/sequence/default.json",
+      "@id": "{{ 'iiif' | absolute_url }}/qatar/sequence/obj6.json",
       "@type": "sc:Sequence",
       "canvases": [
         {
           "@type": "sc:Canvas",
-          "@id": "/iiif/qatar/obj6/canvas/front.json",
-          "label": "front",
+          "@id": "{{ 'iiif' | absolute_url }}/qatar/canvas/obj6.json",
+          "label": "obj6",
           "width": 4081,
           "height": 5441,
-          "thumbnail": "/iiif/qatar/images/obj6-1/full/250,/0/default.jpg",
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/qatar/obj6/full/250,/0/default.jpg",
           "images": [
             {
               "@type": "oa:Annotation",
-              "@id": "/iiif/qatar/obj6/annotation/front.json",
+              "@id": "{{ 'iiif' | absolute_url }}/qatar/annotation/obj6.json",
               "motivation": "sc:painting",
               "resource": {
-                "@id": "/iiif/qatar/images/obj6-1/full/full/0/default.jpg",
+                "@id": "{{ 'iiif' | absolute_url }}/images/qatar/obj6/full/full/0/default.jpg",
                 "@type": "dcterms:Image",
                 "format": "image/jpeg",
                 "service": {
                   "@context": "http://iiif.io/api/image/2/context.json",
-                  "@id": "/iiif/qatar/images/obj6-1",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/qatar/obj6",
                   "profile": "http://iiif.io/api/image/2/level0.json"
                 },
                 "width": 4081,
                 "height": 5441
               },
-              "on": "/iiif/qatar/obj6/canvas/front.json"
+              "on": "{{ 'iiif' | absolute_url }}/qatar/canvas/obj6.json"
             }
           ]
         }
