@@ -22,8 +22,8 @@
         <tr class="meta">
           <td class="label">IIIF Manifest:</td>
           <td class="value">
-            <a href="{{ manifest_uri }}">
-              <img src="{{ site.baseurl }}/assets/iiif-logo.png" class="iiif-logo"/>
+            <a href="{{ manifest_uri | absolute_url }}">
+              <img src="{{ '/assets/iiif-logo.png' | absolute_url }}" class="iiif-logo"/>
             </a>
           </td>
         </tr>
