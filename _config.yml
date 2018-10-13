@@ -1,7 +1,7 @@
 # main settings
 title:            Minicomp/Wax
 description:      a jekyll theme for minimal exhibitions
-url:              '' # the url should stay empty
+url:              'https://mnyrop.github.io' # the url should stay empty
 baseurl:          '/wax' # the baseurl of your site must be defined but can be an empty ''
 
 # build settings
