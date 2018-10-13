@@ -8,7 +8,9 @@
 
     <div class="container" id="main">
       {% if page.banner.size %}
-        {% include banner.html %}
+        {% unless page.hide_banner %}
+          {% include banner.html %}
+        {% endunless %}
       {% endif %}
 
       {{ content }}
@@ -17,8 +19,7 @@
     </div>
 
   </body>
-  
+
   <script type="text/javascript" src="{{ site.js.bootstrap.cdn }}"></script>
   <script type="text/javascript" src="{{ site.js.popper.cdn }}"></script>
-  <script type="text/javascript" src="{{ site.baseurl }}/js/wax.js"></script>
 </html>

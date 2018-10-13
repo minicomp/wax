@@ -3,9 +3,10 @@ layout: iiif_item
 show_title: true
 title: 'The Book of Horses (فَرَس نامه [رسالة في الخيول)'
 permalink: /book-of-horses/
-pid: '00'
+pid: '00' # for referencing first image in gallery views
 iiif:
   viewer: 'mirador'
+  manifest: '/iiif/book-of-horses/manifest.json'
 meta:
   - label: 'Title'
     value: 'The Book of Horses (فَرَس نامه [رسالة في الخيول)'

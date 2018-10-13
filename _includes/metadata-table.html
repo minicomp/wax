@@ -1,0 +1,33 @@
+<center>
+  <div id="metadata-block">
+    <table class="table table-striped">
+      {% for item in include.meta %}
+        {%- if item.value contains 'page.' -%}
+          {%- assign key = item.value | remove: 'page.' -%}
+          {%- assign value = page[key] -%}
+        {%- else -%}
+          {%- assign value = item.value -%}
+        {%- endif -%}
+        {%- if value contains 'http' -%}
+          {%- capture value -%}
+            <a href='{{ value }}'>{{ value }}</a>
+          {%- endcapture -%}
+        {%- endif -%}
+        <tr class="meta">
+          <td class="label">{{ item.label }}: </td>
+          <td class="value">{{ value }}</td>
+        </tr>
+      {% endfor %}
+      {% if include.iiif %}
+        <tr class="meta">
+          <td class="label">IIIF Manifest:</td>
+          <td class="value">
+            <a href="{{ manifest_uri }}">
+              <img src="{{ site.baseurl }}/assets/iiif-logo.png" class="iiif-logo"/>
+            </a>
+          </td>
+        </tr>
+      {% endif %}
+    </table>
+  </div>
+</center>

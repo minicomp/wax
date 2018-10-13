@@ -1,3 +1,7 @@
+---
+layout: none
+---
+
 // banner
 
 function resizeWaxBanner() {
@@ -31,11 +35,16 @@ function resizeMetaBox() {
     var metaBox = $('#metadata-block');
     metaBox.width(viewerWidth);
   }
+  if ( $( "#mirador-iiif-viewer" ).length ) {
+    var viewerWidth = $('#mirador-iiif-viewer').width();
+    var metaBox = $('#metadata-block');
+    metaBox.width(viewerWidth);
+  }
 }
 
-/// iiif viewer
+/// iiif viewers
 
-function loadIIIFImageViewer(image_uri) {
+function leafletImageViewer(image_uri) {
   if ( $( "#leaflet-iiif-viewer" ).length ) {
     var leaflet_viewer = L.map('leaflet-iiif-viewer', {
       center: [0, 0],
@@ -48,7 +57,7 @@ function loadIIIFImageViewer(image_uri) {
   }
 }
 
-function loadIIIFManifestViewer(manifest_uri) {
+function leafletManifestViewer(manifest_uri) {
   if ( $( "#leaflet-iiif-viewer" ).length ) {
     var iiifLayers = {};
     var leaflet_viewer = L.map('leaflet-iiif-viewer', {
@@ -70,23 +79,62 @@ function loadIIIFManifestViewer(manifest_uri) {
   }
 }
 
-if (typeof(image_uri) != "undefined"){
-  loadIIIFImageViewer(image_uri);
+function miradorManifestViewer(manifest_uri) {
+  Mirador({
+    id: 'mirador-iiif-viewer',
+    data: [
+      { "collectionUri": "{{ '/iiif/collection/top.json' | absolute_url }}" }
+    ],
+    windowObjects: [{
+      loadedManifest: manifest_uri,
+      viewType: "ScrollView"
+    }]
+  });
 }
 
-if (typeof(manifest_uri) != "undefined"){
-  loadIIIFManifestViewer(manifest_uri);
+function miradorComparisonViewer(m1, m2) {
+  console.log('here');
+  Mirador({
+    id: "mirador-iiif-viewer",
+    layout: "1x2",
+    data: [
+      { "collectionUri": "{{ '/iiif/collection/top.json' | absolute_url }}" },
+      { "manifestUri": m1 },
+      { "manifestUri": m2 }
+    ],
+    windowObjects: [{
+      loadedManifest: m1,
+      slotAddress: "row1.column1",
+      viewType: "ImageView",
+      displayLayout: false,
+      bottomPanel: false,
+      bottomPanelAvailable: false,
+      bottomPanelVisible: false,
+      sidePanel: false,
+      annotationLayer: false
+    },
+    {
+      loadedManifest: m2,
+      slotAddress: "row1.column2",
+      viewType: "ImageView",
+      displayLayout: false,
+      bottomPanel: false,
+      bottomPanelAvailable: false,
+      bottomPanelVisible: false,
+      sidePanel: false,
+      annotationLayer: false
+    }]
+  });
 }
-
 
 // on load
-
-resizeMetaBox();
-resizeWaxBanner();
+$( document ).ready(function() {
+  resizeMetaBox();
+  resizeWaxBanner();
+});
 
 // on resize
-
 $(window).on('resize', function(){
   resizeMetaBox();
   resizeWaxBanner();
-})
+});

@@ -32,16 +32,20 @@ collections:
 menu:
   - label: About
     sub:
-    - label: Wax
-      link: /about/
-    - label: Minicomp
-      link: /minicomp/
-    - label: Credits
-      link: /credits/
-  - label: Documentation
-    link: https://minicomp.github.io/wiki/#/wax/
+      - label: Wax
+        link: /about/
+      - label: Wiki Documentation
+        link: 'https://minicomp.github.io/wiki/#/wax/'
+      - label: Credits
+        link: /credits
+  - label: Components
+    link: /components/
+  - label: Tasks
+    link: /tasks/
   - label: Exhibits
     link: /exhibits/
+  - label: Browse
+    link: /collection/
   - label: Search
     link: /search/
 

@@ -22,7 +22,12 @@
       {% endcapture %}
 
       <div class="banner-item">
-        <a href="{{ item.link | absolute_url }}">
+        {% if item.link.size %}
+          {% assign link = item.link %}
+        {% else %}
+          {% assign link = item.collection | append: '/' | append: item.pid | append: '/' %}
+        {% endif %}
+        <a href="{{ link | absolute_url }}">
           <div class="banner-img">
               <img src="{{ image_uri }}" style="transform: {{ transform-css }};"/>
           </div>
