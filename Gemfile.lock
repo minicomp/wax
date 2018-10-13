@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/mnyrop/wax_iiif.git
-  revision: 512af815cf60f3100f90961f2a2a57a796d5d6d2
+  revision: 91abe427116262a4581772e788021abcb3daede1
   branch: 0.0.3
   specs:
     wax_iiif (0.0.3)
@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/mnyrop/wax_tasks.git
-  revision: 2fa6abe5c84e073da3c2029481226aee38b0e81d
+  revision: 70090b8d1e14e85d3147f3b69c38c167fb6076fa
   branch: iiif-documents
   specs:
     wax_tasks (0.3.2)

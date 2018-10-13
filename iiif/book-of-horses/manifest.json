@@ -1,0 +1,748 @@
+---
+layout: none
+---
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/manifest.json",
+  "@type": "sc:Manifest",
+  "label": "book-of-horses",
+  "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/00/full/250,/0/default.jpg",
+  "viewingDirection": "left-to-right",
+  "viewingHint": "paged",
+  "sequences": [
+    {
+      "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/sequence/00.json",
+      "@type": "sc:Sequence",
+      "canvases": [
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/00.json",
+          "label": "00",
+          "width": 5233,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/00/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/00.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/00/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/00",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5233,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/00.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/01.json",
+          "label": "01",
+          "width": 5254,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/01/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/01.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/01/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/01",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5254,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/01.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/02.json",
+          "label": "02",
+          "width": 5379,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/02/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/02.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/02/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/02",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5379,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/02.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/03.json",
+          "label": "03",
+          "width": 5388,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/03/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/03.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/03/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/03",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5388,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/03.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/04.json",
+          "label": "04",
+          "width": 5358,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/04/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/04.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/04/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/04",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5358,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/04.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/05.json",
+          "label": "05",
+          "width": 5213,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/05/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/05.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/05/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/05",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5213,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/05.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/06.json",
+          "label": "06",
+          "width": 5354,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/06/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/06.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/06/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/06",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5354,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/06.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/07.json",
+          "label": "07",
+          "width": 5300,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/07/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/07.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/07/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/07",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5300,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/07.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/08.json",
+          "label": "08",
+          "width": 5354,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/08/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/08.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/08/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/08",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5354,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/08.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/09.json",
+          "label": "09",
+          "width": 5379,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/09/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/09.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/09/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/09",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5379,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/09.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/10.json",
+          "label": "10",
+          "width": 5354,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/10/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/10.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/10/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/10",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5354,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/10.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/11.json",
+          "label": "11",
+          "width": 5321,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/11/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/11.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/11/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/11",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5321,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/11.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/12.json",
+          "label": "12",
+          "width": 5371,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/12/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/12.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/12/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/12",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5371,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/12.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/13.json",
+          "label": "13",
+          "width": 5371,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/13/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/13.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/13/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/13",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5371,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/13.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/14.json",
+          "label": "14",
+          "width": 5354,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/14/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/14.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/14/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/14",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5354,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/14.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/15.json",
+          "label": "15",
+          "width": 5404,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/15/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/15.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/15/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/15",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5404,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/15.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/16.json",
+          "label": "16",
+          "width": 5363,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/16/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/16.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/16/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/16",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5363,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/16.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/17.json",
+          "label": "17",
+          "width": 5413,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/17/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/17.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/17/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/17",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5413,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/17.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/18.json",
+          "label": "18",
+          "width": 5363,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/18/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/18.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/18/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/18",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5363,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/18.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/19.json",
+          "label": "19",
+          "width": 5404,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/19/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/19.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/19/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/19",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5404,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/19.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/20.json",
+          "label": "20",
+          "width": 5363,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/20/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/20.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/20/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/20",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5363,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/20.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/21.json",
+          "label": "21",
+          "width": 5363,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/21/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/21.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/21/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/21",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5363,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/21.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/22.json",
+          "label": "22",
+          "width": 5388,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/22/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/22.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/22/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/22",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5388,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/22.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/23.json",
+          "label": "23",
+          "width": 5371,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/23/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/23.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/23/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/23",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5371,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/23.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/24.json",
+          "label": "24",
+          "width": 5333,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/24/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/24.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/24/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/24",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5333,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/24.json"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/25.json",
+          "label": "25",
+          "width": 5396,
+          "height": 7500,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/book-of-horses/25/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/25.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/25/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/25",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 5396,
+                "height": 7500
+              },
+              "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/25.json"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

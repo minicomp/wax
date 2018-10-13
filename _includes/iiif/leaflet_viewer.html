@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"/>
+<script type="text/javascript" src="{{ site.js.leaflet.cdn }}"></script>
+<script type="text/javascript" src="{{ site.js.leaflet-iiif.cdn }}"></script>
+
+{% if layout.pagination %}
+
+  {% assign documents = site[page.collection] | sort: 'order' %}
+  {% assign first = documents.first %}
+  {% assign last = documents.last %}
+
+  {% for doc in documents %}
+    {% if doc.pid == page.pid %}
+
+      {% if forloop.first %}{% assign prevurl = last.url %}
+      {% else %}{% assign prevurl = prev.url %}
+      {% endif %}
+
+      {% if forloop.last %}{% assign nexturl = first.url %}
+      {% else %}{% assign nexturl = documents[forloop.index].url %}
+      {% endif %}
+
+    {% endif %}
+  {% assign prev = doc %}
+  {% endfor %}
+
+  <div class="item-view">
+    <a href="{{ site.baseurl }}{{ prevurl }}" id="prev" class="prevnext">
+      <button type="button" class="btn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+    </a>
+
+    <div id="leaflet-iiif-viewer" class="iiif-viewer"></div>
+
+    <a href="{{ site.baseurl }}{{ nexturl }}" id="next" class="prevnext">
+      <button type="button" class="btn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </a>
+
+  </div>
+
+{% else %}
+
+  <div class="item-view  container-fluid">
+    <div id="leaflet-iiif-viewer" class="iiif-viewer"></div>
+  </div>
+
+{% endif %}

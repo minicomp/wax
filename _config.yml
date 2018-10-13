@@ -11,9 +11,6 @@ safe:             true
 
 # wax collection settings
 collections:
-  pages:
-    output:
-      true
   qatar:
     output: true
     source: qatar.csv
@@ -21,6 +18,15 @@ collections:
     lunr_index:
       content: false
       fields: [pid, title, artist, location, _date, object_type, current_location]
+    iiif:
+      is_document: false
+      sort: false
+  book-of-horses:
+    output: true
+    iiif:
+      is_document: true
+      sort: true
+
 
 # menu settings
 menu:
@@ -36,8 +42,8 @@ menu:
     link: https://minicomp.github.io/wiki/#/wax/
   - label: Exhibits
     link: /exhibits/
-  - label: Gallery
-    link: /gallery/
+  - label: Search
+    link: /search/
 
 # search tests. run with $ bundle exec rspec
 quoll:

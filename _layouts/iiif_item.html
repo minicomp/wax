@@ -1,0 +1,71 @@
+---
+layout: default
+# This is a premade layout for collection items with
+# IIIF viewers and metadata tables.
+# It is recommended you create your own layout (e.g.,
+# 'qatar_item.html') which inherits this layout.
+---
+
+<!-- Show title heading according to inheritor layout -->
+{% if layout.show_title %}
+  <center><h2>{{ page.title }}</h2></center>
+{% endif %}
+
+<!-- Capture the IIIF Manifest URI for the item-->
+{%- capture manifest_uri -%}/iiif/{{ page.collection }}/{{ page.pid }}/manifest.json{%- endcapture -%}
+{% assign manifest_uri = manifest_uri | absolute_url -%}
+
+<!-- Pass the IIIF Manifest URI off to Wax.js for the IIIF viewer to use -->
+<script type="text/javascript">window.manifest_uri = "{{ manifest_uri }}";</script>
+
+<!-- Add the IIIF viewer according to inheritor layout or page front matter -->
+{% if layout.iiif.viewer == 'leaflet' or page.iiif.viewer == 'leaflet'%}
+  {% include iiif/leaflet_viewer.html %}
+{% elsif layout.iiif.viewer == 'mirador' or page.iiif.viewer == 'mirador' %}
+  {% include iiif/mirador_viewer.html %}
+{% endif %}
+
+<!-- Create the metadata table according to inheritor layout or page front matter -->
+
+{% if layout.meta.size %}
+  {% assign meta = layout.meta %}
+{% elsif page.meta.size %}
+  {% assign meta = page.meta %}
+{% endif %}
+{% if meta.size %}
+  <center>
+    <div id="metadata-block">
+      <table class="table table-striped">
+        {% for item in meta %}
+          {%- if item.value contains 'page.' -%}
+            {%- assign key = item.value | remove: 'page.' -%}
+            {%- assign value = page[key] -%}
+          {%- else -%}
+            {%- assign value = item.value -%}
+          {%- endif -%}
+          {%- if value contains 'http' -%}
+            {%- capture value -%}
+              <a href='{{ value }}'>{{ value }}</a>
+            {%- endcapture -%}
+          {%- endif -%}
+          <tr class="meta">
+            <td class="label">{{ item.label }}: </td>
+            <td class="value">{{ value }}</td>
+          </tr>
+        {% endfor %}
+        <tr class="meta">
+          <td class="label">IIIF Manifest:</td>
+          <td class="value">
+            <a href="{{ manifest_uri }}">
+              <img src="{{ site.baseurl }}/assets/iiif-logo.png" class="iiif-logo"/>
+            </a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </center>
+{% endif %}
+
+
+<!-- Include page content, if any exists -->
+{{ content }}

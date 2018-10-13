@@ -61,6 +61,11 @@ layout: none
       "@id": "{{ 'iiif' | absolute_url }}/qatar/obj8/manifest.json",
       "@type": "sc:Manifest",
       "label": "obj8"
+    },
+    {
+      "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "book-of-horses"
     }
   ]
 }

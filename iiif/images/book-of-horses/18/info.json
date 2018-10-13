@@ -1,0 +1,49 @@
+---
+layout: none
+---
+{
+  "@context": "http://iiif.io/api/image/2/context.json",
+  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/18",
+  "protocol": "http://iiif.io/api/image",
+  "width": 5363,
+  "height": 7500,
+  "sizes": [
+    {
+      "width": 5363,
+      "height": 7500
+    },
+    {
+      "width": 250,
+      "height": 350
+    },
+    {
+      "width": 600,
+      "height": 839
+    },
+    {
+      "width": 1140,
+      "height": 1594
+    }
+  ],
+  "profile": [
+    "http://iiif.io/api/image/2/level0.json",
+    {
+      "supports": [
+        "cors",
+        "sizeByWhListed",
+        "baseUriRedirect"
+      ]
+    }
+  ],
+  "tiles": [
+    {
+      "width": 512,
+      "scaleFactors": [
+        1,
+        2,
+        4,
+        8
+      ]
+    }
+  ]
+}

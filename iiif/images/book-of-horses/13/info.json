@@ -1,0 +1,49 @@
+---
+layout: none
+---
+{
+  "@context": "http://iiif.io/api/image/2/context.json",
+  "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/13",
+  "protocol": "http://iiif.io/api/image",
+  "width": 5371,
+  "height": 7500,
+  "sizes": [
+    {
+      "width": 5371,
+      "height": 7500
+    },
+    {
+      "width": 250,
+      "height": 349
+    },
+    {
+      "width": 600,
+      "height": 838
+    },
+    {
+      "width": 1140,
+      "height": 1592
+    }
+  ],
+  "profile": [
+    "http://iiif.io/api/image/2/level0.json",
+    {
+      "supports": [
+        "cors",
+        "sizeByWhListed",
+        "baseUriRedirect"
+      ]
+    }
+  ],
+  "tiles": [
+    {
+      "width": 512,
+      "scaleFactors": [
+        1,
+        2,
+        4,
+        8
+      ]
+    }
+  ]
+}

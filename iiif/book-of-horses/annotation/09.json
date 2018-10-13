@@ -1,0 +1,22 @@
+---
+layout: none
+---
+{
+  "@type": "oa:Annotation",
+  "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/annotation/09.json",
+  "motivation": "sc:painting",
+  "resource": {
+    "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/09/full/full/0/default.jpg",
+    "@type": "dcterms:Image",
+    "format": "image/jpeg",
+    "service": {
+      "@context": "http://iiif.io/api/image/2/context.json",
+      "@id": "{{ 'iiif' | absolute_url }}/images/book-of-horses/09",
+      "profile": "http://iiif.io/api/image/2/level0.json"
+    },
+    "width": 5379,
+    "height": 7500
+  },
+  "on": "{{ 'iiif' | absolute_url }}/book-of-horses/canvas/09.json",
+  "@context": "http://iiif.io/api/presentation/2/context.json"
+}

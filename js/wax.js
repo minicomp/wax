@@ -26,8 +26,8 @@ setInterval(nextSlide, 3000);
 // metadata table
 
 function resizeMetaBox() {
-  if ( $( "#leaflet-iiif" ).length ) {
-    var viewerWidth = $('#leaflet-iiif').width();
+  if ( $( "#leaflet-iiif-viewer" ).length ) {
+    var viewerWidth = $('#leaflet-iiif-viewer').width();
     var metaBox = $('#metadata-block');
     metaBox.width(viewerWidth);
   }
@@ -36,25 +36,22 @@ function resizeMetaBox() {
 /// iiif viewer
 
 function loadIIIFImageViewer(image_uri) {
-  if ( $( "#leaflet-iiif" ).length ) {
-    console.log('inside if');
-    console.log('in the function');
-    var iiif_viewer = L.map('leaflet-iiif', {
+  if ( $( "#leaflet-iiif-viewer" ).length ) {
+    var leaflet_viewer = L.map('leaflet-iiif-viewer', {
       center: [0, 0],
       crs: L.CRS.Simple,
       zoomDelta: 0.5,
       zoomSnap: 0,
       zoom: 0
     });
-    L.tileLayer.iiif(image_uri).addTo(iiif_viewer);
+    L.tileLayer.iiif(image_uri).addTo(leaflet_iiif);
   }
 }
 
 function loadIIIFManifestViewer(manifest_uri) {
-  if ( $( "#leaflet-iiif" ).length ) {
-    var leaflet_iiif;
+  if ( $( "#leaflet-iiif-viewer" ).length ) {
     var iiifLayers = {};
-    leaflet_iiif = L.map('leaflet-iiif', {
+    var leaflet_viewer = L.map('leaflet-iiif-viewer', {
       center: [0, 0],
       crs: L.CRS.Simple,
       zoomSnap: 0,
@@ -67,8 +64,8 @@ function loadIIIFManifestViewer(manifest_uri) {
         iiifLayers[label] = L.tileLayer.iiif(val.images[0].resource.service['@id'] + '/info.json', {fitBounds: true});
         i++;
       });
-      if (i > 2){ L.control.layers(iiifLayers).addTo(leaflet_iiif);}
-      iiifLayers[Object.keys(iiifLayers)[0]].addTo(leaflet_iiif);
+      if (i > 2){ L.control.layers(iiifLayers).addTo(leaflet_viewer);}
+      iiifLayers[Object.keys(iiifLayers)[0]].addTo(leaflet_viewer);
     });
   }
 }
