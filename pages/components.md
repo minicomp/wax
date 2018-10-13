@@ -27,7 +27,7 @@ banner:
 
 With Jekyll, site components are called __includes__ and live in the `_includes` directory. You can add them to single pages or to page layouts with the Liquid `{% raw %}{% include %}{% endraw %}` tag.
 
-So far, __Wax__ has the following reusable components: [banner](#banner), [gallery](#gallery), [search](#search), [Leaflet IIIF viewer](#leaflet), and [Mirador IIIF viewer](#mirador).
+So far, __Wax__ has the following reusable components: __banner__, __gallery__, __search__, __Leaflet IIIF viewer__, and __Mirador IIIF viewer__.
 
 ## Banner
 
