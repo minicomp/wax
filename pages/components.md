@@ -103,7 +103,7 @@ __Result__:
 {% include gallery.html collection='book-of-horses' %}
 
 
-## Search
+## Search Box
 
 Search adds a search box with dynamic, client-side search powered by ElasticLunr.js and jQuery. It loads two files `js/lunr-index.json` and `js/lunr-ui.js`, the first of which can be generated with [wax_tasks](https://github.com/minicomp/wax_tasks/), and the second which needs to be created or modified to meet the needs of the collection.
 
