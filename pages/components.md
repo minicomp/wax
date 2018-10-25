@@ -95,13 +95,6 @@ __Result__:
 
 {% include gallery.html collection='qatar' facet_by='artist' %}
 
-or `{% raw %}{% include gallery.html collection='book-of-horses' %}{% endraw %}`
-
-
-__Result__:
-
-{% include gallery.html collection='book-of-horses' %}
-
 
 ## Search Box
 
@@ -114,7 +107,6 @@ __Result__:
 {% include search.html %}
 
 
-
 ## Leaflet IIIF Viewer
 
 `{% raw %}{% include iiif/leaflet-viewer.html manifest='/iiif/qatar/obj1/manifest.json' %}{% endraw %}`
@@ -122,4 +114,4 @@ __Result__:
 
 ## Mirador IIIF Viewer
 
-`{% raw %}{% include iiif/mirador-viewer.html manifest='/iiif/book-of-horses/manifest.json' %}{% endraw %}`
+`{% raw %}{% include iiif/mirador-viewer.html manifest='/iiif/qatar/obj12/manifest.json' %}{% endraw %}`

@@ -4,7 +4,7 @@
   {% for item in banner %}
 
       {%- capture image_uri -%}
-        {{ site.baseurl }}/iiif/images/{{ item.collection }}/{{ item.pid }}/full/1140,/0/default.jpg
+        {{ site.baseurl }}/iiif/images/{{ item.pid }}/full/1140,/0/default.jpg
       {%- endcapture -%}
 
       {% capture transform-css %}

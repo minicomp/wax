@@ -1,0 +1,49 @@
+---
+layout: none
+---
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "{{ 'iiif' | absolute_url }}/obj11/manifest.json",
+  "@type": "sc:Manifest",
+  "label": "Portrait of Sheikh Ali Mirza",
+  "logo": "{{ '/assets/logo.png' | absolute_url }}",
+  "thumbnail": "{{ 'iiif' | absolute_url }}/images/obj11/full/250,/0/default.jpg",
+  "viewingDirection": "left-to-right",
+  "viewingHint": "individuals",
+  "sequences": [
+    {
+      "@id": "{{ 'iiif' | absolute_url }}/sequence/obj11.json",
+      "@type": "sc:Sequence",
+      "canvases": [
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/canvas/obj11.json",
+          "label": "front",
+          "width": 2708,
+          "height": 4671,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/obj11/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/annotation/obj11.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/obj11/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/obj11",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 2708,
+                "height": 4671
+              },
+              "on": "{{ 'iiif' | absolute_url }}/canvas/obj11.json"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

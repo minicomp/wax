@@ -2,31 +2,26 @@
 layout: default
 title: Wax.
 banner:
-- collection: qatar
-  pid: obj6
+- pid: obj6
   y: center
   x: left
   zoom: 1
   link: '/qatar/obj6/'
-- collection: qatar
-  pid: obj10
+- pid: obj10
   zoom: 1
   x: right
   link: '/qatar/obj10/'
-- collection: book-of-horses
-  pid: '00'
+- pid: 'obj12_00'
   zoom: 0
   y: center
   x: right
-  link: '/book-of-horses/'
-- collection: qatar
-  pid: obj7
+  link: '/qatar/obj12/'
+- pid: obj7
   zoom: 1
   y: center
   x: left
   link: '/qatar/obj7/'
-- collection: qatar
-  pid: obj1
+- pid: obj1
   zoom: 1
   link: '/qatar/obj1/'
 ---
@@ -44,12 +39,6 @@ In [IIIF](http://iiif.io/), each collection item is represented by a [manifest](
 
 The collection items in this demo are from The Museum of Islamic Art, Qatar, (courtesy of [WikiMedia](https://commons.wikimedia.org/wiki/Category:Google_Art_Project_works_in_The_Museum_of_Islamic_Art,_Qatar) and [Google Art Project](https://www.google.com/culturalinstitute/about/artproject/)) and The Qatar National Library (via [World Digital Library](https://www.wdl.org/en/)).
 
-#### The Museum of Islamic Art, Qatar
+#### The Museum of Islamic Art, Qatar + Qatar National Library
 
 {% include gallery.html facet_by='object_type' collection='qatar' %}
-
-<br>
-
-#### Qatar National Library
-
-{% include gallery.html collection='book-of-horses' %}

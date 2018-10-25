@@ -8,64 +8,64 @@ layout: none
   "label": "top",
   "manifests": [
     {
-      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj10/manifest.json",
+      "@id": "{{ 'iiif' | absolute_url }}/obj10/manifest.json",
       "@type": "sc:Manifest",
-      "label": "obj10"
+      "label": "Portrait of Hasan 'Ali Mirza Shuja al-Saltana"
     },
     {
-      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj5/manifest.json",
+      "@id": "{{ 'iiif' | absolute_url }}/obj5/manifest.json",
       "@type": "sc:Manifest",
-      "label": "obj5"
+      "label": "Panel from Iran"
     },
     {
-      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj4/manifest.json",
+      "@id": "{{ 'iiif' | absolute_url }}/obj4/manifest.json",
       "@type": "sc:Manifest",
-      "label": "obj4"
+      "label": "Faridun crosses the River Dijla, fol. 33v"
     },
     {
-      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj11/manifest.json",
+      "@id": "{{ 'iiif' | absolute_url }}/obj11/manifest.json",
       "@type": "sc:Manifest",
-      "label": "obj11"
+      "label": "Portrait of Sheikh Ali Mirza"
     },
     {
-      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj6/manifest.json",
+      "@id": "{{ 'iiif' | absolute_url }}/obj6/manifest.json",
       "@type": "sc:Manifest",
-      "label": "obj6"
+      "label": "Diwan of Jami Manuscript"
     },
     {
-      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj7/manifest.json",
+      "@id": "{{ 'iiif' | absolute_url }}/obj7/manifest.json",
       "@type": "sc:Manifest",
-      "label": "obj7"
+      "label": "Page from the Shahnama"
     },
     {
-      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj3/manifest.json",
+      "@id": "{{ 'iiif' | absolute_url }}/obj3/manifest.json",
       "@type": "sc:Manifest",
-      "label": "obj3"
+      "label": "Map of the World"
     },
     {
-      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj2/manifest.json",
+      "@id": "{{ 'iiif' | absolute_url }}/obj2/manifest.json",
       "@type": "sc:Manifest",
-      "label": "obj2"
+      "label": "Sulwan Al-Muta'a"
     },
     {
-      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj1/manifest.json",
+      "@id": "{{ 'iiif' | absolute_url }}/obj1/manifest.json",
       "@type": "sc:Manifest",
-      "label": "obj1"
+      "label": "The Dala'il al-Khayrat of al-Juzuli"
     },
     {
-      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj9/manifest.json",
+      "@id": "{{ 'iiif' | absolute_url }}/obj9/manifest.json",
       "@type": "sc:Manifest",
-      "label": "obj9"
+      "label": "Portrait of Fath 'Ali Shah"
     },
     {
-      "@id": "{{ 'iiif' | absolute_url }}/qatar/obj8/manifest.json",
+      "@id": "{{ 'iiif' | absolute_url }}/obj8/manifest.json",
       "@type": "sc:Manifest",
-      "label": "obj8"
+      "label": "Silk Tapestry Depicting the story of Leila and Majnun"
     },
     {
-      "@id": "{{ 'iiif' | absolute_url }}/book-of-horses/manifest.json",
+      "@id": "{{ 'iiif' | absolute_url }}/obj12/manifest.json",
       "@type": "sc:Manifest",
-      "label": "book-of-horses"
+      "label": "Excerpt from 'The Book of Horses' (فَرَس نامه [رسالة في الخيول)"
     }
   ]
 }

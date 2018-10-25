@@ -1,54 +1,52 @@
 ---
-collections:
-- "/iiif/collection/top.json"
-manifests:
-- "/iiif/qatar/obj10/manifest.json"
-- "/iiif/qatar/obj5/manifest.json"
-- "/iiif/qatar/obj4/manifest.json"
-- "/iiif/qatar/obj11/manifest.json"
-- "/iiif/qatar/obj6/manifest.json"
-- "/iiif/qatar/obj7/manifest.json"
-- "/iiif/qatar/obj3/manifest.json"
-- "/iiif/qatar/obj2/manifest.json"
-- "/iiif/qatar/obj1/manifest.json"
-- "/iiif/qatar/obj9/manifest.json"
-- "/iiif/qatar/obj8/manifest.json"
-- "/iiif/book-of-horses/manifest.json"
-image_records:
-- "/iiif/images/qatar/obj10/info.json"
-- "/iiif/images/qatar/obj5/info.json"
-- "/iiif/images/qatar/obj4/info.json"
-- "/iiif/images/qatar/obj11/info.json"
-- "/iiif/images/qatar/obj6/info.json"
-- "/iiif/images/qatar/obj7/info.json"
-- "/iiif/images/qatar/obj3/info.json"
-- "/iiif/images/qatar/obj2/info.json"
-- "/iiif/images/qatar/obj1/info.json"
-- "/iiif/images/qatar/obj9/info.json"
-- "/iiif/images/qatar/obj8/info.json"
-- "/iiif/images/book-of-horses/00/info.json"
-- "/iiif/images/book-of-horses/01/info.json"
-- "/iiif/images/book-of-horses/02/info.json"
-- "/iiif/images/book-of-horses/03/info.json"
-- "/iiif/images/book-of-horses/04/info.json"
-- "/iiif/images/book-of-horses/05/info.json"
-- "/iiif/images/book-of-horses/06/info.json"
-- "/iiif/images/book-of-horses/07/info.json"
-- "/iiif/images/book-of-horses/08/info.json"
-- "/iiif/images/book-of-horses/09/info.json"
-- "/iiif/images/book-of-horses/10/info.json"
-- "/iiif/images/book-of-horses/11/info.json"
-- "/iiif/images/book-of-horses/12/info.json"
-- "/iiif/images/book-of-horses/13/info.json"
-- "/iiif/images/book-of-horses/14/info.json"
-- "/iiif/images/book-of-horses/15/info.json"
-- "/iiif/images/book-of-horses/16/info.json"
-- "/iiif/images/book-of-horses/17/info.json"
-- "/iiif/images/book-of-horses/18/info.json"
-- "/iiif/images/book-of-horses/19/info.json"
-- "/iiif/images/book-of-horses/20/info.json"
-- "/iiif/images/book-of-horses/21/info.json"
-- "/iiif/images/book-of-horses/22/info.json"
-- "/iiif/images/book-of-horses/23/info.json"
-- "/iiif/images/book-of-horses/24/info.json"
-- "/iiif/images/book-of-horses/25/info.json"
+qatar:
+  collection: "/iiif/collectionqatar.json"
+  items:
+  - pid: obj10
+    manifest: "/iiif/obj10/manifest.json"
+    label: Portrait of Hasan 'Ali Mirza Shuja al-Saltana
+    thumb: "/iiif/images/obj10/full/250,/0/default.jpg"
+  - pid: obj5
+    manifest: "/iiif/obj5/manifest.json"
+    label: Panel from Iran
+    thumb: "/iiif/images/obj5/full/250,/0/default.jpg"
+  - pid: obj4
+    manifest: "/iiif/obj4/manifest.json"
+    label: Faridun crosses the River Dijla, fol. 33v
+    thumb: "/iiif/images/obj4/full/250,/0/default.jpg"
+  - pid: obj11
+    manifest: "/iiif/obj11/manifest.json"
+    label: Portrait of Sheikh Ali Mirza
+    thumb: "/iiif/images/obj11/full/250,/0/default.jpg"
+  - pid: obj6
+    manifest: "/iiif/obj6/manifest.json"
+    label: Diwan of Jami Manuscript
+    thumb: "/iiif/images/obj6/full/250,/0/default.jpg"
+  - pid: obj7
+    manifest: "/iiif/obj7/manifest.json"
+    label: Page from the Shahnama
+    thumb: "/iiif/images/obj7/full/250,/0/default.jpg"
+  - pid: obj3
+    manifest: "/iiif/obj3/manifest.json"
+    label: Map of the World
+    thumb: "/iiif/images/obj3/full/250,/0/default.jpg"
+  - pid: obj2
+    manifest: "/iiif/obj2/manifest.json"
+    label: Sulwan Al-Muta'a
+    thumb: "/iiif/images/obj2/full/250,/0/default.jpg"
+  - pid: obj1
+    manifest: "/iiif/obj1/manifest.json"
+    label: The Dala'il al-Khayrat of al-Juzuli
+    thumb: "/iiif/images/obj1/full/250,/0/default.jpg"
+  - pid: obj9
+    manifest: "/iiif/obj9/manifest.json"
+    label: Portrait of Fath 'Ali Shah
+    thumb: "/iiif/images/obj9/full/250,/0/default.jpg"
+  - pid: obj8
+    manifest: "/iiif/obj8/manifest.json"
+    label: Silk Tapestry Depicting the story of Leila and Majnun
+    thumb: "/iiif/images/obj8/full/250,/0/default.jpg"
+  - pid: obj12
+    manifest: "/iiif/obj12/manifest.json"
+    label: Excerpt from 'The Book of Horses' (فَرَس نامه [رسالة في الخيول)
+    thumb: "/iiif/images/obj12_00/full/250,/0/default.jpg"

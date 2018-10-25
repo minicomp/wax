@@ -15,14 +15,22 @@ layout: default
 {%- if page.iiif.manifest.size -%}
   {%- assign manifest_uri = page.iiif.manifest -%}
 {%- else -%}
-  {%- capture manifest_uri -%}/iiif/{{ page.collection }}/{{ page.pid }}/manifest.json{%- endcapture -%}
+  {%- capture manifest_uri -%}/iiif/{{ page.pid }}/manifest.json{%- endcapture -%}
 {%- endif -%}
 
 <!-- Add the IIIF viewer according to inheritor layout or page front matter -->
-{% if layout.iiif.viewer == 'leaflet' or page.iiif.viewer == 'leaflet'%}
-  {% include iiif/leaflet-viewer.html manifest=manifest_uri %}
-{% elsif layout.iiif.viewer == 'mirador' or page.iiif.viewer == 'mirador' %}
-  {% include iiif/mirador-viewer.html manifest=manifest_uri %}
+{% if layout.iiif.viewer == 'leaflet' %}
+  {% if page.iiif.viewer == 'mirador' %}
+    {% include iiif/mirador-viewer.html manifest=manifest_uri %}
+  {% else %}
+    {% include iiif/leaflet-viewer.html manifest=manifest_uri %}
+  {% endif %}
+{% elsif layout.iiif.viewer == 'mirador' %}
+  {% if page.iiif.viewer == 'leaflet' %}
+    {% include iiif/leaflet-viewer.html manifest=manifest_uri %}
+  {% else %}
+    {% include iiif/mirador-viewer.html manifest=manifest_uri %}
+  {% endif %}
 {% endif %}
 
 <!-- Create the metadata table according to inheritor layout or page front matter -->
@@ -40,7 +48,6 @@ layout: default
   {% endif %}
   {% include metadata-table.html meta=meta iiif=is_iiif %}
 {% endif %}
-
 
 <!-- Include page content, if any exists -->
 {{ content }}

@@ -1,0 +1,49 @@
+---
+layout: none
+---
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "{{ 'iiif' | absolute_url }}/obj9/manifest.json",
+  "@type": "sc:Manifest",
+  "label": "Portrait of Fath 'Ali Shah",
+  "logo": "{{ '/assets/logo.png' | absolute_url }}",
+  "thumbnail": "{{ 'iiif' | absolute_url }}/images/obj9/full/250,/0/default.jpg",
+  "viewingDirection": "left-to-right",
+  "viewingHint": "individuals",
+  "sequences": [
+    {
+      "@id": "{{ 'iiif' | absolute_url }}/sequence/obj9.json",
+      "@type": "sc:Sequence",
+      "canvases": [
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/canvas/obj9.json",
+          "label": "front",
+          "width": 2501,
+          "height": 3924,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/obj9/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/annotation/obj9.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/obj9/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/obj9",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 2501,
+                "height": 3924
+              },
+              "on": "{{ 'iiif' | absolute_url }}/canvas/obj9.json"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

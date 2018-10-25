@@ -1,0 +1,49 @@
+---
+layout: none
+---
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "{{ 'iiif' | absolute_url }}/obj7/manifest.json",
+  "@type": "sc:Manifest",
+  "label": "Page from the Shahnama",
+  "logo": "{{ '/assets/logo.png' | absolute_url }}",
+  "thumbnail": "{{ 'iiif' | absolute_url }}/images/obj7/full/250,/0/default.jpg",
+  "viewingDirection": "left-to-right",
+  "viewingHint": "individuals",
+  "sequences": [
+    {
+      "@id": "{{ 'iiif' | absolute_url }}/sequence/obj7.json",
+      "@type": "sc:Sequence",
+      "canvases": [
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ 'iiif' | absolute_url }}/canvas/obj7.json",
+          "label": "front",
+          "width": 3927,
+          "height": 5810,
+          "thumbnail": "{{ 'iiif' | absolute_url }}/images/obj7/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ 'iiif' | absolute_url }}/annotation/obj7.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ 'iiif' | absolute_url }}/images/obj7/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ 'iiif' | absolute_url }}/images/obj7",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 3927,
+                "height": 5810
+              },
+              "on": "{{ 'iiif' | absolute_url }}/canvas/obj7.json"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

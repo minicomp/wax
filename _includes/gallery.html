@@ -1,7 +1,10 @@
 <div id="wax-gallery-{{ include.collection }}" class="wax-gallery"></div>
 
-{% assign collection = site.collections | where: "label", include.collection | first %}
-{% assign collection = collection.docs %}
+<!--{% assign collection = site.collections | where: "label", include.collection | first %}
+{% assign collection = collection.docs %}-->
+
+{% assign collection = site.data.iiif_info[include.collection]['manifests'] %}
+
 
 <script type="text/javascript">
   // create items
@@ -9,7 +12,7 @@
   container.prepend("<div id='{{ include.collection }}-gallery' class='gallery-container'></div>");
   var gallery = $('#{{ include.collection }}-gallery');
   {% for item in collection %}
-    gallery.append("<div class='gallery-item {{ include.collection }}-{{ item[include.facet_by] | slugify }} {{ include.collection }}-all'><a href='{{ item.url | absolute_url }}'><div class='hovereffect'><img class='img-responsive gallery-thumb' src='{{ site.baseurl }}/iiif/images/{{ include.collection }}/{{ item.pid }}/full/250,/0/default.jpg'><div class='overlay'><p class='info'>{{ item.title }}</p></div></div></a></div>");
+    gallery.append("<div class='gallery-item {{ include.collection }}-{{ item[include.facet_by] | slugify }} {{ include.collection }}-all'><a href='{{ item.link | absolute_url }}'><div class='hovereffect'><img class='img-responsive gallery-thumb' src='{{ item.thumb | absolute_url }}'><div class='overlay'><p class='info'>{{ item.title }}</p></div></div></a></div>");
   {% endfor %}
 
   {% if include.facet_by %}
