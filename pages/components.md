@@ -9,18 +9,15 @@ banner:
   y: center
   x: left
   zoom: 1
-  link: '/qatar/obj6/'
 - collection: qatar
   pid: obj10
   zoom: 1
   x: right
-  link: '/qatar/obj10/'
-- collection: book-of-horses
-  pid: '00'
+- collection: qatar
+  pid: obj12
   zoom: 0
   y: center
   x: right
-  link: '/book-of-horses/'
 ---
 
 # Components
@@ -52,7 +49,7 @@ banner:
   link: '/book-of-horses/'
 ```
 
-and then called with and `include` tag:
+and is then called with and `include` tag:
 
 `{% raw %}{% include banner.html %}{% endraw %}`
 
@@ -87,7 +84,7 @@ If one item image is given, the banner is still. If multiple are given, there wi
 
 ## Gallery
 
-The gallery include shows a set of image thumbnails from the IIIF directory and object titles for each item in a collection. These can optionally be  can be faceted by a metadata key, for example:
+The gallery include shows a set of image thumbnails from the IIIF directory and object titles for each item in a collection. You must specify a `collection` in the `include`, and can optionally specify a `facet_by` key from the metadata.
 
 `{% raw %}{% include gallery.html collection='qatar' facet_by='artist' %}{% endraw %}`
 
@@ -95,10 +92,12 @@ __Result__:
 
 {% include gallery.html collection='qatar' facet_by='artist' %}
 
+In the above example, the `qatar` collection is shown as a series of thumbnails. Users can facet the results shown according the the `artist` key in the collection metadata.
+
 
 ## Search Box
 
-Search adds a search box with dynamic, client-side search powered by ElasticLunr.js and jQuery. It loads two files `js/lunr-index.json` and `js/lunr-ui.js`, the first of which can be generated with [wax_tasks](https://github.com/minicomp/wax_tasks/), and the second which needs to be created or modified to meet the needs of the collection.
+Search adds a search box with dynamic, client-side search powered by ElasticLunr.js and jQuery. It loads two files `js/lunr-index.json` and `js/lunr-ui.js`, the first of which can be generated with [wax_tasks](https://github.com/minicomp/wax_tasks/), and the second of which needs to be created or modified to meet the needs of the collection.
 
 `{% raw %}{% include search.html %}{% endraw %}`
 
@@ -109,9 +108,8 @@ __Result__:
 
 ## Leaflet IIIF Viewer
 
-`{% raw %}{% include iiif/leaflet-viewer.html manifest='/iiif/qatar/obj1/manifest.json' %}{% endraw %}`
+
+`{% raw %}{% include iiif/leaflet-viewer.html manifest='/img/derivatives/iiif/obj1/manifest.json' %}{% endraw %}`
 
 
-## Mirador IIIF Viewer
-
-`{% raw %}{% include iiif/mirador-viewer.html manifest='/iiif/qatar/obj12/manifest.json' %}{% endraw %}`
+{% include iiif/leaflet-viewer.html manifest='/img/derivatives/iiif/obj1/manifest.json' %}

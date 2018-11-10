@@ -1,14 +1,29 @@
-{%- assign manifest = include.manifest | absolute_url -%}
+<div class='item-view'>
+  {% if include.prevlink %}
+    <a href='{{ include.prevlink | absolute_url }}' id='prev' class='prevnext' display='none'>
+      <button type='button' class='btn'>
+        <i class='fas fa-chevron-left'></i>
+      </button>
+    </a>
+  {% endif %}
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"/>
-<script type="text/javascript" src="{{ site.js.leaflet.cdn }}"></script>
-<script type="text/javascript" src="{{ site.js.leaflet-iiif.cdn }}"></script>
+  <div id='iiif-viewer-leaflet' class='iiif-viewer'></div>
 
-<div class="item-view  container-fluid">
-  <div id="leaflet-iiif-viewer" class="iiif-viewer"></div>
+  {% if include.nextlink %}
+    <a href='{{ include.nextlink | absolute_url }}' id='next' class='prevnext' display='none'>
+      <button type='button' class='btn'>
+        <i class='fas fa-chevron-right'></i>
+      </button>
+    </a>
+  {% endif %}
 </div>
 
-<script type='text/javascript'>
-  console.log('Loading {{ manifest }}');
-  leafletManifestViewer('{{ manifest }}');
+<link rel='stylesheet' href='https://unpkg.com/leaflet@1.3.1/dist/leaflet.css'/>
+<script type='text/javascript' src='{{ site.js.leaflet.src }}'></script>
+<script type='text/javascript' src='{{ site.js.leaflet-iiif.src }}'></script>
+
+<script>
+  $(document).ready(function() {
+    IIIFViewerLeaflet('{{ include.manifest | absolute_url }}');
+  });
 </script>

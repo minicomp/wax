@@ -1,19 +1,20 @@
 ---
 layout: none
 ---
-$.getJSON("{{ site.baseurl }}/js/lunr-index.json", function(index_json) {
+$.getJSON("{{ '/js/lunr-index.json' | absolute_url }}", function(index_json) {
     window.index = new elasticlunr.Index;
     window.store = index_json;
     index.saveDocument(false);
     index.setRef('lunr_index');
     index.addField('pid');
-    index.addField('title');
+    index.addField('label');
     index.addField('artist');
     index.addField('location');
     index.addField('_date');
     index.addField('object_type');
     index.addField('current_location');
     index.addField('collection');
+    index.addField('thumbnail');
     // add docs
     for (i in store) { index.addDoc(store[i]);}
     $('input#search').on('keyup', function () {
@@ -27,7 +28,8 @@ $.getJSON("{{ site.baseurl }}/js/lunr-index.json", function(index_json) {
         var ref     = results[r].ref;
         var item    = store[ref];
         var link    = item.link;
-        var title   = item.title;
+        var label   = item.label;
+        var thumb   = item.thumbnail;
         var meta    = '';
 
         if (item.artist != 'Unknown'){ meta += item.artist + '. ';}
@@ -35,7 +37,7 @@ $.getJSON("{{ site.baseurl }}/js/lunr-index.json", function(index_json) {
         if (item._date){ meta += item._date + '. ';}
         if (item.object_type){ meta += item.object_type + '. ';}
 
-        var result = '<div class="result"><a href="' + link + '"><img class="sq-thumb-sm" src="{{ site.baseurl }}/iiif/images/' + item.collection + '/' + item.pid + '/full/250,/0/default.jpg"/>&nbsp;&nbsp;&nbsp;<p><span class="title">' + title + '.</span><br>' + meta + '</p></a></div>';
+        var result = `<div class='result'><a href='${link}'><img class='sq-thumb-sm' src='{{ "" | absolute_url }}${thumb}'/>&nbsp;&nbsp;&nbsp;<p><span class='title'>${label}.</span><br>${meta}</p></a></div>`;
         results_div.append(result);
       }
     });

@@ -6,16 +6,11 @@ permalink: /collection/
 
 # Browse the Collection
 
-This sites' sample collection represents two [Jekyll 'collections'](https://jekyllrb.com/docs/collections/): the first represents a set of objects, each of which is represented by an image, and the second represents a manuscript, i.e., a set of images that comprise a single object.
+This site's sample collection comprises a set of objects, each of which is represented by one or more images.
 
-In [IIIF](http://iiif.io/), each collection item is represented by a [manifest](https://iiif.io/api/presentation/2.0/#manifest) (like [this one]({{ '/iiif/qatar/obj1/manifest.json' | absolute_url }})), and each image asset is a [canvas](https://iiif.io/api/presentation/2.0/#canvas) (like [this]( {{ '/iiif/qatar/canvas/obj1.json' | absolute_url }})). These JSON files are interpreted by a IIIF-compliant viewer. Wax includes options for [LeafletIiif](https://github.com/mejackreed/Leaflet-IIIF) (as seen [here]({{ '/qatar/obj1/' | absolute_url }})) and [Mirador](http://projectmirador.org/), used for _The Book of Horses_ below. You can use either or both however you like.
+In the parlance of [IIIF](http://iiif.io/), each collection item is represented by a [manifest](https://iiif.io/api/presentation/2.0/#manifest) (like [this one]({{ '/img/derivatives/iiif/obj1/manifest.json' | absolute_url }})), and each image asset is a [canvas](https://iiif.io/api/presentation/2.0/#canvas) (like [this]( {{ '/img/derivatives/iiif/canvas/obj1.json' | absolute_url }})). These JSON files are interpreted by a IIIF-compliant viewer. Wax includes two viewer options: [LeafletIiif](https://github.com/mejackreed/Leaflet-IIIF) (as seen [here]({{ '/qatar/obj1/' | absolute_url }})) and [Mirador](http://projectmirador.org/), used for _[The Book of Horses]({{ '/qatar/obj12/' | relative_url }})_. You can use either or both however you like, though Mirador is much larger to load and is best suited for documents.
 
-### The Museum of Islamic Art, Qatar
+The collection items in this demo are from The Museum of Islamic Art, Qatar, (courtesy of [WikiMedia](https://commons.wikimedia.org/wiki/Category:Google_Art_Project_works_in_The_Museum_of_Islamic_Art,_Qatar) and [Google Art Project](https://www.google.com/culturalinstitute/about/artproject/)) and The Qatar National Library (via [World Digital Library](https://www.wdl.org/en/)).
 
-{% include gallery.html facet_by='object_type' collection='qatar' %}
 
-<br>
-
-### Qatar National Library
-
-{% include gallery.html collection='book-of-horses' %}
+{% include gallery.html collection='qatar' facet_by='object_type' %}

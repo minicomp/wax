@@ -7,6 +7,6 @@ group :development, :test do
   gem 'rack-jekyll'
   gem 'rspec'
   gem 'selenium-webdriver'
-  gem 'wax_tasks', git: 'https://github.com/mnyrop/wax_tasks.git', branch: 'pdfs-in-collections'
-  gem 'wax_iiif', git: 'https://github.com/mnyrop/wax_iiif.git', branch: '0.0.3-flat'
+  gem 'wax_tasks', git: 'https://github.com/mnyrop/wax_tasks.git', branch: 'beta'
+  gem 'wax_iiif', git: 'https://github.com/mnyrop/wax_iiif.git', branch: '0.0.3'
 end

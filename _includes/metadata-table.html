@@ -1,33 +1,28 @@
 <center>
-  <div id="metadata-block">
-    <table class="table table-striped">
+  <div id='metadata-block'>
+    <table id='metadata-table' class='table table-striped'>
       {% for item in include.meta %}
-        {%- if item.value contains 'page.' -%}
-          {%- assign key = item.value | remove: 'page.' -%}
-          {%- assign value = page[key] -%}
-        {%- else -%}
-          {%- assign value = item.value -%}
-        {%- endif -%}
-        {%- if value contains 'http' -%}
+        <!-- if the value is a metadata value and need to be retireived -->
+        {% if item.value contains 'page.' %}
+          {% assign key = item.value | remove: 'page.' %}
+          {% assign value = page[key] %}
+         <!-- if the value is a flat string -->
+        {% else %}
+          {% assign value = item.value %}
+        {% endif %}
+
+        <!-- if the value is a link -->
+        {% if value contains 'http' %}
           {%- capture value -%}
-            <a href='{{ value }}'>{{ value }}</a>
+            <a href="{{ value }}">{{ value }}</a>
           {%- endcapture -%}
-        {%- endif -%}
-        <tr class="meta">
-          <td class="label">{{ item.label }}: </td>
-          <td class="value">{{ value }}</td>
+        {% endif %}
+
+        <tr class='meta'>
+          <td class='label'>{{ item.label }}</td>
+          <td class='value'>{{ value | strip }}</td>
         </tr>
       {% endfor %}
-      {% if include.iiif %}
-        <tr class="meta">
-          <td class="label">IIIF Manifest:</td>
-          <td class="value">
-            <a href="{{ manifest_uri | absolute_url }}">
-              <img src="{{ '/assets/iiif-logo.png' | absolute_url }}" class="iiif-logo"/>
-            </a>
-          </td>
-        </tr>
-      {% endif %}
     </table>
   </div>
 </center>

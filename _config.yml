@@ -7,24 +7,26 @@
 # syntax errors in this file:
 # ~> https://learnxinyminutes.com/docs/yaml/
 #
+#
 # Questions ?
 # ~> https://minicomp.github.io/wiki/#/
 # ~> https://gitter.im/minicomp/wax/
 #
-# ------------------------------------------------------------
+# ---------------------------------------------------------------
 # MAIN SETTINGS
-# ------------------------------------------------------------
+# ---------------------------------------------------------------
 # Feel free to change these! For more info, refer to:
 # ~> https://jekyllrb.com/docs/configuration/options/
 
-title:            Minicomp/Wax
-description:      A Jekyll Workflow for Minimal IIIF Exhibitions
+title:            'Minicomp/Wax'
+description:      'A Jekyll Workflow for Minimal IIIF Exhibitions'
 url:              ''
 baseurl:          '/wax'
+version:          '0.5.0-beta'
 
-# --------------------------------------------------------------
+# ---------------------------------------------------------------
 # BUILD SETTINGS
-# --------------------------------------------------------------
+# ---------------------------------------------------------------
 # Best not to mess with these unless you know what you're doing!
 
 permalink:        'pretty'
@@ -42,24 +44,26 @@ webrick:
 # submenu via `sub`.
 
 menu:
-  - label: About
+  - label: 'About'
     sub:
-      - label: Wax
-        link: /about/
-      - label: Wiki Documentation
+      - label: 'Wax'
+        link: '/about/'
+      - label: 'The Demo'
+        link: '/demo/'
+      - label: 'Documentation'
         link: 'https://minicomp.github.io/wiki/#/wax/'
-      - label: Credits
-        link: /credits
-  - label: Components
-    link: /components/
-  - label: Tasks
-    link: /tasks/
-  - label: Exhibits
-    link: /exhibits/
-  - label: Browse
-    link: /collection/
-  - label: Search
-    link: /search/
+      - label: 'Credits'
+        link: '/credits'
+  - label: 'Components'
+    link: '/components/'
+  - label: 'Tasks'
+    link: '/tasks/'
+  - label: 'Exhibits'
+    link: '/exhibits/'
+  - label: 'Browse'
+    link: '/collection/'
+  - label: 'Search'
+    link: '/search/'
 
 # --------------------------------------------------------------
 # COLLECTION SETTINGS
@@ -72,60 +76,74 @@ menu:
 
 collections:
   qatar: # name of collection
-    output: true # whether or not the pages are output as HTML
-    source: qatar.csv # input metadata file (must in `_data`)
-    layout: qatar_item # layout the pages should use by default
-    lunr_index: # add if the collection should be indexed
-      content: false # whether/not to index page content
-      fields: # metadata fields to be indexed
-        - title
-        - artist
-        - location
-        - _date
-        - object_type
-        - current_location
-    iiif: # add if the collection has local IIIF image content
-      label: title # field to use as IIIF object label
-      attribution: current_location # field to use for IIIF attribution
-      logo: '/assets/logo.png' # path to logo for IIIF object
+    output: true # makes sure pages are output as html files
+    layout: 'qatar_item' # the layout for the pages to use
+    metadata:
+      source: 'qatar_metadata.csv' # path to the metadata file within `_data`
+    images:
+      source: 'raw_images/qatar' # path to the directory of images within `_data`
+
+# --------------------------------------------------------------
+# LUNR SEARCH INDEX SETTINGS
+# --------------------------------------------------------------
+#
+
+lunr_index:
+  - file: 'js/lunr-index.json' # file the index will get written to
+    ui:   'js/lunr-ui.js' # path to the search UI file
+    collections:
+      qatar:
+        content: false # whether or not to index page content
+        fields: # the metadata fields to index
+          - artist
+          - location
+          - label
+          - _date
+          - object_type
+          - current_location
+
 
 # --------------------------------------------------------------
 # JAVASCRIPT DEPENDENCY SETTINGS
 # --------------------------------------------------------------
 # The following hs dependencies can be referenced in site files
-# with Liquid, e.g., `<script src="{{ site.js.jquery.cdn }}">`
+# with Liquid, e.g., `<script src="{{ site.js.jquery.src }}">`
 # and/or used to generate a `package.json` file to monitor
 # dependencies by running `$ bundle exec rake wax:jspackage`
 
 js:
   jquery:
-    version: 3.2.1
-    cdn: //code.jquery.com/jquery-3.2.1.min.js
+    version: '3.2.1'
+    src: '//code.jquery.com/jquery-3.2.1.min.js'
   popper:
-    version: 1.12.9
-    cdn: //cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js
+    version: '1.12.9'
+    src: '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'
   bootstrap:
-    version: 4.0.0
-    cdn: //maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js
+    version: '4.0.0'
+    src: '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'
+  elasticlunr:
+    version: 0.9.6
+    src: '//cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js'
   leaflet:
-    version: 1.3.1
-    cdn: //unpkg.com/leaflet@1.3.1/dist/leaflet.js
+    version: '1.3.1'
+    src: '//unpkg.com/leaflet@1.3.1/dist/leaflet.js'
   leaflet-iiif:
-    version: 2.0.1
-    cdn: //cdn.jsdelivr.net/npm/leaflet-iiif@2.0.1/leaflet-iiif.min.js
+    version: '2.0.1'
+    src: '//cdn.jsdelivr.net/npm/leaflet-iiif@2.0.1/leaflet-iiif.min.js'
+
+
 
 # --------------------------------------------------------------
-# ADVANCED: SEARCH TEST SETTINGS
+# ADVANCED: LUNR SEARCH INDEX TESTS
 # --------------------------------------------------------------
 # Headless search tests can be run with `$ bundle exec rspec`
 # For more, look in the `spec/` directory
 
 quoll:
-  main:
-    page: '/' # the path of the page you want to test
-    terms:  # the search terms you expect to yield results
-      - iran
-      - map
-      - manuscript
+  - page: '/'
+    terms:
+      - 'iran'
+      - 'map'
+      - 'manuscript'
 
 # FIN

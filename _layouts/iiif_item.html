@@ -5,49 +5,55 @@ layout: default
 # It is recommended you create your own layout (e.g.,
 # 'qatar_item.html') which inherits this layout.
 ---
-
 <!-- Show title heading according to inheritor layout -->
 {% if layout.show_title or page.show_title %}
-  <center><h2>{{ page.title }}</h2></center>
+  <center><h2>{{ page.label }}</h2></center>
 {% endif %}
 
-<!-- Capture the IIIF Manifest URI for the item-->
-{%- if page.iiif.manifest.size -%}
-  {%- assign manifest_uri = page.iiif.manifest -%}
-{%- else -%}
-  {%- capture manifest_uri -%}/iiif/{{ page.pid }}/manifest.json{%- endcapture -%}
-{%- endif -%}
+{% unless layout.pagination == false %}
+  {% assign links = site[page.collection] | sort: 'order' | map: 'url' %}
+  {% for link in links %}
+    {% if link == page.url %}
+      {% if forloop.first %}
+        {% assign prevlink = links | last %}
+        {% assign nextlink = links[forloop.index] %}
+      {% elsif forloop.last %}
+        {% assign prevlink = prev %}
+        {% assign nextlink = links | first %}
+      {% else %}
+        {% assign prevlink = prev %}
+        {% assign nextlink = links[forloop.index] %}
+      {% endif %}
+    {% endif %}
+    {% assign prev = link %}
+  {% endfor %}
+{% endunless %}
 
 <!-- Add the IIIF viewer according to inheritor layout or page front matter -->
-{% if layout.iiif.viewer == 'leaflet' %}
-  {% if page.iiif.viewer == 'mirador' %}
-    {% include iiif/mirador-viewer.html manifest=manifest_uri %}
+{% if layout.iiif_viewer == 'leaflet' %}
+  {% if page.iiif_viewer == 'mirador' %}
+    {% include iiif/mirador-viewer.html manifest=page.manifest prevlink=prevlink nextlink=nextlink %}
   {% else %}
-    {% include iiif/leaflet-viewer.html manifest=manifest_uri %}
+    {% include iiif/leaflet-viewer.html manifest=page.manifest prevlink=prevlink nextlink=nextlink %}
   {% endif %}
-{% elsif layout.iiif.viewer == 'mirador' %}
-  {% if page.iiif.viewer == 'leaflet' %}
-    {% include iiif/leaflet-viewer.html manifest=manifest_uri %}
+{% elsif layout.iiif_viewer == 'mirador' %}
+  {% if page.iiif_viewer == 'leaflet' %}
+    {% include iiif/leaflet-viewer.html manifest=page.manifest prevlink=prevlink nextlink=nextlink %}
   {% else %}
-    {% include iiif/mirador-viewer.html manifest=manifest_uri %}
+    {% include iiif/mirador-viewer.html manifest=page.manifest prevlink=prevlink nextlink=nextlink %}
   {% endif %}
 {% endif %}
 
 <!-- Create the metadata table according to inheritor layout or page front matter -->
 {% if layout.meta.size %}
-  {% assign meta = layout.meta %}
+  {% assign metadata = layout.meta %}
 {% elsif page.meta.size %}
-  {% assign meta = page.meta %}
+  {% assign metadata = page.meta %}
 {% endif %}
-{% if meta.size %}
-  {% if layout.iiif.size or page.iiif.size %}
-    {% assign is_iiif = true %}
-  {% else %}
-    {% assign is_iiif = false %}
-    {{ is_iiif }}
-  {% endif %}
-  {% include metadata-table.html meta=meta iiif=is_iiif %}
+{% if metadata.size %}
+  {% include metadata-table.html meta=metadata %}
 {% endif %}
+
 
 <!-- Include page content, if any exists -->
 {{ content }}

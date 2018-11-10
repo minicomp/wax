@@ -6,7 +6,7 @@ variable declaration
 */
 
 /* branding */
-$logo: url('{{ site.baseurl }}/assets/logo.png');
+$logo: url("{{ '/assets/logo.png' | absolute_url }}");
 
 /* text */
 
