@@ -10,62 +10,62 @@ layout: none
     {
       "@id": "{{ '' | absolute_url }}/img/derivatives/iiif/obj10/manifest.json",
       "@type": "sc:Manifest",
-      "label": "Portrait of Hasan 'Ali Mirza Shuja al-Saltana"
+      "label": "obj10"
     },
     {
       "@id": "{{ '' | absolute_url }}/img/derivatives/iiif/obj5/manifest.json",
       "@type": "sc:Manifest",
-      "label": "Panel from Iran"
+      "label": "obj5"
     },
     {
       "@id": "{{ '' | absolute_url }}/img/derivatives/iiif/obj4/manifest.json",
       "@type": "sc:Manifest",
-      "label": "Faridun crosses the River Dijla, fol. 33v"
+      "label": "obj4"
     },
     {
       "@id": "{{ '' | absolute_url }}/img/derivatives/iiif/obj11/manifest.json",
       "@type": "sc:Manifest",
-      "label": "Portrait of Sheikh Ali Mirza"
+      "label": "obj11"
     },
     {
       "@id": "{{ '' | absolute_url }}/img/derivatives/iiif/obj6/manifest.json",
       "@type": "sc:Manifest",
-      "label": "Diwan of Jami Manuscript"
+      "label": "obj6"
     },
     {
       "@id": "{{ '' | absolute_url }}/img/derivatives/iiif/obj7/manifest.json",
       "@type": "sc:Manifest",
-      "label": "Page from the Shahnama"
+      "label": "obj7"
     },
     {
       "@id": "{{ '' | absolute_url }}/img/derivatives/iiif/obj3/manifest.json",
       "@type": "sc:Manifest",
-      "label": "Map of the World"
+      "label": "obj3"
     },
     {
       "@id": "{{ '' | absolute_url }}/img/derivatives/iiif/obj2/manifest.json",
       "@type": "sc:Manifest",
-      "label": "Sulwan Al-Muta'a"
+      "label": "obj2"
     },
     {
       "@id": "{{ '' | absolute_url }}/img/derivatives/iiif/obj1/manifest.json",
       "@type": "sc:Manifest",
-      "label": "The Dala'il al-Khayrat of al-Juzuli"
+      "label": "obj1"
     },
     {
       "@id": "{{ '' | absolute_url }}/img/derivatives/iiif/obj9/manifest.json",
       "@type": "sc:Manifest",
-      "label": "Portrait of Fath 'Ali Shah"
+      "label": "obj9"
     },
     {
       "@id": "{{ '' | absolute_url }}/img/derivatives/iiif/obj8/manifest.json",
       "@type": "sc:Manifest",
-      "label": "Silk Tapestry Depicting the story of Leila and Majnun"
+      "label": "obj8"
     },
     {
       "@id": "{{ '' | absolute_url }}/img/derivatives/iiif/obj12/manifest.json",
       "@type": "sc:Manifest",
-      "label": "Excerpt from 'The Book of Horses' (فَرَس نامه [رسالة في الخيول)"
+      "label": "obj12"
     }
   ]
 }

@@ -7,10 +7,11 @@ _date: Around 1628 - 1658
 object_type: manuscript
 current_location: Qatar National Library
 source: https://www.wdl.org/en/item/10668/
-manifest: "/img/derivatives/iiif/obj12/manifest.json"
+order: '11'
 thumbnail: "/img/derivatives/iiif/images/obj12_00/full/250,/0/default.jpg"
 full: "/img/derivatives/iiif/images/obj12_00/full/1140,/0/default.jpg"
+manifest: "/img/derivatives/iiif/obj12/manifest.json"
 permalink: "/qatar/obj12/"
 layout: qatar_item
-iiif_viewer: 'mirador'
+iiif_viewer: mirador
 ---
