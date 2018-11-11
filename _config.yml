@@ -20,7 +20,7 @@
 
 title:            'Minicomp/Wax'
 description:      'A Jekyll Workflow for Minimal IIIF Exhibitions'
-url:              'http://marii.info'
+url:              'https://minicomp.github.io'
 baseurl:          '/wax'
 version:          '0.5.0-beta'
 
