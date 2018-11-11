@@ -6,7 +6,7 @@ variable declaration
 */
 
 /* branding */
-$logo: url('{{ site.baseurl }}/assets/logo.png');
+$logo: url("{{ '/assets/logo.png' | absolute_url }}");
 
 /* text */
 
@@ -25,9 +25,9 @@ $dark-grey:       #aaaaaa;
 
 /* viewport sizes */
 
-$max-width:       1100px;
+$max-width:       1140px;
 $break-lg:        900px;
-$break-med:       780px;
+$break-med:       800px;
 $break-sm:        600px;
 
 /* margins */

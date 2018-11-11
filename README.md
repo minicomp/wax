@@ -13,7 +13,7 @@ gem behind wax:       <https://github.com/minicomp/wax_tasks/>
 
 ```sh
 NOTE ~>   WAX, WAX_TASKS, and WAX_IIIF are in RAPID development and will be 
-          unstable until the beta release (v0.5.0). 
+          unstable until the beta release. 
           
           Please submit any bugs, questions, suggestions, feature requests, 
           and/or documentation edits as GitHub issues.
@@ -37,16 +37,15 @@ The canonical source for Wax is the [Minicomp](https://github.com/minicomp/wax/)
 
 ## Primary tooling
 
-Wax is a flexible workflow and not a platform. As such, its tooling is more of a dynamic roster than a stack. At its center are __[jekyll](http://jekyllrb.com)__ and __[wax_tasks](https://github.com/minicomp/wax_tasks/)__ (which are both Ruby gems), but the rest of the components
-are purely optional depending on what you'd like to do and how you'd like to do it. The following list is by no means exhaustive, but gives an outline of Wax's open source super group:
+Wax is a flexible workflow and not a platform. As such, its tooling is more of a dynamic roster than a stack. At its center are __[jekyll](http://jekyllrb.com)__ and __[wax_tasks](https://github.com/minicomp/wax_tasks/)__ (which are both Ruby gems), but the rest of the components are optional depending on what you'd like to do and how you'd like to do it. The following list is by no means exhaustive, but gives an outline of Wax's open source super group:
 
 __For searching/indexing:__
 - [elasticlunr.js](http://elasticlunr.com/)
 
 __For IIIF generation/presentation:__
-- [wax_iiif gem](https://github.com/minicomp/wax_iiif/) (fork of [iiif_s3]()https://github.com/cmoa/iiif_s3)
+- [wax_iiif gem](https://github.com/minicomp/wax_iiif/) (fork of [iiif_s3](https://github.com/cmoa/iiif_s3))
 - [leaflet.js](http://leafletjs.com/) and [leaflet-iiif.js](https://github.com/mejackreed/Leaflet-IIIF)
-- [imagemagick](https://www.imagemagick.org/script/index.php)
+- [imagemagick](https://www.imagemagick.org/script/index.php) via [minimagick](https://github.com/minimagick/minimagick)
 
 __For theming:__
 - [jquery](http://jquery.com/)
@@ -61,7 +60,8 @@ __For testing:__
 
 ## Quick Start
 
-Make sure your system is ready with modern Ruby (>=2.2), git, and ImageMagick installed.
+Make sure your system is ready with modern Ruby (>=2.4), git, and ImageMagick installed. 
+(Note: If you want to work with PDFs, you will also need Ghostscript)
 
 Install Bundler
 ```sh
