@@ -1,75 +1,149 @@
-# main settings
-title:            Minicomp/Wax
-description:      a jekyll theme for minimal exhibitions
-url:              '' # the url should stay empty
-baseurl:          '/wax' # the baseurl of your site must be defined but can be an empty ''
+# ==============================================================
+# WAX CONFIGURATION
+# ==============================================================
+# Jekyll configuration files are written in YAML format.
+# Colons, tabs/spacing, and quotes are meaningful in YAML.
+# It is recommended you look at the following guide to avoid
+# syntax errors in this file:
+# ~> https://learnxinyminutes.com/docs/yaml/
+#
+#
+# Questions ?
+# ~> https://minicomp.github.io/wiki/#/
+# ~> https://gitter.im/minicomp/wax/
+#
+# ---------------------------------------------------------------
+# MAIN SETTINGS
+# ---------------------------------------------------------------
+# Feel free to change these! For more info, refer to:
+# ~> https://jekyllrb.com/docs/configuration/options/
 
-# build settings
+title:            'Minicomp/Wax'
+description:      'A Jekyll Workflow for Minimal IIIF Exhibitions'
+url:              'http://marii.info/wax'
+baseurl:          ''
+version:          '0.5.0-beta'
+
+# ---------------------------------------------------------------
+# BUILD SETTINGS
+# ---------------------------------------------------------------
+# Best not to mess with these unless you know what you're doing!
+
 permalink:        'pretty'
 exclude:          [Gemfile*, Rakefile, vendor, spec, README.md]
 safe:             true
-
-# wax collection settings
-collections:
-  pages:
-    output:
-      true
-  qatar:
-    output: true
-    source: qatar.csv
-    layout: qatar_item
-    lunr_index:
-      content: false
-      fields: [pid, title, artist, location, _date, object_type, current_location]
-    iiif:
-      meta:
-        label: title
-
-# menu settings
-menu:
-  - label: About
-    sub:
-    - label: Wax
-      link: /about/
-    - label: Minicomp
-      link: /minicomp/
-    - label: Credits
-      link: /credits/
-  - label: Documentation
-    link: https://minicomp.github.io/wiki/#/wax/
-  - label: Exhibits
-    link: /exhibits/
-  - label: Gallery
-    link: /gallery/
-
-# search tests. run with $ bundle exec rspec
-quoll:
-  main:
-    page: '/' # the path of the page you want to test
-    terms:  # the search terms you expect to yield results
-      - iran
-      - map
-      - manuscript
-
-# javascript dependencies
-js:
-  jquery:
-    version: 3.2.1
-    cdn: //code.jquery.com/jquery-3.2.1.min.js
-  popper:
-    version: 1.12.9
-    cdn: //cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js
-  bootstrap:
-    version: 4.0.0
-    cdn: //maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js
-  leaflet:
-    version: 1.3.1
-    cdn: //unpkg.com/leaflet@1.3.1/dist/leaflet.js
-  leaflet-iiif:
-    version: 2.0.1
-    cdn: //cdn.jsdelivr.net/npm/leaflet-iiif@2.0.1/leaflet-iiif.min.js
-
-# cors headers for iiif use
 webrick:
   headers:
-    "Access-Control-Allow-Origin": "*"
+    'Access-Control-Allow-Origin': '*'
+
+# --------------------------------------------------------------
+# SITE MENU SETTINGS
+# --------------------------------------------------------------
+# Each menu item needs a `label` (whats shown), and a `link`
+# (where it goes). An item can optionally have a dropdown
+# submenu via `sub`.
+
+menu:
+  - label: 'About'
+    sub:
+      - label: 'Wax'
+        link: '/about/'
+      - label: 'The Demo'
+        link: '/demo/'
+      - label: 'Documentation'
+        link: 'https://minicomp.github.io/wiki/#/wax/'
+      - label: 'Credits'
+        link: '/credits'
+  - label: 'Components'
+    link: '/components/'
+  - label: 'Tasks'
+    link: '/tasks/'
+  - label: 'Exhibits'
+    link: '/exhibits/'
+  - label: 'Browse'
+    link: '/collection/'
+  - label: 'Search'
+    link: '/search/'
+
+# --------------------------------------------------------------
+# COLLECTION SETTINGS
+# --------------------------------------------------------------
+# Wax leverages Jekyll collections for much of its
+# functionality, therefor some of the keys below are from
+# Jekyll while others are Wax-specific.
+# For more info, refer to:
+# ~> https://jekyllrb.com/docs/collections/
+
+collections:
+  qatar: # name of collection
+    output: true # makes sure pages are output as html files
+    layout: 'qatar_item' # the layout for the pages to use
+    metadata:
+      source: 'qatar_metadata.csv' # path to the metadata file within `_data`
+    images:
+      source: 'raw_images/qatar' # path to the directory of images within `_data`
+
+# --------------------------------------------------------------
+# LUNR SEARCH INDEX SETTINGS
+# --------------------------------------------------------------
+#
+
+lunr_index:
+  - file: 'js/lunr-index.json' # file the index will get written to
+    ui:   'js/lunr-ui.js' # path to the search UI file
+    collections:
+      qatar:
+        content: false # whether or not to index page content
+        fields: # the metadata fields to index
+          - artist
+          - location
+          - label
+          - _date
+          - object_type
+          - current_location
+
+
+# --------------------------------------------------------------
+# JAVASCRIPT DEPENDENCY SETTINGS
+# --------------------------------------------------------------
+# The following hs dependencies can be referenced in site files
+# with Liquid, e.g., `<script src="{{ site.js.jquery.src }}">`
+# and/or used to generate a `package.json` file to monitor
+# dependencies by running `$ bundle exec rake wax:jspackage`
+
+js:
+  jquery:
+    version: '3.2.1'
+    src: '//code.jquery.com/jquery-3.2.1.min.js'
+  popper:
+    version: '1.12.9'
+    src: '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'
+  bootstrap:
+    version: '4.0.0'
+    src: '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'
+  elasticlunr:
+    version: 0.9.6
+    src: '//cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js'
+  leaflet:
+    version: '1.3.1'
+    src: '//unpkg.com/leaflet@1.3.1/dist/leaflet.js'
+  leaflet-iiif:
+    version: '2.0.1'
+    src: '//cdn.jsdelivr.net/npm/leaflet-iiif@2.0.1/leaflet-iiif.min.js'
+
+
+
+# --------------------------------------------------------------
+# ADVANCED: LUNR SEARCH INDEX TESTS
+# --------------------------------------------------------------
+# Headless search tests can be run with `$ bundle exec rspec`
+# For more, look in the `spec/` directory
+
+quoll:
+  - page: '/'
+    terms:
+      - 'iran'
+      - 'map'
+      - 'manuscript'
+
+# FIN
