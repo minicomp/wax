@@ -21,13 +21,13 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 {% for sub in item.sub %}
-                <a class="dropdown-item" href="{{ sub.link | relative_url }}">{{ sub.label }}</a>
+                <a class="dropdown-item" href="{{ sub.link | absolute_url }}">{{ sub.label }}</a>
                 {% endfor %}
               </div>
             </li>
             {% else %}
             <li class="nav-item">
-              <a class="nav-link" href="{{ item.link | relative_url }}">{{ item.label }}{% unless forloop.last %}&nbsp;&nbsp;&nbsp;/{% endunless %}</a>
+              <a class="nav-link" href="{{ item.link | absolute_url }}">{{ item.label }}{% unless forloop.last %}&nbsp;&nbsp;&nbsp;/{% endunless %}</a>
             </li>
             {% endif %}
           {% endfor %}
