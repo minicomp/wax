@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: wax/page
 title: About Minimal Computing
 permalink: /minicomp/
 banner:

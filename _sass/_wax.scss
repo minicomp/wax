@@ -216,11 +216,20 @@ item pages (iiif + metadata)
   align-items:     center;
   margin:          0;
 
-  .iiif-viewer {
+  .image-viewer {
+    position: relative;
+    text-align: center;
     height:   $viewer-height;
+    background-color: $neutral-light;
     width:    100%;
     border:   1px solid $neutral-dark;
     margin:   $more-margin $less-margin $more-margin $less-margin;
+    a {
+      color: inherit !important;
+    }
+    li {
+      font-size: 1em !important;
+    }
     @media screen and (max-width: $break-med) {
       height: $viewer-height / 1.5;
     }
@@ -231,6 +240,10 @@ item pages (iiif + metadata)
       a {
         color: black !important;
       }
+    }
+    .item-full-image {
+      max-width: $max-width;
+      height: $viewer-height;
     }
   }
 
@@ -262,9 +275,8 @@ item pages (iiif + metadata)
   display: block;
   background-color: $neutral-light;
   position: relative;
-  height: 450px;
+  height: $viewer-height;
   width: 100%;
-  max-height: 60vh;
   margin-top: $super-margin;
   margin-bottom: $super-margin;
   a {

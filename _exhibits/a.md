@@ -1,5 +1,5 @@
 ---
-layout: exhibit
+layout: wax/exhibit
 title: 'Exhibit A: Local and Remote IIIF Manifests'
 author: Mihr 'Ali
 publish_date: 2018-11-15
@@ -11,7 +11,7 @@ This is an example exhibit. In Wax, exhibits are generally essays or curatorial 
 {% assign m1='/img/derivatives/iiif/obj6/manifest.json' %}
 {% assign m2='https://www.wdl.org/en/item/7012/iiif/manifest.json' %}
 
-{% include iiif/mirador-compare.html m1=m1 m2=m2 %}
+{% include wax/mirador_compare.html m1=m1 m2=m2 %}
 
 
 ### In placerat lobortis velit at molestie

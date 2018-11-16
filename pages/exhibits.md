@@ -1,9 +1,8 @@
 ---
-layout: default
+layout: wax/page
 permalink: /exhibits/
+title: Featured Exhibits
 ---
-
-# Exhibits
 
 {% assign exhibits = site.exhibits | where: 'layout','exhibit' %}
 <ul>

@@ -1,12 +1,11 @@
 ---
-layout: default
+layout: wax/page
 title: Tasks
 permalink: /tasks/
+banner:
+  collection: qatar
+  pid: obj1
 ---
-
-{% include parallax.html collection='qatar' pid='obj1' %}
-
-# Tasks
 
 Behind Wax is a Ruby gem called [wax_tasks](https://github.com/minicomp/wax_tasks) that helps prepare collection data for Jekyll and Wax to use. It includes several core tasks for handling images, item pages, and search indexes, as well as few helpful tasks for additional features.
 Each task is run with Rake, using the syntax `$ bundle exec rake wax:TASK_NAME`.

@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang='en-us'>
-  {% include head.html %}
+  {% include wax/head.html %}
 
   <body>
     <time datetime='{{ 'now' | date: '%Y-%m-%d %H:%M' }}'></time>
-    {% include header.html %}
+    {% include wax/header.html %}
 
     <div id='wax-main'>
       <div id='wax-content' class='wax-inline-container'>
         {{ content }}
       </div>
-      {% include footer.html %}
+
+      <footer id='wax-footer' class='page-footer container-fluid'>
+        <div class='wax-inline-container text-center text-md-left'>
+          <!-- add custom footer include here -->
+        </div>
+      </footer>
     </div>
   </body>
 

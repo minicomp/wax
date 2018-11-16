@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: wax/default
 ---
 {% if page.banner %}
   {% assign b = page.banner %}
-  {% include parallax.html collection=b.collection pid=b.pid y=b.y %}
+  {% include wax/parallax.html collection=b.collection pid=b.pid y=b.y %}
 {% endif %}
 
 {% unless page.show_title == false %}

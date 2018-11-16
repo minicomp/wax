@@ -12,5 +12,5 @@ thumbnail: "/img/derivatives/iiif/images/obj10/full/250,/0/default.jpg"
 full: "/img/derivatives/iiif/images/obj10/full/1140,/0/default.jpg"
 manifest: "/img/derivatives/iiif/obj10/manifest.json"
 permalink: "/qatar/obj10/"
-layout: qatar-item
+layout: qatar_item
 ---

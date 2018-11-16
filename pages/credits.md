@@ -1,7 +1,7 @@
 ---
+layout: wax/page
 title: Credits
 permalink: '/credits/'
-layout: page
 banner:
   collection: qatar
   pid: obj4

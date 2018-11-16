@@ -1,0 +1,27 @@
+<link rel="stylesheet" type="text/css" href="{{ '/build/mirador/css/mirador-combined.css' | absolute_url }}">
+<script src="{{ '/build/mirador/mirador.js' | absolute_url }}"></script>
+
+
+<div class='item-view'>
+  {% if include.prevlink %}
+    <a href='{{ include.prevlink | absolute_url }}' id='prev' class='prevnext' display='none'>
+      <button type='button' class='btn'>
+        <i class='fas fa-chevron-left'></i>
+      </button>
+    </a>
+  {% endif %}
+
+  <div id="mirador-iiif-viewer" class="image-viewer mirador" allowfullscreen="allowfullscreen"></div>
+
+  {% if include.nextlink %}
+    <a href='{{ include.nextlink | absolute_url }}' id='next' class='prevnext' display='none'>
+      <button type='button' class='btn'>
+        <i class='fas fa-chevron-right'></i>
+      </button>
+    </a>
+  {% endif %}
+</div>
+
+<script type='text/javascript'>
+  miradorManifestViewer('{{ include.manifest | absolute_url }}');
+</script>

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: wax/page
 title: How was this Wax site made?
 permalink: /demo/
 ---

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: wax/page
 title: Components
 permalink: /components/
 banner:
@@ -16,11 +16,11 @@ So far, __Wax__ has the following reusable components: __banner__, __gallery__, 
 
 The gallery include shows a set of image thumbnails from the IIIF directory and object titles for each item in a collection. You must specify a `collection` in the `include`, and can optionally specify a `facet_by` key from the metadata.
 
-`{% raw %}{% include gallery.html collection='qatar' facet_by='artist' %}{% endraw %}`
+`{% raw %}{% include wax/collection/gallery.html collection='qatar' facet_by='artist' %}{% endraw %}`
 
 __Result__:
 
-{% include gallery.html collection='qatar' facet_by='artist' %}
+{% include wax/collection/gallery.html collection='qatar' facet_by='artist' %}
 
 In the above example, the `qatar` collection is shown as a series of thumbnails. Users can facet the results shown according the the `artist` key in the collection metadata.
 
@@ -29,17 +29,17 @@ In the above example, the `qatar` collection is shown as a series of thumbnails.
 
 Search adds a search box with dynamic, client-side search powered by ElasticLunr.js and jQuery. It loads two files `js/lunr-index.json` and `js/lunr-ui.js`, the first of which can be generated with [wax_tasks](https://github.com/minicomp/wax_tasks/), and the second of which needs to be created or modified to meet the needs of the collection.
 
-`{% raw %}{% include search.html %}{% endraw %}`
+`{% raw %}{% include wax/search.html %}{% endraw %}`
 
 __Result__:
 
-{% include search.html %}
+{% include wax/search.html %}
 
 
 ## Leaflet IIIF Viewer
 
 
-`{% raw %}{% include iiif/leaflet-viewer.html manifest='/img/derivatives/iiif/obj1/manifest.json' %}{% endraw %}`
+`{% raw %}{% include wax/image_viewer/leaflet.html manifest='/img/derivatives/iiif/obj1/manifest.json' %}{% endraw %}`
 
 
-{% include iiif/leaflet-viewer.html manifest='/img/derivatives/iiif/obj1/manifest.json' %}
+{% include wax/image_viewer/leaflet.html manifest='/img/derivatives/iiif/obj1/manifest.json' %}

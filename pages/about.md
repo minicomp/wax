@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: wax/page
 title: What is Wax?
 permalink: /about/
 banner:
