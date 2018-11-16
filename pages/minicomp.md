@@ -1,13 +1,11 @@
 ---
-layout: default
+layout: page
 title: About Minimal Computing
 permalink: /minicomp/
 banner:
-  - collection: qatar
-    pid: obj6
-    zoom: 1
-    y: center
-    x: left
+  collection: qatar
+  pid: obj6
+  y: 50%
 ---
 
 ### Coming soon!

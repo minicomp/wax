@@ -18,7 +18,7 @@
           {%- endcapture -%}
         {% endif %}
 
-        <tr class='meta'>
+        <tr class='meta {{ item.label | slugify}}'>
           <td class='label'>{{ item.label }}</td>
           <td class='value'>{{ value | strip }}</td>
         </tr>

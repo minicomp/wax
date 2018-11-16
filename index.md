@@ -1,29 +1,11 @@
 ---
-layout: default
+layout: page
 title: Wax.
+show_title: false
 banner:
-- collection: qatar
-  pid: obj6
-  y: center
-  x: left
-  zoom: 1
-- collection: qatar
+  collection: qatar
   pid: obj10
-  zoom: 1
-  x: right
-- collection: qatar
-  pid: obj12
-  zoom: 0
-  y: center
-  x: right
-- collection: qatar
-  pid: obj7
-  zoom: 1
-  y: center
-  x: left
-- collection: qatar
-  pid: obj1
-  zoom: 1
+  y: 25%
 ---
 
 __Wax__ is a [minimal computing](http://go-dh.github.io/mincomp/) project for producing digital exhibitions focused on impact, durability, ease, and flexibility. Our underlying technology is made to learn and to teach, and can produce beautifully rendered, high-quality image collections and scholarly exhibits. To start using Wax, please see our [documentation](https://minicomp.github.io/wiki/#/wax/) for installation instructions and more.

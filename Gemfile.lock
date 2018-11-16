@@ -140,7 +140,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   geckodriver-helper
-  jekyll (>= 3.8)
+  jekyll (~> 3.8)
   rack-jekyll
   rspec
   selenium-webdriver

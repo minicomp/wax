@@ -1,0 +1,22 @@
+---
+layout: collection-item
+---
+<style>
+  .image-viewer{
+    background-color: grey;
+    margin: 100px 0 100px 0;
+    text-align: center;
+    width: 100%;
+    border: 1px solid grey;
+  }
+  .item-full-image{
+    max-width: 800px;
+    max-height: 550px;
+  }
+</style>
+
+<div class='image-viewer'>
+  <a href='{{ page.full | absolute_url }}'>
+    <img class='item-full-image' src='{{ page.full | absolute_url }}' alt='{{ page.label | slugify }}'/>
+  </a>
+</div>

@@ -10,25 +10,25 @@ $logo: url("{{ '/assets/logo.png' | absolute_url }}");
 
 /* text */
 
-$serif:           'Karma';
-$sans-serif:      sans-serif;
-$main-font-size:  1.2rem;
+$body-font:       'Source Serif Pro', serif;
+$heading-font:    'Noto Sans', sans-serif;
+$main-font-size:  1rem;
 $max-text-width:  800px;
 
 /* colors */
 
-$text-color:      #222222;
-$accent-color:    #f44441;
-$bg-color:        #ffffff;
-$light-grey:      #dee2e6;
-$dark-grey:       #aaaaaa;
+$text-color:      #323031;
+$bg-color:        #FFFCF9;
+$accent-color:    #A59200;
+$neutral-light:   #E3E6EF;
+$neutral-dark:    #8B8982;
 
 /* viewport sizes */
 
-$max-width:       1140px;
-$break-lg:        900px;
-$break-med:       800px;
-$break-sm:        600px;
+$max-width:       992px;
+$break-lg:        768px;
+$break-med:       614px;
+$break-sm:        466px;
 
 /* margins */
 
@@ -37,20 +37,15 @@ $more-margin:     3rem;
 $less-margin:     1rem;
 $super-margin:    5rem;
 
-/* banner */
 
-$banner-height:   400px;
-$fade-time:       1.5s;
-
-/* iiif viewer */
 $viewer-height:   550px;
-
+$banner-height:   400px;
 
 /*
 font & asset import
 */
 
-@import
-url('https://fonts.googleapis.com/css?family=Karma:400,500,600,700&subset=latin-ext');
-
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Source+Serif+Pro');
+@import 'bootstrap';
+@import 'syntax';
 @import 'wax';

@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class='exhibit-meta'>
+  <h3 class='exhibit-author'>{{ page.author }}</h3>
+  <h1 class='exhibit-title'>{{ page.title }}</h1>
+  <p class='exhibit-date' >Published on
+    <time datetime='{{ page.publish_date | date_to_xmlschema }}'>
+    {{ page.publish_date | date: "%A, %B %d, %Y" }}
+    </time>
+  </p>
+</div>
+
+{{ content }}

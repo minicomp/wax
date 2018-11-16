@@ -1,0 +1,13 @@
+---
+layout: default
+---
+{% if page.banner %}
+  {% assign b = page.banner %}
+  {% include parallax.html collection=b.collection pid=b.pid y=b.y %}
+{% endif %}
+
+{% unless page.show_title == false %}
+  <h1 class='page-title'>{{ page.title }}</h1>
+{% endunless %}
+
+{{ content }}

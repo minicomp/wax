@@ -1,10 +1,8 @@
 ---
-layout: default
-title: About this demo
+layout: page
+title: How was this Wax site made?
 permalink: /demo/
 ---
-
-## How was this Wax site made?
 
 1. Items were curated into a collection.
 2. Collection metadata was catalogued and normalized into a CSV file.

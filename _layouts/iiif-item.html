@@ -1,0 +1,25 @@
+---
+layout: collection-item
+# This is a premade layout for collection items with
+# IIIF viewers and metadata tables.
+# It is recommended you create your own layout (e.g.,
+# 'qatar_item.html') which inherits this layout.
+---
+
+
+<!-- Add the IIIF viewer according to inheritor layout or page front matter -->
+{% if layout.iiif_viewer == 'leaflet' %}
+  {% if page.iiif_viewer == 'mirador' %}
+    {% include iiif/mirador-viewer.html manifest=page.manifest prevlink=prevlink nextlink=nextlink %}
+  {% else %}
+    {% include iiif/leaflet-viewer.html manifest=page.manifest prevlink=prevlink nextlink=nextlink %}
+  {% endif %}
+{% elsif layout.iiif_viewer == 'mirador' %}
+  {% if page.iiif_viewer == 'leaflet' %}
+    {% include iiif/leaflet-viewer.html manifest=page.manifest prevlink=prevlink nextlink=nextlink %}
+  {% else %}
+    {% include iiif/mirador-viewer.html manifest=page.manifest prevlink=prevlink nextlink=nextlink %}
+  {% endif %}
+{% endif %}
+
+{{ content }}

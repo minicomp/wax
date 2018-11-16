@@ -31,7 +31,6 @@ version:          '0.5.0-beta'
 
 permalink:        'pretty'
 exclude:          [Gemfile*, Rakefile, vendor, spec, README.md]
-safe:             true
 webrick:
   headers:
     'Access-Control-Allow-Origin': '*'
@@ -53,17 +52,21 @@ menu:
       - label: 'Documentation'
         link: 'https://minicomp.github.io/wiki/#/wax/'
       - label: 'Credits'
-        link: '/credits'
-  - label: 'Components'
-    link: '/components/'
-  - label: 'Tasks'
-    link: '/tasks/'
+        link: '/credits/'
   - label: 'Exhibits'
-    link: '/exhibits/'
+    sub:
+      - label: 'Local and Remote IIIF Manifests'
+        link: '/exhibits/a/'
+      - label: 'Inline Parallax Image'
+        link: '/exhibits/b/'
+      - label: 'Inline Image References'
+        link: '/exhibits/c/'
   - label: 'Browse'
     link: '/collection/'
   - label: 'Search'
     link: '/search/'
+  - label: 'Reuse'
+    link: '/reuse/'
 
 # --------------------------------------------------------------
 # COLLECTION SETTINGS
@@ -75,11 +78,13 @@ menu:
 # ~> https://jekyllrb.com/docs/collections/
 
 collections:
+  exhibits:
+    output: true
   qatar: # name of collection
     output: true # makes sure pages are output as html files
-    layout: 'qatar_item' # the layout for the pages to use
+    layout: 'qatar-item' # the layout for the pages to use
     metadata:
-      source: 'qatar_metadata.csv' # path to the metadata file within `_data`
+      source: 'qatar.csv' # path to the metadata file within `_data`
     images:
       source: 'raw_images/qatar' # path to the directory of images within `_data`
 

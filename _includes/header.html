@@ -1,18 +1,24 @@
-<div class="container-fluid" id="header-block">
-  <div class="container">
+<header id="wax-header">
+  <div class="wax-inline-container">
     <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center nopadding">
+
+
       <span id="title">
         <a href="{{ site.baseurl }}/" class="navbar-brand d-flex w-50 mr-auto" title="Home">
           <span class="icon baseline logo"></span>
           {{ site.title | newline_to_br }}
         </a>
       </span>
+
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
 
-        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+
+      <div class="navbar-collapse collapse" id="collapsingNavbar3">
+
+        <ul class="nav navbar-nav ml-auto justify-content-end">
           {% for item in site.menu %}
             {% if item.sub %}
             <li class="nav-item dropdown">
@@ -32,8 +38,8 @@
             {% endif %}
           {% endfor %}
         </ul>
+
       </div>
     </nav>
   </div>
-</div>
-<div id="header-spacer"></div>
+</header>

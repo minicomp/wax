@@ -1,10 +1,8 @@
 ---
-layout: default
-title: Collection
+layout: page
+title: Browse the Collection
 permalink: /collection/
 ---
-
-# Browse the Collection
 
 This site's sample collection comprises a set of objects, each of which is represented by one or more images.
 
