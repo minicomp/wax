@@ -41,6 +41,6 @@ Below is a diagram to give you a zoomed-out view. In summary, you create a file 
 
 From there, you can run tests on your site to catch errors and decide where and how to put it online with greater flexibility.
 
-<a href="{{ '/assets/workflow.jpg' | absolute_url }}">
-<img src="{{ '/assets/workflow.jpg' | absolute_url }}" style="max-width:800px;"/>
+<a href="{{ '/img/wax_workflow.jpg' | absolute_url }}">
+<img src="{{ '/img/wax_workflow.jpg' | absolute_url }}" style="max-width:800px;"/>
 </a>

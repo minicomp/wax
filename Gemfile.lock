@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/mnyrop/wax_theme.git
-  revision: d6707b8ba776fe22b63cd182fd0e97a03dd6ffb4
+  revision: 553543a8334586aba721c91c8bc7686984c450c9
   specs:
     wax_theme (0.1.0)
       jekyll (~> 3.8)
