@@ -16,13 +16,17 @@
     <tr>
       {% for value in item %}
         {% if value[0] == 'pid' %}
-          <td><a href='{{ "" | absolute_url }}/{{ include.collection }}/{{ item.pid }}/'>
-            {{ value[1] }}</a>
+          <td>
+            <a href='{{ "" | absolute_url }}/{{ include.collection }}/{{ item.pid }}/'>
+              {{ value[1] }}
+            </a>
           </td>
         {% elsif value[1] contains '/img/derivatives/' %}
-          <a href='{{ value[1] | absolute_url }}'>
-            <td>{{ value[1] | absolute_url }}</td>
-          </a>
+          <td>
+            <a href='{{ value[1] | absolute_url }}'>
+              {{ value[1] | absolute_url }}
+            </a>
+          </td>
         {% else %}
           <td>{{ value[1] }}</td>
         {% endif %}
