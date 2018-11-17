@@ -19,10 +19,10 @@
 # ~> https://jekyllrb.com/docs/configuration/options/
 
 title:            'Minicomp/Wax'
-description:      'A Jekyll Workflow for Minimal IIIF Exhibitions'
+description:      'Minimal Exhibitions with Jekyll'
 url:              'http://marii.info'
 baseurl:          '/wax'
-version:          '0.5.0-beta'
+copyright:        'Example copyright org, 2018'
 
 # ---------------------------------------------------------------
 # BUILD SETTINGS
@@ -35,6 +35,51 @@ exclude:          [Gemfile*, Rakefile, vendor, spec, README.md]
 webrick:
   headers:
     'Access-Control-Allow-Origin': '*'
+
+
+# --------------------------------------------------------------
+# COLLECTION SETTINGS
+# --------------------------------------------------------------
+# Wax leverages Jekyll collections for much of its
+# functionality, therefor some of the keys below are from
+# Jekyll while others are Wax-specific.
+# For more info, refer to:
+# ~> https://jekyllrb.com/docs/collections/
+
+collections:
+  exhibits:
+    output: true
+  qatar: # name of collection
+    output: true # makes sure pages are output as html files
+    layout: 'qatar_item' # the layout for the pages to use
+    metadata:
+      source: 'qatar.csv' # path to the metadata file within `_data`
+    images:
+      source: 'raw_images/qatar' # path to the directory of images within `_data`
+
+# --------------------------------------------------------------
+# LUNR SEARCH INDEX SETTINGS
+# --------------------------------------------------------------
+# You can create multiple lunr indexes below (though only one is
+# recommended!) by specifying
+# a `file` to write it to and some `collections` for it to index
+# and running `$ bundle exec rake wax:lunr` .
+# You can optionally generate a default UI by specifying a UI file
+# and running `$ bundle exec rake wax:lunr UI=true`.
+
+lunr_index:
+  - file: 'js/lunr-index.json' # file the index will get written to
+    ui:   'js/lunr-ui.js' # path to the search UI file
+    collections:
+      qatar:
+        content: false # whether or not to index page content
+        fields: # the metadata fields to index
+          - artist
+          - location
+          - label
+          - _date
+          - object_type
+          - current_location
 
 # --------------------------------------------------------------
 # SITE MENU SETTINGS
@@ -70,42 +115,21 @@ menu:
     link: '/reuse/'
 
 # --------------------------------------------------------------
-# COLLECTION SETTINGS
-# --------------------------------------------------------------
-# Wax leverages Jekyll collections for much of its
-# functionality, therefor some of the keys below are from
-# Jekyll while others are Wax-specific.
-# For more info, refer to:
-# ~> https://jekyllrb.com/docs/collections/
-
-collections:
-  exhibits:
-    output: true
-  qatar: # name of collection
-    output: true # makes sure pages are output as html files
-    layout: 'qatar_item' # the layout for the pages to use
-    metadata:
-      source: 'qatar.csv' # path to the metadata file within `_data`
-    images:
-      source: 'raw_images/qatar' # path to the directory of images within `_data`
-
-# --------------------------------------------------------------
-# LUNR SEARCH INDEX SETTINGS
+# SITE FOOTER SETTINGS
 # --------------------------------------------------------------
 #
 
-lunr_index:
-  - file: 'js/lunr-index.json' # file the index will get written to
-    ui:   'js/lunr-ui.js' # path to the search UI file
-    collections:
-      qatar:
-        content: false # whether or not to index page content
-        fields: # the metadata fields to index
-          - artist
-          - location
-          - label
-          - _date
-          - object_type
-          - current_location
+footer:
+  links:
+    - label: 'GitHub'
+      link: 'https://github.com/minicomp/wax'
+    - label: 'Credits'
+      link: '/credits'
+    - label: 'Contact'
+      link: 'https://gitter.im/minicomp/wax/'
+  logos:
+    - img: '/assets/logo.png'
+    - img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2r40VYrf2Q5jkJiPGjPkl7xZoHJliwgVtHCLVXmAsRKw0ZudD'
+      link: 'https://library.columbia.edu'
 
 # FIN

@@ -1,6 +1,5 @@
 ---
 layout: wax/page
-title: Wax.
 show_title: false
 banner:
   collection: qatar

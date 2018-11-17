@@ -1,9 +1,10 @@
 GIT
   remote: https://github.com/mnyrop/wax_theme.git
-  revision: 108c0e771590ec70e43c59c6c3de61c556e65fc9
+  revision: a9d92d03027d0756edbd16dc75bcb21a7223fcd7
   specs:
-    wax_theme (0.1.0)
+    wax_theme (0.1.0.beta)
       jekyll (~> 3.8)
+      wax_tasks (~> 1.0.beta)
 
 GEM
   remote: https://rubygems.org/
@@ -102,7 +103,6 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 3.8)
-  wax_tasks (= 1.0.0.pre.beta)
   wax_theme!
 
 BUNDLED WITH

@@ -8,4 +8,4 @@ banner:
   y: 30%
 ---
 
-{% include wax/search.html %}
+{% include wax/search.html ui='/js/lunr-ui.js' %}
