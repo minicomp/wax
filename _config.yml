@@ -93,8 +93,6 @@ menu:
     sub:
       - label: 'Wax'
         link: '/about/'
-      - label: 'The Demo'
-        link: '/demo/'
       - label: 'Documentation'
         link: 'https://minicomp.github.io/wiki/#/wax/'
       - label: 'Credits'
