@@ -13,5 +13,5 @@ full: "/img/derivatives/iiif/images/obj12_00/full/1140,/0/default.jpg"
 manifest: "/img/derivatives/iiif/obj12/manifest.json"
 permalink: "/qatar/obj12/"
 layout: qatar_item
-iiif_viewer: mirador
+image_viewer: 'mirador'
 ---

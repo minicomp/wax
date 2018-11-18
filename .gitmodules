@@ -1,0 +1,3 @@
+[submodule ".wax_theme"]
+	path = .wax_theme
+	url = https://github.com/mnyrop/wax_theme.git

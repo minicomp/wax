@@ -32,10 +32,10 @@ $.getJSON("{{ '/js/lunr-index.json' | absolute_url }}", function(index_json) {
         var thumb   = item.thumbnail;
         var meta    = '';
 
-        if (item.artist != 'Unknown'){ meta += item.artist + '. ';}
-        if (item.location){ meta += item.location + ', ';}
-        if (item._date){ meta += item._date + '. ';}
-        if (item.object_type){ meta += item.object_type + '. ';}
+        if (item.artist != 'Unknown'){ meta += `Artist: ${item.artist}. `;}
+        if (item.location){ meta += `Location: ${item.location}. `;}
+        if (item._date){ meta += `Date: ${item._date}. `;}
+        if (item.object_type){ meta += `Object Type: ${item.object_type}. `;}
 
         var result = `<div class='result'><a href='${link}'><img class='sq-thumb-sm' src='{{ "" | absolute_url }}${thumb}'/>&nbsp;&nbsp;&nbsp;<p><span class='title'>${label}.</span><br>${meta}</p></a></div>`;
         results_div.append(result);
