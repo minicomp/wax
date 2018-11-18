@@ -9,7 +9,6 @@ git:
 branches:
   except:
     - static
-    - gh-pages
 before_script:
   - bundle exec rake wax:lunr
 script:
