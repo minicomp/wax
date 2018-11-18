@@ -8,14 +8,16 @@ It's comprised of: __a few Ruby gems__ for processing image data and associated 
 
 <br>
 
+- [Prerequisites](#Prerequisites)
+- [Getting Started](#Getting-Started)
+
+<br>
+
 <a href="https://minicomp.github.io/wax/">
   <img src="https://raw.githubusercontent.com/minicomp/wiki/master/docs/assets/wax_screen.gif"/>
 </a>
 
-
-- [Prerequisites](#Prerequisites)
-- [Getting Started](#Getting-Started)
-
+<br>
 
 # Prerequisites
 
