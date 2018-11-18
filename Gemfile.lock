@@ -88,6 +88,9 @@ GEM
       jekyll (~> 3.8)
       rake (~> 12.3)
       wax_iiif (~> 0.1.0)
+    wax_theme (0.1.0.beta)
+      jekyll (~> 3.8)
+      wax_tasks (~> 1.0.beta)
     yell (2.0.7)
 
 PLATFORMS
