@@ -1,0 +1,11 @@
+<link rel='stylesheet' type='text/css' href="{{ '/assets/css/leaflet.css' | absolute_url }}">
+<script type='text/javascript' src="{{ '/assets/js/leaflet.js' | absolute_url }}"></script>
+<script type='text/javascript' src="{{ '/assets/js/leaflet-iiif.min.js' | absolute_url }}"></script>
+
+<div id='iiif-viewer-leaflet' class='image-viewer'></div>
+
+<script>
+  $(document).ready(function() {
+    IIIFViewerLeaflet('{{ include.manifest | absolute_url }}');
+  });
+</script>

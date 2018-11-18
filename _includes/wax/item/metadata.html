@@ -1,0 +1,23 @@
+<div class='metadata-block wax-inline-container'>
+  <table id='metadata-table' class='table table-striped table-responsive'>
+    {% for item in include.meta %}
+      {% if item.value contains 'page.' %}
+        {% assign key = item.value | remove: 'page.' %}
+        {% assign value = page[key] %}
+      {% else %}
+        {% assign value = item.value %}
+      {% endif %}
+
+      {% if value contains 'http' %}
+        {%- capture value -%}
+          <a href="{{ value }}">{{ value }}</a>
+        {%- endcapture -%}
+      {% endif %}
+
+      <tr class='meta {{ item.label | slugify}}'>
+        <td class='label'>{{ item.label }}</td>
+        <td class='value'>{{ value | strip }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+</div>

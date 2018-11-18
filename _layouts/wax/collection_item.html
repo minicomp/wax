@@ -1,0 +1,41 @@
+---
+layout: wax/default
+---
+
+{% comment %}
+  The block below controls the image viewer
+{% endcomment %}
+
+{% if page.image_viewer %}
+  {% assign viewer = page.image_viewer %}
+{% elsif layout.image_viewer %}
+  {% assign viewer = layout.image_viewer %}
+{% endif %}
+
+{% if viewer %}
+  <div class='item-view'>
+    <span class='pagination-link' id='prevlink'></span>
+    {% if viewer == 'leaflet' %}
+      {% include wax/image_viewer/leaflet.html manifest=page.manifest prevlink=prevlink nextlink=nextlink %}
+    {% elsif viewer == 'mirador' %}
+       {% include wax/image_viewer/mirador.html manifest=page.manifest prevlink=prevlink nextlink=nextlink %}
+    {% else %}
+       {% include wax/image_viewer/simple.html full_image=page.full prevlink=prevlink nextlink=nextlink %}
+    {% endif %}
+    <span class='pagination-link' id='nextlink'></span>
+  </div>
+  {% unless layout.pagination == false %}{% include wax/item/pagination.html %}{% endunless %}
+{% endif %}
+
+{% comment %}
+  The block below controls the item metadata table
+{% endcomment %}
+
+{% if layout.meta.size %}
+  {% assign metadata = layout.meta %}
+{% elsif page.meta.size %}
+  {% assign metadata = page.meta %}
+{% endif %}
+{% if metadata.size %}
+  {% include wax/item/metadata.html meta=metadata %}
+{% endif %}

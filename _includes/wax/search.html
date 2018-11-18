@@ -1,0 +1,12 @@
+{% assign ui = include.ui | default: '/js/lunr-ui.js' %}
+{% assign placeholder = include.placeholder | default: 'Search... ' %}
+
+<script src="{{ '/assets/js/elasticlunr.min.js' | absolute_url }}"></script>
+<script src='{{ ui | absolute_url }}'></script>
+
+<div class='search-block'>
+  <div class='input-group'>
+    <input type='text' class='form-control' id='search' name='x' placeholder='{{ placeholder }}'>
+  </div>
+  <div id='results'></div>
+</div>

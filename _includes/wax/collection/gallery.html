@@ -1,0 +1,33 @@
+{% assign collection = site[include.collection] %}
+
+<div id='wax-gallery-{{ include.collection }}-container' class='wax-gallery-container'></div>
+<script type="text/javascript">
+  var container= $('#wax-gallery-{{ include.collection }}-container');
+  container.prepend("<div id='wax-gallery-{{ include.collection }}' class='wax-gallery'></div>");
+  var gallery = $('#wax-gallery-{{ include.collection }}');
+  {% for item in collection %}
+    {%- capture item_html -%}
+      "<div class='gallery-item {{ item[include.facet_by] | slugify }} all'><a href='{{ item.url | absolute_url }}'><div class='hovereffect'><img class='img-responsive gallery-thumb' src='{{ item.thumbnail | absolute_url }}'/><div class='overlay'><p class='info'>{{ item.label }}</p></div></div></a></div>"
+    {%- endcapture -%}
+    gallery.append({{ item_html | strip_newlines }});
+  {% endfor %}
+
+  {% if include.facet_by %}
+    container.prepend('<div id="{{ include.collection }}-facet-buttons" class="facet-buttons"></div>');
+    var buttonDiv = $('#{{ include.collection }}-facet-buttons');
+    var facets = Array.from(new Set([{%- for item in collection -%}'{{ item[include.facet_by] | slugify }}'{% unless forloop.last %}, {% endunless %}{%- endfor -%}]));
+    buttonDiv.append("<button class='btn facet active' data-filter='all'>show all</button>");
+    for (i in facets) {
+      buttonDiv.append(`<button class='btn facet' data-filter='${facets[i]}'>${facets[i]}</button>`);
+    }
+    $(document).ready(function(){
+      $(".facet").click(function(){
+        var filterValue = $(this).attr('data-filter');
+        $('.facet').removeClass('active');
+        $(this).addClass('active');
+        if(filterValue == 'all') { $('.all').show('slow'); }
+        else { $('.all').hide('slow'); $(`.${filterValue}`).show('slow'); }
+      });
+    });
+  {% endif %}
+</script>

@@ -1,0 +1,11 @@
+{%- assign m1 = include.m1 | absolute_url -%}
+{%- assign m2 = include.m2 | absolute_url -%}
+
+<link rel='stylesheet' type='text/css' href='{{ "/assets/mirador/css/mirador-combined.css" | absolute_url }}'>
+<script src="{{ '/assets/mirador/mirador.js' | absolute_url }}"></script>
+
+<div id='mirador-iiif-viewer' class='image-viewer mirador' allowfullscreen='allowfullscreen'></div>
+
+<script type='text/javascript'>
+  miradorComparisonViewer('{{ m1 }}', '{{ m2 }}' );
+</script>

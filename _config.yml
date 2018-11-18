@@ -29,10 +29,9 @@ copyright:        'Example copyright org, 2018'
 # ---------------------------------------------------------------
 # Best not to mess with these unless you know what you're doing!
 
-theme:            wax_theme
 permalink:        'pretty'
 safe:             true
-exclude:          [Gemfile*, Rakefile, vendor, spec, README.md, wax_theme]
+exclude:          [Gemfile*, Rakefile, vendor, spec, README.md]
 webrick:
   headers:
     'Access-Control-Allow-Origin': '*'

@@ -1,10 +1,3 @@
-PATH
-  remote: .wax_theme
-  specs:
-    wax_theme (0.1.0.beta)
-      jekyll (~> 3.8)
-      wax_tasks (~> 1.0.beta)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -102,7 +95,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 3.8)
-  wax_theme!
+  wax_tasks (~> 1.0.beta)
 
 BUNDLED WITH
    1.16.5

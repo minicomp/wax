@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+  {% include wax/head.html %}
+
+  <body>
+    <time datetime='{{ 'now' | date: '%Y-%m-%d %H:%M' }}'></time>
+    {% include wax/header.html %}
+
+    <div id='wax-main'>
+      <div id='wax-content' class='wax-inline-container'>
+        {{ content }}
+      </div>
+
+      {% include wax/footer.html %}
+    </div>
+  </body>
+
+  <script type='text/javascript' src='{{ "/assets/js/bootstrap.min.js" | absolute_url }}'></script>
+  <script type='text/javascript' src='{{ "/assets/js/popper.min.js" | absolute_url }}'></script>
+</html>
