@@ -20,7 +20,7 @@
 
 title:            'Minicomp/Wax'
 description:      'Minimal Exhibitions with Jekyll'
-url:              'https://marii.info'
+url:              ''
 baseurl:          '/wax'
 copyright:        'Example copyright org, 2018'
 
