@@ -31,7 +31,8 @@ copyright:        'Example copyright org, 2018'
 
 theme:            wax_theme
 permalink:        'pretty'
-exclude:          [Gemfile*, Rakefile, vendor, spec, README.md]
+safe:             true
+exclude:          [Gemfile*, Rakefile, vendor, spec, README.md, wax_theme]
 webrick:
   headers:
     'Access-Control-Allow-Origin': '*'
