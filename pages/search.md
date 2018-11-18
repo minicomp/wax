@@ -1,9 +1,11 @@
 ---
-layout: default
-title: Search
+layout: wax/page
+title: Search the Collection
 permalink: /search/
+banner:
+  collection: qatar
+  pid: obj8
+  y: 30%
 ---
 
-# Search the Collection
-
-{% include search.html %}
+{% include wax/search.html ui='/js/lunr-ui.js' %}

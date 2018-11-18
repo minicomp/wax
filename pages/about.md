@@ -1,10 +1,12 @@
 ---
-layout: default
-title: About Wax
+layout: wax/page
+title: What is Wax?
 permalink: /about/
+banner:
+  collection: qatar
+  pid: obj6
+  y: 50%
 ---
-
-## What is Wax?
 
 **Wax is an extensible workflow for producing scholarly exhibitions with minimal computing principles.**  
 It is comprised of a few Ruby gems, some customizable UI components, and (hopefully soon!) a lot of documentation and recipes for creating, deploying, and maintaining digital exhibitions.
@@ -39,8 +41,6 @@ Below is a diagram to give you a zoomed-out view. In summary, you create a file 
 
 From there, you can run tests on your site to catch errors and decide where and how to put it online with greater flexibility.
 
-<a href="{{ '/assets/workflow.jpg' | absolute_url }}">
-<img src="{{ '/assets/workflow.jpg' | absolute_url }}" style="max-width:800px;"/>
+<a href="{{ '/img/wax_workflow.jpg' | absolute_url }}">
+  <img src="{{ '/img/wax_workflow.jpg' | absolute_url }}"/>
 </a>
-
-## How do I get started?

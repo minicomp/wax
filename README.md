@@ -1,82 +1,95 @@
 # minicomp/wax 🐝
 
-[![Build Status](https://travis-ci.org/mnyrop/wax.svg?branch=master)](https://travis-ci.org/mnyrop/wax) [![](https://img.shields.io/librariesio/github/mnyrop/wax.svg)](https://libraries.io/github/mnyrop/wax) [![Join the chat at https://gitter.im/minicomp/wax](https://badges.gitter.im/minicomp/wax.svg)](https://gitter.im/minicomp/wax?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) 
+[![Build Status](https://travis-ci.org/mnyrop/wax.svg?branch=master)](https://travis-ci.org/mnyrop/wax) [![Join the chat at https://gitter.im/minicomp/wax](https://badges.gitter.im/minicomp/wax.svg)](https://gitter.im/minicomp/wax?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
-__jekyll for minimal exhibitions with iiif__
-
-demo site:            <https://minicomp.github.io/wax/> <br>
-cannonical repo:      <https://github.com/minicomp/wax/> <br>
-gem behind wax:       <https://github.com/minicomp/wax_tasks/>
+__Wax is an extensible workflow for producing scholarly exhibitions with minimal computing principles.__<br>
+It's comprised of: __a few Ruby gems__ for processing image data and associated metadata ([wax_tasks](https://github.com/minicomp/wax_tasks/), [wax_iiif](https://github.com/minicomp/wax_iiif/)), __a Jekyll theme__ ([wax_theme](https://github.com/minicomp/wax_theme/)), and (hopefully soon!) a lot of __documentation and recipes__ for creating, deploying, and maintaining digital exhibitions ([wax_docs](https://github.com/minicomp/wax_docs/)).
 
 <br>
 
-```sh
-NOTE ~>   WAX, WAX_TASKS, and WAX_IIIF are in RAPID development and will be 
-          unstable until the beta release. 
-          
-          Please submit any bugs, questions, suggestions, feature requests, 
-          and/or documentation edits as GitHub issues.
-          Any feedback is helpful/appreciated !!!!
-```
+- [Prerequisites](#Prerequisites)
+- [Getting Started](#Getting-Started)
+
 <br>
 
 <a href="https://minicomp.github.io/wax/">
   <img src="https://raw.githubusercontent.com/minicomp/wiki/master/docs/assets/wax_screen.gif"/>
 </a>
 
-#### Welcome to the demo repository for the [Minicomp/Wax](https://github.com/minicomp/wax/) minimal exhibition workflow.
+<br>
 
-The easiest way to **get started** with your own Wax exhibition is **by cloning this repository** and swapping out content, media, styles, and components **to make it your your own**.
-
-Advanced users can check back to find a **Ruby gem / Jekyll theme** with the layouts, includes, and scripts from this demo.
-
-## Issues / Contributing
-
-The canonical source for Wax is the [Minicomp](https://github.com/minicomp/wax/) fork of the project. Please submit issues (bugs, feature requests, questions, etc.) as well as pull requests only to the Minicomp/Wax repository.
-
-## Primary tooling
-
-Wax is a flexible workflow and not a platform. As such, its tooling is more of a dynamic roster than a stack. At its center are __[jekyll](http://jekyllrb.com)__ and __[wax_tasks](https://github.com/minicomp/wax_tasks/)__ (which are both Ruby gems), but the rest of the components are optional depending on what you'd like to do and how you'd like to do it. The following list is by no means exhaustive, but gives an outline of Wax's open source super group:
-
-__For searching/indexing:__
-- [elasticlunr.js](http://elasticlunr.com/)
-
-__For IIIF generation/presentation:__
-- [wax_iiif gem](https://github.com/minicomp/wax_iiif/) (fork of [iiif_s3](https://github.com/cmoa/iiif_s3))
-- [leaflet.js](http://leafletjs.com/) and [leaflet-iiif.js](https://github.com/mejackreed/Leaflet-IIIF)
-- [imagemagick](https://www.imagemagick.org/script/index.php) via [minimagick](https://github.com/minimagick/minimagick)
-
-__For theming:__
-- [jquery](http://jquery.com/)
-- [bootstrap4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
-
-__For testing:__
-- [rspec gem](http://rspec.info/)
-- [html-proofer gem](https://github.com/gjtorikian/html-proofer)
-- [capybara gem](http://teamcapybara.github.io/capybara/)
-- [travis-ci](https://travis-ci.org/)
+# Prerequisites
 
 
-## Quick Start
+You'll need `Ruby >= 2.4` with `bundler` installed. Check your versions with:
 
-Make sure your system is ready with modern Ruby (>=2.4), git, and ImageMagick installed. 
-(Note: If you want to work with PDFs, you will also need Ghostscript)
+```bash
+$ ruby -v
+  ruby 2.4.2p198 (2017-09-14 revision 59899) [x86_64-darwin15]
 
-Install Bundler
-```sh
-$ gem install bundler
+$ bundler -v
+  Bundler version 1.16.1
 ```
-Clone the repository and change directory into it
-```sh
-$ git clone https://github.com/minicomp/wax.git && cd wax
+
+To process images, you will also need to have ImageMagick and Ghostscript installed and functional. You can check to see if you have ImageMagick by running:
+
+```bash
+$ convert -version
+  Version: ImageMagick 6.9.9-20 Q16 x86_64 2017-10-15 http://www.imagemagick.org
+  Copyright: ÂŠ 1999-2017 ImageMagick Studio LLC
 ```
-Install the Ruby Dependencies
-```sh
-$ bundle install
+
+... and check Ghostscript with:
+```bash
+$ gs -version
+  GPL Ghostscript 9.21 (2017-03-16)
+  Copyright (C) 2017 Artifex Software, Inc.  All rights reserved.
 ```
-Serve the site locally
-```sh
-$ bundle exec jekyll serve
-```
-Check out the [Minicomp Wiki](https://minicomp.github.io/wiki/) to learn how to use and customize the demo components.
+
+
+# Getting Started
+
+__There are a few ways to get started with Wax, depending on your needs.__ You will need to decide in advance if you'd like to host your site with __GitHub Pages__, because GitHub pages does not allow Ruby gem Jekyll themes to be used on build. You will also need to know your skill level with Jekyll. Cloning the demo is suggested for new users so you can see how a full Wax site would work. __Advanced Jekyllers__ can start from a clean Jekyll install. 
+
+### Option 1. Clone the demo for use with GitHub pages
+
+1. Change directory into where you'd like your site, e.g., your Desktop:
+    ```sh
+    cd ~/Desktop
+    ```
+2. Clone this repository from the `gh-pages` branch:
+    ```sh
+    git clone https://github.com/minicomp/wax.git -b 'gh-pages'
+    ```
+3. Change directory into the site repository and install the dependencies:
+    ```sh
+    cd wax
+    bundle install
+    ```
+4. Serve the site locally
+    ```sh
+    bundle exec jekyll serve
+    ```
+
+### Option 2. Clone the demo without using GitHub pages
+
+1. Change directory into where you'd like your site, e.g., your Desktop:
+    ```sh
+    cd ~/Desktop
+    ```
+2. Clone this repository from the master branch:
+    ```sh
+    git clone https://github.com/minicomp/wax.git -b master
+    ```
+3. Change directory into the site repository and install the dependencies:
+    ```sh
+    cd wax
+    bundle install
+    ```
+4. Serve the site locally
+    ```sh
+    bundle exec jekyll serve
+    ```
+    
+ When the demo site is serving correctly you're ready to swap in your own content and configuration to make your own exhibition site.
