@@ -3,9 +3,6 @@ layout: wax/reuse_page
 title: Reuse the Collection
 permalink: /reuse/
 collection: qatar
-banner:
-  collection: qatar
-  pid: obj5
 ---
 
 Wax is inspired by [FAIR data principles](https://journal.code4lib.org/articles/13427), and as such strives to make its collections findable, accessible, interoperable and reusable.

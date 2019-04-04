@@ -2,10 +2,6 @@
 layout: wax/page
 title: What is Wax?
 permalink: /about/
-banner:
-  collection: qatar
-  pid: obj6
-  y: 50%
 ---
 
 **Wax is an extensible workflow for producing scholarly exhibitions with minimal computing principles.**  

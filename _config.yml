@@ -18,11 +18,11 @@
 # Feel free to change these! For more info, refer to:
 # ~> https://jekyllrb.com/docs/configuration/options/
 
-title:            'Minicomp/Wax'
+title:            'Wax'
 description:      'Minimal Exhibitions with Jekyll'
 url:              ''
 baseurl:          '/wax'
-copyright:        'Example copyright org, 2018'
+copyright:        'Example copyright org, 2019'
 
 # ---------------------------------------------------------------
 # BUILD SETTINGS
