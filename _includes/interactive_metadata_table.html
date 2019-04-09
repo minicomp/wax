@@ -1,0 +1,53 @@
+<link rel="stylesheet" type="text/css" href="{{ '/assets/css/datatables.css' | absolute_url }}">
+<script type="text/javascript" src="{{ 'assets/js/datatables.min.js' | absolute_url }}"></script>
+
+<table id='{{ include.collection }}-datatable' class='datatable display'>
+  {% assign first_item = site.data[include.collection].first %}
+  <thead>
+    <tr>
+      {% for field in first_item %}
+        <th>{{ field[0] }}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+  {% for item in site.data[include.collection] %}
+    <tr>
+      {% for value in item %}
+        {% if value[0] == 'pid' %}
+          <td>
+            <a href='{{ "" | absolute_url }}/{{ include.collection }}/{{ item.pid }}/'>
+              {{ value[1] }}
+            </a>
+          </td>
+        {% elsif value[1] contains '/img/derivatives/' %}
+          <td>
+            <a href='{{ value[1] | absolute_url }}'>
+              {{ value[1] | absolute_url }}
+            </a>
+          </td>
+        {% else %}
+          <td>{{ value[1] }}</td>
+        {% endif %}
+      {% endfor %}
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+<script>
+  $(document).ready(function () {
+    $('#{{ include.collection }}-datatable').DataTable({
+      scrollY: 600,
+      scrollX: 600,
+      paging: false,
+      fixedHeader: false,
+      searching: false,
+      dom: 'Bfrtip',
+      buttons: [
+        'csvHtml5',
+        'copyHtml5'
+      ]
+    });
+  });
+</script>

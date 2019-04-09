@@ -23,16 +23,24 @@ description:      'Minimal Exhibitions with Jekyll'
 url:              ''
 baseurl:          '/wax'
 copyright:        'Example copyright org, 2019'
+logo:             '/assets/logo.png'
 
 # ---------------------------------------------------------------
 # BUILD SETTINGS
 # ---------------------------------------------------------------
 # Best not to mess with these unless you know what you're doing!
 
-theme:            wax_theme
 permalink:        'pretty'
-safe:             true
-exclude:          [Gemfile*, Rakefile, vendor, spec, README.md, wax_theme]
+sass:
+    style: compressed
+exclude:
+  - Gemfile*
+  - Rakefile
+  - vendor
+  - spec
+  - README.md
+  - wax_theme
+  - package.json
 webrick:
   headers:
     'Access-Control-Allow-Origin': '*'
@@ -69,8 +77,8 @@ collections:
 # and running `$ bundle exec rake wax:lunr UI=true`.
 
 lunr_index:
-  - file: 'js/lunr-index.json' # file the index will get written to
-    ui:   'js/lunr-ui.js' # path to the search UI file
+  - file: 'assets/js/lunr-index.json' # file the index will get written to
+    ui:   'assets/js/lunr-ui.js' # path to the search UI file
     collections:
       qatar:
         content: false # whether or not to index page content
@@ -100,12 +108,10 @@ menu:
         link: '/credits/'
   - label: 'Exhibits'
     sub:
-      - label: 'Local and Remote IIIF Manifests'
-        link: '/exhibits/a/'
       - label: 'Inline Parallax Image'
-        link: '/exhibits/b/'
+        link: '/exhibits/a/'
       - label: 'Inline Image References'
-        link: '/exhibits/c/'
+        link: '/exhibits/b/'
   - label: 'Browse'
     link: '/collection/'
   - label: 'Search'

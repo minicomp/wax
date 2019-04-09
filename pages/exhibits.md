@@ -1,5 +1,5 @@
 ---
-layout: wax/page
+layout: page
 permalink: /exhibits/
 title: Featured Exhibits
 ---

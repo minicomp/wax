@@ -1,0 +1,58 @@
+{% assign collection = site[include.collection] %}
+
+{% if include.only and include.facet_by %}
+  {% assign subset = collection | where: include.facet_by, include.only %}
+{% endif %}
+
+<div id='wax-gallery-{{ include.collection }}-container' class='wax-gallery-container full-width'>
+  <div class='wax-inline-container'>
+    <div id="{{ include.collection }}-facet-buttons" class="facet-buttons"></div>
+    <div id="wax-gallery-{{ include.collection }}" class="wax-gallery"></div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  $( document ).ready(function() {
+    var container = $('#wax-gallery-{{ include.collection }}-container');
+    var gallery = $('#wax-gallery-{{ include.collection }}');
+    var buttonDiv = $('#{{ include.collection }}-facet-buttons');
+
+    {% if subset %}
+      {% for item in subset %}
+        {%- capture item_html -%}
+          "<div class='gallery-item {{ item[include.facet_by] | slugify }} all'><a href='{{ item.url | absolute_url }}'><div class='hovereffect'><img class='img-responsive gallery-thumb' src='{{ item.thumbnail | absolute_url }}'/><div class='overlay'><p class='info'>{{ item.label }}</p></div></div></a></div>"
+        {%- endcapture -%}
+        gallery.append({{ item_html | strip_newlines }});
+      {% endfor %}
+    {% else %}
+      {% for item in collection %}
+        {%- capture item_html -%}
+          "<div class='gallery-item {{ item[include.facet_by] | slugify }} all'><a href='{{ item.url | absolute_url }}'><div class='hovereffect'><img class='img-responsive gallery-thumb' src='{{ item.thumbnail | absolute_url }}' alt='{{ item.label }}'/><div class='overlay'><p class='info'>{{ item.label }}</p></div></div></a></div>"
+        {%- endcapture -%}
+        gallery.append({{ item_html | strip_newlines }});
+      {% endfor %}
+    {% endif %}
+
+    {% if include.facet_by %}
+      {% unless subset %}
+        var facets = Array.from(new Set([{%- for item in collection -%}'{{ item[include.facet_by] | slugify }}'{% unless forloop.last %}, {% endunless %}{%- endfor -%}]));
+        buttonDiv.append("<button class='btn facet active' data-filter='all'>show all</button>");
+
+        for (i in facets) {
+          buttonDiv.append(`<button class='btn facet' data-filter='${facets[i]}'>${facets[i]}</button>`);
+        }
+
+        $(document).ready(function(){
+          $(".facet").click(function(){
+            var filterValue = $(this).attr('data-filter');
+            $('.facet').removeClass('active');
+            $(this).addClass('active');
+            if(filterValue == 'all') { $('.all').show('slow'); }
+            else { $('.all').hide('slow'); $(`.${filterValue}`).show('slow'); }
+          });
+        });
+      {% endunless %}
+    {% endif %}
+  });
+</script>

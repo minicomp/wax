@@ -1,7 +1,7 @@
 ---
-layout: wax/page
+layout: page
 title: Search the Collection
 permalink: /search/
 ---
 
-{% include wax/search.html ui='/js/lunr-ui.js' %}
+{% include search_box.html ui='/assets/js/lunr-ui.js' %}

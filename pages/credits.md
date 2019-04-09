@@ -1,5 +1,5 @@
 ---
-layout: wax/page
+layout: page
 title: Credits
 permalink: '/credits/'
 ---

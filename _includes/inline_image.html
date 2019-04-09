@@ -1,0 +1,12 @@
+{% assign item  = site[include.collection] | where: 'pid', include.pid | first %}
+
+<div class='inline-image-reference'>
+  <a href='{{ item.url | absolute_url }}'>
+    <img src='{{ item.full | absolute_url }}'/>
+  </a>
+  {% if item.label %}
+  <p class='image-caption'>
+    Above: <a href='{{ item.url | absolute_url }}'>{{ item.label }}</a>
+  </p>
+  {% endif %}
+</div>

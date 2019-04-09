@@ -1,0 +1,11 @@
+{
+  "name": "Minicomp/Wax",
+  "version": "0.1.0-beta",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "popper": "^1.12.9",
+    "bootstrap": "^4.0.0",
+    "elasticlunr": "^0.9.6",
+    "datatables": "^1.10.18"
+  }
+}

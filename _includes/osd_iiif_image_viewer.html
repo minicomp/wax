@@ -1,0 +1,20 @@
+<div id="osd" class="image-viewer"></div>
+<script src="{{ '/assets/js/openseadragon/openseadragon.min.js' | absolute_url }}"></script>
+
+<script>
+  var manifestUrl = "{{ include.manifest | absolute_url }}";
+  $.getJSON(manifestUrl, function(data) {
+    var tileSources = [];
+    $.each(data.sequences[0].canvases, function(k, val) {
+      tileSources.push(val.images[0].resource.service['@id'] + '/info.json');
+    });
+    OpenSeadragon({
+      id: "osd",
+      sequenceMode: true,
+      prefixUrl: "{{ '/assets/js/openseadragon/images/' | absolute_url }}",
+      tileSources: tileSources,
+      homeFillsViewer: false,
+      showReferenceStrip: true
+    });
+  });
+</script>
