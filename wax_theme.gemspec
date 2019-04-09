@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "wax_theme"
-  spec.version       = "1.0.0."
+  spec.version       = "1.0.0"
   spec.authors       = ["mnyrop"]
   spec.email         = ["m.nyrop@columbia.edu"]
   spec.summary       = "Jekyll gem theme for Minicomp/Wax"
