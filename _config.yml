@@ -33,14 +33,7 @@ logo:             '/assets/logo.png'
 permalink:        'pretty'
 sass:
     style: compressed
-exclude:
-  - Gemfile*
-  - Rakefile
-  - vendor
-  - spec
-  - README.md
-  - wax_theme
-  - package.json
+exclude: [Gemfile*,Rakefile,vendor,spec,README.md,wax_theme,package.json]
 webrick:
   headers:
     'Access-Control-Allow-Origin': '*'
