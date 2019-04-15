@@ -9,7 +9,7 @@
 
     {% if value contains 'http' %}
       {%- capture value -%}
-        <a href="{{ value }}" target="_blank">Link</a>
+        <a href="{{ value }}" target="_blank">{{ value }}</a>
       {%- endcapture -%}
     {% endif %}
       <dt>{{ item.label }}</dt>
