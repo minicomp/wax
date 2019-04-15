@@ -20,7 +20,7 @@ The Wax workflow starts with making standardized image files and metadata record
 
 Wax was created for individuals and groups who either don't have or don't want to use a lot of resources to create their scholarly exhibitions. It's best suited for folks who are willing to take on some technical responsibility in exchange for a lot of flexibility.
 
-This is to say that Wax has a relatively high but general-purpose learning curve. To get the most out of Wax, you should have some familiarity with:
+For beginners, Wax has a relatively high, but general-purpose learning curve. To get the most out of Wax, you should have some familiarity with:
 
 - Using an interactive shell (e.g., Bash/Terminal) to install and interact with programs, files, and directories on your local computer.
 - Using Git and GitHub to version control and collaborate on projects.
@@ -29,7 +29,10 @@ This is to say that Wax has a relatively high but general-purpose learning curve
 - Using file-naming conventions and best practices.
 - Editing HTML, CSS, and some JavaScript.
 
-**However, Wax is also great for teaching the skills above!** For examples of digital humanities pedagogy via the creation of Wax exhibitions, check out [this workshop](https://library.columbia.edu/news/events/event.html?guid=CAL-00bb9e25-6667531c-0166-695e8946-00001777events%40columbia.edu&returnlinkurl=/content/libraryweb/research/workshops&returnlinktext=Workshops), [this GitHub repository](https://github.com/stylerevolution/stylerevolution.github.io), and [this custom Wax site](https://stylerevolution.github.io/).
+**However, Wax is also great for teaching the skills above!** For examples of digital humanities pedagogy via the creation of Wax exhibitions, check out [this workshop](https://library.columbia.edu/news/events/event.html?guid=CAL-00bb9e25-6667531c-0166-695e8946-00001777events%40columbia.edu&returnlinkurl=/content/libraryweb/research/workshops&returnlinktext=Workshops), [this GitHub repository](https://github.com/stylerevolution/stylerevolution.github.io), or [this custom Wax site](https://stylerevolution.github.io/).
+
+**Wax is also phenomenal for professionals who play a facilitating role**, such as Digital Humanities Librarians or Coordinators. With some practice, Wax substantially reduces the time to production, and the post-production maintenance costs to you and your team. In the most common scenario, students, faculty or any other collaborator, just have to provide you with a properly formatted spreadsheet, and the copy for the exhibits.
+
 
 ## So what does Wax *look like?*
 
