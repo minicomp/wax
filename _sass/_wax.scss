@@ -31,7 +31,7 @@ a:hover {
 
 p {
   color: $text-color;
-  margin-top: $margin;
+  margin-top: $less-margin;
   max-width: 100%;
   letter-spacing: .02rem;
   font-weight: 400;
@@ -152,20 +152,22 @@ content section
     min-height: 70vh;
 
     .exhibit-meta {
-      margin-bottom: $super-margin;
+      margin-bottom: $more-margin;
+      
       .exhibit-author {
-        margin-top: $super-margin;
+        margin-top: $margin;
         margin-bottom: 1em;
         padding-bottom: 0;
       }
       .exhibit-title {
         margin-top: 0;
         padding-top: 0;
-        margin-bottom: 1em;
+        margin-bottom: 0;
       }
       .exhibit-date {
         margin: 0;
         padding: 0;
+        font-style: italic; 
       }
     }
 
@@ -250,6 +252,8 @@ content section
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  margin-top: $more-margin;
+  margin-bottom: $more-margin;
 }
 
 .wax-parallax {
