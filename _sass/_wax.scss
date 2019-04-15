@@ -30,8 +30,8 @@ a:hover {
 
 p {
   color: $text-color;
-  margin-top: $margin;
   max-width: 100%;
+  margin-bottom: $less-margin;
   letter-spacing: .02rem;
   font-weight: 400;
   font-size: 1rem;
@@ -86,6 +86,9 @@ header & nav bar
     .dropdown-menu {
       background-color: $bg-color;
       border-color: $neutral;
+      .dropdown-item:focus {
+        background-color: transparent;
+      }
     }
   }
 }
@@ -139,6 +142,10 @@ content section
     max-width: 100%;
   }
 
+  .footnotes ol {
+    padding-left: 0;
+  }
+
   li {
     font-family: $body-font;
     color: $text-color;
@@ -152,24 +159,28 @@ content section
 
     .exhibit-meta {
       margin-bottom: $super-margin;
+
       .exhibit-author {
-        margin-top: $super-margin;
+        margin-top: $more-margin;
         margin-bottom: 1em;
         padding-bottom: 0;
       }
       .exhibit-title {
         margin-top: 0;
         padding-top: 0;
-        margin-bottom: 1em;
+        margin-bottom: 0;
       }
       .exhibit-date {
         margin: 0;
         padding: 0;
+        font-weight: 400;
       }
     }
 
     .inline-image-reference {
       background-color: $neutral;
+      margin-top: $more-margin;
+      margin-bottom: $more-margin;
       display: inline-block;
       padding: 1em;
       max-width: 90%;
@@ -249,13 +260,23 @@ content section
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  margin-bottom: $more-margin;
+}
+
+.wax-parallax.inline-parallax {
+  margin-top: $more-margin;
+}
+
+.wax-parallax.top-banner {
+
 }
 
 .wax-parallax {
+
   .parallax-image {
     background-color: $neutral;
     width: 100vw;
-    height: $banner-height;
+    height: $parallax-height;
     max-height: 55vh;
     margin: 0;
     background-attachment: fixed;
@@ -362,6 +383,7 @@ search box
   #search{
     border-style: groove;
     border-width: 2px;
+    margin-bottom: $more-margin;
     &:focus {
         box-shadow: none ;
         border-color: $neutral;

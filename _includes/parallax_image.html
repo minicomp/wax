@@ -14,7 +14,7 @@
   {% endif %}
 {% endcapture %}
 
-<div class='wax-parallax full-width'>
+<div class='wax-parallax full-width {% if page.banner %}top-banner{% else %}inline-parallax{% endif %}'>
   <div class='parallax-image' style="{{ style | strip }}"></div>
 
   {% if item.label %}
