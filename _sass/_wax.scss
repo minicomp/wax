@@ -31,8 +31,8 @@ a:hover {
 
 p {
   color: $text-color;
-  margin-top: $less-margin;
   max-width: 100%;
+  margin-bottom: $less-margin;
   letter-spacing: .02rem;
   font-weight: 400;
   font-size: 1rem;
@@ -171,7 +171,7 @@ content section
       .exhibit-date {
         margin: 0;
         padding: 0;
-        font-weight: 100; 
+        font-weight: 400; 
       }
     }
 
@@ -258,15 +258,23 @@ content section
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  margin-top: $more-margin;
   margin-bottom: $more-margin;
 }
 
+.wax-parallax.inline-parallax {
+  margin-top: $more-margin;
+}
+
+.wax-parallax.top-banner {
+  
+}
+
 .wax-parallax {
+
   .parallax-image {
     background-color: $neutral;
     width: 100vw;
-    height: $banner-height;
+    height: $parallax-height;
     max-height: 55vh;
     margin: 0;
     background-attachment: fixed;

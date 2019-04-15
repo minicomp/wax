@@ -34,7 +34,7 @@ For beginners, Wax has a relatively high, but general-purpose learning curve. To
 
 **However, Wax is also great for teaching the skills above!** For examples of digital pedagogy via the creation of Wax exhibitions, check out [this workshop](https://www.columbia.edu/content/events/introduction-minimal-computing-humanities-building-exhibit-primary-sources-using-wax), [this GitHub repository](https://github.com/stylerevolution/stylerevolution.github.io), and [this custom Wax site](https://stylerevolution.github.io/).
 
-**Wax is also phenomenal for professionals who play a facilitating role**, such as Digital Humanities Librarians or Coordinators. With some practice, Wax substantially reduces the time to production, and the post-production maintenance costs to you and your team. In the most common scenario, students, faculty, colleagues or any other collaborators just have to provide you with a properly formatted spreadsheet, and the copy for the exhibits. The extras are up to you.
+**Wax is also phenomenal for professionals who play a facilitating role**, such as Digital Humanities Librarians or Coordinators. With some practice, Wax substantially reduces the time to production and post-production maintenance costs for you and your team. In the most common scenario, students, faculty, colleagues or any other collaborators just have to provide you with a properly formatted spreadsheet, and the copy for the exhibits. The extras are up to you.
 
 
 ## So what does the Wax workflow *look like?*
