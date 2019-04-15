@@ -140,6 +140,10 @@ content section
     max-width: 100%;
   }
 
+  .footnotes ol {
+    padding-left: 0;
+  }
+
   li {
     font-family: $body-font;
     color: $text-color;
@@ -152,10 +156,10 @@ content section
     min-height: 70vh;
 
     .exhibit-meta {
-      margin-bottom: $more-margin;
+      margin-bottom: $super-margin;
       
       .exhibit-author {
-        margin-top: $margin;
+        margin-top: $more-margin;
         margin-bottom: 1em;
         padding-bottom: 0;
       }
@@ -167,12 +171,14 @@ content section
       .exhibit-date {
         margin: 0;
         padding: 0;
-        font-style: italic; 
+        font-weight: 100; 
       }
     }
 
     .inline-image-reference {
       background-color: $neutral;
+      margin-top: $more-margin;
+      margin-bottom: $more-margin;
       display: inline-block;
       padding: 1em;
       max-width: 90%;
@@ -367,6 +373,7 @@ search box
   #search{
     border-style: groove;
     border-width: 2px;
+    margin-bottom: $more-margin;
     &:focus {
         box-shadow: none ;
         border-color: $neutral;
