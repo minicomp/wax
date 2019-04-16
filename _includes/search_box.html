@@ -1,7 +1,7 @@
 {% assign ui = include.ui | default: site.lunr_index.first.ui %}
 {% assign placeholder = include.placeholder | default: 'Search... ' %}
 
-<script src="{{ '/assets/js/elasticlunr.min.js' | absolute_url }}"></script>
+<script src="{{ '/assets/elasticlunr.min.js' | absolute_url }}"></script>
 <script src='{{ ui | absolute_url }}'></script>
 
 <div class='search-block'>

@@ -1,5 +1,5 @@
-<link rel="stylesheet" type="text/css" href="{{ '/assets/css/datatables.css' | absolute_url }}">
-<script type="text/javascript" src="{{ 'assets/js/datatables.min.js' | absolute_url }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ '/assets/datatables/datatables.css' | absolute_url }}">
+<script defer async type="text/javascript" src="{{ 'assets/datatables/datatables.min.js' | absolute_url }}"></script>
 
 <table id='{{ include.collection }}-datatable' class='datatable display'>
   {% assign first_item = site.data[include.collection].first %}
@@ -43,6 +43,7 @@
       paging: false,
       fixedHeader: false,
       searching: false,
+      ordering:  false,
       dom: 'Bfrtip',
       buttons: [
         'csvHtml5',

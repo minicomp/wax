@@ -9,14 +9,7 @@
 
     {% if value contains 'http' %}
       {%- capture value -%}
-        <a href="{{ value }}" target="_blank">
-          {% assign urlparts = value | split: "/" %}
-          {% assign counter = 0 %}
-          {% for part in urlparts %}
-          {% assign counter = counter | plus: 1 %}
-             {% if counter == 3 %}{{ part }}{% endif %}
-          {% endfor %}
-
+        <a href="{{ value }}" target="_blank" rel="noreferrer">{{ value | remove: 'https://' | remove: 'http://' | split: "/" | first }}
         </a>
       {%- endcapture -%}
     {% endif %}
