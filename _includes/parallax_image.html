@@ -1,18 +1,18 @@
 {% if include.image %}
-  {% assign image = image | absolute_url %}
+  {% assign image = image %}
 {% else %}
   {% assign item  = site[include.collection] | where: 'pid', include.pid | first %}
-  {% assign image = item.full | absolute_url %}
+  {% assign image = item.full %}
 {% endif %}
 
-{% capture style %}
+{%- capture style -%}
   background-image: url('{{ image | absolute_url }}');
   background-position: 0% {{ include.y | default: '15%' }};
 
   {% if include.height %}
   height: {{ include.height }} !important;
   {% endif %}
-{% endcapture %}
+{%- endcapture -%}
 
 <div class='wax-parallax full-width {% if page.banner %}top-banner{% else %}inline-parallax{% endif %}'>
   <div class='parallax-image' style="{{ style | strip }}"></div>

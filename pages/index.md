@@ -1,6 +1,7 @@
 ---
 layout: page
 show_title: false
+permalink: '/'
 banner:
   collection: qatar
   pid: obj10

@@ -1,7 +1,7 @@
 ---
 layout: none
 ---
-$.getJSON("{{ 'assets/js/lunr-index.json' | absolute_url }}", function(index_json) {
+$.getJSON("{{ 'js/lunr-index.json' | absolute_url }}", function(index_json) {
   window.index = new elasticlunr.Index;
   window.store = index_json;
   index.saveDocument(false);

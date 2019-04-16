@@ -70,8 +70,8 @@ collections:
 # and running `$ bundle exec rake wax:lunr UI=true`.
 
 lunr_index:
-  - file: 'assets/js/lunr-index.json' # file the index will get written to
-    ui:   'assets/js/lunr-ui.js' # path to the search UI file
+  - file: '/search/index.json' # file the index will get written to
+    ui:   '/search/ui.js' # path to the search UI file
     collections:
       qatar:
         content: false # whether or not to index page content
@@ -126,7 +126,7 @@ footer:
     - label: 'Contact'
       link: 'https://gitter.im/minicomp/wax/'
   logos:
-    - img: '/assets/logo.png'
+    - img: 'logo.png'
     - img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2r40VYrf2Q5jkJiPGjPkl7xZoHJliwgVtHCLVXmAsRKw0ZudD'
       link: 'https://library.columbia.edu'
 
