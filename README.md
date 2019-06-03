@@ -1,7 +1,5 @@
 # minicomp/wax
-[![Gem Version](https://badge.fury.io/rb/wax_theme.svg)](https://badge.fury.io/rb/wax_tasks) ![License](https://img.shields.io/badge/license-MIT-yellowgreen.svg) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Join the chat at https://gitter.im/minicomp/wax](https://badges.gitter.im/minicomp/wax.svg)](https://gitter.im/minicomp/wax?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-[![Build Status](https://travis-ci.org/mnyrop/wax.svg?branch=master)](https://travis-ci.org/minicomp/wax) [![Dependency Status](https://img.shields.io/librariesio/github/minicomp/wax.svg)](https://libraries.io/github/minicomp/wax)
+[![Gem Version](https://badge.fury.io/rb/wax_theme.svg)](https://badge.fury.io/rb/wax_tasks) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Build Status](https://travis-ci.org/mnyrop/wax.svg?branch=master)](https://travis-ci.org/minicomp/wax) [![Join the chat at https://gitter.im/minicomp/wax](https://badges.gitter.im/minicomp/wax.svg)](https://gitter.im/minicomp/wax?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) ![License](https://img.shields.io/github/license/minicomp/wax_tasks.svg?color=c6a1e0) 
 
 
 
@@ -41,7 +39,7 @@ To process images, you will also need to have ImageMagick and Ghostscript instal
 ```bash
 $ convert -version
   Version: ImageMagick 6.9.9-20 Q16 x86_64 2017-10-15 http://www.imagemagick.org
-  Copyright: ÂŠ 1999-2017 ImageMagick Studio LLC
+  Copyright: (c) 1999-2017 ImageMagick Studio LLC
 ```
 
 ... and check Ghostscript with:
@@ -75,7 +73,7 @@ __There are a few ways to get started with Wax, depending on your needs.__ Cloni
     ```sh
     bundle exec jekyll serve
     ```
-#### Option 2: Start from scratch
+#### Option 2: Start from scratch (Advanced)
 
 1. Make a new Jekyll site and cd into it:
   ```sh
