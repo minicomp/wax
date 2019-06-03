@@ -1,0 +1,34 @@
+<nav id='wax-header' class='navbar navbar-expand-lg navbar-light'>
+ <div class='wax-inline-container'>
+    <a class='navbar-brand' href="{{ '/' | absolute_url }}" title='Home'>
+      {{ site.title | newline_to_br }}
+    </a>
+
+    <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#wax-header-navbar' aria-controls='wax-header-navbar' aria-expanded='false' aria-label='navigation'>
+      <span class='navbar-toggler-icon'></span>
+    </button>
+
+    <div class='collapse navbar-collapse' id="wax-header-navbar">
+      <ul class='nav navbar-nav ml-auto justify-content-end'>
+        {% for item in site.menu %}
+          {% if item.sub %}
+            <li class='nav-item dropdown'>
+              <a class='nav-link dropdown-toggle' href='#' id='wax-{{ item.label }}-dropdown' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                {{ item.label }}
+              </a>
+              <div class='dropdown-menu' aria-labelledby='wax-{{ item.label }}-dropdown'>
+                {% for sub in item.sub %}
+                  <a class='dropdown-item' href='{{ sub.link | absolute_url }}'>{{ sub.label }}</a>
+                {% endfor %}
+              </div>
+            </li>
+          {% else %}
+            <li class='nav-item'>
+              <a class='nav-link' href='{{ item.link | absolute_url }}'>{{ item.label }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+ </nav>

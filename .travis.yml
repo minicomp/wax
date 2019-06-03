@@ -2,6 +2,11 @@ sudo: required
 language: ruby
 rvm:
   - 2.4
+  - 2.5
+  - 2.6
+before_install:
+  - gem update --system
+  - gem install bundler
 addons:
   firefox: latest
 git:
@@ -9,8 +14,6 @@ git:
 branches:
   except:
     - static
-before_script:
-  - bundle exec rake wax:lunr
 script:
   - bundle exec jekyll build -d _site/wax
   - bundle exec rake wax:test

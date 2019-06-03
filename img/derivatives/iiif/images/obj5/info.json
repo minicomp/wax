@@ -3,7 +3,7 @@ layout: none
 ---
 {
   "@context": "http://iiif.io/api/image/2/context.json",
-  "@id": "{{ '' | absolute_url }}/img/derivatives/iiif/images/obj5",
+  "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/images/obj5",
   "protocol": "http://iiif.io/api/image",
   "width": 4001,
   "height": 2840,
@@ -15,14 +15,6 @@ layout: none
     {
       "width": 250,
       "height": 177
-    },
-    {
-      "width": 250,
-      "height": 177
-    },
-    {
-      "width": 1140,
-      "height": 809
     }
   ],
   "profile": [

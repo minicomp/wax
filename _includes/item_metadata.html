@@ -1,0 +1,19 @@
+<dl class='metadata-block'>
+  {% for item in include.meta %}
+    {% if item.value contains 'page.' %}
+      {% assign key = item.value | remove: 'page.' %}
+      {% assign value = page[key] %}
+    {% else %}
+      {% assign value = item.value %}
+    {% endif %}
+
+    {% if value contains 'http' %}
+      {%- capture value -%}
+        <a href="{{ value }}" target="_blank" rel="noreferrer">{{ value | remove: 'https://' | remove: 'http://' | split: "/" | first }}
+        </a>
+      {%- endcapture -%}
+    {% endif %}
+      <dt>{{ item.label }}</dt>
+      <dd>{{ value | strip }}</dd>
+  {% endfor %}
+</dl>

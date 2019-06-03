@@ -8,9 +8,9 @@ object_type: manuscript
 current_location: The Museum of Islamic Art, Qatar
 source: https://commons.wikimedia.org/wiki/File:Unknown,_Iran_-_Page_from_the_Shahnama_of_Shah_Tahmasp_-_Google_Art_Project.jpg
 order: '03'
-thumbnail: "/img/derivatives/iiif/images/obj4/full/250,/0/default.jpg"
-full: "/img/derivatives/iiif/images/obj4/full/1140,/0/default.jpg"
-manifest: "/img/derivatives/iiif/obj4/manifest.json"
-permalink: "/qatar/obj4/"
 layout: qatar_item
+collection: qatar
+thumbnail: "/img/derivatives/iiif/images/obj4/full/250,/0/default.jpg"
+full: "/img/derivatives/iiif/images/obj4/full/full/0/default.jpg"
+manifest: "/img/derivatives/iiif/obj4/manifest.json"
 ---

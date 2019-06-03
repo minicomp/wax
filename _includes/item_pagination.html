@@ -1,0 +1,23 @@
+{% assign links = site[page.collection] | sort: 'order' | map: 'url' %}
+{% for link in links %}
+  {% if link == page.url %}
+    {% if forloop.first %}
+      {% assign prevlink = links | last %}
+      {% assign nextlink = links[forloop.index] %}
+    {% elsif forloop.last %}
+      {% assign prevlink = prev %}
+      {% assign nextlink = links | first %}
+    {% else %}
+      {% assign prevlink = prev %}
+      {% assign nextlink = links[forloop.index] %}
+    {% endif %}
+  {% endif %}
+  {% assign prev = link %}
+{% endfor %}
+
+{% if prevlink and nextlink %}
+  <script type='text/javascript'>
+    $('#prevlink').append(`<a href='{{ prevlink | absolute_url }}' display='none'>&#8249;</a>`);
+    $('#nextlink').append(`<a href='{{ nextlink | absolute_url }}' display='none'>&#8250;</a>`);
+  </script>
+{% endif %}

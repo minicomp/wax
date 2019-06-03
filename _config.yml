@@ -18,24 +18,38 @@
 # Feel free to change these! For more info, refer to:
 # ~> https://jekyllrb.com/docs/configuration/options/
 
-title:            'Minicomp/Wax'
+title:            'Wax'
 description:      'Minimal Exhibitions with Jekyll'
-url:              ''
+url:              'https://minicomp.github.io'
 baseurl:          '/wax'
-copyright:        'Example copyright org, 2018'
+copyright:        'Example copyright org, 2019'
+logo:             '/assets/logo.png'
 
 # ---------------------------------------------------------------
 # BUILD SETTINGS
 # ---------------------------------------------------------------
 # Best not to mess with these unless you know what you're doing!
 
-theme:            wax_theme
-permalink:        'pretty'
-safe:             true
-exclude:          [Gemfile*, Rakefile, vendor, spec, README.md, wax_theme]
+permalink: 'pretty'
+sass:
+  style: compressed
+exclude:
+  - Gemfile*
+  - Rakefile
+  - vendor
+  - spec
+  - README.md
 webrick:
   headers:
     'Access-Control-Allow-Origin': '*'
+kramdown:
+ auto_ids:       true
+ footnote_nr:    1
+ entity_output:  as_char
+ footnote_backlink: "&#x21a9;&#xfe0e;"
+ toc_levels:     1..6
+ smart_quotes:   lsquo,rsquo,ldquo,rdquo
+ enable_coderay: false
 
 
 # --------------------------------------------------------------
@@ -59,18 +73,16 @@ collections:
       source: 'raw_images/qatar' # path to the directory of images within `_data`
 
 # --------------------------------------------------------------
-# LUNR SEARCH INDEX SETTINGS
+# SEARCH INDEX SETTINGS
 # --------------------------------------------------------------
-# You can create multiple lunr indexes below (though only one is
+# You can create multiple search indexes below (though only one is
 # recommended!) by specifying
-# a `file` to write it to and some `collections` for it to index
-# and running `$ bundle exec rake wax:lunr` .
-# You can optionally generate a default UI by specifying a UI file
-# and running `$ bundle exec rake wax:lunr UI=true`.
+# an `index` file to write it to and some `collections` for it to index
+# and running `$ bundle exec rake wax:search` .
 
-lunr_index:
-  - file: 'js/lunr-index.json' # file the index will get written to
-    ui:   'js/lunr-ui.js' # path to the search UI file
+search:
+  main:
+    index: '/search/index.json' # file the index will get written to
     collections:
       qatar:
         content: false # whether or not to index page content
@@ -95,17 +107,15 @@ menu:
       - label: 'Wax'
         link: '/about/'
       - label: 'Documentation'
-        link: 'https://minicomp.github.io/wiki/#/wax/'
+        link: 'https://minicomp.github.io/wiki/wax/'
       - label: 'Credits'
         link: '/credits/'
   - label: 'Exhibits'
     sub:
-      - label: 'Local and Remote IIIF Manifests'
-        link: '/exhibits/a/'
       - label: 'Inline Parallax Image'
-        link: '/exhibits/b/'
+        link: '/exhibits/a/'
       - label: 'Inline Image References'
-        link: '/exhibits/c/'
+        link: '/exhibits/b/'
   - label: 'Browse'
     link: '/collection/'
   - label: 'Search'
@@ -127,8 +137,6 @@ footer:
     - label: 'Contact'
       link: 'https://gitter.im/minicomp/wax/'
   logos:
-    - img: '/assets/logo.png'
-    - img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2r40VYrf2Q5jkJiPGjPkl7xZoHJliwgVtHCLVXmAsRKw0ZudD'
-      link: 'https://library.columbia.edu'
+    - img: '/img/logo.png'
 
 # FIN

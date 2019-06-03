@@ -1,21 +1,29 @@
 ---
-layout: wax/exhibit
-title: 'Exhibit A: Local and Remote IIIF Manifests'
+layout: exhibit
+title: 'Exhibit A: Inline Parallax Image'
 author: Mihr 'Ali
 publish_date: 2018-11-15
 permalink: /exhibits/a/
 ---
 
-This is an example exhibit. In Wax, exhibits are generally essays or curatorial assemblages referencing the site collection. Because Wax uses IIIF, exhibits can even leverage the included viewer [Mirador](http://projectmirador.org) to compare collection items in the site with items housed at other institutions. Below, an item from this site's local collection is compared with one from the Library of Congress, _[The Battle of Mazandaran from "Hamzahnamah"](https://www.wdl.org/en/item/7012/#q=shahnamah&qla=en)_, hosted as a IIIF manifest by the World Digital Library.
+Ut eleifend lacus at erat efficitur bibendum. Ut laoreet elit nec dolor molestie finibus. Vivamus justo risus, scelerisque nec dolor ut, pretium fringilla purus. Nam nisl erat, tristique ac libero vitae, bibendum pellentesque nulla. Praesent accumsan ut mauris ut euismod. Etiam mattis a justo eget blandit. Aliquam vitae magna eget nisi suscipit finibus id sit amet nulla.[^1]
 
-{% assign m1='/img/derivatives/iiif/obj6/manifest.json' %}
-{% assign m2='https://www.wdl.org/en/item/7012/iiif/manifest.json' %}
-
-{% include wax/mirador_compare.html m1=m1 m2=m2 %}
+Nam velit leo, mattis ac dui non, vulputate porttitor sapien. Praesent in aliquet dui. Nulla facilisi. Maecenas nulla ex, facilisis non aliquet ac, ultrices eu sem. Sed vel aliquet urna. Mauris quis ex at lectus iaculis elementum id id massa. Integer luctus nulla vel tellus rutrum, ac pulvinar erat finibus. Aliquam erat volutpat. Pellentesque vel velit sit amet mauris dignissim feugiat.
 
 
-### In placerat lobortis velit at molestie
+{% include parallax_image.html collection='qatar' pid='obj12' y='50%' %}
 
-Portrait of Hasan 'Ali Mirza Shuja al-Saltana Sed sed eros finibus, euismod quam in, accumsan arcu. Cras leo leo, viverra et purus viverra, fringilla varius lacus. Nullam ultricies, odio ac molestie accumsan, nunc magna tempus ante, vitae mattis tellus tortor vel est. Sed vel lorem id elit sodales pellentesque. Vivamus ullamcorper ex nec leo lobortis, vel elementum metus placerat. Cras imperdiet felis sed ligula tristique facilisis. In hac habitasse platea dictumst. Proin non sodales felis, ut accumsan purus. Fusce eget lacus tristique mi vestibulum ornare. Donec et ex eget neque bibendum pretium. Proin porttitor et enim et aliquet. Nulla sed gravida lacus, lobortis hendrerit libero. Nunc a turpis eget massa consequat imperdiet.
 
-Fusce bibendum ultrices augue sit amet molestie. Vestibulum massa est, pulvinar ut nulla vel, sagittis ornare ex. Proin non elit quam. In dapibus finibus tellus, eget feugiat augue euismod ut. Integer in sapien odio. Proin nunc arcu, lobortis non ante id, rutrum convallis velit. Nullam elementum euismod dui, in hendrerit purus suscipit sed.
+Duis commodo ligula libero, a pharetra ligula posuere sit amet. Sed ipsum dolor, elementum eget nisl eget, sagittis vestibulum augue. Donec tincidunt mauris et nunc sagittis, nec consectetur lorem tristique. Nulla tincidunt magna ut ullamcorper consectetur. Nulla mi urna, feugiat sed massa non, ullamcorper efficitur dolor.[^2] Sed luctus, massa eget pharetra posuere, nibh sem eleifend lectus, lobortis molestie ante libero non metus. Aenean et est sit amet est pulvinar convallis vel non tortor. Nunc semper commodo fringilla. Proin eget metus eget felis faucibus aliquet. Cras ultrices turpis id nibh cursus fringilla. Aenean nec magna turpis. Suspendisse egestas tellus iaculis ante pharetra imperdiet ac at odio.
+
+Integer eu augue elementum, venenatis nisi vitae, ultrices magna. Nunc accumsan sem quis tristique iaculis. Quisque sed lorem tortor. Quisque viverra sem a orci aliquet sodales. Aliquam commodo eros at sagittis vehicula. Quisque in massa turpis. Aliquam aliquam consectetur magna non dignissim. Sed fringilla a ligula vitae molestie.
+
+Duis finibus leo non velit viverra tincidunt. Fusce efficitur laoreet convallis. Sed sem felis, porttitor sit amet volutpat ac, consequat quis lectus. Donec elementum dignissim vehicula. Pellentesque fringilla ex bibendum, ornare sapien a, mollis neque. Duis faucibus diam vitae faucibus feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra elit sem, et euismod massa mattis ut. Phasellus maximus ipsum in nulla sollicitudin viverra. Morbi semper lectus quis dolor cursus, ut convallis lacus venenatis. Pellentesque lorem mauris, malesuada a fringilla et, iaculis sodales metus. Suspendisse finibus purus ut sem commodo feugiat.
+
+---
+
+### Notes
+
+[^1]: Integer eu augue elementum, venenatis nisi vitae, ultrices magna. Nunc accumsan sem quis tristique iaculis. Quisque sed lorem tortor.
+
+[^2]: Nunc semper commodo fringilla. Proin eget metus eget felis faucibus aliquet. Cras ultrices turpis id nibh cursus fringilla. Aenean nec magna turpis. Suspendisse egestas tellus iaculis ante pharetra imperdiet ac at odio.
