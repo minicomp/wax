@@ -107,7 +107,7 @@ menu:
       - label: 'Wax'
         link: '/about/'
       - label: 'Documentation'
-        link: 'https://minicomp.github.io/wiki/#/wax/'
+        link: 'https://minicomp.github.io/wiki/wax/'
       - label: 'Credits'
         link: '/credits/'
   - label: 'Exhibits'
