@@ -137,6 +137,6 @@ footer:
     - label: 'Contact'
       link: 'https://gitter.im/minicomp/wax/'
   logos:
-    - img: 'logo.png'
+    - img: '/img/logo.png'
 
 # FIN
