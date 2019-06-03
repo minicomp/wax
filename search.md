@@ -4,4 +4,4 @@ title: Search the Collection
 permalink: /search/
 ---
 
-{% include search_box.html ui='search-ui.js' %}
+{% include search_box.html search='main' %}

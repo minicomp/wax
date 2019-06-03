@@ -20,7 +20,7 @@
 
 title:            'Wax'
 description:      'Minimal Exhibitions with Jekyll'
-url:              ''
+url:              'https://minicomp.github.io'
 baseurl:          '/wax'
 copyright:        'Example copyright org, 2019'
 logo:             '/assets/logo.png'
@@ -30,13 +30,26 @@ logo:             '/assets/logo.png'
 # ---------------------------------------------------------------
 # Best not to mess with these unless you know what you're doing!
 
-permalink:        'pretty'
+permalink: 'pretty'
 sass:
-    style: compressed
-exclude: [Gemfile*,Rakefile,vendor,spec,README.md,wax_theme,package.json]
+  style: compressed
+exclude:
+  - Gemfile*
+  - Rakefile
+  - vendor
+  - spec
+  - README.md
 webrick:
   headers:
     'Access-Control-Allow-Origin': '*'
+kramdown:
+ auto_ids:       true
+ footnote_nr:    1
+ entity_output:  as_char
+ footnote_backlink: "&#x21a9;&#xfe0e;"
+ toc_levels:     1..6
+ smart_quotes:   lsquo,rsquo,ldquo,rdquo
+ enable_coderay: false
 
 
 # --------------------------------------------------------------
@@ -60,18 +73,16 @@ collections:
       source: 'raw_images/qatar' # path to the directory of images within `_data`
 
 # --------------------------------------------------------------
-# LUNR SEARCH INDEX SETTINGS
+# SEARCH INDEX SETTINGS
 # --------------------------------------------------------------
-# You can create multiple lunr indexes below (though only one is
+# You can create multiple search indexes below (though only one is
 # recommended!) by specifying
-# a `file` to write it to and some `collections` for it to index
-# and running `$ bundle exec rake wax:lunr` .
-# You can optionally generate a default UI by specifying a UI file
-# and running `$ bundle exec rake wax:lunr UI=true`.
+# an `index` file to write it to and some `collections` for it to index
+# and running `$ bundle exec rake wax:search` .
 
-lunr_index:
-  - file: '/search/index.json' # file the index will get written to
-    ui:   '/search/ui.js' # path to the search UI file
+search:
+  main:
+    index: '/search/index.json' # file the index will get written to
     collections:
       qatar:
         content: false # whether or not to index page content
@@ -127,18 +138,5 @@ footer:
       link: 'https://gitter.im/minicomp/wax/'
   logos:
     - img: 'logo.png'
-    - img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2r40VYrf2Q5jkJiPGjPkl7xZoHJliwgVtHCLVXmAsRKw0ZudD'
-      link: 'https://library.columbia.edu'
-
-## Kramdown instructions
-
-kramdown:
-  auto_ids:       true
-  footnote_nr:    1
-  entity_output:  as_char
-  footnote_backlink: "&#x21a9;&#xfe0e;"
-  toc_levels:     1..6
-  smart_quotes:   lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
 
 # FIN
