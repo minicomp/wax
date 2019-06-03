@@ -14,8 +14,6 @@ git:
 branches:
   except:
     - static
-before_script:
-  - bundle exec rake wax:lunr
 script:
   - bundle exec jekyll build -d _site/wax
   - bundle exec rake wax:test
