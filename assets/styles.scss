@@ -13,7 +13,11 @@ $logo: url("{{ '/assets/logo.png' | absolute_url }}");
 $body-font:       'Open Sans', 'sans-serif';
 $heading-font:    'Open Sans', 'sans-serif';
 
-// $ text font size
+
+/* Image Size */
+
+$thumbnail-height: 140px;
+$thumbnail-width: 140px;
 
 /* colors */
 

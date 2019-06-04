@@ -448,8 +448,8 @@ search box
       padding: 0;
       margin: .25rem;
       background-color: #ffffff;
-      max-height: 200px;
-      max-width: 200px;
+      max-height: $thumbnail-height;
+      max-width: $thumbnail-width;
       border: 1px grey solid;
 
       .gallery-thumb {
