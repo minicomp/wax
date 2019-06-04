@@ -478,7 +478,7 @@ search box
               -webkit-transform: scale(1);
               -ms-transform: scale(1);
               transform: scale(1);
-              display: none;
+              // display: none;
             }
           }
         }
@@ -494,11 +494,30 @@ search box
           -ms-transform: scale(0);
           transform: scale(0);
           font-weight: normal;
+          font-size: .9rem;
+          line-height: 1rem;
           overflow: hidden;
           display: table-cell;
-          vertical-align: middle;
-          padding: 0 $margin 0 $margin;
-        }
+          padding: .4rem;
+          vertical-align: center;
+        }        
+
+        // .info {
+        //   text-decoration: none;
+        //   font-family: $heading-font !important;
+        //   color: $bg-color !important;
+        //   background-color: transparent;
+        //   opacity: 0;
+        //   filter: alpha(opacity=0);
+        //   -webkit-transform: scale(0);
+        //   -ms-transform: scale(0);
+        //   transform: scale(0);
+        //   font-weight: normal;
+        //   overflow: hidden;
+        //   display: table-cell;
+        //   vertical-align: middle;
+        //   padding: 0 $margin 0 $margin;
+        // }
 
         .overlay {
           width: 100%;
