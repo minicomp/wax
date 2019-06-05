@@ -1,5 +1,6 @@
 // Methods and jQuery UI for Wax search box
 function excerptedString(str) {
+  str = str || '';
   if (str.length < 40) {
     return str;
   }
