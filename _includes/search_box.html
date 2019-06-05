@@ -18,73 +18,14 @@
   <div id='results'></div>
 </div>
 
-<script src="{{ '/assets/elasticlunr.min.js' | absolute_url }}"></script>
+<script type='text/javascript' src="{{ '/assets/elasticlunr.min.js' | absolute_url }}"></script>
+<script type='text/javascript' src="{{ '/assets/search-ui.js' | absolute_url }}"></script>
 <script type='text/javascript'>
+  var fields    = {{ fields | jsonify }};
+  var indexFile = "{{ index }}";
+  var url       = "{{ '' | absolute_url }}";
+
   $(document).ready(function() {
-
-    function excerptedString(str) {
-      if (str.length < 40) {
-        return str;
-      }
-      else {
-        return `${str.substring(0, 40)} ...`;
-      }
-    }
-
-    function getThumbnail(item) {
-      if ('thumbnail' in item) {
-        return `<img class='sq-thumb-sm' src='{{ "" | absolute_url }}${item.thumbnail}'/>&nbsp;&nbsp;&nbsp;`
-      }
-      else {
-        return '';
-      }
-    }
-
-    function displayResult(item, fields) {
-      var pid   = item.pid;
-      var label = item.label || 'Untitled';
-      var link  = item.permalink;
-      var thumb = getThumbnail(item);
-      var meta  = []
-
-      for (i in fields) {
-        fieldLabel = fields[i];
-        if (fieldLabel in item ) {
-          meta.push(`<b>${fieldLabel}:</b> ${excerptedString(item[fieldLabel])}`);
-        }
-      }
-      return `<div class="result"><a href="{{ '' | absolute_url }}${link}">${thumb}<p><span class="title">${item.label}</span><br><span class="meta">${meta.join(' | ')}</span></p></a></p></div>`;
-    }
-
-
-    $.getJSON("{{ index }}", function(store) {
-      window.index  = new elasticlunr.Index;
-      window.store  = store;
-      window.fields = {{ fields | jsonify }};
-      index.saveDocument(false);
-      index.setRef('lunr_id');
-      for (i in fields) {
-        index.addField(fields[i]);
-      }
-      for (i in store){
-        index.addDoc(store[i]);
-      }
-
-      $('input#search').on('keyup', function() {
-        var results_div = $('#results');
-        var query       = $(this).val();
-        var results     = index.search(query, { boolean: 'AND', expand: true });
-
-        results_div.empty();
-
-        for (var r in results) {
-          var ref    = results[r].ref;
-          var item   = store[ref];
-          var result = displayResult(item, fields);
-
-          results_div.append(result);
-        }
-      });
-    });
+    startSearchUI(fields, indexFile, url);
   });
 </script>
