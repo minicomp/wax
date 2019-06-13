@@ -85,6 +85,8 @@ __There are a few ways to get started with Wax, depending on your needs.__ Downl
     ```
 After the last step the terminal will provide you with a localhost URL for you to see your local copy of the site on your browser. This is the site you will make changes to in order to make your own.
 
+Note: If you are running MacOS Mojave, steps 6 and 7 may not work for you. Follow [these steps](https://desiredpersona.com/install-jekyll-on-macos/) and then run steps 6 and 7. 
+
 #### Option 2: Start from scratch (Advanced)
 
 1. Make a new Jekyll site and cd into it:
