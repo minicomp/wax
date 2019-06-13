@@ -2,9 +2,7 @@
 layout: page
 show_title: false
 banner:
-  collection: qatar
-  pid: obj10
-  y: 25%
+  image: 'https://cdn.pixabay.com/photo/2019/06/05/14/27/forest-4253766_1280.jpg'
   height: '500px'
 ---
 

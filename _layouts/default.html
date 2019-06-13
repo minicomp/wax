@@ -8,7 +8,7 @@
 
     {% if page.banner %}
       {% assign b = page.banner %}
-      {% include parallax_image.html collection=b.collection pid=b.pid y=b.y height=b.height %}
+      {% include parallax_image.html collection=b.collection pid=b.pid y=b.y height=b.height image=b.image %}
     {% endif %}
 
     <div id='wax-main'>
