@@ -59,7 +59,7 @@ __There are a few ways to get started with Wax, depending on your needs.__ Downl
     ```sh
     cd ~/Desktop
     ```
-2. Download the zip file from the [wax github repository](https://github.com/minicomp/wax/). The option to download the zil file should be on the button labeled "Clone or download." Your browser will save the file where it normally saves downloads.
+2. Download the zip file from the [wax github repository](https://github.com/minicomp/wax/). The option to download the zip file should be on the button labeled "Clone or download." Your browser will save the file where it normally saves downloads.
 
 3. Move the zip file to the location you will use. In our example, to the Desktop.
 
