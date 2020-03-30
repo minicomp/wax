@@ -1,7 +1,7 @@
 {% assign collection = site[include.collection] %}
 
 {% if include.only and include.facet_by %}
-  {% assign subset = collection | where: include.facet_by, include.only %}
+  {% assign subset = collection | where: include.facet_by, include.only | sort: 'order' %}
 {% endif %}
 
 <div id='wax-gallery-{{ include.collection }}-container' class='wax-gallery-container full-width'>
