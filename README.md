@@ -29,7 +29,12 @@ It's comprised of: __a few Ruby gems__ for processing image data and associated 
 # Prerequisites
 
 
-You'll need `Ruby >= 2.4` with `bundler` installed. Check your versions with:
+You'll need `Ruby >= 2.4` with `bundler` installed.
+These dependencies can either be installed [natively](#Native-Installation) on your system or within a [Docker environment](#Docker-Installation).
+
+## Native Installation
+
+Check your versions with:
 
 ```bash
 $ ruby -v
@@ -54,12 +59,23 @@ $ gs -version
   Copyright (C) 2017 Artifex Software, Inc.  All rights reserved.
 ```
 
+## Docker Installation
+
+This setup has been verified with Docker 19.03.8
+
+Check your Docker version with:
+```bash
+$ docker version
+  Version:           19.03.8
+```
 
 # Getting Started
 
 __There are a few ways to get started with Wax, depending on your needs.__ Downloading the demo is suggested for new users so you can see how a full Wax site would work. __Advanced Jekyllers__ can start from a clean Jekyll install.
 
 ### Downloading the demo
+
+The following steps apply to both native and Docker installations
 
 1. Change directory into where you'd like your site, e.g., your Desktop:
     ```sh
@@ -81,14 +97,21 @@ __There are a few ways to get started with Wax, depending on your needs.__ Downl
     cd wax-master
     ```
 
-6. Install the gems:
+6. Install the gems (not required if using Docker):
     ```sh
     bundle install
     ```
+
 7. Run the demo site:
+   1. Natively
     ```sh
     bundle exec jekyll serve
     ```
+   2. Or, with Docker
+   ```sh
+   docker run --rm --volume="$PWD:/srv/jekyll" --env JEKYLL_ENV=development -p 4000:4000 jekyll/jekyll:3.8 jekyll serve
+   ```
+
 After the last step the terminal will provide you with a localhost URL for you to see your local copy of the site on your browser. This is the site you will make changes to in order to make your own.
 
 #### Option 2: Start from scratch (Advanced)
