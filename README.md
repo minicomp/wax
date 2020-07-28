@@ -5,7 +5,7 @@
 [![Depfu](https://badges.depfu.com/badges/9d4da973f2cd2680c11ca34738c2dfb2/overview.svg)](https://depfu.com/github/minicomp/wax?project_id=10550)
 [![Gem Downloads](https://img.shields.io/gem/dt/wax_theme.svg?color=046d0b)](https://badge.fury.io/rb/wax_theme)
 [![Join the chat at https://gitter.im/minicomp/wax](https://badges.gitter.im/minicomp/wax.svg)](https://gitter.im/minicomp/wax?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-![License](https://img.shields.io/github/license/minicomp/wax_tasks.svg?color=c6a1e0) 
+![License](https://img.shields.io/github/license/minicomp/wax_tasks.svg?color=c6a1e0)
 
 
 
@@ -30,9 +30,9 @@ It's comprised of: __a few Ruby gems__ for processing image data and associated 
 
 
 You'll need `Ruby >= 2.4` with `bundler` installed.
-These dependencies can either be installed [natively](#Native-Installation) on your system or within a [Docker environment](#Docker-Installation).
+These dependencies can either be installed [natively](#Option-1-Native-Installation) on your system or within a [Docker environment](#Option-2-Docker-Installation).
 
-## Native Installation
+## Option 1: Native Installation
 
 Check your versions with:
 
@@ -59,15 +59,20 @@ $ gs -version
   Copyright (C) 2017 Artifex Software, Inc.  All rights reserved.
 ```
 
-## Docker Installation
+## Option 2: Docker Installation
 
-This setup has been verified with Docker 19.03.8
+To use Wax in a container, make sure you have [Docker installed](https://docs.docker.com/get-docker/).
 
-Check your Docker version with:
-```bash
-$ docker version
-  Version:           19.03.8
+Next, build the `ubuntu/wax` base image:
 ```
+$ docker build -t ubuntu/wax .
+```
+
+You will run all of the Wax tasks and commands within an interactive bash container, which you can access by running:
+```
+$ docker run -it -p 4000:4000 ubuntu/wax bash
+```
+You can exit the container at any time with `$ exit`
 
 # Getting Started
 
@@ -109,7 +114,8 @@ The following steps apply to both native and Docker installations
     ```
    2. Or, with Docker
    ```sh
-   docker run --rm --volume="$PWD:/srv/jekyll" --env JEKYLL_ENV=development -p 4000:4000 jekyll/jekyll:3.8 jekyll serve
+   $ docker run -it -p 4000:4000 ubuntu/wax bash
+   bundle exec jekyll serve --host 0.0.0.0
    ```
 
 After the last step the terminal will provide you with a localhost URL for you to see your local copy of the site on your browser. This is the site you will make changes to in order to make your own.
