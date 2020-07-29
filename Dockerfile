@@ -4,23 +4,22 @@ MAINTAINER Andrew Woods <awoods01@gmail.com>
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-# Install dependencies
+# Install apt dependencies
 RUN apt-get update
 RUN apt-get install build-essential -y
 RUN apt-get install software-properties-common -y
 RUN apt-get install git -y
 RUN apt-get install ghostscript -y
 RUN apt-get install imagemagick -y
-RUN apt-get install locales -y
 
-RUN locale-gen en_US.UTF-8
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
+# Install locales
+RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \
+    && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+ENV LANG en_US.utf8
 
+# Install RVM
 RUN apt-add-repository -y ppa:rael-gc/rvm
 RUN apt-get update
-
 RUN apt-get install rvm -y
 
 # Install Ruby and Gems
