@@ -4,7 +4,7 @@ services:
   - docker
 before_install:
   - docker build -t ubuntu/wax .
-  - docker run -it -d --name wax ubuntu/wax bash
+  - docker run -itd -v "$PWD":/wax --name wax ubuntu/wax bash
   - docker ps -a
 script:
   - docker exec -it wax bash -l -c "bundle exec rake --tasks;"
