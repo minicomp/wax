@@ -97,10 +97,10 @@ __There are a few ways to get started with Wax, depending on your needs.__ Downl
 
 After the last step, the terminal will provide you with a localhost URL for you to see your local copy of the site on your browser. This is the template site you will make changes to in order to make your own exhibition. For more, check out the [Wax Wiki](https://minicomp.github.io/wiki/wax/)
 
- 
+
 # Using Docker
 
-To use Wax in a container, make sure you are familiar with Docker and have [Docker installed](https://docs.docker.com/get-docker/). 
+To use Wax in a container, make sure you are familiar with Docker and have [Docker installed](https://docs.docker.com/get-docker/).
 
 Run the "Getting Started" steps 1-5 above to copy and `cd` into the repo.  
 
@@ -111,7 +111,7 @@ $ docker build -t ubuntu/wax .
 
 You will run all of the Wax tasks and commands within an interactive bash container, which you can create and access by running:
 ```
-$ docker run -it --name wax -p 4000:4000 ubuntu/wax bash
+$ docker run -it --rm -v "$PWD":/wax --name wax -p 4000:4000 ubuntu/wax bash
 ```
 
 To serve the site, you can run the following command in the guest container and view it in your host browser:
@@ -119,7 +119,7 @@ To serve the site, you can run the following command in the guest container and 
 $ bundle exec jekyll serve --host 0.0.0.0
 ```
 
-You can exit the container at any time with `$ exit`, which will automatically stop the container as well. To restart (rather than recreate) and access the container, run `$ docker start -ai wax`
+You can exit the container at any time with `$ exit`, which will automatically stop and remove the container.
 
 # Contributing
 
