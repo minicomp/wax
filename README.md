@@ -31,10 +31,8 @@ It's comprised of: __a few Ruby gems__ for processing image data and associated 
 # Prerequisites
 
 
-You'll need `Ruby >= 2.4` with `bundler` installed.
-These dependencies can either be installed natively on your system (see below) or within a [Docker environment](#Using-Docker).
-
-## Native Installation
+You'll need `git` and `ruby >= 2.4` with `bundler` installed.
+These dependencies can either be installed natively on your system or within a [Docker environment](#Using-Docker). For instructions, check the Wiki's [Installation Guide](https://minicomp.github.io/wiki/wax/system-requirements/installation-guide/).
 
 Check your versions with:
 
@@ -63,7 +61,7 @@ $ gs -version
 
 # Getting Started
 
-__There are a few ways to get started with Wax, depending on your needs.__ Downloading the demo is suggested for new users so you can see how a full Wax site would work. __Advanced Jekyllers__ can start from a clean Jekyll install.
+__There are a few ways to get started with Wax, depending on your needs.__ Downloading the demo is suggested for new users so you can see how a full Wax site would work. __Advanced Jekyllers__ can start from a clean Jekyll install. To start with the demo:
 
 1. Change directory into where you'd like your site, e.g., your Desktop:
     ```sh
@@ -95,7 +93,7 @@ __There are a few ways to get started with Wax, depending on your needs.__ Downl
     bundle exec jekyll serve
     ```
 
-After the last step, the terminal will provide you with a localhost URL for you to see your local copy of the site on your browser. This is the template site you will make changes to in order to make your own exhibition. For more, check out the [Wax Wiki](https://minicomp.github.io/wiki/wax/)
+After the last step, the terminal will provide you with a localhost URL for you to see your local copy of the site on your browser. This is the template site you will make changes to in order to make your own exhibition. For more, check out the [Minicomp/Wax Wiki](https://minicomp.github.io/wiki/wax/).
 
 
 # Using Docker
