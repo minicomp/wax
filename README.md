@@ -5,7 +5,7 @@
 [![Depfu](https://badges.depfu.com/badges/9d4da973f2cd2680c11ca34738c2dfb2/overview.svg)](https://depfu.com/github/minicomp/wax?project_id=10550)
 [![Gem Downloads](https://img.shields.io/gem/dt/wax_theme.svg?color=046d0b)](https://badge.fury.io/rb/wax_theme)
 [![Join the chat at https://gitter.im/minicomp/wax](https://badges.gitter.im/minicomp/wax.svg)](https://gitter.im/minicomp/wax?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-![License](https://img.shields.io/github/license/minicomp/wax_tasks.svg?color=c6a1e0) 
+![License](https://img.shields.io/github/license/minicomp/wax_tasks.svg?color=c6a1e0)
 
 
 
@@ -17,6 +17,8 @@ It's comprised of: __a few Ruby gems__ for processing image data and associated 
 
 - [Prerequisites](#Prerequisites)
 - [Getting Started](#Getting-Started)
+- [Using Docker](#Using-Docker)
+- [Contributing](#Contributing)
 
 <br>
 
@@ -29,7 +31,10 @@ It's comprised of: __a few Ruby gems__ for processing image data and associated 
 # Prerequisites
 
 
-You'll need `Ruby >= 2.4` with `bundler` installed. Check your versions with:
+You'll need `git` and `ruby >= 2.4` with `bundler` installed.
+These dependencies can either be installed natively on your system or within a [Docker environment](#Using-Docker). For instructions, check the Wiki's [Installation Guide](https://minicomp.github.io/wiki/wax/system-requirements/installation-guide/).
+
+Check your versions with:
 
 ```bash
 $ ruby -v
@@ -54,12 +59,9 @@ $ gs -version
   Copyright (C) 2017 Artifex Software, Inc.  All rights reserved.
 ```
 
-
 # Getting Started
 
-__There are a few ways to get started with Wax, depending on your needs.__ Downloading the demo is suggested for new users so you can see how a full Wax site would work. __Advanced Jekyllers__ can start from a clean Jekyll install.
-
-### Downloading the demo
+__There are a few ways to get started with Wax, depending on your needs.__ Downloading the demo is suggested for new users so you can see how a full Wax site would work. __Advanced Jekyllers__ can start from a clean Jekyll install. To start with the demo:
 
 1. Change directory into where you'd like your site, e.g., your Desktop:
     ```sh
@@ -81,38 +83,42 @@ __There are a few ways to get started with Wax, depending on your needs.__ Downl
     cd wax-master
     ```
 
-6. Install the gems:
+6. Install the gems (not required if using Docker):
     ```sh
     bundle install
     ```
+
 7. Run the demo site:
     ```sh
     bundle exec jekyll serve
     ```
-After the last step the terminal will provide you with a localhost URL for you to see your local copy of the site on your browser. This is the site you will make changes to in order to make your own.
 
-#### Option 2: Start from scratch (Advanced)
+After the last step, the terminal will provide you with a localhost URL for you to see your local copy of the site on your browser. This is the template site you will make changes to in order to make your own exhibition. For more, check out the [Minicomp/Wax Wiki](https://minicomp.github.io/wiki/wax/).
 
-1. Make a new Jekyll site and cd into it:
-  ```sh
-  jekyll new ~/Desktop/wax_site
-  cd ~/Desktop/wax_site
-  ```
-2. Add this line to your Jekyll site's Gemfile:
-  ```sh
-  gem "wax_theme"
-  ```
-3. And add this line to your Jekyll site's \_config.yml:
-  ```sh
-  theme: wax_theme
-  ```
-4. Install the dependencies:
-  ```sh
-  bundle install
-  ```
-5. Serve the site locally
-  ```sh
-  bundle exec jekyll serve
-  ```
 
- When the demo site is serving correctly you're ready to swap in your own content and configuration to make your own exhibition site.
+# Using Docker
+
+To use Wax in a container, make sure you are familiar with Docker and have [Docker installed](https://docs.docker.com/get-docker/).
+
+Run the "Getting Started" steps 1-5 above to copy and `cd` into the repo.  
+
+Next, build the `wax_image` base image:
+```
+$ docker build -t ubuntu/wax .
+```
+
+You will run all of the Wax tasks and commands within an interactive bash container, which you can create and access by running:
+```
+$ docker run -it --rm -v "$PWD":/wax --name wax -p 4000:4000 ubuntu/wax bash
+```
+
+To serve the site, you can run the following command in the guest container and view it in your host browser:
+```
+$ bundle exec jekyll serve --host 0.0.0.0
+```
+
+You can exit the container at any time with `$ exit`, which will automatically stop and remove the container.
+
+# Contributing
+
+We welcome contributions to Wax, including bug reports and feature requests (submitted as [Issues](https://github.com/minicomp/wax/issues)), code contributions (submitted as [Pull Requests](https://github.com/minicomp/wax/pulls)), and documentation updates (submitted however!) Not sure where to start? Feel free to get in touch via [GitHub issue](https://github.com/minicomp/wax/issues) or [Gitter chat](https://gitter.im/minicomp/wax).
