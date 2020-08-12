@@ -114,7 +114,7 @@ $ docker run -it --rm -v "$PWD":/wax --name wax -p 4000:4000 ubuntu/wax bash
 
 To serve the site, you can run the following command in the guest container and view it in your host browser:
 ```
-$ bundle exec jekyll serve --host 0.0.0.0
+$ bundle exec jekyll serve --host 0.0.0.0 --incremental --force-polling
 ```
 
 You can exit the container at any time with `$ exit`, which will automatically stop and remove the container.
