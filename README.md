@@ -1,4 +1,5 @@
 # minicomp/wax 🐝
+
 [![Gem Version](https://badge.fury.io/rb/wax_theme.svg)](https://badge.fury.io/rb/wax_tasks)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Build Status](https://travis-ci.com/minicomp/wax.svg?branch=main)](https://travis-ci.com/minicomp/wax)
