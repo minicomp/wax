@@ -1,6 +1,14 @@
+# jekyll things
 _site
 .sass-cache
 .jekyll-metadata
+.jekyll-cache
+
+# system things
 .DS_Store
+
+# ruby things
 Gemfile.lock
-package-lock.json
+
+# wax things
+wax_tasks
