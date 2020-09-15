@@ -6,4 +6,3 @@ gemspec
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'kramdown-parser-gfm'
-gem 'wax_tasks', github: 'minicomp/wax_tasks', tag: 'v1.1.2'
