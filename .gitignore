@@ -6,6 +6,7 @@ _site
 
 # system things
 .DS_Store
+.idea/
 
 # ruby things
 Gemfile.lock

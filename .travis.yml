@@ -6,6 +6,8 @@ before_install:
   - docker build -t ubuntu/wax .
   - docker run -itd -v "$PWD":/wax --name wax ubuntu/wax bash
   - docker ps -a
+install:
+  - docker exec -it wax bash -l -c "bundle install;"
 script:
   - docker exec -it wax bash -l -c "bundle exec rake --tasks;"
   - docker exec -it wax bash -l -c "bundle exec rake wax:clobber qatar;"
