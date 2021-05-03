@@ -26,7 +26,7 @@ layout: default
       {% include osd_iiif_image_viewer.html manifest=page.manifest prevlink=prevlink nextlink=nextlink %}
     <span class='pagination-link' id='nextlink'></span>
   </div>
-
+  {% endif %}
   {% unless layout.pagination == false %}{% include item_pagination.html %}{% endunless %}
 {% endif %}
 
