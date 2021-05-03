@@ -15,15 +15,18 @@ layout: default
 {% endif %}
 
 {% if viewer %}
-  <div class='item-view'>
+  <div class='item-view static-browser'>
     <span class='pagination-link' id='prevlink'></span>
-    {% if viewer == 'openseadragon' %}
-      {% include osd_iiif_image_viewer.html manifest=page.manifest prevlink=prevlink nextlink=nextlink %}
-    {% else %}
        {% include simple_image_viewer.html full_image=page.full prevlink=prevlink nextlink=nextlink %}
-    {% endif %}
     <span class='pagination-link' id='nextlink'></span>
   </div>
+  {% if viewer == 'openseadragon' %}
+  <div class='item-view osd-browser' style="display:none">
+    <span class='pagination-link' id='prevlink'></span>
+      {% include osd_iiif_image_viewer.html manifest=page.manifest prevlink=prevlink nextlink=nextlink %}
+    <span class='pagination-link' id='nextlink'></span>
+  </div>
+
   {% unless layout.pagination == false %}{% include item_pagination.html %}{% endunless %}
 {% endif %}
 
