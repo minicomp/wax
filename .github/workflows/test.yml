@@ -1,0 +1,17 @@
+name: ci:test
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: install
+        run: gem install bundler && bundle
+      - name: test
+        run: bundle exec rake wax:test
