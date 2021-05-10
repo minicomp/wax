@@ -13,10 +13,10 @@
         {% for item in site.menu %}
           {% if item.sub %}
             <li class='nav-item dropdown'>
-              <a class='nav-link dropdown-toggle' href='#' id='wax-{{ item.label }}-dropdown' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+              <a class='nav-link dropdown-toggle' href='#' id='wax-{{ item.label | slugify }}-dropdown' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
                 {{ item.label }}
               </a>
-              <div class='dropdown-menu' aria-labelledby='wax-{{ item.label }}-dropdown'>
+              <div class='dropdown-menu' aria-labelledby='wax-{{ item.label | slugify }}-dropdown'>
                 {% for sub in item.sub %}
                   <a class='dropdown-item' href='{{ sub.link | absolute_url }}'>{{ sub.label }}</a>
                 {% endfor %}
