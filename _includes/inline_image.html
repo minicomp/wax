@@ -2,7 +2,7 @@
 
 <div class='inline-image-reference'>
   <a href='{{ item.url | absolute_url }}'>
-    <img src='{{ item.full | absolute_url }}'/>
+    <img src='{{ item.full | absolute_url }}' alt="{{ item.label | escape }}"/>
   </a>
   {% if item.label %}
   <p class='image-caption'>
