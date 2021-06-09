@@ -37,27 +37,23 @@ These dependencies can either be installed natively on your system or within a [
 
 Check your versions with:
 
-```bash
-$ ruby -v
-  ruby 2.4.5p335 (2018-10-18 revision 65137) [x86_64-darwin18]
+```sh
+ruby -v
+```
 
-$ bundler -v
-  Bundler version 2.0.1
+``` sh
+bundler -v
 ```
 
 To process images, you will also need to have ImageMagick and Ghostscript installed and functional. You can check to see if you have ImageMagick by running:
 
-```bash
-$ convert -version
-  Version: ImageMagick 6.9.9-20 Q16 x86_64 2017-10-15 http://www.imagemagick.org
-  Copyright: (c) 1999-2017 ImageMagick Studio LLC
+```sh
+convert -version
 ```
 
 ... and check Ghostscript with:
-```bash
-$ gs -version
-  GPL Ghostscript 9.21 (2017-03-16)
-  Copyright (C) 2017 Artifex Software, Inc.  All rights reserved.
+``` sh
+gs -version
 ```
 
 # Getting Started
@@ -80,8 +76,8 @@ __There are a few ways to get started with Wax, depending on your needs.__ Downl
 
 5. Rename the directory and go inside the project folder:
     ```sh
-    mv wax-master my-project
-    cd wax-master
+    mv wax-main my-project
+    cd wax-main
     ```
 
 6. Install the gems (not required if using Docker):
@@ -103,19 +99,19 @@ To use Wax in a container, make sure you are familiar with Docker and have [Dock
 
 Run the "Getting Started" steps 1-5 above to copy and `cd` into the repo.  
 
-Next, build the `wax_image` base image:
+Next, build the `minicomp/wax` base image:
 ```
-$ docker build -t ubuntu/wax .
+docker build -t minicomp/wax .
 ```
 
 You will run all of the Wax tasks and commands within an interactive bash container, which you can create and access by running:
 ```
-$ docker run -it --rm -v "$PWD":/wax --name wax -p 4000:4000 ubuntu/wax bash
+docker run -it --rm -v "$PWD":/wax --name wax -p 4000:4000 minicomp/wax bash
 ```
 
 To serve the site, you can run the following command in the guest container and view it in your host browser:
 ```
-$ bundle exec jekyll serve --host 0.0.0.0 --incremental --force-polling
+bundle exec jekyll serve --host 0.0.0.0 --incremental --force-polling
 ```
 
 You can exit the container at any time with `$ exit`, which will automatically stop and remove the container.
