@@ -6,16 +6,19 @@
     var manifestUrl = "{{ include.manifest | absolute_url }}";
     $.getJSON(manifestUrl, function(data) {
       var tileSources = [];
-      $.each(data.sequences[0].canvases, function(k, val) {
-        tileSources.push(val.images[0].resource.service['@id'] + '/info.json');
+      $.each(data.sequences[0].canvases, function(_k, val) {
+        tileSources.push({
+          tileSource: val.images[0].resource.service['@id'] + '/info.json',
+          referenceStripThumbnailUrl: val.thumbnail
+        });
       });
       OpenSeadragon({
         id: "osd",
+        preload: true,
         sequenceMode: true,
         prefixUrl: "{{ '/assets/openseadragon/images/' | absolute_url }}",
         tileSources: tileSources,
-        homeFillsViewer: false,
-        showReferenceStrip: true
+        showReferenceStrip: true,
       });
     });
   });
