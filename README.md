@@ -24,7 +24,7 @@ It's comprised of: __a few Ruby gems__ for processing image data and associated 
 <br>
 
 <a href="https://minicomp.github.io/wax/">
-  <img src="https://github.com/minicomp/wiki/raw/main/assets/wax_screen.gif?raw=true"/>
+  <img src="https://minicomp.github.io/wiki/assets/wax_screen.gif?raw=true"/>
 </a>
 
 <br>
@@ -96,9 +96,9 @@ __There are a few ways to get started with Wax, depending on your needs.__ Copyi
   ```
 
 8. Run the demo site:
-    ```sh
-    bundle exec jekyll serve
-    ```
+  ```sh
+  bundle exec jekyll serve
+  ```
 
 After the last step, the terminal will provide you with a localhost URL for you to see your local copy of the site on your browser. This is the template site you will make changes to in order to make your own exhibition. For more, check out the [Minicomp/Wax Wiki](https://minicomp.github.io/wiki/wax/).
 
