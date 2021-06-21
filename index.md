@@ -5,6 +5,7 @@ banner:
   collection: qatar
   pid: obj10
   y: 25%
+  clickable: yes
   height: '500px'
 ---
 
