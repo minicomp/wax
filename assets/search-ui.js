@@ -21,7 +21,7 @@ function getThumbnail(item, url) {
 function displayResult(item, fields, url) {
   var pid   = item.pid;
   var label = item.label || 'Untitled';
-  var link  = item.permalink;
+  var link  = item.permalink.toLowerCase();
   var thumb = getThumbnail(item, url);
   var meta  = []
 
