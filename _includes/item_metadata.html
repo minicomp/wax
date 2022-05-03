@@ -3,10 +3,12 @@
     {% if item.value contains 'page.' %}
       {% assign key = item.value | remove: 'page.' %}
       {% assign value = page[key] %}
+    {% elsif item contains 'page.' %}
+      {% assign key = item | remove: 'page.' %}
+      {% assign value = page[key] %}
     {% else %}
       {% assign value = item.value %}
     {% endif %}
-
     {% comment %}
     Only display non-empty values
     {% endcomment %}
@@ -24,7 +26,7 @@
           {%- endcapture -%}
         {% endif %}
       {% endif %}
-        <dt>{{ item.label }}</dt>
+        <dt>{% if item.label %}{{ item.label }}{% else %}{{key | capitalize | replace: "_", " " | strip}}{% endif %}</dt>
         <dd>{{ value | strip }}</dd>
     {% endif %}
   {% endfor %}
