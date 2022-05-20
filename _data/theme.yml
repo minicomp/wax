@@ -1,0 +1,101 @@
+##########
+# CollectionBuilder Theme Customization
+# values set here help configure details of individual pages in the website
+##########
+
+##########
+# HOME PAGE
+#
+# featured image is used in home page banner and in meta markup to represent the collection
+# use either an objectid (from an item in this collect), a relative location of an image in this repo, or a full url to an image elsewhere
+featured-image: demo_001
+# optional: add extra padding around collection title for a larger image feature. 
+home-title-y-padding: 12em # the margin from the top your title portion will appear.
+# optional: change position of background image, center, top, bottom
+home-banner-image-position: center # Default is top
+
+##########
+# ITEM PAGE
+#
+# see _data/metadata-config.csv to define the metadata fields that will display.
+browse-buttons: true # true / false, adds previous/next arrows to items, but increases build time
+
+##########
+# SUBJECTS PAGE
+#
+subjects-fields: subject;creator # set of fields separated by ; to be featured in the cloud (leave blank or comment out to not generate)
+subjects-min: 1 # min size for subject cloud, too many terms = slow load time!
+subjects-stopwords: # set of subjects separated by ; that will be removed from display, e.g. boxers;boxing
+
+##########
+# LOCATIONS PAGE
+#
+locations-fields: location # set of fields separated by ; to be featured in the cloud (leave blank or comment out to not generate)
+locations-min: 1 # min size for subject cloud, too many terms = slow load time!
+locations-stopwords: # set of subjects separated by ; that will be removed from display, e.g. boxers;boxing
+
+##########
+# MAP PAGE
+#
+# see _data/map-config.csv for field display options
+latitude: 46.727485 #to determine center of map
+longitude: -117.014185 #to determine center of map
+zoom-level: 5 # zoom level for map 
+map-base: Esri_WorldStreetMap # set default base map, choose from: Esri_WorldStreetMap, Esri_NatGeoWorldMap, Esri_WorldImagery
+map-search: true # not suggested with large collections
+map-search-fuzziness: 0.35 # fuzzy search range from 1 = anything to 0 = exact match only
+map-cluster: true # suggested for large collection or with many items in same location
+map-cluster-radius: 25 # size of clusters, from ~ 10 to 80
+
+##########
+# TIMELINE PAGE
+#
+# set either year-navigation or year-nav-increment to generate a year nav dropdown
+year-navigation: #"1900;1905;1910;1915;1920" # manually set years to appear in dropdown nav
+year-nav-increment: 5 # set increments to auto gen nav years
+
+##########
+# DATA 
+# 
+# add metadata fields for export in data downloads (tip: paste in first row of csv)
+# comma delimited list, reference url is automatic
+metadata-export-fields: "title,creator,date,description,subject,location,latitude,longitude,source,identifier,type,format,language,rights,rightsstatement"
+# generate a facets list for given fields, comma delimited
+metadata-facets-fields: "subject,creator,format"
+
+##########
+# ADVANCED OPTIONS
+#
+
+# NAVBAR COLORS [optional!]
+# navbar text color
+# Choose from "navbar-light" for use with light background colors, or "navbar-dark" for dark background colors
+navbar-color: navbar-dark
+# navbar background color
+# Choose from bg-primary, bg-secondary, bg-success, bg-danger, bg-warning, bg-info, bg-light, bg-dark, bg-white
+navbar-background: bg-dark
+
+# BOOTSWATCH THEMES [optional!]
+# You can replace the standard Bootstrap theme with a Bootswatch (https://github.com/thomaspark/bootswatch) option
+# Choose from: cerulean; cosmo; cyborg; darkly; flatly; journal; litera; lumen; lux; materia; minty; pulse; sandstone; simplex; sketchy; slate; solar; spacelab; superhero; united; yeti 
+bootswatch: # leave blank or comment out for plain bootstrap
+
+# THEME FONTS [optional!]
+base-font-size: 1.2em
+text-color: "#191919"
+link-color: "#0d6efd"
+base-font-family: # comment out for bootstrap defaults. e.g. Roboto
+font-cdn: # add font stylesheet, e.g. <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+# THEME ICONS [optional!]
+# default icons can be overridden or new icons can be added using "icons" object
+# the template uses Bootstrap Icons, https://icons.getbootstrap.com/
+# find the names on the BI icons page, e.g. file-image
+#
+# icons: 
+#   icon-image: image
+#   icon-audio: file-play
+#   icon-video: film
+#   icon-pdf: file-richtext
+#   icon-default: file-earmark # fall back icon
+

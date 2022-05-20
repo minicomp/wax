@@ -1,0 +1,147 @@
+
+.leaflet-fusesearch-control {
+    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+    background: #fff;
+    border-radius: 5px;
+}
+
+.leaflet-fusesearch-control .button {
+    background-repeat: no-repeat;
+    background-image: url(images/search_icon.svg);
+    background-position: center;
+    background-size: 36px 36px;
+    display: block;
+    width: 36px;
+    height: 36px;
+}
+.leaflet-touch .leaflet-fusesearch-control .button {
+    width: 44px;
+    height: 44px;
+}
+
+.leaflet-fusesearch-panel {
+    position: absolute;
+    height: 100%;
+    width: 350px;
+    
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s linear;
+    -moz-transition: opacity 0.3s linear;
+    -o-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.leaflet-fusesearch-panel .content {
+    height: 100%;
+    width: 100%;
+    
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 8px 20px;
+
+    background: white;
+    box-shadow: 0 1px 7px rgba(0,0,0,0.65);
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+
+    color: black;
+    font-size: 1.1em;
+}
+
+.leaflet-fusesearch-panel.left {
+    left: 0;
+}
+
+.leaflet-fusesearch-panel.right {
+    right: 0;
+}
+
+.leaflet-fusesearch-panel.visible {
+    opacity: 1;
+    z-index: 2000;
+}
+
+
+.leaflet-fusesearch-panel .close {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    color: #333;
+    font-size: 25pt;
+    line-height: 1em;
+    text-align: center;
+    background: white;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    z-index: 8;
+}
+
+.leaflet-fusesearch-panel .search-image {
+    background-repeat: no-repeat;
+    background-image: url(images/search_input.png);
+    background-size: 20px 20px;
+    background-position: 1px 1px;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    width: 22px;
+    height: 22px;
+}
+
+.leaflet-fusesearch-panel .search-input {
+    position: relative;
+    top: 6px;
+    left: 3px;
+}
+
+.leaflet-fusesearch-panel .result-item {
+    color : black;
+}
+
+.leaflet-fusesearch-panel .result-item.clickable {
+    cursor: pointer;
+}
+
+@media (max-width:320px) {
+    .leaflet-fusesearch-panel {
+        width: 100%;
+        padding: 0;
+    }
+    .leaflet-fusesearch-panel .content {
+        box-shadow: none;
+        -webkit-border-radius: 0;
+        border-radius: 0;        
+    }
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+    .leaflet-fusesearch-panel {
+        width: 250px;
+        padding: 0;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .leaflet-fusesearch-panel {
+        width: 300px;
+    }
+}
+
+@media (min-width: 769px) {
+    .leaflet-fusesearch-panel {
+        width: 350px;
+    }
+}

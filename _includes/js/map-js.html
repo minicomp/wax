@@ -1,0 +1,127 @@
+{%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid' | where_exp: 'item','item.latitude != nil and item.longitude != nil' -%}
+{%- assign fields = site.data.config-map -%}
+<!-- load leaflet dependencies -->
+<script src="{{ '/assets/lib/leaflet/leaflet.js' | relative_url }}"></script>
+{% if site.data.theme.map-search == true %}<script src="{{ '/assets/lib/leaflet/fuse.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/lib/leaflet/leaflet.fusesearch.js' | relative_url }}"></script>{% endif %}
+{% if site.data.theme.map-cluster == true %}<script src="{{ '/assets/lib/leaflet/leaflet.markercluster.js' | relative_url }}"></script>{% endif %}
+{% if site.data.theme.map-search == true and site.data.theme.map-cluster == true %}<script src="{{ '/assets/lib/leaflet/leaflet.markercluster.freezable.js' | relative_url }}"></script>{% endif %}
+
+<script>
+(function(){
+    /* add collection map data */
+    var geodata = { "type": "FeatureCollection", "features": [ 
+    {% for item in items %}
+    { "type":"Feature", "geometry":{ "type":"Point", "coordinates":[{{ item.longitude | strip }},{{ item.latitude | strip }}] }, "properties":
+    { 
+        {% for f in fields %}{% if item[f.field] %}{{ f.field | escape | jsonify }}:{{ item[f.field] | strip | escape | jsonify }}, {%- endif -%}{%- endfor -%}
+        {% if item.image_thumb %}"img": {{ item.image_thumb | relative_url | jsonify }},{% endif %}
+        {% if item.display_template %}"template": {{ item.display_template | escape | jsonify }}, {%- endif -%}
+        {% if item.format %}"format": {{ item.format | escape | jsonify }}, {%- endif -%}
+        "title": {{ item.title | escape | jsonify }}, 
+        "id": {{ item.objectid | jsonify }} 
+    } }{% unless forloop.last %}, {% endunless %}{% endfor %}
+    ]};
+
+    /* init map and set zoom */
+    if (window.location.hash) {
+        /* if url has a hash, it is split by comma into coordinates that set the view */
+        var hashfilter = decodeURIComponent(location.hash.substr(1));
+        var latitudeHash = hashfilter.split(',')[0]
+        var longitudeHash = hashfilter.split(',')[1]
+        var map = L.map('map').setView([latitudeHash,longitudeHash],16);
+    } else {
+        var map = L.map('map').setView([{{ site.data.theme.latitude | default: 46.727485 }},{{ site.data.theme.longitude | default: -117.014185 }}],{{ site.data.theme.zoom-level | default: 5 }});
+    }
+
+    /* add map layer options */
+    var Esri_WorldStreetMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+    });
+    var Esri_NatGeoWorldMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
+        maxZoom: 16
+    });
+    var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+    });
+    /* add base map switcher */
+    var baseMaps = {
+        "Esri World StreetMap": Esri_WorldStreetMap,
+        "Esri National Geo": Esri_NatGeoWorldMap,
+        "Esri Imagery": Esri_WorldImagery
+    };
+    L.control.layers(baseMaps).addTo(map);
+    /* load base map */
+    {{ site.data.theme.map-base | default: 'Esri_WorldStreetMap' }}.addTo(map);
+
+    {% if site.data.theme.map-search == true %}
+    /* add search, https://github.com/naomap/leaflet-fusesearch */
+    var options = {
+        title: 'Search Map Items',
+        placeholder: 'Search map items...',
+        threshold: {{ site.data.theme.map-search-fuzziness | default: 0.35 }} 
+    };
+    var searchCtrl = L.control.fuseSearch(options);
+    searchCtrl.addTo(map);
+    searchCtrl.indexFeatures(geodata.features, {{ fields | where: 'search','true' | map: 'field' | unshift: 'title' | jsonify }});{% endif %}
+
+    {% if site.data.theme.map-cluster == true %}
+    /* create cluster group */
+    var markers = L.markerClusterGroup({ maxClusterRadius: {{ site.data.theme.map-cluster-radius | default: 15 }}, singleMarkerMode: true {% if site.data.theme.map-search == true %}, removeOutsideVisibleBounds: false{% endif %} });{% endif %}
+
+    /* get icons function */ 
+    {% include js/get-icon.js %}
+
+    /* object popup function */
+    function objectPopups(feature, layer) {
+        {% if site.data.theme.map-search == true %}/* bind feature for search */
+        feature.layer = layer;{% endif %}
+        // find item link
+        var itemHref = '{{ "/items/" | relative_url }}' + feature.properties.id + '.html';
+        // find image
+        var thumbImg;
+        if (feature.properties.img) {
+            thumbImg = '<img class="map-thumb" src="' + feature.properties.img + '" alt="item thumbnail">';
+        } else {
+            thumbImg = getIcon(feature.properties.template,feature.properties.format)
+        }
+        // set up popup content
+        var popupTemplate = '<h4><a class="text-dark" href="' + itemHref + '">' +
+            feature.properties.title + '</a></h4><div class="text-center"><a href="' + itemHref + 
+            '" >' + thumbImg + '</a></div><p>';
+        {% for f in fields %}{% if f.display_name %}
+        if (feature.properties[{{ f.field | escape | jsonify }}]) {
+            popupTemplate += '<strong>{{ f.display_name }}:</strong> ' + feature.properties[{{ f.field | escape | jsonify }}] + '<br>'; 
+        }
+        {% endif %}{% endfor %}
+        popupTemplate += '</p><div class="text-center"><a class="btn btn-light" href="' + itemHref + '" >View Item</a></div>';
+        layer.bindPopup(popupTemplate);
+    }
+    function objectMarkers(feature,latlng) {
+        var marker = L.marker(latlng);
+        {% if site.data.theme.map-cluster == true %}markers.addLayer(marker);{% endif %}
+        return marker;
+    }
+
+    /* add objects from geoJson features */
+    L.geoJson(geodata, {
+        onEachFeature: objectPopups,
+        pointToLayer: objectMarkers
+    }){% if site.data.theme.map-cluster != true %}.addTo(map);{% else %};
+    map.addLayer(markers);{% endif %}
+    
+    {% if site.data.theme.map-cluster == true and site.data.theme.map-search == true %}
+    /* uncluster when search is clicked */
+    document.querySelector('a.button').addEventListener("click", function() {
+        markers.disableClustering();
+    });
+    /* recluster when search is closed */
+    document.querySelector('a.close').addEventListener("click", function() {
+        markers.enableClustering();
+        document.querySelector('input.search-input').value = "";
+    });{% endif %}
+
+})();
+
+</script>

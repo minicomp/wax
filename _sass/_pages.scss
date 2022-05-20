@@ -1,0 +1,87 @@
+/*  
+    pages - style tweaks related to individual CB pages
+    although most presentation is controlled by Bootstrap classes, these styles are necessary for default visualization pages to function correctly
+*/
+/* index */
+.carousel-item-title{
+    background-color: rgba(37, 36, 36, 0.72);
+}
+
+/* item page */
+.gallery-img {
+    cursor: pointer;
+}
+#item-nav {
+    a { 
+        position: absolute;
+        top:500px;
+    }
+    .previous { left:10px; }
+    .next{ right:10px; }
+}
+.breadcrumb {
+    padding: 0.75rem 1rem;
+    background-color: rgb(248, 249, 250);
+    border-radius: 0.25rem;
+}
+
+/* browse */
+
+/* map */
+#map { height: 750px; z-index: 98; }
+.map-thumb {
+    height: 100px;
+    max-width: 100%;
+}
+.leaflet-fusesearch-panel .header {
+    padding-bottom: 1.5em;
+}
+
+/* timeline */
+.timeline-thumb {
+    height: 110px;
+    max-width: 100%;
+}
+/* subjects */
+.tagcloud0{font-size:0.4em;}
+.tagcloud1{font-size:0.5em;}
+.tagcloud2{font-size:0.8em;}
+.tagcloud3{font-size:1.1em;}
+.tagcloud4{font-size:1.4em;}
+.tagcloud5{font-size:1.6em;}
+.tagcloud6{font-size:1.9em;}
+.tagcloud7{font-size:2.2em;}
+.tagcloud8{font-size:2.5em;}
+.tagcloud9{font-size:2.8em;}
+.tagcloud10{font-size:3.0em;}
+
+/* About */
+/* creating a narrow text column */ 
+.about-contents > {
+    h2 {
+        font-weight: bold;
+        padding-top: 100px;
+        border-top: 1px dotted black;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        max-width: 650px;
+        margin: 1.5rem auto 1rem;
+    }
+    
+    p, .about-narrowed-content, .footnotes, ol, ul {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 650px;
+    }
+
+}
+
+/* narrow text block for page-narrow layout */
+.page-narrow {
+    h1, h2, h3, h4, h5, h6, p, ol, ul, .footnotes, .narrow-content { 
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto; 
+    }
+}
