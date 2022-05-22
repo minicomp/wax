@@ -1,5 +1,5 @@
 ---
-title: Map
 layout: map
-permalink: /map.html
+show_title: false
+permalink: /map/
 ---

@@ -1,5 +1,4 @@
 field,display_name,search
-date,Date,true
-creator,Creator,true
-subject,Subjects,true
+creation_date,Date,true
+keywords,Keywords,true
 location,Location,true

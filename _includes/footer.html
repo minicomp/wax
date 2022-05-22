@@ -30,4 +30,9 @@
       </div>
     </div>
   </div>
+
+  {% if layout.custom-foot %}
+    {% include {{ layout.custom-foot }} %}
+  {%- endif -%}
+
 </footer>

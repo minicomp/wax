@@ -1,4 +1,4 @@
-{%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid' | where_exp: 'item','item.latitude != nil and item.longitude != nil' -%}
+{%- assign items = site.data['qatar'] | where_exp: 'item','item.pid' | where_exp: 'item','item.latitude != nil and item.longitude != nil' -%}
 {%- assign fields = site.data.config-map -%}
 <!-- load leaflet dependencies -->
 <script src="{{ '/assets/lib/leaflet/leaflet.js' | relative_url }}"></script>
@@ -15,11 +15,11 @@
     { "type":"Feature", "geometry":{ "type":"Point", "coordinates":[{{ item.longitude | strip }},{{ item.latitude | strip }}] }, "properties":
     { 
         {% for f in fields %}{% if item[f.field] %}{{ f.field | escape | jsonify }}:{{ item[f.field] | strip | escape | jsonify }}, {%- endif -%}{%- endfor -%}
-        {% if item.image_thumb %}"img": {{ item.image_thumb | relative_url | jsonify }},{% endif %}
+        {% if item.thumbnail %}"img": {{ item.thumbnail | relative_url | jsonify }},{% endif %}
         {% if item.display_template %}"template": {{ item.display_template | escape | jsonify }}, {%- endif -%}
         {% if item.format %}"format": {{ item.format | escape | jsonify }}, {%- endif -%}
-        "title": {{ item.title | escape | jsonify }}, 
-        "id": {{ item.objectid | jsonify }} 
+        "title": {{ item.label | escape | jsonify }},
+        "id": {{ item.pid | jsonify }}
     } }{% unless forloop.last %}, {% endunless %}{% endfor %}
     ]};
 
@@ -78,7 +78,7 @@
         {% if site.data.theme.map-search == true %}/* bind feature for search */
         feature.layer = layer;{% endif %}
         // find item link
-        var itemHref = '{{ "/items/" | relative_url }}' + feature.properties.id + '.html';
+        var itemHref = '{{ "/qatar/" | relative_url }}' + feature.properties.id;
         // find image
         var thumbImg;
         if (feature.properties.img) {

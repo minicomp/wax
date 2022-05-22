@@ -10,5 +10,10 @@
   <link rel='stylesheet' href="{{ '/assets/styles.css' | absolute_url }}"/>
 
   <script type='text/javascript' src="{{ '/assets/jquery-3.2.1.min.js' | absolute_url }}"></script>
+  {% if page.layout == 'map' %}<link rel="stylesheet" href="{{ '/assets/lib/leaflet/leaflet.css' | relative_url }}">
+  {% if site.data.theme.map-search == true %}<link rel="stylesheet" href="{{ '/assets/lib/leaflet/leaflet.fusesearch.css' | relative_url }}">{%- endif -%}
+  {% if site.data.theme.map-cluster == true %}<link rel="stylesheet" href="{{ '/assets/lib/leaflet/MarkerCluster.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/lib/leaflet/MarkerCluster.Default.css' | relative_url }}">{% endif %}{%- endif -%}
+
   <noscript><p>Please enable JavaScript in your browser.</p></noscript>
 </head>
