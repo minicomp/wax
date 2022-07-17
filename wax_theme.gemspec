@@ -14,5 +14,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'jekyll', '~> 4.1'
   spec.add_runtime_dependency 'wax_tasks', '~> 1.1'
 
-  spec.add_development_dependency 'html-proofer', '~> 3.15'
+  spec.add_development_dependency 'html-proofer', '~> 4.2'
 end
