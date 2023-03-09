@@ -3,6 +3,7 @@ on: [push, pull_request]
 
 jobs:
   test:
+    if: github.repository_owner == 'minicomp'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
