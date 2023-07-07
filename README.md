@@ -24,7 +24,7 @@ It's comprised of: __a few Ruby gems__ for processing image data and associated 
 <br>
 
 <a href="https://minicomp.github.io/wax/">
-  <img src="https://github.com/minicomp/wiki/raw/main/assets/wax_screen.gif?raw=true"/>
+  <img src="https://raw.githubusercontent.com/minicomp/wiki/main/src/assets/wax_screen.gif?raw=true"/>
 </a>
 
 <br>
@@ -33,66 +33,72 @@ It's comprised of: __a few Ruby gems__ for processing image data and associated 
 
 
 You'll need `git` and `ruby >= 2.4` with `bundler` installed.
-These dependencies can either be installed natively on your system or within a [Docker environment](#Using-Docker). For instructions, check the Wiki's [Installation Guide](https://minicomp.github.io/wiki/wax/system-requirements/installation-guide/).
+These dependencies can either be installed natively on your system or within a [Docker environment](#Using-Docker). For instructions, check the Wiki's [Setting up your system page](https://minicomp.github.io/wiki/wax/setting-up-your-system/).
 
 Check your versions with:
 
-```bash
-$ ruby -v
-  ruby 2.4.5p335 (2018-10-18 revision 65137) [x86_64-darwin18]
+```sh
+ruby -v
+```
 
-$ bundler -v
-  Bundler version 2.0.1
+``` sh
+bundler -v
 ```
 
 To process images, you will also need to have ImageMagick and Ghostscript installed and functional. You can check to see if you have ImageMagick by running:
 
-```bash
-$ convert -version
-  Version: ImageMagick 6.9.9-20 Q16 x86_64 2017-10-15 http://www.imagemagick.org
-  Copyright: (c) 1999-2017 ImageMagick Studio LLC
+```sh
+convert -version
 ```
 
 ... and check Ghostscript with:
-```bash
-$ gs -version
-  GPL Ghostscript 9.21 (2017-03-16)
-  Copyright (C) 2017 Artifex Software, Inc.  All rights reserved.
+``` sh
+gs -version
+```
+
+Vips will soon replace ImageMagick for Wax's image processing. If you're ahead of the curve, you can check your version with
+
+``` sh
+vips -v
 ```
 
 # Getting Started
 
-__There are a few ways to get started with Wax, depending on your needs.__ Downloading the demo is suggested for new users so you can see how a full Wax site would work. __Advanced Jekyllers__ can start from a clean Jekyll install. To start with the demo:
+__There are a few ways to get started with Wax, depending on your needs.__ Copyin the demo template is suggested for new users so you can see how a full Wax site would work. __Advanced Jekyllers__ can start from a clean Jekyll install. To start with the demo:
 
-1. Change directory into where you'd like your site, e.g., your Desktop:
-    ```sh
-    cd ~/Desktop
-    ```
-2. Download the zip file from the [wax github repository](https://github.com/minicomp/wax/). The option to download the zip file should be on the button labeled "Code." Your browser will save the file where it normally saves downloads.
+1. Log into your [GitHub account](https://github.com/). (Or sign up if you don't have one!)
 
-3. Move the zip file to the location you will use. In our example, to the Desktop.
+2. Head to the [Wax demo page](https://github.com/) and click **"Use this Template"** button. It will prompt you to create a copy of the repository in your own account. You should name it after the collection or exhibition you'll make, since this name will inform your free URL for the project with GitHub. For this example, our repository is called **"my-wax-site"**.
 
-4. Unzip the file. This can be done through your operating system graphic user interface, or in the terminal:
-    ```sh
-    unzip wax-master.zip
-    ```
-    You can delete the zip file once you're done.
+3. On your own, new Wax repository page, click the Green **"Code"** button and copy the URL it provides to your clipboard, e.g,
+  ```sh
+  git@github.com:mnyrop/my-wax-site.git
+  ```
 
-5. Rename the directory and go inside the project folder:
-    ```sh
-    mv wax-master my-project
-    cd wax-master
-    ```
+4. Open your Terminal/Shell application and change directory into where you'd like to work on your project, e.g., your Desktop:
+  ```sh
+  cd ~/Desktop
+  ```
 
-6. Install the gems (not required if using Docker):
-    ```sh
-    bundle install
-    ```
+5. Run the `git clone` command plus the link you copied on your clipboard in one line, e.g.,
+  ```sh
+  git clone git@github.com:mnyrop/my-wax-site.git
+  ```
 
-7. Run the demo site:
-    ```sh
-    bundle exec jekyll serve
-    ```
+6. When the clone is complete, change directory into your newly cloned project folder, in our case:
+  ```sh
+  cd my-wax-site
+  ```
+
+7. Install the project-specific Ruby dependencies by running the command
+  ```sh
+  bundle install
+  ```
+
+8. Run the demo site:
+  ```sh
+  bundle exec jekyll serve
+  ```
 
 After the last step, the terminal will provide you with a localhost URL for you to see your local copy of the site on your browser. This is the template site you will make changes to in order to make your own exhibition. For more, check out the [Minicomp/Wax Wiki](https://minicomp.github.io/wiki/wax/).
 
@@ -101,21 +107,21 @@ After the last step, the terminal will provide you with a localhost URL for you 
 
 To use Wax in a container, make sure you are familiar with Docker and have [Docker installed](https://docs.docker.com/get-docker/).
 
-Run the "Getting Started" steps 1-5 above to copy and `cd` into the repo.  
+Run the "Getting Started" steps 1-6 above to copy and `cd` into the repo.  
 
-Next, build the `wax_image` base image:
+Next, build the `minicomp/wax` base image:
 ```
-$ docker build -t ubuntu/wax .
+docker build -t minicomp/wax .
 ```
 
 You will run all of the Wax tasks and commands within an interactive bash container, which you can create and access by running:
 ```
-$ docker run -it --rm -v "$PWD":/wax --name wax -p 4000:4000 ubuntu/wax bash
+docker run -it --rm -v "$PWD":/wax --name wax -p 4000:4000 minicomp/wax bash
 ```
 
 To serve the site, you can run the following command in the guest container and view it in your host browser:
 ```
-$ bundle exec jekyll serve --host 0.0.0.0 --incremental --force-polling
+bundle exec jekyll serve --host 0.0.0.0
 ```
 
 You can exit the container at any time with `$ exit`, which will automatically stop and remove the container.

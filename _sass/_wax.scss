@@ -334,6 +334,7 @@ item pages (iiif + metadata)
 
     .item-full-image {
       max-width: $max-width;
+      max-height: 100%;
       height: $viewer-height;
     }
   }
@@ -500,7 +501,7 @@ search box
           display: table-cell;
           padding: .4rem;
           vertical-align: center;
-        }        
+        }
 
         // .info {
         //   text-decoration: none;
