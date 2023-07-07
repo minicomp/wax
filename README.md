@@ -59,7 +59,7 @@ gs -version
 Vips will soon replace ImageMagick for Wax's image processing. If you're ahead of the curve, you can check your version with
 
 ``` sh
-vips -version
+vips -v
 ```
 
 # Getting Started
