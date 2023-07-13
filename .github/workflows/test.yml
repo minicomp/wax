@@ -1,18 +1,17 @@
 name: ci:test
-on: [push, pull_request]
+on:
+  pull_request:
+    branches:
+      - main
 
 jobs:
   test:
     if: github.repository_owner == 'minicomp'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 1
+      - uses: actions/checkout@v3
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-      - name: install
-        run: gem install bundler && bundle
       - name: test
         run: bundle exec rake wax:test
