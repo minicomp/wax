@@ -1,4 +1,5 @@
 {% assign collection = site[include.collection] %}
+{% assign undefined = include.undefined | default: 'undefined' %}
 
 {% if include.only and include.facet_by %}
   {% assign subset = collection | where: include.facet_by, include.only | sort: 'order' %}
@@ -28,7 +29,7 @@
     {% else %}
       {% for item in collection %}
         {%- capture item_html -%}
-          "<div class='gallery-item {{ item[include.facet_by] | slugify }} all'><a href='{{ item.url | absolute_url }}'><div class='hovereffect'><img class='img-responsive gallery-thumb' src='{{ item.thumbnail | absolute_url }}' alt='{{ item.label | escape }}'/><div class='overlay'><p class='info'>{{ item.label | escape }}</p></div></div></a></div>"
+          "<div class='gallery-item {{ item[include.facet_by] | default: undefined | slugify }} all'><a href='{{ item.url | absolute_url }}'><div class='hovereffect'><img class='img-responsive gallery-thumb' src='{{ item.thumbnail | absolute_url }}' alt='{{ item.label | escape }}'/><div class='overlay'><p class='info'>{{ item.label | escape }}</p></div></div></a></div>"
         {%- endcapture -%}
         gallery.append({{ item_html | strip_newlines }});
       {% endfor %}
@@ -36,7 +37,7 @@
 
     {% if include.facet_by %}
       {% unless subset %}
-        var facets = Array.from(new Set([{%- for item in collection -%}'{{ item[include.facet_by] | slugify }}'{% unless forloop.last %}, {% endunless %}{%- endfor -%}]));
+        var facets = Array.from(new Set([{%- for item in collection -%}'{{ item[include.facet_by] | default: undefined | slugify }}'{% unless forloop.last %}, {% endunless %}{%- endfor -%}]));
         buttonDiv.append("<button class='btn facet active' data-filter='all'>show all</button>");
 
         for (i in facets) {
