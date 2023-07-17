@@ -22,7 +22,7 @@ title:            'Wax'
 description:      'Minimal Exhibitions with Jekyll'
 url:              'https://minicomp.github.io'
 baseurl:          '/wax'
-copyright:        'Example copyright org, 2019'
+copyright:        'Example copyright org, 2023'
 logo:             '/assets/logo.png'
 
 # ---------------------------------------------------------------
