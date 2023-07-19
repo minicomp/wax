@@ -10,7 +10,6 @@
 #
 # Questions ?
 # ~> https://minicomp.github.io/wiki/#/
-# ~> https://gitter.im/minicomp/wax/
 #
 # ---------------------------------------------------------------
 # MAIN SETTINGS
@@ -24,6 +23,7 @@ url:              'https://minicomp.github.io'
 baseurl:          '/wax'
 copyright:        'Example copyright org, 2023'
 logo:             '/assets/logo.png'
+default_thumb:    '/assets/default.png'
 
 # ---------------------------------------------------------------
 # BUILD SETTINGS
@@ -34,7 +34,6 @@ permalink: 'pretty'
 sass:
   style: compressed
 exclude: ["Gemfile*", "*.gemspec", "Rakefile", "vendor", "spec", "README.md", "LICENSE.txt", "Docker*"]
-incremental: true
 webrick:
   headers:
     'Access-Control-Allow-Origin': '*'
