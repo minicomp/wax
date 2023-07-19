@@ -3,9 +3,8 @@
 source 'https://rubygems.org'
 gemspec
 
-# Temporarily pin jekyll to avoid absolute_url bug in 4.2
-gem 'jekyll', '4.1'
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'kramdown-parser-gfm'
+platforms :mingw, :x64_mingw, :mswin, :jruby do
+  gem 'wdm', '~> 0.1.1', :install_if => Gem.win_platform?
+  gem "tzinfo", ">= 1", "< 3"
+  gem "tzinfo-data"
+end
