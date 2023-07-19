@@ -1,3 +1,7 @@
+---
+---
+DEFAULT = "{{ site.default_thumb }}";
+
 // Methods and jQuery UI for Wax search box
 function excerptedString(str) {
   str = str || ''; // handle null > string
@@ -10,11 +14,11 @@ function excerptedString(str) {
 }
 
 function getThumbnail(item, url) {
-  if ('thumbnail' in item) {
+  if (item.thumbnail) {
     return `<img class='sq-thumb-sm' src='${url}${item.thumbnail}'/>&nbsp;&nbsp;&nbsp;`
   }
   else {
-    return '';
+    return `<img class='sq-thumb-sm' src='${url}${DEFAULT}'/>&nbsp;&nbsp;&nbsp;`
   }
 }
 
