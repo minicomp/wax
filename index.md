@@ -14,4 +14,5 @@ The collection items in this demo are from The Museum of Islamic Art, Qatar, (co
 
 ### Browse the Collection
 
+#### By Item Type
 {% include collection_gallery.html facet_by='object_type' collection='qatar' %}
