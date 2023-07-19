@@ -1,9 +1,9 @@
 name: ci:test
 on:
   push: 
-    branches: [main, development]
+    branches: [main, development, v1*]
   pull_request:
-    branches: [main, development]
+    branches: [main, development, v1*]
 
 jobs:
   test:
