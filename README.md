@@ -32,7 +32,7 @@ It's comprised of: __a few Ruby gems__ for processing image data and associated 
 # Prerequisites
 
 
-You'll need `git` and `ruby >= 2.4` with `bundler` installed.
+You'll need `git` and `ruby >= 3.2` with `bundler` installed.
 These dependencies can either be installed natively on your system or within a [Docker environment](#Using-Docker). For instructions, check the Wiki's [Setting up your system page](https://minicomp.github.io/wiki/wax/setting-up-your-system/).
 
 Check your versions with:
