@@ -129,8 +129,8 @@ footer:
       link: 'https://github.com/minicomp/wax'
     - label: 'Credits'
       link: '/credits'
-    - label: 'Contact'
-      link: 'https://gitter.im/minicomp/wax/'
+    - label: 'Wiki'
+      link: 'https://minicomp.github.io/wiki/wax/'
   logos:
     - img: '/img/logo.png'
 
