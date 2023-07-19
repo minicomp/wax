@@ -11,7 +11,7 @@ layout: none
     "object_type": "manuscript",
     "current_location": "The Museum of Islamic Art, Qatar",
     "collection": "qatar",
-    "thumbnail": "/img/derivatives/simple/obj1/thumbnail.jpg",
+    "thumbnail": "/img/derivatives/iiif/images/obj1/full/250,/0/default.jpg",
     "permalink": "/qatar/obj1",
     "lunr_id": 0
   },
@@ -24,7 +24,7 @@ layout: none
     "object_type": "portrait",
     "current_location": "The Museum of Islamic Art, Qatar",
     "collection": "qatar",
-    "thumbnail": "/img/derivatives/simple/obj10/thumbnail.jpg",
+    "thumbnail": "/img/derivatives/iiif/images/obj10/full/250,/0/default.jpg",
     "permalink": "/qatar/obj10",
     "lunr_id": 1
   },
@@ -37,7 +37,7 @@ layout: none
     "object_type": "portrait",
     "current_location": "The Museum of Islamic Art, Qatar",
     "collection": "qatar",
-    "thumbnail": "/img/derivatives/simple/obj11/thumbnail.jpg",
+    "thumbnail": "/img/derivatives/iiif/images/obj11/full/250,/0/default.jpg",
     "permalink": "/qatar/obj11",
     "lunr_id": 2
   },
@@ -50,7 +50,7 @@ layout: none
     "object_type": "manuscript",
     "current_location": "Qatar National Library",
     "collection": "qatar",
-    "thumbnail": "/img/derivatives/simple/obj12_05/thumbnail.jpg",
+    "thumbnail": "/img/derivatives/iiif/images/obj12_00/full/250,/0/default.jpg",
     "permalink": "/qatar/obj12",
     "lunr_id": 3
   },
@@ -63,7 +63,7 @@ layout: none
     "object_type": "manuscript",
     "current_location": "The Museum of Islamic Art, Qatar",
     "collection": "qatar",
-    "thumbnail": "/img/derivatives/simple/obj2/thumbnail.jpg",
+    "thumbnail": "/img/derivatives/iiif/images/obj2/full/250,/0/default.jpg",
     "permalink": "/qatar/obj2",
     "lunr_id": 4
   },
@@ -76,7 +76,7 @@ layout: none
     "object_type": "map",
     "current_location": "The Museum of Islamic Art, Qatar",
     "collection": "qatar",
-    "thumbnail": "/img/derivatives/simple/obj3/thumbnail.jpg",
+    "thumbnail": "/img/derivatives/iiif/images/obj3/full/250,/0/default.jpg",
     "permalink": "/qatar/obj3",
     "lunr_id": 5
   },
@@ -89,7 +89,7 @@ layout: none
     "object_type": "manuscript",
     "current_location": "The Museum of Islamic Art, Qatar",
     "collection": "qatar",
-    "thumbnail": "/img/derivatives/simple/obj4/thumbnail.jpg",
+    "thumbnail": "/img/derivatives/iiif/images/obj4/full/250,/0/default.jpg",
     "permalink": "/qatar/obj4",
     "lunr_id": 6
   },
@@ -102,7 +102,7 @@ layout: none
     "object_type": "panel",
     "current_location": "The Museum of Islamic Art, Qatar",
     "collection": "qatar",
-    "thumbnail": "/img/derivatives/simple/obj5/thumbnail.jpg",
+    "thumbnail": "/img/derivatives/iiif/images/obj5/full/250,/0/default.jpg",
     "permalink": "/qatar/obj5",
     "lunr_id": 7
   },
@@ -115,7 +115,7 @@ layout: none
     "object_type": "manuscript",
     "current_location": "The Museum of Islamic Art, Qatar",
     "collection": "qatar",
-    "thumbnail": "/img/derivatives/simple/obj6/thumbnail.jpg",
+    "thumbnail": "/img/derivatives/iiif/images/obj6/full/250,/0/default.jpg",
     "permalink": "/qatar/obj6",
     "lunr_id": 8
   },
@@ -128,7 +128,7 @@ layout: none
     "object_type": "manuscript",
     "current_location": "The Museum of Islamic Art, Qatar",
     "collection": "qatar",
-    "thumbnail": "/img/derivatives/simple/obj7/thumbnail.jpg",
+    "thumbnail": "/img/derivatives/iiif/images/obj7/full/250,/0/default.jpg",
     "permalink": "/qatar/obj7",
     "lunr_id": 9
   },
@@ -141,7 +141,7 @@ layout: none
     "object_type": "panel",
     "current_location": "The Museum of Islamic Art, Qatar",
     "collection": "qatar",
-    "thumbnail": "/img/derivatives/simple/obj8/thumbnail.jpg",
+    "thumbnail": "/img/derivatives/iiif/images/obj8/full/250,/0/default.jpg",
     "permalink": "/qatar/obj8",
     "lunr_id": 10
   },
@@ -154,7 +154,7 @@ layout: none
     "object_type": "portrait",
     "current_location": "The Museum of Islamic Art, Qatar",
     "collection": "qatar",
-    "thumbnail": "/img/derivatives/simple/obj9/thumbnail.jpg",
+    "thumbnail": "/img/derivatives/iiif/images/obj9/full/250,/0/default.jpg",
     "permalink": "/qatar/obj9",
     "lunr_id": 11
   }
