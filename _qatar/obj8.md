@@ -10,7 +10,6 @@ source: https://commons.wikimedia.org/wiki/File:Unknown,_Iran,_16th_or_16th_Cent
 order: '07'
 layout: qatar_item
 collection: qatar
-thumbnail: "/img/derivatives/iiif/images/obj8/full/250,/0/default.jpg"
-manifest: "/img/derivatives/iiif/obj8/manifest.json"
-full: "/img/derivatives/iiif/images/obj8/full/1140,/0/default.jpg"
+thumbnail: "/img/derivatives/simple/obj8/thumbnail.jpg"
+full: "/img/derivatives/simple/obj8/fullwidth.jpg"
 ---
