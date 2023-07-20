@@ -33,12 +33,7 @@ logo:             '/assets/logo.png'
 permalink: 'pretty'
 sass:
   style: compressed
-exclude:
-  - Gemfile*
-  - Rakefile
-  - vendor
-  - spec
-  - README.md
+exclude: ["Gemfile*", "*.gemspec", "Rakefile", "vendor", "spec", "README.md", "LICENSE.txt", "Docker*"]
 incremental: true
 webrick:
   headers:
