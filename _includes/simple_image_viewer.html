@@ -1,5 +1,36 @@
-<div class='image-viewer'>
-  <a href='{{ include.full_image | absolute_url }}'>
-    <img class='item-full-image' src='{{ include.full_image | absolute_url }}' alt='{{ page.label | escape }}'/>
-  </a>
-</div>
+<div id="osd" class="image-viewer"></div>
+<script defer src="{{ '/assets/openseadragon/openseadragon.min.js' | absolute_url }}"></script>
+
+<script>
+  $(document).ready(function () {
+    OpenSeadragon({
+      id: "osd",
+      preload: true,
+      showNavigationControl: false,
+      panHorizontal: false,
+      defaultZoomLevel: 0,
+      zoomPerScroll: 1, 
+      prefixUrl: "{{ '/assets/openseadragon/images/' | absolute_url }}",
+      {% if page.img_list.size > 1 %}
+      sequenceMode: true,
+      showReferenceStrip: true,
+      tileSources: [
+        {% for img in page.img_list %}
+        {
+          type: 'image',
+          url:  '{{ img.full | absolute_url }}',
+          referenceStripThumbnailUrl: '{{ img.thumbnail | absolute_url }}',
+          buildPyramid: false
+        }{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      ]
+      {% else %}
+      tileSources: {
+        type: 'image',
+        url:  '{{ page.full | absolute_url}}',
+        buildPyramid: false
+      },
+      {% endif %}
+    });
+  });
+</script>

@@ -7,19 +7,15 @@ layout: default
 {% endcomment %}
 
 <h3 alt="{{ page.label | escape }}" class='item-label'>{{ page.label }}</h3>
-
-{% assign viewer = page.image_viewer | default: layout.image_viewer %}
-{% assign image = page.manifest | default: page.full %} 
-
   <div class='item-view'>
     <span class='pagination-link' id='prevlink'></span>
-    {% if viewer and image.size > 0 %}
-      {% if viewer == 'openseadragon' %}
-        {% include osd_iiif_image_viewer.html manifest=page.manifest prevlink=prevlink nextlink=nextlink %}
-      {% else %}
-        {% include simple_image_viewer.html full_image=page.full prevlink=prevlink nextlink=nextlink %}
-      {% endif %}
+
+    {% if page.manifest.size > 0 %}
+      {% include osd_iiif_image_viewer.html manifest=page.manifest %}
+    {% elsif page.full.size > 0 %}
+      {% include simple_image_viewer.html full_image=page.full %}
     {% endif %}
+    
     <span class='pagination-link' id='nextlink'></span>
   </div>
   {% unless layout.pagination == false %}{% include item_pagination.html %}{% endunless %}
