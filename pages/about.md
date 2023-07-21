@@ -44,5 +44,5 @@ Below is a diagram to give you a zoomed-out view. In summary, you create a file 
 From there, you can run tests on your site to catch errors and decide where and how to put it online or in offline media.
 
 <a href="{{ '/img/wax_workflow.jpg' | absolute_url }}">
-  <img src="{{ '/img/wax_workflow.jpg' | absolute_url }}"/>
+  <img src="{{ '/img/wax_workflow.jpg' | absolute_url }}" alt="workflow diagram for wax process"/>
 </a>
