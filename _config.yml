@@ -10,7 +10,6 @@
 #
 # Questions ?
 # ~> https://minicomp.github.io/wiki/#/
-# ~> https://gitter.im/minicomp/wax/
 #
 # ---------------------------------------------------------------
 # MAIN SETTINGS
@@ -22,8 +21,9 @@ title:            'Wax'
 description:      'Minimal Exhibitions with Jekyll'
 url:              'https://minicomp.github.io'
 baseurl:          '/wax'
-copyright:        'Example copyright org, 2019'
+copyright:        'Example copyright org, 2023'
 logo:             '/assets/logo.png'
+default_thumb:    '/assets/default.png'
 
 # ---------------------------------------------------------------
 # BUILD SETTINGS
@@ -33,13 +33,7 @@ logo:             '/assets/logo.png'
 permalink: 'pretty'
 sass:
   style: compressed
-exclude:
-  - Gemfile*
-  - Rakefile
-  - vendor
-  - spec
-  - README.md
-incremental: true
+exclude: ["Gemfile*", "*.gemspec", "Rakefile", "vendor", "spec", "README.md", "LICENSE.txt", "Docker*"]
 webrick:
   headers:
     'Access-Control-Allow-Origin': '*'
@@ -137,8 +131,8 @@ footer:
       link: 'https://github.com/minicomp/wax'
     - label: 'Credits'
       link: '/credits'
-    - label: 'Contact'
-      link: 'https://gitter.im/minicomp/wax/'
+    - label: 'Wiki'
+      link: 'https://minicomp.github.io/wiki/wax/'
   logos:
     - img: '/img/logo.png'
 

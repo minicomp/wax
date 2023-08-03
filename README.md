@@ -1,6 +1,6 @@
 # minicomp/wax 🐝
 
-[![Gem Version](https://badge.fury.io/rb/wax_theme.svg)](https://badge.fury.io/rb/wax_tasks)
+[![Gem Version](https://badge.fury.io/rb/wax_theme.svg)](https://badge.fury.io/rb/wax_theme)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![CI:Test](https://github.com/minicomp/wax/workflows/ci:test/badge.svg)](https://github.com/minicomp/wax/actions?query=workflow%3Aci%3Atest)
 [![Depfu](https://badges.depfu.com/badges/9d4da973f2cd2680c11ca34738c2dfb2/overview.svg)](https://depfu.com/github/minicomp/wax?project_id=10550)
@@ -32,7 +32,7 @@ It's comprised of: __a few Ruby gems__ for processing image data and associated 
 # Prerequisites
 
 
-You'll need `git` and `ruby >= 2.4` with `bundler` installed.
+You'll need `git` and `ruby >= 3.2` with `bundler` installed.
 These dependencies can either be installed natively on your system or within a [Docker environment](#Using-Docker). For instructions, check the Wiki's [Setting up your system page](https://minicomp.github.io/wiki/wax/setting-up-your-system/).
 
 Check your versions with:

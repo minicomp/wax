@@ -5,7 +5,9 @@
         <p class='footer-title'>{{ site.title }}</p>
         <p class='footer-description'>{{ site.description }}</p>
         <p class='footer-copyright'>
+          {% if site.copyright.size > 0 %}
           &copy; {{ site.copyright }}<br>
+          {% endif %}
           Built with <a href='https://github.com/minicomp/wax/'>Minicomp/Wax</a>
         </p>
       </div>
