@@ -51,7 +51,7 @@ function startSearchUI(fields, indexFile, url) {
     $('input#search').on('keyup', function() {
       var results_div = $('#results');
       var query       = $(this).val();
-      var results     = index.search(query, { boolean: 'AND', expand: true });
+      var results     = index.search(query, { bool: 'AND', expand: true });
 
       results_div.empty();
       results_div.append(`<p class="results-info">Displaying ${results.length} results</p>`);
