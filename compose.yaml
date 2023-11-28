@@ -1,0 +1,18 @@
+services:
+    rake:
+        image: minicomp/wax
+        entrypoint: ["bundle", "exec", "rake"]
+        volumes:
+            - .:/wax
+        user: 1000:1000
+    jekyll:
+        image: minicomp/wax
+        environment:
+            - JEKYLL_ENV=docker
+        entrypoint: ["bundle", "exec", "jekyll"]
+        command: ["serve", "--host", "0.0.0.0", "--config", "_config.yml,_config.docker.yml"]
+        volumes:
+            - .:/wax
+        ports:
+            - "4000:4000"
+        user: 1000:1000
