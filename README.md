@@ -16,10 +16,10 @@ __Wax is an extensible workflow for producing scholarly exhibitions with minimal
 It's comprised of: __a few Ruby gems__ for processing image data and associated metadata ([wax_tasks](https://github.com/minicomp/wax_tasks/), [wax_iiif](https://github.com/minicomp/wax_iiif/)), __a Jekyll theme__ ([wax_theme](https://github.com/minicomp/wax/)), and (hopefully soon!) a lot of __documentation and recipes__ for creating, deploying, and maintaining digital exhibitions. For now, additional documentation is in the [Minicomp/Wax Wiki](https://minicomp.github.io/wiki/wax/).
 
 
-- [Prerequisites](#Prerequisites)
-- [Getting Started](#Getting-Started)
-- [Using Docker](#Using-Docker)
-- [Contributing](#Contributing)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [Using Docker](#using-docker)
+- [Contributing](#contributing)
 
 <br>
 
@@ -32,7 +32,7 @@ It's comprised of: __a few Ruby gems__ for processing image data and associated 
 # Prerequisites
 
 
-You'll need `git` and `ruby >= 3.2` with `bundler` installed.
+You'll need `git` and `ruby >= 3.4` with `bundler` installed.
 These dependencies can either be installed natively on your system or within a [Docker environment](#Using-Docker). For instructions, check the Wiki's [Setting up your system page](https://minicomp.github.io/wiki/wax/setting-up-your-system/).
 
 Check your versions with:

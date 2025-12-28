@@ -1,4 +1,35 @@
-@import 'bootstrap';
+@use 'bootstrap';
+
+
+// Define all variables with !default so they can be configured via 'with'
+// These are the default values that will be used if not overridden
+
+/* text */
+$body-font: bootstrap.$font-family-base !default;
+$heading-font: bootstrap.$font-family-base !default;
+
+/* Image Size */
+$thumbnail-height: 140px !default;
+$thumbnail-width: 140px !default;
+
+/* colors */
+$text-color: #100c01 !default;
+$bg-color: #ffffff !default;
+$neutral: #eae7de !default;
+$accent-light: #966d09 !default;
+$accent-dark: #644906 !default;
+
+/* viewport sizes */
+$max-width: 800px !default;
+
+/* margins */
+$less-margin: 1.0rem !default;
+$margin: 1.5rem !default;
+$more-margin: 2.0rem !default;
+$super-margin: 3.0rem !default;
+$viewer-height: 550px !default;
+$parallax-height: 350px !default;
+$footer-height: 250px !default;
 
 /*
 

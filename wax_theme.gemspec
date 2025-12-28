@@ -14,6 +14,11 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'jekyll', '~> 4.3.2'
   spec.add_runtime_dependency 'wax_tasks', '~> 1.1'
   spec.add_runtime_dependency 'webrick', '~> 1.8'
+  spec.add_runtime_dependency 'csv', '~> 3.3', '>= 3.3.5' # used by jekyll but no longer in ruby v3.4
+  spec.add_runtime_dependency 'logger', '~> 1.7' # used by jekyll but no longer in ruby v3.5
+  spec.add_runtime_dependency 'base64', '~> 0.3.0' # used by safe yaml but no longer in ruby v3.4
 
   spec.add_development_dependency 'html-proofer', '~> 3.15'
+  spec.add_development_dependency 'benchmark', '~> 0.5.0' # used by mini_magick in pages task
+
 end

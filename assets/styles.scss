@@ -1,51 +1,40 @@
 ---
 sitemap: false
 ---
-/*
-variable declaration
-*/
+@use 'wax' with (
+    /* text */
+    $body-font: ('Open Sans', 'sans-serif'),
+    $heading-font: ('Open Sans', 'sans-serif'),
+
+    /* Image Size */
+    $thumbnail-height: 140px,
+    $thumbnail-width: 140px,
+
+    /* colors */
+    $text-color: #100c01,
+    $bg-color: #ffffff,
+    $neutral: #eae7de,
+    $accent-light: #966d09,
+    $accent-dark: #644906,
+
+    /* viewport sizes */
+    $max-width: 800px,
+
+    /* margins */
+    $less-margin: 1.0rem,
+    $margin: 1.5rem,
+    $more-margin: 2.0rem,
+    $super-margin: 3.0rem,
+    $viewer-height: 550px,
+    $parallax-height: 350px,
+    $footer-height: 250px
+);
 
 /* branding */
-$logo: url("{{ '/assets/logo.png' | absolute_url }}");
-
-/* text */
-
-$body-font:       'Open Sans', 'sans-serif';
-$heading-font:    'Open Sans', 'sans-serif';
-
-
-/* Image Size */
-
-$thumbnail-height: 140px;
-$thumbnail-width: 140px;
-
-/* colors */
-
-$text-color:      #100c01;
-$bg-color:        #ffffff;
-$neutral:         #eae7de;
-$accent-light:    #966d09;
-$accent-dark:     #644906;
-
-/* viewport sizes */
-
-$max-width:       800px;
-
-/* margins */
-
-$less-margin:     1.0rem;
-$margin:          1.5rem;
-$more-margin:     2.0rem;
-$super-margin:    3.0rem;
-
-
-$viewer-height:   550px;
-$parallax-height: 350px;
-$footer-height:   250px;
+$logo: url("{{ '/assets/pmc-archive.jpg' | absolute_url }}");
 
 /*
-font & asset import
+font import
 */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&font-display=auto');
-@import 'wax';
