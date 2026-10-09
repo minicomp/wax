@@ -12,6 +12,8 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README)!i) }
 
   spec.add_runtime_dependency 'jekyll', '~> 4.3.2'
+  spec.add_runtime_dependency 'base64', '~> 0.3.0'
+  spec.add_runtime_dependency 'csv', '~> 3.3'
   spec.add_runtime_dependency 'wax_tasks', '~> 1.1'
   spec.add_runtime_dependency 'webrick', '~> 1.8'
 

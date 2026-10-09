@@ -1,4 +1,6 @@
-FROM ruby:2.7.2
+# check=skip=InvalidDefaultArgInFrom
+ARG RUBY_VERSION
+FROM ruby:${RUBY_VERSION}
 
 MAINTAINER Andrew Woods <awoods01@gmail.com>
 
