@@ -111,7 +111,7 @@ Run the "Getting Started" steps 1-6 above to copy and `cd` into the repo.
 
 Next, build the `minicomp/wax` base image:
 ```
-docker build -t minicomp/wax .
+docker build --build-arg RUBY_VERSION=$(cat .ruby-version) -t minicomp/wax .
 ```
 
 You will run all of the Wax tasks and commands within an interactive bash container, which you can create and access by running:
